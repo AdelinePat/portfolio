@@ -1,0 +1,87 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+    border: none;
+    text-decoration: none;
+    background: none;
+
+    a {
+        color: none;
+    }
+    
+}
+
+:root {
+    --color1: #1d1e1d;
+    --color2: #262626;
+    --light-color: #DBDBDB;
+    --primary-color: #60C6ED; /* blue/cyan */
+    --secondary-color: #FDA0A9; /* pink */
+}
+
+@font-face {
+    font-family: "inter";
+    src: url(./Inter-VariableFont_opsz\,wght.ttf);
+}
+
+@font-face {
+    font-family: "inter-italic";
+    src: url(./Inter-Italic-VariableFont_opsz\,wght.ttf);
+}
+
+@font-face {
+    font-family: "syne";
+    src: url(./Syne-VariableFont_wght.ttf);
+}
+
+
+h1, h2, h3 {
+    font-family: "syne";
+}
+
+
+header {
+    height: 580px;
+    background: url(./images/image_header_portfolio.jpg) 10% 0% no-repeat,  radial-gradient(var(--color1), var(--color2));;
+    /* background-size: contain; */
+    background-size: contain;
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 40px;
+        border-bottom: 1px solid rgba(255,255,255,0.4);
+        font-family: "syne";
+
+        :first-of-type {
+            padding-left: 24px;
+        }
+
+        :last-of-type {
+            padding-right: 24px;
+        }
+
+        ul {
+            display: flex;
+            justify-content: space-around;
+
+            a {
+                color: var(--light-color);
+            }
+        }
+    }
+
+    h1 {
+        font-size: 56pt;
+
+        strong {
+            text-transform: uppercase;
+            background: linear-gradient(0.6turn, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+}
