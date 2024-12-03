@@ -44,8 +44,7 @@ h1, h2, h3 {
 header {
     height: 580px;
     background: url(./images/image_header_portfolio.jpg) 10% 0% no-repeat,  radial-gradient(var(--color1), var(--color2));;
-    /* background-size: contain; */
-    background-size: contain;
+    background-size: auto 100%; /*background fits the height of container*/
 
     nav {
         display: flex;
@@ -75,6 +74,11 @@ header {
 
     h1 {
         font-size: 56pt;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+        height: 80%;
 
         strong {
             text-transform: uppercase;
