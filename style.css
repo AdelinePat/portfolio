@@ -12,13 +12,14 @@
     
 }
 
+
 :root {
     --color1: #1d1e1d;
     --color2: #262626;
     --light-color: #DBDBDB;
     --primary-color: #60C6ED; /* blue/cyan */
     --secondary-color: #FDA0A9; /* pink */
-    --background-color: #1B1B1B;
+    --background-color: #1B1B1B; 
 }
 
 @font-face {
@@ -42,15 +43,17 @@ h1, h2, h3 {
 }
 
 
-
-
 body {
     background: var(--background-color);
     font-family: "inter";
 
+    li {
+        padding: 4px 0px;
+    }
+
     #page_header {
-        height: 580px;
-        background: url(./images/image_header_portfolio.jpg) 10% 0% no-repeat,  #252525 /*radial-gradient(var(--color1), var(--color2));*/;
+        height: 550px;
+        background: url(./images/image_header_portfolio_v2.jpg  ) 10% 0% no-repeat,  #282827 /*radial-gradient(var(--color1), var(--color2));*/;
         background-size: auto 100%; /*background fits the height of container*/
     
         nav {
@@ -81,7 +84,7 @@ body {
         }
     
         h1 {
-            font-size: 56pt;
+            font-size: 40pt;
             display: flex;
             flex-flow: column nowrap;
             align-items: center;
@@ -101,6 +104,65 @@ body {
 
     main {
     color: var(--light-color);
+
+    section {
+        
+
+        header {
+            background: none;
+        }
+
+        h2 {
+            font-size: 20pt;
+            font-weight: 400;
+            text-align: center;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--light-color);
+            margin-bottom: 8px;
+            width: 80%;
+            margin: auto;
+        }
+
+        article {
+            /* background: purple; */
+        }
+    
+    }
+
+    #presentation {
+
+        width: 70%;
+        margin: auto;
+        max-width: 1100px;
+
+        article:first-of-type {
+            background: var(--color2);
+            position: relative;
+            top: -56px;
+            border-radius: 24px;
+            box-shadow: 0px 0px 16px black;
+            padding: 24px;
+
+            h2 {
+                color: var(--primary-color);
+                text-align: center;
+                padding: 16px 0px 16px 0px;
+                border: none;
+            }
+            
+            p {
+                padding-bottom: 16px;
+            }
+
+        }
+
+        .hardskills {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-evenly;
+            margin-bottom: 56px;
+        }
+    }
 
     .experiences {
         max-width: 1300px;
@@ -122,6 +184,7 @@ body {
                 justify-content: space-between;
                 color: var(--primary-color);
                 font-weight: 300;
+                font-size: 16pt;
 
                 strong {
                     color: var(--secondary-color);
@@ -171,69 +234,10 @@ body {
             }
         }
     }
-
-    section {
-        
-
-        header {
-            background: none;
-        }
-
-        h2 {
-            font-size: 20pt;
-            font-weight: 400;
-            text-align: center;
-            padding-bottom: 16px;
-            border-bottom: 1px solid var(--light-color);
-            margin-bottom: 8px;
-            width: 80%;
-            margin: auto;
-        }
-
-        article {
-            /* background: purple; */
-        }
-    
-    }
-
-    #presentation {
-
-        width: 70%;
-        margin: auto;
-        max-width: 1300px;
-
-        article:first-of-type {
-            background: var(--color2);
-            position: relative;
-            top: -56px;
-            border-radius: 24px;
-            box-shadow: 0px 0px 16px black;
-            padding: 24px;
-
-            h2 {
-                color: var(--primary-color);
-                text-align: center;
-                padding: 16px 0px 16px 0px;
-                border: none;
-            }
-            
-            p {
-                padding-bottom: 16px;
-            }
-
-        }
-
-        .hardskills {
-            display: flex;
-            flex-flow: row nowrap;
-            justify-content: space-evenly;
-            margin-bottom: 56px;
-        }
-    }
     }
 
     footer {
-        background: url(./images/image_footer_portfolio.jpg) 0% 50% no-repeat;
+        background: url(./images/image_footer_portfolio_v2.jpg) 0% 50% no-repeat;
         background-size: cover;
         height: 300px;
         margin-top: 32px;
