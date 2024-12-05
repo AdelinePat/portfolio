@@ -10,19 +10,25 @@
 </head>
 <body>
     <header id="page_header">
-        <nav>
+        <nav class="navbar">
             <img src="#" alt="Logo de Adeline">
-            <ul>
+            <div class="menu-phone">
+                <input type="checkbox" id="menu-hamburger">
+                <label for="menu-hamburger"></label>
+            </div>
+            <ul class="menu-items"> <!-- class="menu-items"-->
                 <li><a href="#">Resume</a></li>
                 <li><a href="#">Portfolio</a></li>
                 <li><a href="#">Contact me</a></li>
             </ul>
+            
             <button><a href="#">Télécharger le CV</a></button>
         </nav>
         <h1>
             Hey ! I'm <strong>Adeline Patenne</strong>
+            <button><a href="#">Contact me</a></button>
         </h1>
-        <button><a href="#">Contact me</a></button>
+       
     </header>
 
     <main>
@@ -158,8 +164,10 @@
             <h4>
                 Retrouvez-moi sur
             </h4>
-            <a href="#"><img src="./images/linkedin.svg" alt="logo LinkedIn" title="LinkedIn"></a>
-            <a href="#"><img src="./images/github.svg" alt ="logo GitHub" title="GitHub"></a>
+            <p>
+                <a href="#"><img src="./images/linkedin.svg" alt="logo LinkedIn" title="LinkedIn"></a>
+                <a href="#"><img src="./images/github.svg" alt ="logo GitHub" title="GitHub"></a>
+            </p>
         </article>
         <article>
             Faire un formulaire de contact ICI 
@@ -168,4 +176,14 @@
 
     </footer>
 </body>
+
+<script>
+    const menuHamburger = document.querySelector("#menu-hamburger")
+    const navLinks = document.querySelector("ul.menu-items")
+
+    menuHamburger.addEventListener('click',()=>{
+    navLinks.classList.toggle('mobile-menu')
+    })
+</script>
+
 </html>
