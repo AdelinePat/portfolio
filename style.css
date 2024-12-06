@@ -230,17 +230,30 @@ body {
 
         h1 {
             font-size: 40pt;
+            font-weight: 500;
+            color: var(--light-color);
+            text-align: center;
             display: flex;
+            flex-flow: column wrap;
+            position: relative;
+            top: 180px;
+            width: 60%;
+            left: 35%;
+
+
+            /* display: flex;
             flex-flow: column nowrap;
             align-items: center;
             justify-content: center;
             justify-self: flex-end;
-            text-align: center;
+            
             height: 90%;
-            font-weight: 500;
-            color: var(--light-color);
             width: 60%;
-            margin-right: 5%;
+            margin-right: 5%; */
+
+            span {
+                display: inline-block;
+            }
     
             strong {
                 text-transform: uppercase;
@@ -248,10 +261,12 @@ body {
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 text-align: center;
+                display: inline-block;
             }
         }
         
         .contact-me {
+            display: inline-block;
             font-family: "inter";
             font-size: 14pt;
             letter-spacing: 2pt;
@@ -755,11 +770,12 @@ body {
 
             h1 {
                 font-size: 30pt;
-                width: 60%;
-                margin-right: 0%;
-                flex-flow: wrap;
-                align-content: flex-end;
-                height: 70%;
+                top: 300px;
+                /* width: 60%; */
+                /* margin-left: 0%; */
+                /* flex-flow: wrap;
+                align-content: flex-end; */
+                /* height: 70%; */
                 /* align-items: space-evenly; */
 
                 
@@ -791,11 +807,15 @@ body {
 
             h1 {
                 font-size: 32pt;
-                flex-flow: wrap;
+                top: 375px;
+                justify-content: center;
+                left: 16px;
+                width: calc(100% - 32px);
+                /* flex-flow: wrap;
                 justify-self: center;
                 align-content: flex-end;
                 align-items: flex-end;
-                height: 80%;
+                height: 80%; */
                 
 
                 strong {
