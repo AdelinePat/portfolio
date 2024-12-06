@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Adeline Patenne">
     <link rel="stylesheet" href="style.css">
+
+    <script defer src="script.js"></script>
     <!-- <link rel="icon" type="image/x-icon" href="./images/#">          créer le logo pour pouvoir l'ajouter dans la favicon -->
     <title>Accueil</title>
 </head>
@@ -25,8 +27,8 @@
             <button><a href="#">Télécharger le CV</a></button>
         </nav>
         <h1>
-            Hey ! I'm <strong>Adeline Patenne</strong>
-            <button><a href="#">Contact me</a></button>
+            <span>Hey ! I'm</span> <strong>Adeline Patenne</strong>
+            <button class="contact-me"><a href="#">Contact me</a></button>
         </h1>
        
     </header>
@@ -176,14 +178,4 @@
 
     </footer>
 </body>
-
-<script>
-    const menuHamburger = document.querySelector("#menu-hamburger")
-    const navLinks = document.querySelector("ul.menu-items")
-
-    menuHamburger.addEventListener('click',()=>{
-    navLinks.classList.toggle('mobile-menu')
-    })
-</script>
-
 </html>
