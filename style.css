@@ -547,6 +547,10 @@ body {
 
                         }
 
+                        input:-internal-autofill-selected {
+                            background: red;
+                        }
+
                     }
 
                     div {

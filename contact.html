@@ -36,7 +36,7 @@
             <article>
                 <!-- <h2>Contact</h2> -->
                 
-                <form method="post" action="traitement.php">
+                <form method="post" action="contactform.php">
                     <!-- Champs de base obligatoires : -->                
                     <fieldset id="contacter">
                         <div>
@@ -59,8 +59,8 @@
                     
                     <fieldset id="message">
                         <div>
-                            <label for="Objet">Objet</label>
-                            <input type="text" name="Objet" id="Objet" required>
+                            <label for="objet">Objet</label>
+                            <input type="text" name="objet" id="objet" required>
                         </div>
                         <div>
                             <label for="message">Votre message</label>
@@ -71,7 +71,7 @@
 
                     <fieldset id="validation">
                         <!-- Bouton de soumission : -->
-                            <button type="submit">Envoyer</button>
+                            <button type="submit" name="submit">Envoyer</button>
                             <p>Tous les champs sont obligatoires</p>
                     </fieldset>
                 </form>
