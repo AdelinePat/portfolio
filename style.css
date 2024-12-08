@@ -837,9 +837,9 @@ body {
 
         /* // Up arrow anchor to get back on top of the page // */
         article:nth-child(3) {
-            align-self: flex-end;
+            align-self: center;
             position: relative;
-            bottom: 20px;
+            top: 30px;
 
             a {
             font-size: 24pt;
@@ -1160,6 +1160,11 @@ body {
             p {
                 display: flex;
                 justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+            article:nth-child(3) {
+                position: static;
             }
         }
     }
