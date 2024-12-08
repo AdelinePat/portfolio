@@ -13,5 +13,5 @@ if (isset($_POST['submit'])) {
     $txt = "Vous avez reçu un message de votre portfolio venant de ".$nom.".\n\n".$message; 
 
     mail($mailTo, $objet, $headers, $txt);
-
+    header("location: index.php?mailsend")
 }
