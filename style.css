@@ -1283,7 +1283,8 @@ body {
         }
 
         footer {
-            background-size: 250%;
+            background-size: 400%;
+            background-position-x: 15%;
         }
     }
 }
