@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Adeline Patenne">
+    <link rel="stylesheet" href="style.css">
+
+    <script defer src="script.js"></script>
+    <!-- <link rel="icon" type="image/x-icon" href="./images/#">          créer le logo pour pouvoir l'ajouter dans la favicon -->
+    <title>Contact</title>
+</head>
+<body>
+    <header class="header contact">
+        <nav class="navbar">
+            <img src="#" alt="Logo de Adeline">
+            <div class="menu-phone">
+                <input type="checkbox" id="menu-hamburger">
+                <label for="menu-hamburger"></label>
+            </div>
+            <ul class="menu-items"> <!-- class="menu-items"-->
+                <li><a href="./index.html">CV</a></li>
+                <li><a href="./portfolio.html">Portfolio</a></li>
+                <li><a class="active" href="./contact.html">Contact</a></li>
+            </ul>
+            <button><a href="#">Télécharger le CV</a></button>
+        </nav>
+        <!-- <h1>
+            <span>Bienvenue sur mon</span> <strong>Portfolio</strong>
+        </h1> -->
+       
+    </header>
+
+    <main>
+        <section class="portfolio-contact">
+            <article>
+                <!-- <h2>Contact</h2> -->
+                
+                <form method="post" action="traitement.php">
+                    <!-- Champs de base obligatoires : -->                
+                    <fieldset id="contacter">
+                        <div>
+                            <label for="prenom">Votre prénom</label>
+                            <input type="text" name="prenom" id="prenom" required>
+                        </div>
+                        <div>
+                            <label for="nom">Votre nom</label>
+                            <input type="text" name="nom" id="nom" required>
+                        </div>
+                        <div>
+                            <label for="email">Votre adresse e-mail</label>
+                            <input type="email" name="email" id="email" required>
+                        </div>
+                        <div>
+                            <label for="telephone">Votre numéro de téléphone</label>
+                            <input type="tel" name="telephone" id="telephone" pattern="[0-9]{10}" required>
+                        </div>
+                    </fieldset>
+                    
+                    <fieldset id="message">
+                        <div>
+                            <label for="Objet">Objet</label>
+                            <input type="text" name="Objet" id="Objet" required>
+                        </div>
+                        <div>
+                            <label for="message">Votre message</label>
+                            <textarea name="message" id="message" required rows="6"></textarea>
+                        </div>
+
+                    </fieldset>
+
+                    <fieldset id="validation">
+                        <!-- Bouton de soumission : -->
+                            <button type="submit">Envoyer</button>
+                            <p>Tous les champs sont obligatoires</p>
+                    </fieldset>
+                </form>
+                
+            </article>
+
+        </section>
+    </main>
+
+    <footer>
+        <article>
+            <h4>
+                Navigation
+            </h4>
+            <ul>
+                <li><a href="./index.html">CV</a></li>
+                <li><a href="./portfolio.html">Portfolio</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul> 
+        </article>
+        <article>
+            <h4>
+                Retrouvez-moi sur
+            </h4>
+            <p>
+                <a href="https://www.linkedin.com/in/adeline-patenne/"><img src="./images/linkedin.svg" alt="logo LinkedIn" title="LinkedIn"></a>
+                <a href="https://github.com/adelinePat/"><img src="./images/github.svg" alt ="logo GitHub" title="GitHub"></a>
+            </p>
+        </article>
+        <article>
+            <a href="#">↑</a>
+        </article>
+
+    </footer>
+</body>
+</html>
