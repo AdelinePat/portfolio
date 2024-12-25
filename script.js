@@ -13,9 +13,9 @@ window.addEventListener('scroll', () => {
 
 // Creating menu hamburger, adding class to the list in navbar when checkbox is checked
 
-const menuHamburger = document.querySelector("#menu-hamburger")
-    const navLinks = document.querySelector("ul.menu-items")
+const menuHamburger = document.querySelector("#menu-hamburger");
+const navLinks = document.querySelector("ul.menu-items");
 
-    menuHamburger.addEventListener('click',()=>{
+menuHamburger.addEventListener('click',()=>{
     navLinks.classList.toggle('mobile-menu')
-    })
+});
