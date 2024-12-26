@@ -104,6 +104,10 @@ body {
             padding: 0px 24px;
             font-size: 14pt;
 
+            img#logo {
+                width: 65px;
+            }
+
             /* // Hamburger menu // */
             .menu-phone {
                 display: none;
