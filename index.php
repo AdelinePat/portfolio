@@ -1,3 +1,9 @@
+<?php 
+$isResume = true;
+$isPortfolio = false;
+$isContact = false;
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -13,27 +19,7 @@
 </head>
 <body>
     
-    <header class="header resume">
-        <nav class="navbar">
-            <img id="logo" src="./images/Logo AP.svg" alt="Logo de Adeline">
-            <div class="menu-phone">
-                <input type="checkbox" id="menu-hamburger">
-                <label for="menu-hamburger"></label>
-            </div>
-            <ul class="menu-items"> <!-- class="menu-items"-->
-                <li><a class="active" href="./index.html">CV</a></li>
-                <li><a href="./portfolio.html">Portfolio</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-            </ul>
-            
-            <button><a href="https://drive.google.com/file/d/1F0hdz7AnUZbUjS4yTaVKmk4DfhMjKUX5/view?usp=sharing" target="_blank">Télécharger le CV</a></button>
-        </nav>
-        <h1>
-            <span>Bonjour ! Je suis</span> <strong>Adeline Patenne</strong>
-            <button class="contact-me"><a href="./contact.html">Contactez moi</a></button>
-        </h1>
-       
-    </header>
+    <?php require_once(__DIR__ . '/header.php'); ?>
 
     <main>
         <section id="presentation">
@@ -153,37 +139,7 @@
 
     </main>
 
-    <footer>
-        <section>
-            <article>
-                <h4>
-                    Navigation
-                </h4>
-                <ul>
-                    <li><a href="./index.html">CV</a></li>
-                    <li><a href="./portfolio.html">Portfolio</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
-                </ul> 
-            </article>
-            <article>
-                <h4>
-                    Retrouvez-moi sur
-                </h4>
-                <p>
-                    <a href="https://www.linkedin.com/in/adeline-patenne/"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="https://github.com/adelinePat/"><i class="fa-brands fa-github"></i></a>
-                </p>
-            </article>
-            <article>
-                <a href="#">↑</a>
-            </article>
-        </section>
-        <div id="credits">
-            <p>© Copyright 2024 - Adeline Patenne - Tous droits réservés</p>
-            <p class="infocredit">Le logo ainsi que l'image de fond du footer ont été réalisé par mes soins.</p>
-        </div>
-
-    </footer>
+    <?php require_once(__DIR__ . '/footer.php'); ?>
     
 </body>
 </html>
