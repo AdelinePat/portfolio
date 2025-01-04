@@ -16,11 +16,29 @@
 :root {
     --color1: rgb(29, 30, 29);
     --color2: #262626;
-    --light-color: #DBDBDB;
-    --primary-color: #60C6ED; /* blue/cyan */
+    --light-color: rgb(219, 219, 219);
+    --primary-color: rgb(96, 198, 237); /* blue/cyan */
     --secondary-color: rgb(253, 160, 169); /* pink */
     --background-color: #1B1B1B; 
 }
+
+::selection {
+    background: rgba(96, 198, 237,0.4);
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    /* background: rgba(219,219,219,0.5); */
+    background: #0d0d0d;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--secondary-color); 
+    /* border-radius: 10px; */
+  }
 
 @font-face {
     font-family: "inter";
@@ -104,8 +122,17 @@ body {
             padding: 0px 24px;
             font-size: 14pt;
 
+            /* #logo_link {
+                height: 100%;
+
+            } */
+
             img#logo {
                 width: 65px;
+                position: relative;
+                top: 3px;
+                box-sizing: border-box;
+                /* background: red; */
             }
 
             /* // Hamburger menu // */
@@ -613,6 +640,7 @@ body {
             width: 80%;
             margin: auto;
             max-width: 1000px;
+            text-align: center;
 
             transition: .5s all;
 
@@ -737,12 +765,34 @@ body {
         background: url(./images/footer_portfolio.jpg) 0% 50% no-repeat;
         background-size: 150%;
         margin-top: 32px;
+        /* display: flex;
+        flex-direction: column;
 
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-around;
-        align-items: flex-start;
-        text-align: center;
+        align-items: space-between; */
+
+        section {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-around;
+            align-items: flex-start;
+            text-align: center;
+        }
+    
+        #credits {
+            text-align: center;
+            width: calc(100% -30px);
+            font-size: 10pt;
+            padding: 5px 15px 15px 15px;
+            color: rgba(255,255,255,0.5);
+            font-family: "inter-italic";
+            letter-spacing: 0.5pt;
+
+            .infocredit {
+                opacity: 0.7;
+                font-size: 8pt;
+            }
+            
+        }
 
         ul {
             list-style-type: none;
@@ -1156,8 +1206,12 @@ body {
         
 
         footer {
-            flex-direction: column;
-            align-items: center;
+
+            section {
+                flex-direction: column;
+                align-items: center;
+            }
+            
 
             background-size: 200%;
 
