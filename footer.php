@@ -24,7 +24,7 @@
             </article>
         </section>
         <div id="credits">
-            <p>© Copyright 2024 - Adeline Patenne - Tous droits réservés</p>
+            <p>© Copyright 2024-<?php echo date('Y') ?> - Adeline Patenne - Tous droits réservés</p>
             <p class="infocredit">Le logo ainsi que l'image de fond du footer ont été réalisé par mes soins.</p>
         </div>
 
