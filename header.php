@@ -1,4 +1,8 @@
-<header class="header <?php if($isResume) {echo'resume';} elseif($isPortfolio) {echo 'portfolio';} elseif($isContact) {echo 'contact';}?>">
+<header class="header <?php
+if($isResume) {echo'resume';}
+ elseif($isPortfolio) {echo 'portfolio';}
+ elseif($isContact) {echo 'contact';}
+ ?>">
         <nav class="navbar">
             <a id="logo_link" href="./index.php"><img id="logo" src="./images/Logo AP.svg" alt="Logo de Adeline"></a>
             <div class="menu-phone">

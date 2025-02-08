@@ -29,10 +29,43 @@ $isContact = false;
                     Après avoir travaillé 3 ans dans le domaine de la santé en tant qu'infirmière,
                     j'ai décidé d'entreprendre une reconversion vers l'informatique. Actuellement
                     en préparation d'un Bachelor IT à La Plateforme_ , je suis à la recherche d'une
-                    alternance qui me permettra de m'engager sur ce nouveau parcours professionnel.
+                    alternance d'une <strong>durée de 2 ans à partir de septembre 2025</strong>.
+                    Cette alternance me permettra de m'engager sur ce nouveau parcours professionnel.
                 </p>
             </article>
-            <article class="hardskills">
+            <!-- <article class="hardskills"> -->
+                <ul class="hardskills">
+                    <li>
+                        <i class="fa-brands fa-git-alt"></i> <span>Git</span>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-github"></i> <span>GitHub</span>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-python"></i> <span>Python</span>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-html5"></i> <span>HMTL</span>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-css3-alt"></i> <span>CSS</span>
+                    </li>
+                     <li>
+                        <i class="fa-brands fa-js"></i> <span>JavaScript</span>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-figma"></i> <span>Figma</span>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-wordpress"></i> <span>WordPress</span>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-elementor"></i> <span>Elementor</span>
+                    </li>
+                </ul>
+            <!-- </article> -->
+
+            <!-- <article class="hardskills">
                 <img src="./images/git.svg" alt="logo Git" title="Git">
                 <img src="./images/github.svg" alt ="logo GitHub" title="GitHub">
                 <img src="./images/python.svg" alt="logo Python" title="Python">
@@ -42,7 +75,7 @@ $isContact = false;
                 <img src="./images/figma.svg" alt="logo figma" title="Figma">
                 <img src="./images/wordpress.svg" alt="logo WordPress" title="WordPress">
                 <img src="./images/elementor.svg" alt="logo Elemetor" title="Elementor">
-            </article>
+            </article> -->
         </section>
 
         <div class="experiences">
@@ -62,6 +95,22 @@ $isContact = false;
                     </p>
                     <ul>
                         <li>
+                            Organisation, rapidité d'exécution des tâches, prises de décision en situation d'urgence
+                        </li>
+                        <li>
+                            Analyses des besoins, analyse et repérage des risques
+                        </li>
+                        <li>
+                            Collaboration au sein d'une équipe pluridisciplinaire
+                        </li>
+                        <li>
+                            Connaissances techniques, transmissions d'informations
+                        </li>
+                        <li>
+                            Formation des élèves et des nouveaux infirmiers
+                        </li>
+                        <!-- 
+                        <li>
                             Administration des chimiothérapies en connaissances des protocoles spécifiques à chaque molécule et surveillance des effets secondaires;
                         </li>
                         <li>
@@ -75,7 +124,7 @@ $isContact = false;
                         </li>
                         <li>
                             Formation des élèves et des nouveaux infirmiers
-                        </li>
+                        </li> -->
                     </ul>
                 </article>
                 <article class="professionnel">
@@ -89,6 +138,14 @@ $isContact = false;
                         En tant qu'infirmière au pool, j'ai travaillé dans plusieurs services en fonction des besoins de l'hôpital.
                         Chacun demandant des soins techniques, des connaissances de protocoles et procédures différents.
                     </p>
+                    <ul>
+                        <li>
+                            Changement fréquent de service
+                        </li>
+                        <li>
+                            Bonne capacité d'adaptation, réactivité
+                        </li>
+                    </ul>
                 </article>
             </section>
 
@@ -99,7 +156,10 @@ $isContact = false;
                     </h3>
                     <ul>
                         <li>
-                            <strong>Bachelor IT</strong> - La Plateforme_ - <em>rentrée octobre 2024</em>
+                            <strong>Bachelor IT</strong> - La Plateforme_ - <em>2024 - 2027 (en cours)</em>
+                            <p>Pédagogie par projet basée sur la résolution de problématiques concrètes en autonomie</br>
+                                Formation de 3 ans délivrant un <em>titre RNCP 6 Concepteur développeur d'applications (équivalent BAC +3)</em>
+                            </p>
                         </li>
                         <li>
                             <strong>Diplôme d'Etat Infirmier</strong> - <em>2019</em>

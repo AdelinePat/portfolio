@@ -14,14 +14,137 @@ $isContact = false;
 
     <script defer src="script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/boxicons/css/boxicons.min.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="./images/Logo AP.ico">
     <title>Portfolio</title>
 </head>
 <body>
     <?php require_once(__DIR__ . '/header.php'); ?>
-
+    <!-- <i class='bx bx-filter-alt'></i> -->
+    <!-- <i class='bx bx-filter' ></i> -->
+    <!-- <i class="fa-solid fa-filter"></i>  -->
+     
+    <!-- <strong><a href="https://boxicons.com/">Boxicons</a></strong> -->
     <main>
+        <section id="filter_nav">
+            <h2 class="filter_nav-title-h2"><span class="filter_nav-title">Filtrer <i class='bx bx-filter-alt'></i></span><span class="filter_nav-number"></span></h2>
+            <article class="filter_nav-articles">
+                <label for="all" class="filter_items">Tous</label><input type="checkbox" id="all" />
+
+                <label for="git" class="filter_items">Git</label><input type="checkbox" id="git" />
+                <label for="teamwork" class="filter_items">Travail d'équipe</label><input type="checkbox" id="teamwork" />
+                <label for="poo" class="filter_items">POO</label><input type="checkbox" id="poo"/>
+                <label for="python" class="filter_items">Python</label><input type="checkbox" id="python"/>
+                <label for="pygame" class="filter_items">Pygame</label><input type="checkbox" id="pygame"/>
+                <label for="algorithmique" class="filter_items">Algorithmique</label><input type="checkbox" id="algorithmique"/>
+                <label for="css" class="filter_items">CSS</label><input type="checkbox" id="css" />
+                <label for="html" class="filter_items">HTML</label><input type="checkbox" id="html"/>
+                <label for="js" class="filter_items">JavaScript</label><input type="checkbox" id="js"/>
+                <label for="php" class="filter_items">PHP</label><input type="checkbox" id="php" />
+                <label for="figma" class="filter_items">Figma</label><input type="checkbox" id="figma"/>
+                <label for="linux" class="filter_items">Linux</label><input type="checkbox" id="linux" />
+                <label for="virtualisation" class="filter_items">Virtualisation</label><input type="checkbox" id="virtualisation" />
+            </article>
+
+        </section>
         <section class="portfolio-gallery">
+            <article>
+                <figure>
+                    <img src="https://github.com/AdelinePat/typing-game/blob/main/main_menu.jpg?raw=true" alt="image du jeu fruit ninja">
+                </figure>
+                <div class="content">
+                    <h2>Fruit Ninja</h2>
+                    <p>
+                        Réalisation d'un jeu type Fruit Ninja avec python en utilisant l'interface graphique Pygame. Lorsque la touche du clavier correspondante a été appuyée, le fruit est coupé.
+                    </p>
+                    <p>
+                        Création de plusieurs classes (fruits, boutons) et utilisation de l'héritage (bouton_image hérite de bouton)
+                    </p>
+                    <div class="portfolio-link">
+                        <button><a href="https://github.com/AdelinePat/typing-game" target="_blank">Code source</a></button>
+                    </div>
+                    <div class="skills">
+                        <strong><i class="fa-brands fa-git-alt"></i> Git</strong>
+                        <strong><i class="fa-brands fa-python"></i> Python</strong>
+                        <strong><i class="fa-sharp fa-solid fa-code"></i> POO</strong>
+                        <strong> Pygame</strong>
+                        <strong>Algorithmique</strong>
+                        <strong><i class="fa-solid fa-users"></i> Travail d'équipe</strong>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <figure>
+                    <img src="https://github.com/AdelinePat/hangman/blob/main/main_preview.png?raw=true" alt="image du jeu du pendu">
+                </figure>
+                <div class="content">
+                    <h2>Jeu du pendu</h2>
+                    <p>
+                        Réalisation d'un jeu du pendu avec python en utilisant l'interface graphique Pygame.
+                    </p>
+                    <p>
+                        Utilisation d'un fichier Json pour enregistrer les scores et les supprimer.
+                    </p>
+                    <div class="portfolio-link">
+                        <button><a href="https://github.com/AdelinePat/hangman" target="_blank">Code source</a></button>
+                    </div>
+                    <div class="skills">
+                        <strong><i class="fa-brands fa-git-alt"></i> Git</strong>
+                        <strong><i class="fa-brands fa-python"></i> Python</strong>
+                        <strong>Pygame</strong>
+                        <strong>Algorithmique</strong>
+                        <strong><i class="fa-solid fa-users"></i> Travail d'équipe</strong>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <figure>
+                    <img src="" alt="image de calculatrice">
+                </figure>
+                <div class="content">
+                    <h2>Ma calculatrice</h2>
+                    <p>
+                        Réalisation d'une calculatrice dans le terminal avec python. Prise en compte d'un input géré par une regex.
+                    </p>
+                    <p>
+                        Utilisation du try except, gestion des diverses exceptions possible (ZeroDivisionError, si la regex renvoie un nombre sous la forme d'adresse IP)
+                    </p>
+                    <div class="portfolio-link">
+                        <button><a href="https://github.com/AdelinePat/my_calculator" target="_blank">Code source</a></button>
+                    </div>
+                    <div class="skills">
+                        <strong><i class="fa-brands fa-git-alt"></i> Git</strong>
+                        <strong><i class="fa-brands fa-python"></i> Python</strong>
+                        <strong>Algorithmique</strong>
+                        <strong>Regex</strong>
+                        <strong><i class="fa-solid fa-users"></i> Travail d'équipe</strong>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <figure>
+                    <img src="" alt="image de AzerType">
+                </figure>
+                <div class="content">
+                    <h2>AzerType</h2>
+                    <p>
+                        Création d'un jeu pour s'entraîner à taper au clavier dans le cadre d'un cours OpenClassRooms : <a href="https://openclassrooms.com/fr/courses/7696886-apprenez-a-programmer-avec-javascript">Apprenez à programmer avec JavaScript</a>
+                    </p>
+                    <p>Le cours se concentrait sur l'apprentissage du javascript. Le CSS et HTML a donc été fourni par OpenClassRooms</p>
+                    <div class="portfolio-link">
+                        <button><a href="https://github.com/AdelinePat/AzerType" target="_blank">Code source</a></button>
+                    </div>
+                    <div class="skills">
+                        <strong><i class="fa-brands fa-js"></i> Javascript</strong>
+                        <strong>Regex</strong>
+                    </div>
+                    </div>
+                </div>
+            </article>
+
             <article>
                 <figure>
                     <img src="https://raw.githubusercontent.com/AdelinePat/tictactoe/refs/heads/main/tictactoe.jpg" alt="image du jeu du morpion">
@@ -63,6 +186,8 @@ $isContact = false;
                         <strong><i class="fa-brands fa-css3-alt"></i> CSS</strong>
                         <strong><i class="fa-brands fa-figma"></i> Figma</strong>
                         <strong><i class="fa-brands fa-js"></i> Javascript</strong>
+                        <strong><i class="fa-brands fa-php"></i> PHP</strong>
+                        <strong><i class="fa-brands fa-sass"></i> Sass</strong>
                     </div>
                 </div>
             </article>
