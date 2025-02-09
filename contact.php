@@ -6,7 +6,7 @@ $isContact = true;
 $errors = [];
 $errorMessage = '';
 
-$secret = 'clé-privée';
+$secret = 'clé privée';
 
 if (!empty($_POST)) {
     $name = $_POST['nom'];
@@ -75,7 +75,9 @@ if (!empty($_POST)) {
     <link rel="stylesheet" href="style.css">
 
     <script defer src="script.js"></script>
-    
+    <script defer src="https://www.google.com/recaptcha/api.js"></script>
+    <script defer src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+    <script defer src="contact.js"></script>
     
     <!-- <script defer src="contact.js"></script> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -88,7 +90,7 @@ if (!empty($_POST)) {
         <section class="portfolio-contact">
             <article>
                 <!-- <h2>Contact</h2> -->
-                <script src="https://www.google.com/recaptcha/api.js"></script>
+                
                 <form method="POST" action="contact.php" id="contact-form">
                     <?php echo((!empty($errorMessage)) ? $errorMessage : '') ?>    
                     <!-- Champs de base obligatoires : -->                
@@ -128,7 +130,7 @@ if (!empty($_POST)) {
                         <!-- Bouton de soumission : -->
                             <button
                                 class="g-recaptcha"
-                                data-sitekey="clé-publique"
+                                data-sitekey="clé publique"
                                 data-callback="onRecaptchaSuccess"
                                 type="submit">
                                 Envoyer
@@ -136,57 +138,8 @@ if (!empty($_POST)) {
                             <p>Tous les champs sont obligatoires</p>
                     </fieldset>
                 </form>
-                <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
-                <script>
-                    const constraints = {
-                        name: {
-                            presence: {allowEmpty: false}
-                        },
-                        firstname: {
-                            presence: {allowEmpty: false}
-                        },
-                        email: {
-                            presence: {allowEmpty: false},
-                            email: true
-                        },
-                        subject: {
-                            presence: {allowEmpty: false}
-                        },
-                        message: {
-                            presence: {allowEmpty: false}
-                        }
-                    };
-
-                    const form = document.getElementById('contact-form');
-
-                    form.addEventListener('submit', function (event) {
-                        const formValues = {
-                            name: form.elements.nom.value,
-                            firstname : form.elements.prenom.value,
-                            email: form.elements.email.value,
-                            subject : form.elements.objet.value,
-                            message: form.elements.message_content.value
-                        };
-
-                        const errors = validate(formValues, constraints);
-
-                        if (errors) {
-                            event.preventDefault();
-                            const errorMessage = Object
-                                .values(errors)
-                                .map(function (fieldValues) {
-                                    return fieldValues.join(', ')
-                                })
-                                .join("\n");
-
-                            alert(errorMessage);
-                        }
-                    }, false);
-
-                    function onRecaptchaSuccess () {
-                        document.getElementById('contact-form').submit()
-                    }
-                </script>
+                
+                
             </article>
 
         </section>
