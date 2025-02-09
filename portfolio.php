@@ -30,37 +30,22 @@ $isContact = false;
         <section id="filter_nav">
             <h2 class="filter_nav-title-h2"><span class="filter_nav-title">Filtrer <i class='bx bx-filter-alt'></i></span><span class="filter_nav-number"></span></h2>
             <article class="filter_nav-articles">
-                <!-- <label for="all" class="filter_items">Tous</label><input type="checkbox" id="all"/>
-
-                <label for="git" class="filter_items">Git</label><input type="checkbox" id="git" />
-                <label for="teamwork" class="filter_items">Travail d'équipe</label><input type="checkbox" id="teamwork"/>
-                <label for="poo" class="filter_items">POO</label><input type="checkbox" id="poo"/>
-                <label for="python" class="filter_items">Python</label><input type="checkbox" id="python"/>
-                <label for="pygame" class="filter_items">Pygame</label><input type="checkbox" id="pygame"/>
-                <label for="algorithmique" class="filter_items">Algorithmique</label><input type="checkbox" id="algorithmique"/>
-                <label for="css" class="filter_items">CSS</label><input type="checkbox" id="css" />
-                <label for="html" class="filter_items">HTML</label><input type="checkbox" id="html"/>
-                <label for="js" class="filter_items">JavaScript</label><input type="checkbox" id="js"/>
-                <label for="php" class="filter_items">PHP</label><input type="checkbox" id="php" />
-                <label for="figma" class="filter_items">Figma</label><input type="checkbox" id="figma"/>
-                <label for="linux" class="filter_items">Linux</label><input type="checkbox" id="linux" />
-                <label for="virtualisation" class="filter_items">Virtualisation</label><input type="checkbox" id="virtualisation" /> -->
-
-                <label id="all" class="filter_items reset active">Tous</label>
-
-                <label id="git" class="filter_items">Git</label>
-                <label id="teamwork" class="filter_items">Travail d'équipe</label>
-                <label id="poo" class="filter_items">POO</label>
-                <label id="python" class="filter_items">Python</label>
-                <label id="pygame" class="filter_items">Pygame</label>
-                <label id="algorithmique" class="filter_items">Algorithmique</label>
-                <label id="css" class="filter_items">CSS</label>
-                <label id="html" class="filter_items">HTML</label>
-                <label id="js" class="filter_items">JavaScript</label>
-                <label id="php" class="filter_items">PHP</label>
-                <label id="figma" class="filter_items">Figma</label>
-                <label id="linux" class="filter_items">Linux</label>
-                <label id="virtualisation" class="filter_items">Virtualisation</label>
+                <ul>
+                    <li id="all" class="filter_items reset active">Tous</li>
+                    <li id="git" class="filter_items">Git</li>
+                    <li id="teamwork" class="filter_items">Travail d'équipe</li>
+                    <li id="poo" class="filter_items">POO</li>
+                    <li id="python" class="filter_items">Python</li>
+                    <li id="pygame" class="filter_items">Pygame</li>
+                    <li id="algorithmique" class="filter_items">Algorithmique</li>
+                    <li id="css" class="filter_items">CSS</li>
+                    <li id="html" class="filter_items">HTML</li>
+                    <li id="js" class="filter_items">JavaScript</li>
+                    <li id="php" class="filter_items">PHP</li>
+                    <li id="figma" class="filter_items">Figma</li>
+                    <li id="linux" class="filter_items">Linux</li>
+                    <li id="virtualisation" class="filter_items">Virtualisation</li>
+                </ul>
             </article>
 
         </section>

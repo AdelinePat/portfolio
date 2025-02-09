@@ -419,14 +419,22 @@ body {
         /* position: relative; */
         /* display: flex; */
         flex-flow: row wrap;
-        justify-content: flex-end;
-        align-content: flex-end;
-        gap: 8px;
+        
+        
         /* top: -50px; */
         z-index:0;
         transition: all 0.3s ease-out;
         /* allow-discrete ? */
         /* transition-property: opacity, display; */
+
+        ul {
+            gap: 8px;
+            list-style: none;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-content: flex-end;
+        }
         
     }
 
