@@ -1,4 +1,3 @@
-
 // Creating filter nav
 let all_article_portfolio = document.querySelectorAll(".portfolio-gallery article")
 let number_articles = all_article_portfolio.length
