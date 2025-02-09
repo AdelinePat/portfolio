@@ -28,8 +28,8 @@ $isContact = false;
                 <p>
                     Après avoir travaillé 3 ans dans le domaine de la santé en tant qu'infirmière,
                     j'ai décidé d'entreprendre une reconversion vers l'informatique. Actuellement
-                    en préparation d'un Bachelor IT à La Plateforme_ , je suis à la recherche d'une
-                    alternance d'une <strong>durée de 2 ans à partir de septembre 2025</strong>.
+                    en préparation d'un Bachelor IT à La Plateforme_ , je suis <strong>à la recherche d'une
+                    alternance d'une durée de 2 ans à partir de septembre 2025</strong>.
                     Cette alternance me permettra de m'engager sur ce nouveau parcours professionnel.
                 </p>
             </article>
