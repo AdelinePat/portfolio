@@ -52,7 +52,7 @@ $isContact = false;
         <section class="portfolio-gallery">
             <article class="all git python poo pygame algorithmique teamwork">
                 <figure>
-                    <img src="https://github.com/AdelinePat/typing-game/blob/main/main_menu.jpg?raw=true" alt="image du jeu fruit ninja">
+                    <img src="./images/fruit_ninja_project.jpg" alt="image du jeu fruit ninja">
                 </figure>
                 <div class="content">
                     <h2>Fruit Ninja</h2>
@@ -78,7 +78,7 @@ $isContact = false;
 
             <article class="all git python pygame algorithmique teamwork">
                 <figure>
-                    <img src="https://github.com/AdelinePat/hangman/blob/main/main_preview.png?raw=true" alt="image du jeu du pendu">
+                    <img src="./images/hangman_project.jpg" alt="image du jeu du pendu">
                 </figure>
                 <div class="content">
                     <h2>Jeu du pendu</h2>
@@ -103,7 +103,7 @@ $isContact = false;
 
             <article class="all git python algorithmique regex teamwork">
                 <figure>
-                    <img src="" alt="image de calculatrice">
+                    <img src="./images/calculator_project1.jpg" alt="image de calculatrice">
                 </figure>
                 <div class="content">
                     <h2>Ma calculatrice</h2>
@@ -128,7 +128,7 @@ $isContact = false;
 
             <article class="all js regex">
                 <figure>
-                    <img src="" alt="image de AzerType">
+                    <img src="./images/azertype_project.jpg" alt="image de AzerType">
                 </figure>
                 <div class="content">
                     <h2>AzerType</h2>
