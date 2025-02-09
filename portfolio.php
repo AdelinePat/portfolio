@@ -13,6 +13,7 @@ $isContact = false;
     <link rel="stylesheet" href="style.css">
 
     <script defer src="script.js"></script>
+    <script defer src="./portfolio_filter.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://unpkg.com/boxicons/css/boxicons.min.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="./images/Logo AP.ico">
@@ -48,7 +49,7 @@ $isContact = false;
 
         </section>
         <section class="portfolio-gallery">
-            <article>
+            <article class="git python poo pygame algorithmique">
                 <figure>
                     <img src="https://github.com/AdelinePat/typing-game/blob/main/main_menu.jpg?raw=true" alt="image du jeu fruit ninja">
                 </figure>
@@ -74,7 +75,7 @@ $isContact = false;
                 </div>
             </article>
 
-            <article>
+            <article class="git python pygame algorithmique teamwork">
                 <figure>
                     <img src="https://github.com/AdelinePat/hangman/blob/main/main_preview.png?raw=true" alt="image du jeu du pendu">
                 </figure>
@@ -99,7 +100,7 @@ $isContact = false;
                 </div>
             </article>
 
-            <article>
+            <article class="git python algorithmique regex teamwork">
                 <figure>
                     <img src="" alt="image de calculatrice">
                 </figure>
@@ -109,7 +110,7 @@ $isContact = false;
                         Réalisation d'une calculatrice dans le terminal avec python. Prise en compte d'un input géré par une regex.
                     </p>
                     <p>
-                        Utilisation du try except, gestion des diverses exceptions possible (ZeroDivisionError, si la regex renvoie un nombre sous la forme d'adresse IP)
+                        Utilisation du try except, gestion des diverses exceptions possible (ZeroDivisionError, gestion des erreurs possible après traitement par la regex)
                     </p>
                     <div class="portfolio-link">
                         <button><a href="https://github.com/AdelinePat/my_calculator" target="_blank">Code source</a></button>
@@ -124,7 +125,7 @@ $isContact = false;
                 </div>
             </article>
 
-            <article>
+            <article class="javascript regex">
                 <figure>
                     <img src="" alt="image de AzerType">
                 </figure>
@@ -145,7 +146,7 @@ $isContact = false;
                 </div>
             </article>
 
-            <article>
+            <article class="git python algorithmique">
                 <figure>
                     <img src="https://raw.githubusercontent.com/AdelinePat/tictactoe/refs/heads/main/tictactoe.jpg" alt="image du jeu du morpion">
                 </figure>
@@ -168,7 +169,7 @@ $isContact = false;
                 </div>
             </article>
 
-            <article>
+            <article class="git html css figma javascript php sass">
                 <figure>
                     <img src="./images/preview_resume.jpg" alt="Capture d'écran du projet Portfolio">
                 </figure>
@@ -192,7 +193,7 @@ $isContact = false;
                 </div>
             </article>
 
-            <article>
+            <article class="git html css figma javascript">
                 <figure>
                     <img src="https://raw.githubusercontent.com/AdelinePat/fansite/refs/heads/main/preview_fansite1_blackpink.jpg" alt="Capture d'écran du projet Blackpink">
                 </figure>
@@ -200,6 +201,9 @@ $isContact = false;
                     <h2>BlackPink</h2>
                     <p>
                         Création d'un fansite sur blackpink, projet individuel lié au projet Fansite en groupe.
+                    </p>
+                    <p>
+                        Utilisation des pseudo classes et des transitions
                     </p>
                     <div class="portfolio-link">
                         <button><a href="https://github.com/AdelinePat/fansite" target="_blank">Code source</a></button>
@@ -215,7 +219,7 @@ $isContact = false;
                 </div>
             </article>
 
-            <article>
+            <article class="git hmtl css figma javascript teamwork">
                 <figure>
                         <img src="https://raw.githubusercontent.com/AdelinePat/fansite/refs/heads/main/preview_index.jpg" alt="Capture d'écran du projet Fansite">
                 </figure>
@@ -223,6 +227,9 @@ $isContact = false;
                     <h2>Fansite</h2>
                     <p>
                         Réalisation d'un site en groupe rassemblant 3 autres sites (un par membre du groupe). 
+                    </p>
+                    <p>
+                        Utilisation de flexbox ainsi que des pseudo class ::before et ::after
                     </p>
                     <div class="portfolio-link">
                         <button><a href="https://github.com/AdelinePat/fansite" target="_blank">Code source</a></button>
@@ -239,7 +246,7 @@ $isContact = false;
                 </div>
             </article>
 
-            <article>
+            <article class="git html css figma javascript">
                 <figure>
                     <img src="https://raw.githubusercontent.com/AdelinePat/webdesign-fleuriste/refs/heads/main/preview-desktop.jpg" alt="Capture d'écran du projet Bloom Petals">
                 </figure>
@@ -262,7 +269,7 @@ $isContact = false;
                 </div>
             </article>
 
-            <article>
+            <article class="linux virtualisation">
                 <figure>
                     <img src="./images/component.jpg" alt="Image représentant le projet hardware et virtualisation">
                 </figure>

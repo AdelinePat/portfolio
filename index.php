@@ -54,6 +54,12 @@ $isContact = false;
                         <i class="fa-brands fa-js"></i> <span>JavaScript</span>
                     </li>
                     <li>
+                        <i class="fa-brands fa-sass"></i> <span>Sass</span>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-php"></i> <span>PHP</span>
+                    </li>
+                    <li>
                         <i class="fa-brands fa-figma"></i> <span>Figma</span>
                     </li>
                     <li>
@@ -62,6 +68,7 @@ $isContact = false;
                     <li>
                         <i class="fa-brands fa-elementor"></i> <span>Elementor</span>
                     </li>
+                    
                 </ul>
             <!-- </article> -->
 

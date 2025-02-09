@@ -705,9 +705,9 @@ body {
                     flex-flow: column nowrap;
                     gap: 32px;
                     /* background: black; */
-                    textarea {
+                    /* textarea { */
                         /* background: white; */         
-                    }
+                    /* } */
                 }
 
                 #validation {
@@ -1122,10 +1122,10 @@ body {
                             padding-top: 24px; */
                             text-align: center;
                         }
-
+/* 
                         .skills {
 
-                        }
+                        } */
             
                     }
 
