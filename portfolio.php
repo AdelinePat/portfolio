@@ -30,10 +30,10 @@ $isContact = false;
         <section id="filter_nav">
             <h2 class="filter_nav-title-h2"><span class="filter_nav-title">Filtrer <i class='bx bx-filter-alt'></i></span><span class="filter_nav-number"></span></h2>
             <article class="filter_nav-articles">
-                <label for="all" class="filter_items">Tous</label><input type="checkbox" id="all" />
+                <!-- <label for="all" class="filter_items">Tous</label><input type="checkbox" id="all"/>
 
                 <label for="git" class="filter_items">Git</label><input type="checkbox" id="git" />
-                <label for="teamwork" class="filter_items">Travail d'équipe</label><input type="checkbox" id="teamwork" />
+                <label for="teamwork" class="filter_items">Travail d'équipe</label><input type="checkbox" id="teamwork"/>
                 <label for="poo" class="filter_items">POO</label><input type="checkbox" id="poo"/>
                 <label for="python" class="filter_items">Python</label><input type="checkbox" id="python"/>
                 <label for="pygame" class="filter_items">Pygame</label><input type="checkbox" id="pygame"/>
@@ -44,12 +44,28 @@ $isContact = false;
                 <label for="php" class="filter_items">PHP</label><input type="checkbox" id="php" />
                 <label for="figma" class="filter_items">Figma</label><input type="checkbox" id="figma"/>
                 <label for="linux" class="filter_items">Linux</label><input type="checkbox" id="linux" />
-                <label for="virtualisation" class="filter_items">Virtualisation</label><input type="checkbox" id="virtualisation" />
+                <label for="virtualisation" class="filter_items">Virtualisation</label><input type="checkbox" id="virtualisation" /> -->
+
+                <label id="all" class="filter_items reset active">Tous</label>
+
+                <label id="git" class="filter_items">Git</label>
+                <label id="teamwork" class="filter_items">Travail d'équipe</label>
+                <label id="poo" class="filter_items">POO</label>
+                <label id="python" class="filter_items">Python</label>
+                <label id="pygame" class="filter_items">Pygame</label>
+                <label id="algorithmique" class="filter_items">Algorithmique</label>
+                <label id="css" class="filter_items">CSS</label>
+                <label id="html" class="filter_items">HTML</label>
+                <label id="js" class="filter_items">JavaScript</label>
+                <label id="php" class="filter_items">PHP</label>
+                <label id="figma" class="filter_items">Figma</label>
+                <label id="linux" class="filter_items">Linux</label>
+                <label id="virtualisation" class="filter_items">Virtualisation</label>
             </article>
 
         </section>
         <section class="portfolio-gallery">
-            <article class="git python poo pygame algorithmique">
+            <article class="all git python poo pygame algorithmique teamwork">
                 <figure>
                     <img src="https://github.com/AdelinePat/typing-game/blob/main/main_menu.jpg?raw=true" alt="image du jeu fruit ninja">
                 </figure>
@@ -75,7 +91,7 @@ $isContact = false;
                 </div>
             </article>
 
-            <article class="git python pygame algorithmique teamwork">
+            <article class="all git python pygame algorithmique teamwork">
                 <figure>
                     <img src="https://github.com/AdelinePat/hangman/blob/main/main_preview.png?raw=true" alt="image du jeu du pendu">
                 </figure>
@@ -100,7 +116,7 @@ $isContact = false;
                 </div>
             </article>
 
-            <article class="git python algorithmique regex teamwork">
+            <article class="all git python algorithmique regex teamwork">
                 <figure>
                     <img src="" alt="image de calculatrice">
                 </figure>
@@ -125,7 +141,7 @@ $isContact = false;
                 </div>
             </article>
 
-            <article class="javascript regex">
+            <article class="all js regex">
                 <figure>
                     <img src="" alt="image de AzerType">
                 </figure>
@@ -146,7 +162,7 @@ $isContact = false;
                 </div>
             </article>
 
-            <article class="git python algorithmique">
+            <article class="all git python algorithmique">
                 <figure>
                     <img src="https://raw.githubusercontent.com/AdelinePat/tictactoe/refs/heads/main/tictactoe.jpg" alt="image du jeu du morpion">
                 </figure>
@@ -161,7 +177,7 @@ $isContact = false;
                     <div class="portfolio-link">
                         <button><a href="https://github.com/AdelinePat/tictactoe" target="_blank">Code source</a></button>
                     </div>
-                    <div class="skills">
+                    <div class="all skills">
                         <strong><i class="fa-brands fa-git-alt"></i> Git</strong>
                         <strong><i class="fa-brands fa-python"></i> Python</strong>
                         <strong>Algorithmique</strong>
@@ -169,7 +185,7 @@ $isContact = false;
                 </div>
             </article>
 
-            <article class="git html css figma javascript php sass">
+            <article class="all git html css figma js php sass">
                 <figure>
                     <img src="./images/preview_resume.jpg" alt="Capture d'écran du projet Portfolio">
                 </figure>
@@ -193,7 +209,7 @@ $isContact = false;
                 </div>
             </article>
 
-            <article class="git html css figma javascript">
+            <article class="all git html css figma js">
                 <figure>
                     <img src="https://raw.githubusercontent.com/AdelinePat/fansite/refs/heads/main/preview_fansite1_blackpink.jpg" alt="Capture d'écran du projet Blackpink">
                 </figure>
@@ -219,7 +235,7 @@ $isContact = false;
                 </div>
             </article>
 
-            <article class="git hmtl css figma javascript teamwork">
+            <article class="all git hmtl css figma js teamwork">
                 <figure>
                         <img src="https://raw.githubusercontent.com/AdelinePat/fansite/refs/heads/main/preview_index.jpg" alt="Capture d'écran du projet Fansite">
                 </figure>
@@ -246,7 +262,7 @@ $isContact = false;
                 </div>
             </article>
 
-            <article class="git html css figma javascript">
+            <article class="all git html css figma js">
                 <figure>
                     <img src="https://raw.githubusercontent.com/AdelinePat/webdesign-fleuriste/refs/heads/main/preview-desktop.jpg" alt="Capture d'écran du projet Bloom Petals">
                 </figure>
@@ -269,7 +285,7 @@ $isContact = false;
                 </div>
             </article>
 
-            <article class="linux virtualisation">
+            <article class="all linux virtualisation">
                 <figure>
                     <img src="./images/component.jpg" alt="Image représentant le projet hardware et virtualisation">
                 </figure>

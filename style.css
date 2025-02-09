@@ -475,14 +475,19 @@ body {
         padding: 0px 32px;
         margin: 48px auto;
 
+        .active {
+            display: flex;
+        }
+
         article {
+            display: none;
             background: #202020;
             box-shadow: 0px 0px 8px rgba(0,0,0,0.4);
             box-sizing: border-box;
             width: 100%;
             border-radius: 25px;
             /* padding: 16px; */
-            display: flex;
+            /* display: flex; */
             transition: all 0.3s ease-out;
 
             p a {color: var(--primary-color);
@@ -623,6 +628,19 @@ body {
             max-width: 1300px;
             margin: auto;
 
+            .error_messages {
+                color: var(--secondary-color);
+                font-weight: bold;
+                font-family: "syne";
+                font-variant: small-caps;
+                font-size: 0.8em;
+                letter-spacing: 1pt;
+                display: block;
+                padding: 0px 24px;
+                line-height: 1.5em;
+                text-align: center;
+            }
+
             form {
                 /* display: flex; */
                 font-family: "inter";
@@ -643,6 +661,7 @@ body {
                     transition: 0.3s all ease-in;
 
                     &:hover {
+                        cursor: pointer;
                         transform: scale(1.1);
 
                         filter: hue-rotate(90deg);
@@ -677,7 +696,6 @@ body {
 
                         &:hover {
                             background: rgba(126, 126, 126, 0.1);
-
                         }
 
                         input:-internal-autofill-selected {
@@ -709,16 +727,22 @@ body {
                         /* background: white; */         
                     /* } */
                 }
+                
+                .form_info {
+                    font-size: 10pt;
+                    opacity: 0.4;
+                    font-style: italic;
+                    text-align: right;
+                    margin: 0px 16px;
+
+                }
 
                 #validation {
                     display: flex;
+                    flex-direction: row-reverse;
                     justify-content: space-between;
 
-                    p {
-                        font-size: 10pt;
-                        opacity: 0.4;
-                        font-style: italic;
-                    }
+                    
                 }
             }
         }
