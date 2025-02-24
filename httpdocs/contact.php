@@ -3,10 +3,33 @@ $isResume = false;
 $isPortfolio = false;
 $isContact = true;
 
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+require 'vendor/autoload.php'; // Adjust the path as needed if you're not using Composer
+
+$mail = new PHPMailer(true);
+
+//Server settings
+$mail->isSMTP();                                            // Send using SMTP
+$mail->Host       = 'smtp.gmail.com';                     // Set the SMTP server to send through
+$mail->SMTPAuth   = true;
+$ini = parse_ini_file('../ini_folder/file.ini', true);
+
+$mail->Username = $ini['email']['username'];
+$mail->Password = $ini['email']['password'];
+                                   // Enable SMTP authentication
+                       // SMTP password
+$mail->SMTPSecure = 'tls'; // Enable TLS encryption
+$mail->Port       = 587;                                    // TCP port to connect to
+
+
 $errors = [];
 $errorMessage = '';
 
-$secret = 'clé privée';
+$secret = $ini['captcha']['secret'];
 
 if (!empty($_POST)) {
     $name = $_POST['nom'];
@@ -24,45 +47,68 @@ if (!empty($_POST)) {
       }
   
     if (empty($name)) {
-        $errors[] = 'Name is empty';
+        $errors[] = 'Le champ "nom" est vide';
     }
 
     if (empty($firstname)) {
-        $errors[] = 'Firstname is empty';
+        $errors[] = 'Le champ "prénom" est vide';
     }
 
     if (empty($email)) {
-        $errors[] = 'Email is empty';
+        $errors[] = 'Le champ "email" est vide';
     } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $errors[] = 'Email is invalid';
     }
 
     if (empty($object)) {
-        $errors[] = 'Object is empty';
+        $errors[] = 'Le champ "objet" est vide';
     }
 
     if (empty($message)) {
-        $errors[] = 'Message is empty';
+        $errors[] = 'Vous n\'avez pas écrit de message';
     }
 
     if (!empty($errors)) {
         $allErrors = join('<br/>', $errors);
-        $errorMessage = "<p style='color: red;'>{$allErrors}</p>";
+        $errorMessage = "<p>{$allErrors}</p>";
     } else {
         $toEmail = 'adeline.patenne@laplateforme.io';
-        $emailSubject = 'New email from your contact form';
+        $emailSubject = $object;
         $headers = ['From' => $email, 'Reply-To' => $email, 'Content-type' => 'text/html; charset=iso-8859-1'];
 
-        $bodyParagraphs = ["Nom: {$name}", "prénom: {$firstname}", "Email: {$email}", "Objet: {$object}", "Message:", $message];
+        $bodyParagraphs = ["Nom: {$name}", "prénom: {$firstname}\n", "Email: {$email}\n", "Objet: {$object}\n\n", "Message:", $message];
         $body = join(PHP_EOL, $bodyParagraphs);
 
-        if (mail($toEmail, $emailSubject, $body, $headers)) {
-            header('Location: contactform_response.php');
-        } else {
-            $errorMessage = "<p style='color: red;'>Oops, something went wrong. Please try again later</p>";
-        }
-    }
+        $mail -> addReplyTo($email, "{$name} {$firstname}");
+        $mail->setFrom($email, "{$name} {$firstname}");
+        $mail->addAddress($toEmail, 'Adeline');
 
+        // Sending plain text email
+        $mail->isHTML(false); // Set email format to plain text
+        $mail->Subject = $emailSubject;
+        $mail->Body = $body;
+
+        // Send the email
+        try {
+            if($mail->send()){
+                $errorMessage = "<p>Message bien envoyé</p>";
+                
+            } else {
+                throw exception("<p>Il y a eu une erreur, veuillez réessayer plus tard</p>");
+            }
+        } catch (exception $e) {$errorMessage = $e -> getMessage();}
+        // if(!$mail->send()){
+        //     $errorMessage = "<p>Oops, something went wrong. Please try again later</p>";
+        // } else {
+        //     $errorMessage = "<p>Message send</p>";
+        // }
+
+        // if (mail($toEmail, $emailSubject, $body, $headers)) {
+        //     header('Location: contactform_response.php');
+        // } else {
+        //     $errorMessage = "<p style='color: red;'>Oops, something went wrong. Please try again later</p>";
+        // }
+    }
 }
 
 ?>
@@ -92,7 +138,7 @@ if (!empty($_POST)) {
                 <!-- <h2>Contact</h2> -->
                 
                 <form method="POST" action="contact.php" id="contact-form">
-                    <?php echo((!empty($errorMessage)) ? $errorMessage : '') ?>    
+                    <div class="error_messages"><?php echo((!empty($errorMessage)) ? $errorMessage : '') ?></div>
                     <!-- Champs de base obligatoires : -->                
                     <fieldset id="contacter">
                         <div>
@@ -103,11 +149,6 @@ if (!empty($_POST)) {
                             <label for="nom">Votre nom</label>
                             <input type="text" name="nom" id="nom" required>
                         </div>
-                        
-                        <!-- <div>
-                            <label for="telephone">Votre numéro de téléphone</label>
-                            <input type="tel" name="telephone" id="telephone" pattern="[0-9]{10}">
-                        </div> -->
                     </fieldset>
                     
                     <fieldset id="message">
@@ -123,20 +164,22 @@ if (!empty($_POST)) {
                             <label for="message_content">Votre message</label>
                             <textarea name="message_content" id="message_content" rows="6" required ></textarea>
                         </div>
-
+                        
                     </fieldset>
-
+                    <p class="form_info">Tous les champs sont obligatoires</p>
                     <fieldset id="validation">
                         <!-- Bouton de soumission : -->
                             <button
                                 class="g-recaptcha"
-                                data-sitekey="clé publique"
+                                data-sitekey= <?php
+                                echo $ini['captcha']['public']; 
+                                    ?>
                                 data-callback="onRecaptchaSuccess"
                                 type="submit">
                                 Envoyer
                             </button>
-                            <p>Tous les champs sont obligatoires</p>
                     </fieldset>
+                    
                 </form>
                 
                 

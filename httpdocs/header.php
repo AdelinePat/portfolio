@@ -21,7 +21,7 @@ if($isResume) {echo'resume';}
             <h1>
                 <span>Bonjour ! Je suis</span>
                 <strong>Adeline Patenne</strong>
-                <button class="contact-me"><a href="./contact.html">Contactez moi</a></button>
+                <button class="contact-me"><a href="./contact.php">Contactez moi</a></button>
             </h1>
         <?php elseif($isPortfolio) : ?>
             <h1>

@@ -50,6 +50,38 @@ $isContact = false;
 
         </section>
         <section class="portfolio-gallery">
+        <article class="all git python poo pygame algorithmique teamwork">
+                <figure>
+                    <img src="./images/pokemon_project.jpg" alt="image du jeu pokemon">
+                </figure>
+                <div class="content">
+                    <h2>Pokémon</h2>
+                    <p>
+                        Réalisation d'un jeu Pokémon en deux semaines. Créations d'une classe pokémon <strong>héritant</strong> d'évolution afin de gérer le gain d'expérience, de level up et l'évolution.
+                    </p>
+                    <p>
+                        Utilisation du modèle MVC (Model View Controller) afin de faire communiquer les classes et fichier back avec les classes et fichiers front
+                    </p>
+                    <p>
+                        Sauvegarde des données dans des json (traduction des objets en dictionnaire) puis instanciation des objets depuis les fichiers json
+                    </p>
+                    <p class="coming-soon">
+                        Février 2025
+                    </p>
+                    <div class="portfolio-link">
+                        <button><a href="https://github.com/AdelinePat/pokemon" target="_blank">Code source</a></button>
+                    </div>
+                    <div class="skills">
+                        <strong><i class="fa-brands fa-git-alt"></i> Git</strong>
+                        <strong><i class="fa-brands fa-python"></i> Python</strong>
+                        <strong><i class="fa-sharp fa-solid fa-code"></i> POO</strong>
+                        <strong> Pygame</strong>
+                        <strong>Algorithmique</strong>
+                        <strong><i class="fa-solid fa-users"></i> Travail d'équipe</strong>
+                    </div>
+                </div>
+            </article>
+
             <article class="all git python poo pygame algorithmique teamwork">
                 <figure>
                     <img src="./images/fruit_ninja_project.jpg" alt="image du jeu fruit ninja">
@@ -60,7 +92,10 @@ $isContact = false;
                         Réalisation d'un jeu type Fruit Ninja avec python en utilisant l'interface graphique Pygame. Lorsque la touche du clavier correspondante a été appuyée, le fruit est coupé.
                     </p>
                     <p>
-                        Création de plusieurs classes (fruits, boutons) et utilisation de l'héritage (bouton_image hérite de bouton)
+                        Création de plusieurs classes (fruits, boutons) et utilisation de l'<strong>héritage</strong> (bouton_image hérite de bouton)
+                    </p>
+                    <p class="coming-soon">
+                        Janvier 2025
                     </p>
                     <div class="portfolio-link">
                         <button><a href="https://github.com/AdelinePat/typing-game" target="_blank">Code source</a></button>
@@ -88,6 +123,9 @@ $isContact = false;
                     <p>
                         Utilisation d'un fichier Json pour enregistrer les scores et les supprimer.
                     </p>
+                    <p class="coming-soon">
+                        Janvier 2025
+                    </p>
                     <div class="portfolio-link">
                         <button><a href="https://github.com/AdelinePat/hangman" target="_blank">Code source</a></button>
                     </div>
@@ -113,6 +151,9 @@ $isContact = false;
                     <p>
                         Utilisation du try except, gestion des diverses exceptions possible (ZeroDivisionError, gestion des erreurs possible après traitement par la regex)
                     </p>
+                    <p class="coming-soon">
+                        Janvier 2025
+                    </p>
                     <div class="portfolio-link">
                         <button><a href="https://github.com/AdelinePat/my_calculator" target="_blank">Code source</a></button>
                     </div>
@@ -135,7 +176,15 @@ $isContact = false;
                     <p>
                         Création d'un jeu pour s'entraîner à taper au clavier dans le cadre d'un cours OpenClassRooms : <a href="https://openclassrooms.com/fr/courses/7696886-apprenez-a-programmer-avec-javascript">Apprenez à programmer avec JavaScript</a>
                     </p>
-                    <p>Le cours se concentrait sur l'apprentissage du javascript. Le CSS et HTML a donc été fourni par OpenClassRooms</p>
+                    <p>
+                        Le cours se concentrait sur l'apprentissage du javascript. Le CSS et HTML a donc été fourni par OpenClassRooms
+                    </p>
+                    <p>
+                        Utilisation du DOM (Document Object Model), modification du contenu html selon certaines conditions (au niveau du score), utilisation d'une regex pour le formulaire.
+                    </p>
+                    <p class="coming-soon">
+                        Décembre 2024
+                    </p>
                     <div class="portfolio-link">
                         <button><a href="https://github.com/AdelinePat/AzerType" target="_blank">Code source</a></button>
                     </div>
@@ -147,25 +196,34 @@ $isContact = false;
                 </div>
             </article>
 
-            <article class="all git python algorithmique">
+            <article class="all teamwork">
                 <figure>
-                    <img src="https://raw.githubusercontent.com/AdelinePat/tictactoe/refs/heads/main/tictactoe.jpg" alt="image du jeu du morpion">
+                    <img src="./images/kosphere_project.jpg" alt="image représentant le hackaton">
                 </figure>
                 <div class="content">
-                    <h2>Tic Tac Toe</h2>
+                    <h2>Hackaton - KoSphere</h2>
                     <p>
-                        Réalisation d'un jeu de morpion avec python, création d'un jeu joueur contre joueur et joueur contre bot. Première version du bot : random.
+                        Participation à un hackaton à la Plateforme_ . Idéation sur un sujet imposé : l'amélioration de l'utiisation des IoT au sein de notre centre de formation
+                    </p>
+                    <p>
+                        Echange des idées au sein d'une équipe de 4 à l'aide du crazy 8
+                    </p>
+                    <p>
+                        L'idée choisie est une machine à café connectée avec une application notifiant les utilisateurs si une machine est en panne, à nouveau en service et quelle quantité de quelle boisson se trouve dans la machine.<br>
+                        Le problème nous ayant poussé à choisir cette idée plutôt qu'une autre : les machines à café souvent en panne poussent les élèves à aller consommer en dehors de l'école, causant une perte de temps et de la mauvaise humeur lorsque l'utilisateur découvre que toutes les machines sont en pannes.
                     </p>
                     <p class="coming-soon">
-                        A venir : bot intelligent, interface graphique, tests automatisé.
+                        Décembre 2024
                     </p>
-                    <div class="portfolio-link">
-                        <button><a href="https://github.com/AdelinePat/tictactoe" target="_blank">Code source</a></button>
+                    <!-- <div class="portfolio-link">
+                        <button><a href="https://github.com/AdelinePat/AzerType" target="_blank">Code source</a></button>
+                    </div> -->
+                    <div class="skills">
+                        <!-- <strong><i class="fa-brands fa-js"></i> Javascript</strong>
+                        <strong>Regex</strong> -->
+                        <strong><i class="fa-solid fa-users"></i> Travail d'équipe</strong>
+                        <strong><i class="fa-solid fa-lightbulb"></i> Idéation</strong>
                     </div>
-                    <div class="all skills">
-                        <strong><i class="fa-brands fa-git-alt"></i> Git</strong>
-                        <strong><i class="fa-brands fa-python"></i> Python</strong>
-                        <strong>Algorithmique</strong>
                     </div>
                 </div>
             </article>
@@ -177,7 +235,17 @@ $isContact = false;
                 <div class="content">
                     <h2>CV et Portfolio</h2>
                     <p>
-                        Réalisation d'un CV et portfolio à mettre en ligne.
+                        Réalisation d'un CV et portfolio regrouppant mes projets scolaires et personnels.
+                    </p>
+                    <p>
+                        Utilisation du javascript pour la page portfolio afin de créer les filtres (utilisation de classList).
+                        Utilisation du php afin de n'avoir qu'un fichier pour le header et le modifier dans les 3 pages.
+                    </p>
+                    <p>
+                        Apprentissage de Sass en cours afin de rendre le CSS plus facile à maintenir
+                    </p>
+                    <p class="coming-soon">
+                        Décembre 2024 - Février 2025
                     </p>
                     <div class="portfolio-link">
                         <button><a href="https://github.com/AdelinePat/portfolio" target="_blank">Code source</a></button>
@@ -206,6 +274,9 @@ $isContact = false;
                     <p>
                         Utilisation des pseudo classes et des transitions
                     </p>
+                    <p class="coming-soon">
+                        Novembre 2024
+                    </p>
                     <div class="portfolio-link">
                         <button><a href="https://github.com/AdelinePat/fansite" target="_blank">Code source</a></button>
                         <button><a href="https://adelinepat.github.io/fansite/fansite1.html" target="_blank">Live demo</a></button>
@@ -232,6 +303,9 @@ $isContact = false;
                     <p>
                         Utilisation de flexbox ainsi que des pseudo class ::before et ::after
                     </p>
+                    <p class="coming-soon">
+                        Novembre 2024
+                    </p>
                     <div class="portfolio-link">
                         <button><a href="https://github.com/AdelinePat/fansite" target="_blank">Code source</a></button>
                         <button><a href="https://adelinepat.github.io/fansite/index.html" target="_blank">Live demo</a></button>
@@ -256,6 +330,12 @@ $isContact = false;
                     <p>
                         Premier projet HTML et CSS, réalisation d'un site pour une fleuriste nommée Bloom Petals.
                     </p>
+                    <p>
+                        Apprentissage des balises HTML5 et bonnes pratiques
+                    </p>
+                    <p class="coming-soon">
+                        Novembre 2024
+                    </p>
                     <div class="portfolio-link">
                         <button><a href="https://github.com/AdelinePat/webdesign-fleuriste" target="_blank">Code source</a></button>
                         <button><a href="#" target="_blank">Live demo</a></button>
@@ -270,6 +350,35 @@ $isContact = false;
                 </div>
             </article>
 
+            <article class="all git python algorithmique">
+                <figure>
+                    <img src="https://raw.githubusercontent.com/AdelinePat/tictactoe/refs/heads/main/tictactoe.jpg" alt="image du jeu du morpion">
+                </figure>
+                <div class="content">
+                    <h2>Tic Tac Toe</h2>
+                    <p>
+                        Réalisation d'un jeu de morpion avec python, création d'un jeu joueur contre joueur et joueur contre bot
+                    </p>
+                    <p>
+                        Première version du bot : l'algorithme cherche le premier emplacement vide disponible (en partant du haut à gauche en allant vers la droite et en bas) pour y placer son signe.
+                    </p>
+                    <p>
+                        Deuxième version du bot : l'algorithme liste tous les emplacements disponibles restants et choisi au hasard un emplacement avec le module random.
+                    </p>
+                    <p class="coming-soon">
+                        Novembre 2024
+                    </p>
+                    <div class="portfolio-link">
+                        <button><a href="https://github.com/AdelinePat/tictactoe" target="_blank">Code source</a></button>
+                    </div>
+                    <div class="all skills">
+                        <strong><i class="fa-brands fa-git-alt"></i> Git</strong>
+                        <strong><i class="fa-brands fa-python"></i> Python</strong>
+                        <strong>Algorithmique</strong>
+                    </div>
+                </div>
+            </article>
+
             <article class="all linux virtualisation">
                 <figure>
                     <img src="./images/component.jpg" alt="Image représentant le projet hardware et virtualisation">
@@ -278,6 +387,9 @@ $isContact = false;
                     <h2>Hardware et virtualisation</h2>
                     <p>
                         Projet dans le cadre de la formation La Plateforme_ . Apprentissage des différents composants hardware, utilisation de VMware, installation de windows 11 et linux.
+                    </p>
+                    <p class="coming-soon">
+                        Octobre 2024
                     </p>
                     <div class="skills">
                         <strong><i class="fa-brands fa-linux"></i> Linux</strong>
