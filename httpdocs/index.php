@@ -1,3 +1,9 @@
+<?php 
+$isResume = true;
+$isPortfolio = false;
+$isContact = false;
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -8,32 +14,13 @@
 
     <script defer src="script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/boxicons/css/boxicons.min.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="./images/Logo AP.ico">
     <title>Accueil</title>
 </head>
 <body>
     
-    <header class="header resume">
-        <nav class="navbar">
-            <img id="logo" src="./images/Logo AP.svg" alt="Logo de Adeline">
-            <div class="menu-phone">
-                <input type="checkbox" id="menu-hamburger">
-                <label for="menu-hamburger"></label>
-            </div>
-            <ul class="menu-items"> <!-- class="menu-items"-->
-                <li><a class="active" href="./index.html">CV</a></li>
-                <li><a href="./portfolio.html">Portfolio</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-            </ul>
-            
-            <button><a href="https://drive.google.com/file/d/1F0hdz7AnUZbUjS4yTaVKmk4DfhMjKUX5/view?usp=sharing" target="_blank">Télécharger le CV</a></button>
-        </nav>
-        <h1>
-            <span>Bonjour ! Je suis</span> <strong>Adeline Patenne</strong>
-            <button class="contact-me"><a href="./contact.html">Contactez moi</a></button>
-        </h1>
-       
-    </header>
+    <?php require_once(__DIR__ . '/header.php'); ?>
 
     <main>
         <section id="presentation">
@@ -42,11 +29,54 @@
                 <p>
                     Après avoir travaillé 3 ans dans le domaine de la santé en tant qu'infirmière,
                     j'ai décidé d'entreprendre une reconversion vers l'informatique. Actuellement
-                    en préparation d'un Bachelor IT à La Plateforme_ , je suis à la recherche d'une
-                    alternance qui me permettra de m'engager sur ce nouveau parcours professionnel.
+                    en préparation d'un Bachelor IT à La Plateforme_ , je suis <strong>à la recherche d'une
+                    alternance d'une durée de 2 ans à partir de septembre 2025</strong>.
+                    Cette alternance me permettra de m'engager sur ce nouveau parcours professionnel.
                 </p>
             </article>
-            <article class="hardskills">
+            <!-- <article class="hardskills"> -->
+                <ul class="hardskills">
+                    <li>
+                        <i class="fa-brands fa-git-alt"></i><span>Git</span>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-github"></i><span>GitHub</span>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-python"></i><span>Python</span>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-html5"></i><span>HMTL</span>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-css3-alt"></i><span>CSS</span>
+                    </li>
+                     <li>
+                        <i class="fa-brands fa-js"></i><span>JavaScript</span>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-sass"></i><span>Sass</span>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-php"></i><span>PHP</span>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-figma"></i><span>Figma</span>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-wordpress"></i><span>WordPress</span>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-elementor"></i><span>Elementor</span>
+                    </li>
+                    <li>
+                    <i class='bx bxl-visual-studio'></i><span>VS Code</span>
+                    </li>
+                    
+                </ul>
+            <!-- </article> -->
+
+            <!-- <article class="hardskills">
                 <img src="./images/git.svg" alt="logo Git" title="Git">
                 <img src="./images/github.svg" alt ="logo GitHub" title="GitHub">
                 <img src="./images/python.svg" alt="logo Python" title="Python">
@@ -56,7 +86,7 @@
                 <img src="./images/figma.svg" alt="logo figma" title="Figma">
                 <img src="./images/wordpress.svg" alt="logo WordPress" title="WordPress">
                 <img src="./images/elementor.svg" alt="logo Elemetor" title="Elementor">
-            </article>
+            </article> -->
         </section>
 
         <div class="experiences">
@@ -76,6 +106,22 @@
                     </p>
                     <ul>
                         <li>
+                            Organisation, rapidité d'exécution des tâches, prises de décision en situation d'urgence
+                        </li>
+                        <li>
+                            Analyses des besoins, analyse et repérage des risques
+                        </li>
+                        <li>
+                            Collaboration au sein d'une équipe pluridisciplinaire
+                        </li>
+                        <li>
+                            Connaissances techniques, transmissions d'informations
+                        </li>
+                        <li>
+                            Formation des élèves et des nouveaux infirmiers
+                        </li>
+                        <!-- 
+                        <li>
                             Administration des chimiothérapies en connaissances des protocoles spécifiques à chaque molécule et surveillance des effets secondaires;
                         </li>
                         <li>
@@ -89,7 +135,7 @@
                         </li>
                         <li>
                             Formation des élèves et des nouveaux infirmiers
-                        </li>
+                        </li> -->
                     </ul>
                 </article>
                 <article class="professionnel">
@@ -103,6 +149,14 @@
                         En tant qu'infirmière au pool, j'ai travaillé dans plusieurs services en fonction des besoins de l'hôpital.
                         Chacun demandant des soins techniques, des connaissances de protocoles et procédures différents.
                     </p>
+                    <ul>
+                        <li>
+                            Changement fréquent de service
+                        </li>
+                        <li>
+                            Bonne capacité d'adaptation, réactivité
+                        </li>
+                    </ul>
                 </article>
             </section>
 
@@ -113,7 +167,10 @@
                     </h3>
                     <ul>
                         <li>
-                            <strong>Bachelor IT</strong> - La Plateforme_ - <em>rentrée octobre 2024</em>
+                            <strong>Bachelor IT</strong> - La Plateforme_ - <em>2024 - 2027 (en cours)</em>
+                            <p>Pédagogie par projet basée sur la résolution de problématiques concrètes en autonomie</br>
+                                Formation de 3 ans délivrant un <em>titre RNCP 6 Concepteur développeur d'applications (équivalent BAC +3)</em>
+                            </p>
                         </li>
                         <li>
                             <strong>Diplôme d'Etat Infirmier</strong> - <em>2019</em>
@@ -153,37 +210,7 @@
 
     </main>
 
-    <footer>
-        <section>
-            <article>
-                <h4>
-                    Navigation
-                </h4>
-                <ul>
-                    <li><a href="./index.html">CV</a></li>
-                    <li><a href="./portfolio.html">Portfolio</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
-                </ul> 
-            </article>
-            <article>
-                <h4>
-                    Retrouvez-moi sur
-                </h4>
-                <p>
-                    <a href="https://www.linkedin.com/in/adeline-patenne/"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="https://github.com/adelinePat/"><i class="fa-brands fa-github"></i></a>
-                </p>
-            </article>
-            <article>
-                <a href="#">↑</a>
-            </article>
-        </section>
-        <div id="credits">
-            <p>© Copyright 2024 - Adeline Patenne - Tous droits réservés</p>
-            <p class="infocredit">Le logo ainsi que l'image de fond du footer ont été réalisé par mes soins.</p>
-        </div>
-
-    </footer>
+    <?php require_once(__DIR__ . '/footer.php'); ?>
     
 </body>
 </html>
