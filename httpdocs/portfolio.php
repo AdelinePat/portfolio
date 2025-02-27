@@ -38,19 +38,21 @@ $isContact = false;
                     <li id="python" class="filter_items">Python</li>
                     <li id="pygame" class="filter_items">Pygame</li>
                     <li id="algorithmique" class="filter_items">Algorithmique</li>
-                    <li id="css" class="filter_items">CSS</li>
-                    <li id="html" class="filter_items">HTML</li>
+                    <!-- <li id="css" class="filter_items">CSS</li> -->
+                    <li id="html/css" class="filter_items">HTML/CSS</li>
                     <li id="js" class="filter_items">JavaScript</li>
                     <li id="php" class="filter_items">PHP</li>
                     <li id="figma" class="filter_items">Figma</li>
                     <li id="linux" class="filter_items">Linux</li>
                     <li id="virtualisation" class="filter_items">Virtualisation</li>
+                    <li id="school" class="filter_items">Scolaire</li>
+                    <li id="personal" class="filter_items">Personnel</li>
                 </ul>
             </article>
 
         </section>
         <section class="portfolio-gallery">
-        <article class="all git python poo pygame algorithmique teamwork">
+        <article class="all git python poo pygame algorithmique teamwork school">
                 <figure>
                     <img src="./images/pokemon_project.jpg" alt="image du jeu pokemon">
                 </figure>
@@ -78,11 +80,12 @@ $isContact = false;
                         <strong> Pygame</strong>
                         <strong>Algorithmique</strong>
                         <strong><i class="fa-solid fa-users"></i> Travail d'équipe</strong>
+                        <strong><i class="fa-solid fa-graduation-cap"></i> Scolaire</strong>
                     </div>
                 </div>
             </article>
 
-            <article class="all git python poo pygame algorithmique teamwork">
+            <article class="all git python poo pygame algorithmique teamwork school">
                 <figure>
                     <img src="./images/fruit_ninja_project.jpg" alt="image du jeu fruit ninja">
                 </figure>
@@ -107,11 +110,12 @@ $isContact = false;
                         <strong> Pygame</strong>
                         <strong>Algorithmique</strong>
                         <strong><i class="fa-solid fa-users"></i> Travail d'équipe</strong>
+                        <strong><i class="fa-solid fa-graduation-cap"></i> Scolaire</strong>
                     </div>
                 </div>
             </article>
 
-            <article class="all git python pygame algorithmique teamwork">
+            <article class="all git python pygame algorithmique teamwork school">
                 <figure>
                     <img src="./images/hangman_project.jpg" alt="image du jeu du pendu">
                 </figure>
@@ -135,11 +139,12 @@ $isContact = false;
                         <strong>Pygame</strong>
                         <strong>Algorithmique</strong>
                         <strong><i class="fa-solid fa-users"></i> Travail d'équipe</strong>
+                        <strong><i class="fa-solid fa-graduation-cap"></i> Scolaire</strong>
                     </div>
                 </div>
             </article>
 
-            <article class="all git python algorithmique regex teamwork">
+            <article class="all git python algorithmique regex teamwork school">
                 <figure>
                     <img src="./images/calculator_project1.jpg" alt="image de calculatrice">
                 </figure>
@@ -163,11 +168,12 @@ $isContact = false;
                         <strong>Algorithmique</strong>
                         <strong>Regex</strong>
                         <strong><i class="fa-solid fa-users"></i> Travail d'équipe</strong>
+                        <strong><i class="fa-solid fa-graduation-cap"></i> Scolaire</strong>
                     </div>
                 </div>
             </article>
 
-            <article class="all js regex">
+            <article class="all js regex personal">
                 <figure>
                     <img src="./images/azertype_project.jpg" alt="image de AzerType">
                 </figure>
@@ -187,16 +193,18 @@ $isContact = false;
                     </p>
                     <div class="portfolio-link">
                         <button><a href="https://github.com/AdelinePat/AzerType" target="_blank">Code source</a></button>
+                        <button><a href="https://adelinepat.github.io/AzerType/" target="_blank">Live demo</a></button>
                     </div>
                     <div class="skills">
                         <strong><i class="fa-brands fa-js"></i> Javascript</strong>
                         <strong>Regex</strong>
+                        <strong><i class="fa-solid fa-briefcase"></i> Personnel</strong>
                     </div>
                     </div>
                 </div>
             </article>
 
-            <article class="all teamwork">
+            <article class="all teamwork school">
                 <figure>
                     <img src="./images/kosphere_project.jpg" alt="image représentant le hackaton">
                 </figure>
@@ -223,12 +231,13 @@ $isContact = false;
                         <strong>Regex</strong> -->
                         <strong><i class="fa-solid fa-users"></i> Travail d'équipe</strong>
                         <strong><i class="fa-solid fa-lightbulb"></i> Idéation</strong>
+                        <strong><i class="fa-solid fa-graduation-cap"></i> Scolaire</strong>
                     </div>
                     </div>
                 </div>
             </article>
 
-            <article class="all git html css figma js php sass">
+            <article class="all git html/css figma js php sass personal">
                 <figure>
                     <img src="./images/preview_resume.jpg" alt="Capture d'écran du projet Portfolio">
                 </figure>
@@ -258,11 +267,12 @@ $isContact = false;
                         <strong><i class="fa-brands fa-js"></i> Javascript</strong>
                         <strong><i class="fa-brands fa-php"></i> PHP</strong>
                         <strong><i class="fa-brands fa-sass"></i> Sass</strong>
+                        <strong><i class="fa-solid fa-briefcase"></i> Personnel</strong>
                     </div>
                 </div>
             </article>
 
-            <article class="all git html css figma js">
+            <article class="all git html/css figma js school">
                 <figure>
                     <img src="https://raw.githubusercontent.com/AdelinePat/fansite/refs/heads/main/preview_fansite1_blackpink.jpg" alt="Capture d'écran du projet Blackpink">
                 </figure>
@@ -287,11 +297,12 @@ $isContact = false;
                         <strong><i class="fa-brands fa-css3-alt"></i> CSS</strong>
                         <strong><i class="fa-brands fa-figma"></i> Figma</strong>
                         <strong><i class="fa-brands fa-js"></i> Javascript</strong>
+                        <strong><i class="fa-solid fa-graduation-cap"></i> Scolaire</strong>
                     </div>
                 </div>
             </article>
 
-            <article class="all git hmtl css figma js teamwork">
+            <article class="all git html/css figma js teamwork school">
                 <figure>
                         <img src="https://raw.githubusercontent.com/AdelinePat/fansite/refs/heads/main/preview_index.jpg" alt="Capture d'écran du projet Fansite">
                 </figure>
@@ -317,11 +328,12 @@ $isContact = false;
                         <strong><i class="fa-brands fa-figma"></i> Figma</strong>
                         <strong><i class="fa-brands fa-js"></i> Javascript</strong>
                         <strong><i class="fa-solid fa-users"></i> Travail d'équipe</strong>
+                        <strong><i class="fa-solid fa-graduation-cap"></i> Scolaire</strong>
                     </div>
                 </div>
             </article>
 
-            <article class="all git html css figma js">
+            <article class="all git html/css figma js school">
                 <figure>
                     <img src="https://raw.githubusercontent.com/AdelinePat/webdesign-fleuriste/refs/heads/main/preview-desktop.jpg" alt="Capture d'écran du projet Bloom Petals">
                 </figure>
@@ -338,7 +350,7 @@ $isContact = false;
                     </p>
                     <div class="portfolio-link">
                         <button><a href="https://github.com/AdelinePat/webdesign-fleuriste" target="_blank">Code source</a></button>
-                        <button><a href="#" target="_blank">Live demo</a></button>
+                        <button><a href="https://adelinepat.github.io/webdesign-fleuriste/" target="_blank">Live demo</a></button>
                     </div>
                     <div class="skills">
                         <strong><i class="fa-brands fa-git-alt"></i> Git</strong>
@@ -346,11 +358,12 @@ $isContact = false;
                         <strong><i class="fa-brands fa-css3-alt"></i> CSS</strong>
                         <strong><i class="fa-brands fa-figma"></i> Figma</strong>
                         <strong><i class="fa-brands fa-js"></i> Javascript</strong>
+                        <strong><i class="fa-solid fa-graduation-cap"></i> Scolaire</strong>
                     </div>
                 </div>
             </article>
 
-            <article class="all git python algorithmique">
+            <article class="all git python algorithmique school">
                 <figure>
                     <img src="https://raw.githubusercontent.com/AdelinePat/tictactoe/refs/heads/main/tictactoe.jpg" alt="image du jeu du morpion">
                 </figure>
@@ -375,11 +388,12 @@ $isContact = false;
                         <strong><i class="fa-brands fa-git-alt"></i> Git</strong>
                         <strong><i class="fa-brands fa-python"></i> Python</strong>
                         <strong>Algorithmique</strong>
+                        <strong><i class="fa-solid fa-graduation-cap"></i> Scolaire</strong>
                     </div>
                 </div>
             </article>
 
-            <article class="all linux virtualisation">
+            <article class="all linux virtualisation school">
                 <figure>
                     <img src="./images/component.jpg" alt="Image représentant le projet hardware et virtualisation">
                 </figure>
@@ -396,6 +410,7 @@ $isContact = false;
                         <strong>installation d'OS</strong>
                         <strong>Machine virtuelle</strong>
                         <strong>VMWare</strong>
+                        <strong><i class="fa-solid fa-graduation-cap"></i> Scolaire</strong>
                     </div>
                 </div>
             </article>

@@ -14,6 +14,7 @@ $isContact = false;
 
     <script defer src="script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/boxicons/css/boxicons.min.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="./images/Logo AP.ico">
     <title>Accueil</title>
 </head>
@@ -36,37 +37,40 @@ $isContact = false;
             <!-- <article class="hardskills"> -->
                 <ul class="hardskills">
                     <li>
-                        <i class="fa-brands fa-git-alt"></i> <span>Git</span>
+                        <i class="fa-brands fa-git-alt"></i><span>Git</span>
                     </li>
                     <li>
-                        <i class="fa-brands fa-github"></i> <span>GitHub</span>
+                        <i class="fa-brands fa-github"></i><span>GitHub</span>
                     </li>
                     <li>
-                        <i class="fa-brands fa-python"></i> <span>Python</span>
+                        <i class="fa-brands fa-python"></i><span>Python</span>
                     </li>
                     <li>
-                        <i class="fa-brands fa-html5"></i> <span>HMTL</span>
+                        <i class="fa-brands fa-html5"></i><span>HMTL</span>
                     </li>
                     <li>
-                        <i class="fa-brands fa-css3-alt"></i> <span>CSS</span>
+                        <i class="fa-brands fa-css3-alt"></i><span>CSS</span>
                     </li>
                      <li>
-                        <i class="fa-brands fa-js"></i> <span>JavaScript</span>
+                        <i class="fa-brands fa-js"></i><span>JavaScript</span>
                     </li>
                     <li>
-                        <i class="fa-brands fa-sass"></i> <span>Sass</span>
+                        <i class="fa-brands fa-sass"></i><span>Sass</span>
                     </li>
                     <li>
-                        <i class="fa-brands fa-php"></i> <span>PHP</span>
+                        <i class="fa-brands fa-php"></i><span>PHP</span>
                     </li>
                     <li>
-                        <i class="fa-brands fa-figma"></i> <span>Figma</span>
+                        <i class="fa-brands fa-figma"></i><span>Figma</span>
                     </li>
                     <li>
-                        <i class="fa-brands fa-wordpress"></i> <span>WordPress</span>
+                        <i class="fa-brands fa-wordpress"></i><span>WordPress</span>
                     </li>
                     <li>
-                        <i class="fa-brands fa-elementor"></i> <span>Elementor</span>
+                        <i class="fa-brands fa-elementor"></i><span>Elementor</span>
+                    </li>
+                    <li>
+                    <i class='bx bxl-visual-studio'></i><span>VS Code</span>
                     </li>
                     
                 </ul>
