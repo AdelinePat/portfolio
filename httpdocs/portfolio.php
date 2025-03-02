@@ -239,7 +239,7 @@ $isContact = false;
 
             <article class="all git html/css figma js php sass personal">
                 <figure>
-                    <img src="./images/preview_resume.jpg" alt="Capture d'écran du projet Portfolio">
+                    <img src="./images/resume-preview-recent.png" alt="Capture d'écran du projet Portfolio">
                 </figure>
                 <div class="content">
                     <h2>CV et Portfolio</h2>
