@@ -15,7 +15,7 @@ if($isResume) {echo'resume';}
                 <li><a class="<?php if($isContact) {echo 'active';} ?>" href="./contact.php">Contact</a></li>
             </ul>
             
-            <button><a href="https://drive.google.com/file/d/17IvvzIdmWN-PFVbMY67MRuV3xjbtyD66/view?usp=sharing" target="_blank">Télécharger le CV</a></button>
+            <button><a href="https://drive.google.com/file/d/1BoVuNZ87vg3w8rHIfpgrqmnMStJyWZTL/view?usp=sharing" target="_blank">Télécharger le CV</a></button>
         </nav>
         <?php if($isResume) : ?>
             <h1>
