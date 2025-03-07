@@ -10,6 +10,8 @@ $isContact = false;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Adeline Patenne">
+    <meta name="google-site-verification" content="D-P5IliP_Ji1Z46g1JrTjG-Ciy4kmHF7BVgdPqaUrDw"/>
+    
     <link rel="stylesheet" href="style.css">
 
     <script defer src="script.js"></script>
