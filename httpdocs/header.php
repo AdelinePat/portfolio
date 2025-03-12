@@ -10,7 +10,7 @@ if($isResume) {echo'resume';}
                 <label for="menu-hamburger"></label>
             </div>
             <ul class="menu-items"> <!-- class="menu-items"-->
-                <li><a class="<?php if($isResume) {echo 'active';} ?>" href="./index.php">CV</a></li>
+                <li><a class="<?php if($isResume) {echo 'active';} ?>" href="./">CV</a></li>
                 <li><a  class="<?php if($isPortfolio) {echo 'active';} ?>" href="./portfolio.php">Portfolio</a></li>
                 <li><a class="<?php if($isContact) {echo 'active';} ?>" href="./contact.php">Contact</a></li>
             </ul>

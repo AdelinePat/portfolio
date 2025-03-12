@@ -5,7 +5,7 @@
                     Navigation
                 </h4>
                 <ul>
-                    <li><a href="./index.php">CV</a></li>
+                    <li><a href="./">CV</a></li>
                     <li><a href="./portfolio.php">Portfolio</a></li>
                     <li><a href="./contact.php">Contact</a></li>
                 </ul> 
