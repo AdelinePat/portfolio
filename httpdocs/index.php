@@ -10,6 +10,8 @@ $isContact = false;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Adeline Patenne">
+    <meta name="description" content="Ancienne infirmière en reconversion professionnelle. Je prépare un bachelor IT afin de devenir développeuse logiciel. Découvrez mes projets personnels ainsi que ceux réalisés dans le cadre de ma formation ">
+
     <meta name="google-site-verification" content="D-P5IliP_Ji1Z46g1JrTjG-Ciy4kmHF7BVgdPqaUrDw"/>
     
     <link rel="stylesheet" href="style.css">

@@ -10,6 +10,7 @@ $isContact = false;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Adeline Patenne">
+    <meta name="description" content="Portfolio des projets réalisés par Adeline Patenne. Travail personnel, scolaire, individuel et en équipe.">
     <link rel="stylesheet" href="style.css">
 
     <script defer src="script.js"></script>
@@ -35,10 +36,17 @@ $isContact = false;
                     <li id="git" class="filter_items">Git</li>
                     <li id="teamwork" class="filter_items">Travail d'équipe</li>
                     <li id="poo" class="filter_items">POO</li>
+                    <!-- <li id="sql/nosql" class="filter_items">SQL/NoSQL</li> -->
+                    <!-- <li id="java" class="filter_items">Java</li> -->
+                    <!-- <li id="c/c++" class="filter_items">C/C++</li>  -->
+                    <!-- <li id="c#" class="filter_items">C#</li> -->
+                    <!-- <li id="cryptographie" class="filter_items">Cryptographie<li> -->
+                    <!-- <li id="docker" class="filter_items">Docker</li> -->
+                    <!-- <li id="rust" class="filter_items">Rust</li> -->
+                    <!-- <li id="go" class="filter_items">Go</li> -->
                     <li id="python" class="filter_items">Python</li>
                     <li id="pygame" class="filter_items">Pygame</li>
                     <li id="algorithmique" class="filter_items">Algorithmique</li>
-                    <!-- <li id="css" class="filter_items">CSS</li> -->
                     <li id="html/css" class="filter_items">HTML/CSS</li>
                     <li id="js" class="filter_items">JavaScript</li>
                     <li id="php" class="filter_items">PHP</li>
@@ -54,7 +62,7 @@ $isContact = false;
         <section class="portfolio-gallery">
         <article class="all git python poo pygame algorithmique teamwork school">
                 <figure>
-                    <img src="./images/pokemon_project.jpg" alt="image du jeu pokemon">
+                    <img src="./images/pokemon_project.jpg" alt="image du jeu pokemon" loading="lazy">
                 </figure>
                 <div class="content">
                     <h2>Pokémon</h2>
@@ -87,7 +95,7 @@ $isContact = false;
 
             <article class="all git python poo pygame algorithmique teamwork school">
                 <figure>
-                    <img src="./images/fruit_ninja_project.jpg" alt="image du jeu fruit ninja">
+                    <img src="./images/fruit_ninja_project.jpg" alt="image du jeu fruit ninja" loading="lazy">
                 </figure>
                 <div class="content">
                     <h2>Fruit Ninja</h2>
@@ -117,7 +125,7 @@ $isContact = false;
 
             <article class="all git python pygame algorithmique teamwork school">
                 <figure>
-                    <img src="./images/hangman_project.jpg" alt="image du jeu du pendu">
+                    <img src="./images/hangman_project.jpg" alt="image du jeu du pendu" loading="lazy">
                 </figure>
                 <div class="content">
                     <h2>Jeu du pendu</h2>
@@ -146,7 +154,7 @@ $isContact = false;
 
             <article class="all git python algorithmique regex teamwork school">
                 <figure>
-                    <img src="./images/calculator_project1.jpg" alt="image de calculatrice">
+                    <img src="./images/calculator_project1.jpg" alt="image de calculatrice" loading="lazy">
                 </figure>
                 <div class="content">
                     <h2>Ma calculatrice</h2>
@@ -175,7 +183,7 @@ $isContact = false;
 
             <article class="all js regex personal">
                 <figure>
-                    <img src="./images/azertype_project.jpg" alt="image de AzerType">
+                    <img src="./images/azertype_project.jpg" alt="image de AzerType" loading="lazy">
                 </figure>
                 <div class="content">
                     <h2>AzerType</h2>
@@ -206,7 +214,7 @@ $isContact = false;
 
             <article class="all teamwork school">
                 <figure>
-                    <img src="./images/kosphere_project.jpg" alt="image représentant le hackaton">
+                    <img src="./images/kosphere_project.jpg" alt="image représentant le hackaton" loading="lazy">
                 </figure>
                 <div class="content">
                     <h2>Hackaton - KoSphere</h2>
@@ -239,7 +247,7 @@ $isContact = false;
 
             <article class="all git html/css figma js php sass personal">
                 <figure>
-                    <img src="./images/resume-preview-recent.png" alt="Capture d'écran du projet Portfolio">
+                    <img src="./images/resume-preview-recent.png" alt="Capture d'écran du projet Portfolio" loading="lazy">
                 </figure>
                 <div class="content">
                     <h2>CV et Portfolio</h2>
@@ -274,7 +282,7 @@ $isContact = false;
 
             <article class="all git html/css figma js school">
                 <figure>
-                    <img src="https://raw.githubusercontent.com/AdelinePat/fansite/refs/heads/main/preview_fansite1_blackpink.jpg" alt="Capture d'écran du projet Blackpink">
+                    <img src="https://raw.githubusercontent.com/AdelinePat/fansite/refs/heads/main/preview_fansite1_blackpink.jpg" alt="Capture d'écran du projet Blackpink" loading="lazy">
                 </figure>
                 <div class="content">
                     <h2>BlackPink</h2>
@@ -304,7 +312,7 @@ $isContact = false;
 
             <article class="all git html/css figma js teamwork school">
                 <figure>
-                        <img src="https://raw.githubusercontent.com/AdelinePat/fansite/refs/heads/main/preview_index.jpg" alt="Capture d'écran du projet Fansite">
+                        <img src="https://raw.githubusercontent.com/AdelinePat/fansite/refs/heads/main/preview_index.jpg" alt="Capture d'écran du projet Fansite" loading="lazy">
                 </figure>
                 <div class="content">
                     <h2>Fansite</h2>
@@ -335,7 +343,7 @@ $isContact = false;
 
             <article class="all git html/css figma js school">
                 <figure>
-                    <img src="https://raw.githubusercontent.com/AdelinePat/webdesign-fleuriste/refs/heads/main/preview-desktop.jpg" alt="Capture d'écran du projet Bloom Petals">
+                    <img src="https://raw.githubusercontent.com/AdelinePat/webdesign-fleuriste/refs/heads/main/preview-desktop.jpg" alt="Capture d'écran du projet Bloom Petals" loading="lazy">
                 </figure>
                 <div class="content">
                     <h2>Bloom Petals</h2>
@@ -365,7 +373,7 @@ $isContact = false;
 
             <article class="all git python algorithmique school">
                 <figure>
-                    <img src="https://raw.githubusercontent.com/AdelinePat/tictactoe/refs/heads/main/tictactoe.jpg" alt="image du jeu du morpion">
+                    <img src="https://raw.githubusercontent.com/AdelinePat/tictactoe/refs/heads/main/tictactoe.jpg" alt="image du jeu du morpion" loading="lazy">
                 </figure>
                 <div class="content">
                     <h2>Tic Tac Toe</h2>
@@ -395,7 +403,7 @@ $isContact = false;
 
             <article class="all linux virtualisation school">
                 <figure>
-                    <img src="./images/component.jpg" alt="Image représentant le projet hardware et virtualisation">
+                    <img src="./images/component.jpg" alt="Image représentant le projet hardware et virtualisation" loading="lazy">
                 </figure>
                     <div class="content">
                     <h2>Hardware et virtualisation</h2>
