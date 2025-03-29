@@ -60,6 +60,39 @@ $isContact = false;
 
         </section>
         <section class="portfolio-gallery">
+
+            <!-- <article class="all git python poo pygame algorithmique teamwork school">
+                    <figure>
+                        <img src="#" alt="image du jeu du démineur" loading="lazy">
+                    </figure>
+                    <div class="content">
+                        <h2>Démineur</h2>
+                        <p>
+                            Réalisation d'un jeu de démineur avec pygame. Utilisation d'un design system (création des différents composants réutilisables et modifiable de l'interface graphique)
+                        </p>
+                        <p>
+                            Programmation orientée objet. Score enregistré dans un json
+                        </p>
+                        <p class="coming-soon">
+                            Mars 2025
+                        </p>
+                        <div class="portfolio-link">
+                            <button><a href="https://github.com/AdelinePat/pokemon" target="_blank">Code source</a></button>
+                        </div>
+                        <div class="skills">
+                            <strong><i class="fa-brands fa-git-alt"></i> Git</strong>
+                            <strong><i class="fa-brands fa-python"></i> Python</strong>
+                            <strong><i class="fa-sharp fa-solid fa-code"></i> POO</strong>
+                            <strong> Pygame</strong>
+                            <strong> MVC</strong>
+                            <strong> Design System</strong>
+                            <strong> Algorithmique</strong>
+                            <strong><i class="fa-solid fa-users"></i> Travail d'équipe</strong>
+                            <strong><i class="fa-solid fa-graduation-cap"></i> Scolaire</strong>
+                        </div>
+                    </div>
+                </article> -->
+
             <article class="all git python poo tkinter sql/nosql algorithmique teamwork school">
                     <figure>
                         <img src="https://raw.githubusercontent.com/AdelinePat/budget_buddy/refs/heads/main/budget_buddy.png" alt="image de l'application budget buddy" loading="lazy">
@@ -83,16 +116,17 @@ $isContact = false;
                         </div>
                         <div class="skills">
                             <strong><i class="fa-brands fa-git-alt"></i> Git</strong>
-                            <strong><i class="fa-solid fa-database"></i> SQL MYSQL</strong>
+                            <strong><i class="fa-solid fa-database"> SQL</strong>
                             <strong><i class="fa-brands fa-python"></i> Python</strong>
                             <strong><i class="fa-sharp fa-solid fa-code"></i> POO</strong>
+                            <strong> MVC</strong>
                             <strong> Tkinter</strong>
                             <strong> Algorithmique</strong>
                             <strong><i class="fa-solid fa-users"></i> Travail d'équipe</strong>
                             <strong><i class="fa-solid fa-graduation-cap"></i> Scolaire</strong>
                         </div>
                     </div>
-            </article>
+                </article>
 
             <article class="all git python poo pygame algorithmique teamwork school">
                     <figure>
