@@ -32,11 +32,9 @@ $isContact = false;
             <article>
                 <h2>Développeuse logiciel en formation</h2>
                 <p>
-                    Après avoir travaillé 3 ans dans le domaine de la santé en tant qu'infirmière,
-                    j'ai décidé d'entreprendre une reconversion vers l'informatique. Actuellement
-                    en préparation d'un Bachelor IT à La Plateforme_ , je suis <strong>à la recherche d'une
-                    alternance d'une durée de 2 ans à partir de septembre 2025</strong>.
-                    Cette alternance me permettra de m'engager sur ce nouveau parcours professionnel.
+                    Actuellement en Bachelor IT à La Plateforme_,
+                    je recherche une <strong>alternance de 2 ans</strong> pour mettre en pratique mes compétences
+                    en programmation et approfondir mon expertise technique au sein d'une équipe dynamique.
                 </p>
             </article>
             <!-- <article class="hardskills"> -->
@@ -69,13 +67,13 @@ $isContact = false;
                         <i class="fa-brands fa-figma"></i><span>Figma</span>
                     </li>
                     <li>
-                        <i class="fa-brands fa-wordpress"></i><span>WordPress</span>
+                        <i class="fa-solid fa-database"></i><span>SQL</span>
                     </li>
                     <li>
                         <i class="fa-brands fa-elementor"></i><span>Elementor</span>
                     </li>
                     <li>
-                    <i class='bx bxl-visual-studio'></i><span>VS Code</span>
+                        <i class='bx bxl-visual-studio'></i><span>VS Code</span>
                     </li>
                     
                 </ul>
