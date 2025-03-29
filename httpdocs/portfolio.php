@@ -61,37 +61,37 @@ $isContact = false;
         </section>
         <section class="portfolio-gallery">
             <article class="all git python poo tkinter sql/nosql algorithmique teamwork school">
-                <figure>
-                    <img src="https://raw.githubusercontent.com/AdelinePat/budget_buddy/refs/heads/main/budget_buddy.png" alt="image de l'application budget buddy" loading="lazy">
-                </figure>
-                <div class="content">
-                    <h2>Budget Buddy</h2>
-                    <p>
-                        Réalisation d'un application de gestion bancaire. Utilisation de SQL, SQL CLI et du connecteur mysql-connector-python.
-                    </p>
-                    <p>
-                        Réalisation d'une interface graphique avec Tkinter, projet basé sur le Model View Controller
-                    </p>
-                    <p>
-                        Création de compte client et bancaire, regex pour les emails et les mots de passe, hashage avec sallage des mots de passe avant de les enregistrer en base de donnée.
-                    </p>
-                    <p class="coming-soon">
-                        Mars 2025
-                    </p>
-                    <div class="portfolio-link">
-                        <button><a href="https://github.com/AdelinePat/budget_buddy" target="_blank">Code source</a></button>
+                    <figure>
+                        <img src="https://raw.githubusercontent.com/AdelinePat/budget_buddy/refs/heads/main/budget_buddy.png" alt="image de l'application budget buddy" loading="lazy">
+                    </figure>
+                    <div class="content">
+                        <h2>Budget Buddy</h2>
+                        <p>
+                            Réalisation d'un application de gestion bancaire. Utilisation de SQL, SQL CLI et du connecteur mysql-connector-python.
+                        </p>
+                        <p>
+                            Réalisation d'une interface graphique avec Tkinter, projet basé sur le Model View Controller
+                        </p>
+                        <p>
+                            Création de compte client et bancaire, regex pour les emails et les mots de passe, hashage avec sallage des mots de passe avant de les enregistrer en base de donnée.
+                        </p>
+                        <p class="coming-soon">
+                            Mars 2025
+                        </p>
+                        <div class="portfolio-link">
+                            <button><a href="https://github.com/AdelinePat/budget_buddy" target="_blank">Code source</a></button>
+                        </div>
+                        <div class="skills">
+                            <strong><i class="fa-brands fa-git-alt"></i> Git</strong>
+                            <strong><i class="fa-solid fa-database"></i> SQL MYSQL</strong>
+                            <strong><i class="fa-brands fa-python"></i> Python</strong>
+                            <strong><i class="fa-sharp fa-solid fa-code"></i> POO</strong>
+                            <strong> Tkinter</strong>
+                            <strong> Algorithmique</strong>
+                            <strong><i class="fa-solid fa-users"></i> Travail d'équipe</strong>
+                            <strong><i class="fa-solid fa-graduation-cap"></i> Scolaire</strong>
+                        </div>
                     </div>
-                    <div class="skills">
-                        <strong><i class="fa-brands fa-git-alt"></i> Git</strong>
-                        <strong><i class="fa-solid fa-database"></i> SQL MYSQL<s/trong>
-                        <strong><i class="fa-brands fa-python"></i> Python</strong>
-                        <strong><i class="fa-sharp fa-solid fa-code"></i> POO</strong>
-                        <strong> Tkinter</strong>
-                        <strong> Algorithmique</strong>
-                        <strong><i class="fa-solid fa-users"></i> Travail d'équipe</strong>
-                        <strong><i class="fa-solid fa-graduation-cap"></i> Scolaire</strong>
-                    </div>
-                </div>
             </article>
 
             <article class="all git python poo pygame algorithmique teamwork school">
