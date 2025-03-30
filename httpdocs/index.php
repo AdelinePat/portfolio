@@ -49,28 +49,28 @@ $isContact = false;
                         <i class="fa-brands fa-python"></i><span>Python</span>
                     </li>
                     <li>
-                        <i class="fa-brands fa-html5"></i><span>HMTL</span>
+                        <i class="fa-solid fa-database"></i><span>SQL</span>
                     </li>
                     <li>
-                        <i class="fa-brands fa-css3-alt"></i><span>CSS</span>
-                    </li>
-                     <li>
                         <i class="fa-brands fa-js"></i><span>JavaScript</span>
-                    </li>
-                    <li>
-                        <i class="fa-brands fa-sass"></i><span>Sass</span>
                     </li>
                     <li>
                         <i class="fa-brands fa-php"></i><span>PHP</span>
                     </li>
                     <li>
+                        <i class="fa-brands fa-html5"></i><span>HMTL</span>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-css3-alt"></i><span>CSS</span>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-sass"></i><span>Sass</span>
+                    </li>
+                    <li>
                         <i class="fa-brands fa-figma"></i><span>Figma</span>
                     </li>
                     <li>
-                        <i class="fa-solid fa-database"></i><span>SQL</span>
-                    </li>
-                    <li>
-                        <i class="fa-brands fa-elementor"></i><span>Elementor</span>
+                    <i class="fa-brands fa-wordpress"></i><span>Wordpress</span>
                     </li>
                     <li>
                         <i class='bx bxl-visual-studio'></i><span>VS Code</span>
@@ -192,19 +192,25 @@ $isContact = false;
                     </h3>
                     <ul>
                         <li>
+                            Anglais bilingue
+                        </li>
+                        <li>
+                            Leadership
+                        </li>
+                        <li>
+                            Chef de projet
+                        </li>
+                        <li>
                             Communication écrite et orale
                         </li>
                         <li>
                             Adaptation
                         </li>
                         <li>
-                            Organisation
+                            Sens de l'organisation
                         </li>
                         <li>
                             Créative
-                        </li>
-                        <li>
-                            Anglais parlé couramment
                         </li>
                     </ul>
                 </article>

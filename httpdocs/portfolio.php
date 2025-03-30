@@ -61,17 +61,22 @@ $isContact = false;
         </section>
         <section class="portfolio-gallery">
 
-            <!-- <article class="all git python poo pygame algorithmique teamwork school">
+            <article class="all git python poo pygame algorithmique teamwork school">
                     <figure>
-                        <img src="#" alt="image du jeu du démineur" loading="lazy">
+                        <img src="./images/minesweeper_project.jpg" alt="image du jeu du démineur" loading="lazy">
                     </figure>
                     <div class="content">
                         <h2>Démineur</h2>
                         <p>
+                            Travail de conception du projet, réalisation : d'un diagramme de classe, d'une maquette Figma du projet. Répartition des tâches dans le groupe, intégration et test manuel des nouvelles features.
+                        </p>
+                        <p>
                             Réalisation d'un jeu de démineur avec pygame. Utilisation d'un design system (création des différents composants réutilisables et modifiable de l'interface graphique)
                         </p>
                         <p>
-                            Programmation orientée objet. Score enregistré dans un json
+                            Programmation orientée objet. Utilisation de la récursivité pour découvrir en chaîne les cases libres.</p>
+                        <p>
+                            Score enregistré dans un json
                         </p>
                         <p class="coming-soon">
                             Mars 2025
@@ -91,16 +96,19 @@ $isContact = false;
                             <strong><i class="fa-solid fa-graduation-cap"></i> Scolaire</strong>
                         </div>
                     </div>
-                </article> -->
+                </article>
 
             <article class="all git python poo tkinter sql/nosql algorithmique teamwork school">
                     <figure>
-                        <img src="https://raw.githubusercontent.com/AdelinePat/budget_buddy/refs/heads/main/budget_buddy.png" alt="image de l'application budget buddy" loading="lazy">
+                        <img src="./images/budget_buddy_project.jpg" alt="image de l'application budget buddy" loading="lazy">
                     </figure>
                     <div class="content">
                         <h2>Budget Buddy</h2>
                         <p>
                             Réalisation d'un application de gestion bancaire. Utilisation de SQL, SQL CLI et du connecteur mysql-connector-python.
+                        </p>
+                        <p>
+                            Travail de conception du projet, réalisation : d'un diagramme de classe, d'une maquette Figma du projet. Répartition des tâches dans le groupe, intégration et test manuel des nouvelles features.
                         </p>
                         <p>
                             Réalisation d'une interface graphique avec Tkinter, projet basé sur le Model View Controller
@@ -116,7 +124,7 @@ $isContact = false;
                         </div>
                         <div class="skills">
                             <strong><i class="fa-brands fa-git-alt"></i> Git</strong>
-                            <strong><i class="fa-solid fa-database"> SQL</strong>
+                            <strong><i class="fa-solid fa-database"></i> SQL</strong>
                             <strong><i class="fa-brands fa-python"></i> Python</strong>
                             <strong><i class="fa-sharp fa-solid fa-code"></i> POO</strong>
                             <strong> MVC</strong>
@@ -135,7 +143,7 @@ $isContact = false;
                     <div class="content">
                         <h2>Pokémon</h2>
                         <p>
-                            Réalisation d'un jeu Pokémon en deux semaines. Créations d'une classe pokémon <strong>héritant</strong> d'évolution afin de gérer le gain d'expérience, de level up et l'évolution.
+                            Réalisation d'un jeu Pokémon en groupe. Créations d'une classe pokémon <strong>héritant</strong> d'évolution afin de gérer le gain d'expérience, de level up et l'évolution.
                         </p>
                         <p>
                             Utilisation du modèle MVC (Model View Controller) afin de faire communiquer les classes et fichier back avec les classes et fichiers front
