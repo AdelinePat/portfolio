@@ -10,7 +10,7 @@ $isContact = false;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Adeline Patenne">
-    <meta name="description" content="Ancienne infirmière en reconversion professionnelle. Je prépare un bachelor IT afin de devenir développeuse logiciel. Découvrez mes projets personnels ainsi que ceux réalisés dans le cadre de ma formation ">
+    <meta name="description" content="Animée par une soif d'apprendre et un goût du challenge, j'ai fait le choix audacieux de me réinventer dans le développement logiciel. En pleine formation pour obtenir mon Bachelor IT, je mets toute ma passion et ma rigueur dans l'adoption des bonnes pratiques et l'amélioration continue du code. Découvrez mes projets, fruits de mon engagement et de ma volonté de progresser chaque jour.">
     <link rel="canonical" href="https://adeline-patenne.students-laplateforme.io/"/>
 
     <meta name="google-site-verification" content="D-P5IliP_Ji1Z46g1JrTjG-Ciy4kmHF7BVgdPqaUrDw"/>
@@ -22,6 +22,65 @@ $isContact = false;
     <link href="https://unpkg.com/boxicons/css/boxicons.min.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="./images/Logo AP.ico">
     <title>Accueil</title>
+    <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@graph": [
+                    {
+                        "@type": "Person",
+                        "@id": "https://adeline-patenne.students-laplateforme.io#me",
+                        "name": "Adeline Patenne",
+                        "jobTitle": "Développeuse logiciel et web fullstack",
+                        "url": "https://adeline-patenne.students-laplateforme.io/",
+                        "email": "adeline.patenne@laplateforme.io",
+                        "description": "Portfolio d'Adeline Patenne, développeuse spécialisée en logiciel et web fullstack. Expertise en back-end, algorithmie et clean code. Compétences en gestion de projet et leadership."
+                        "image": "https://adeline-patenne.students-laplateforme.io/images/adeline.jpg",
+                        "sameAs": [
+                            "https://www.linkedin.com/in/adeline-patenne/",
+                            "https://github.com/AdelinePat",
+                            "https://adelinepat.github.io/portfolio/"
+                        ],
+                        "address": {
+                            "@type": "PostalAddress",
+                            "addressLocality": "Marseille",
+                            "addressCountry": "FR",
+                            "addressRegion": "Provence-Alpes-Côte d'Azur",
+                            "postalCode": "13000"
+                        },
+                        "knowsAbout": ["Développement logiciel", "Développement web", "Fullstack", "Back-end", "Algorithmie", "SQL", "Python", "JavaScript", "HTML", "CSS", "PHP", "SASS", "Programmation orientée objet"],
+                        "skills" : ["Leadership", "Programmation logicielle", "Gestion de projet", "Optimisation des performances"],
+                        "knowsLanguage" : ["Français", "English", "PHP", "Python", "SQL", "JavaScript"],
+                        "alumniOf": {
+                            "@type": "EducationalOrganization",
+                            "name": "La Plateforme_ Formation",
+                            "url": "https://laplateforme.io/"
+                        }
+                    },
+                    {
+                        "@type": "WebSite",
+                        "@id": "https://adeline-patenne.students-laplateforme.io#website",
+                        "name": "Portfolio d'Adeline Patenne",
+                        "url": "https://adeline-patenne.students-laplateforme.io",
+                        "image": "https://adeline-patenne.students-laplateforme.io/images/adeline.jpg",
+                        "keywords" : ["Portfolio", "Profil professionnel", "Candidature", "Compétences", "Développement logiciel", "Développement web", "Fullstack", "Back-end"],
+                        "author": {
+                            "@type": "Person",
+                            "name": "Adeline Patenne",
+                            "@id": "https://adeline-patenne.students-laplateforme.io#me"
+                        },
+                        "sameAs": [
+                            "https://www.linkedin.com/in/adeline-patenne/",
+                            "https://github.com/AdelinePat"
+                        ]
+                        "potentialAction": {
+                            "@type": "SearchAction",
+                            "target": "https://adeline-patenne.students-laplateforme.io/?q={search_term}",
+                            "query-input": "required name=search_term"
+                        }
+                    }
+                ]
+            }
+        </script>
 </head>
 <body>
     
@@ -32,9 +91,11 @@ $isContact = false;
             <article>
                 <h2>Développeuse logiciel en formation</h2>
                 <p>
-                    Actuellement en Bachelor IT à La Plateforme_,
-                    je recherche une <strong>alternance de 2 ans</strong> pour mettre en pratique mes compétences
-                    en programmation et approfondir mon expertise technique au sein d'une équipe dynamique.
+                Animée par une soif d'apprendre et un goût du challenge,
+                j'ai fait le choix audacieux de me réinventer dans le développement logiciel.
+                En pleine formation pour obtenir mon Bachelor IT, je mets toute ma passion et ma rigueur
+                dans l'adoption des bonnes pratiques et l'amélioration continue du code. Découvrez mes projets,
+                fruits de mon engagement et de ma volonté de progresser chaque jour.
                 </p>
             </article>
             <!-- <article class="hardskills"> -->
