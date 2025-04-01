@@ -22,7 +22,7 @@ $isContact = false;
     <link href="https://unpkg.com/boxicons/css/boxicons.min.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="./images/Logo AP.ico">
     <title>Accueil</title>
-    <script type="application/ld+json">
+	<script type="application/ld+json">
             {
                 "@context": "https://schema.org",
                 "@graph": [
@@ -33,7 +33,7 @@ $isContact = false;
                         "jobTitle": "Développeuse logiciel et web fullstack",
                         "url": "https://adeline-patenne.students-laplateforme.io/",
                         "email": "adeline.patenne@laplateforme.io",
-                        "description": "Portfolio d'Adeline Patenne, développeuse spécialisée en logiciel et web fullstack. Expertise en back-end, algorithmie et clean code. Compétences en gestion de projet et leadership."
+                        "description": "Portfolio d'Adeline Patenne, développeuse spécialisée en logiciel et web fullstack. Expertise en back-end, algorithmie et clean code. Compétences en gestion de projet et leadership.",
                         "image": "https://adeline-patenne.students-laplateforme.io/images/adeline.jpg",
                         "sameAs": [
                             "https://www.linkedin.com/in/adeline-patenne/",
@@ -71,7 +71,7 @@ $isContact = false;
                         "sameAs": [
                             "https://www.linkedin.com/in/adeline-patenne/",
                             "https://github.com/AdelinePat"
-                        ]
+                        ],
                         "potentialAction": {
                             "@type": "SearchAction",
                             "target": "https://adeline-patenne.students-laplateforme.io/?q={search_term}",
@@ -233,7 +233,7 @@ $isContact = false;
                         <li>
                             <strong>Bachelor IT</strong> - La Plateforme_ - <em>2024 - 2027 (en cours)</em>
                             <p>Pédagogie par projet basée sur la résolution de problématiques concrètes en autonomie</br>
-                                Formation de 3 ans délivrant un <em>titre RNCP 6 Concepteur développeur d'applications (équivalent BAC +3)</em>
+                                Formation de 3 ans délivrant un <em>titre RNCP 6 Concepteur développeur d'applications (équivalent BAC +3</em>
                             </p>
                         </li>
                         <li>
