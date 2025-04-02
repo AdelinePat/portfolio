@@ -61,7 +61,7 @@ $isContact = false;
                         "@id": "https://adeline-patenne.students-laplateforme.io",
                         "name": "Portfolio d'Adeline Patenne",
                         "url": "https://adeline-patenne.students-laplateforme.io",
-                        "image": "https://adeline-patenne.students-laplateforme.io/images/adeline.jpg",
+                        "image": "https://adeline-patenne.students-laplateforme.io/images/Logo%20AP.svg",
                         "keywords" : ["Portfolio", "Profil professionnel", "Candidature", "Compétences", "Développement logiciel", "Développement web", "Fullstack", "Back-end"],
                         "author": {
                             "@type": "Person",
@@ -107,6 +107,12 @@ $isContact = false;
                         <i class="fa-brands fa-github"></i><span>GitHub</span>
                     </li>
                     <li>
+                        <i class='bx bxl-c-plus-plus'></i><span>C/C++</span>
+                    </li>
+                    <!-- <li>
+                        <i class="fa-brands fa-java"></i><span>Java</span>
+                    </li> -->
+                    <li>
                         <i class="fa-brands fa-python"></i><span>Python</span>
                     </li>
                     <li>
@@ -118,12 +124,18 @@ $isContact = false;
                     <li>
                         <i class="fa-brands fa-php"></i><span>PHP</span>
                     </li>
-                    <li>
-                        <i class="fa-brands fa-html5"></i><span>HMTL</span>
+                    <!-- <li>
+                        <i class="fa-brands fa-rust"></i><span>Rust</span>
                     </li>
+                    <li>
+                        <i class="fa-brands fa-golang"></i><span>Go</span>
+                    </li> -->
+                    <!-- <li>
+                        <i class="fa-brands fa-html5"></i><span>HMTL</span>
+                    </li>-->
                     <li>
                         <i class="fa-brands fa-css3-alt"></i><span>CSS</span>
-                    </li>
+                    </li> 
                     <li>
                         <i class="fa-brands fa-sass"></i><span>Sass</span>
                     </li>
@@ -131,8 +143,14 @@ $isContact = false;
                         <i class="fa-brands fa-figma"></i><span>Figma</span>
                     </li>
                     <li>
-                    <i class="fa-brands fa-wordpress"></i><span>Wordpress</span>
+                        <i class="fa-brands fa-wordpress"></i><span>Wordpress</span>
                     </li>
+                    <!-- <li>
+                        <i class="fa-brands fa-docker"></i><span>Docker</span>
+                    </li>
+                    <li>
+                        <i class='bx bxl-kubernetes' ></i><span>Kubernetes</span>
+                    </li> -->
                     <li>
                         <i class='bx bxl-visual-studio'></i><span>VS Code</span>
                     </li>
