@@ -28,7 +28,7 @@ $isContact = false;
                 "@graph": [
                     {
                         "@type": "Person",
-                        "@id": "https://adeline-patenne.students-laplateforme.io#me",
+                        "@id": "https://adeline-patenne.students-laplateforme.io",
                         "name": "Adeline Patenne",
                         "jobTitle": "Développeuse logiciel et web fullstack",
                         "url": "https://adeline-patenne.students-laplateforme.io/",
@@ -58,7 +58,7 @@ $isContact = false;
                     },
                     {
                         "@type": "WebSite",
-                        "@id": "https://adeline-patenne.students-laplateforme.io#website",
+                        "@id": "https://adeline-patenne.students-laplateforme.io",
                         "name": "Portfolio d'Adeline Patenne",
                         "url": "https://adeline-patenne.students-laplateforme.io",
                         "image": "https://adeline-patenne.students-laplateforme.io/images/adeline.jpg",
@@ -66,7 +66,7 @@ $isContact = false;
                         "author": {
                             "@type": "Person",
                             "name": "Adeline Patenne",
-                            "@id": "https://adeline-patenne.students-laplateforme.io#me"
+                            "@id": "https://adeline-patenne.students-laplateforme.io"
                         },
                         "sameAs": [
                             "https://www.linkedin.com/in/adeline-patenne/",
