@@ -20,6 +20,8 @@ $isContact = false;
     <script defer src="script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://unpkg.com/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
     <link rel="icon" type="image/x-icon" href="./images/Logo AP.ico">
     <title>Accueil</title>
 	<script type="application/ld+json">
@@ -100,6 +102,10 @@ $isContact = false;
             </article>
             <!-- <article class="hardskills"> -->
                 <ul class="hardskills">
+                    <!-- <li>
+                        <i class="devicon-csharp-plain"></i><span>C#</span>
+                    </li> -->
+                    
                     <li>
                         <i class="fa-brands fa-git-alt"></i><span>Git</span>
                     </li>
@@ -107,7 +113,7 @@ $isContact = false;
                         <i class="fa-brands fa-github"></i><span>GitHub</span>
                     </li>
                     <li>
-                        <i class='bx bxl-c-plus-plus'></i><span>C/C++</span>
+                        <i class="devicon-cplusplus-plain"></i><span>C/C++</span>
                     </li>
                     <!-- <li>
                         <i class="fa-brands fa-java"></i><span>Java</span>
@@ -117,6 +123,9 @@ $isContact = false;
                     </li>
                     <li>
                         <i class="fa-solid fa-database"></i><span>SQL</span>
+                    </li>
+                    <li>     
+                        <i class="devicon-mysql-original"></i><span>MySQL</span>
                     </li>
                     <li>
                         <i class="fa-brands fa-js"></i><span>JavaScript</span>
@@ -133,9 +142,9 @@ $isContact = false;
                     <!-- <li>
                         <i class="fa-brands fa-html5"></i><span>HMTL</span>
                     </li>-->
-                    <li>
+                    <!-- <li>
                         <i class="fa-brands fa-css3-alt"></i><span>CSS</span>
-                    </li> 
+                    </li>  -->
                     <li>
                         <i class="fa-brands fa-sass"></i><span>Sass</span>
                     </li>
