@@ -28,7 +28,7 @@ $isContact = false;
                 "@graph": [
                     {
                         "@type": "Person",
-                        "@id": "https://adeline-patenne.students-laplateforme.io",
+                        "@id": "https://adeline-patenne.students-laplateforme.io/",
                         "name": "Adeline Patenne",
                         "jobTitle": "Développeuse logiciel et web fullstack",
                         "url": "https://adeline-patenne.students-laplateforme.io/",
@@ -66,7 +66,7 @@ $isContact = false;
                         "author": {
                             "@type": "Person",
                             "name": "Adeline Patenne",
-                            "@id": "https://adeline-patenne.students-laplateforme.io"
+                            "@id": "https://adeline-patenne.students-laplateforme.io/"
                         },
                         "sameAs": [
                             "https://www.linkedin.com/in/adeline-patenne/",
