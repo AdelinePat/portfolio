@@ -1,0 +1,21 @@
+
+@use "mixin" as m;
+
+.title {
+  display: inline-block;
+  &-odd {
+    @include m.title(secondary);
+  }
+  &-even {
+    @include m.title(primary);
+  }
+}
+
+.btn {
+  &-odd {
+    background: var(--secondary);
+  }
+  &-even {
+    background: var(--primary);
+  }
+}

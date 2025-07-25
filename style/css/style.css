@@ -1,6 +1,53 @@
+:root {
+  --primary: #B4A7F7;
+  --primary-lighter: #EDDEFF;
+  --secondary: #80FFDB;
+  --secondary-lighter: #C6FFED;
+  --background: #1B1B1B;
+  --background-lighter: #242427;
+  --text: #E0E0E0;
+  --title-font: "Manrope", sans-serif;
+  --text-font: "Inter", sans-serif;
+  --big-title-font: "Onest", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.title {
+  display: inline-block;
+}
+.title-odd {
+  color: var(--secondary);
+  border-bottom: 1px solid var(--secondary);
+}
+.title-even {
+  color: var(--primary);
+  border-bottom: 1px solid var(--primary);
+}
+
+.btn-odd {
+  background: var(--secondary);
+}
+.btn-even {
+  background: var(--primary);
+}
+
 body {
-  background: blue;
-  height: 100vh;
+  background: var(--background);
+  font-family: var(--text-font);
+  color: var(--text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--title-font);
+}
+
+h1 {
+  font-family: var(--big-title-font);
 }
 
 /*# sourceMappingURL=style.css.map */
