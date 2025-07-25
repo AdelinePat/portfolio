@@ -7,6 +7,8 @@ body {
   font-family: var(--text-font);
   font-size: 1.6rem;
   color: var(--text);
+  display: flex;
+  position: relative;
 }
 
 h1,
@@ -16,8 +18,17 @@ h4,
 h5,
 h6 {
   font-family: var(--title-font);
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
 h1 {
   font-family: var(--big-title-font);
+}
+
+aside {
+    // top: 0;
+    top: 0;
+    position: sticky;
+    
 }
