@@ -7,12 +7,13 @@
 
 // general
 i {
+  font-family: var(-text-font);
   // font-size: 5.6rem;
   // margin: 0 1rem;
 }
 .container {
   margin: 0 auto;
-  padding: 0 2.4rem 2.4rem 2.4rem;
+  padding: 0 3rem 2.4rem 3rem;
 }
 
 .grid-container {
@@ -28,7 +29,7 @@ i {
     / 45rem 3rem auto;
 }
 
-// left side
+// LEFT SIDE
 aside {
   top: 4rem;
   position: sticky;
@@ -49,6 +50,7 @@ header {
   }
 }
 
+// footer [nav + social + credits]
 footer {
   grid-area: footer;
 
@@ -115,12 +117,13 @@ footer {
   }
 }
 
-// right side
+// RIGHT SIDE
 main {
   grid-area: main;
   text-align: center;
   h2 {
     margin-top: 1.6rem;
+    margin-bottom: 4rem;
     letter-spacing: 0.5rem;
     line-height: 4rem;
   }
@@ -130,7 +133,66 @@ main {
 }
 
 .preview {
-  p {
+  ul {
     margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    li {
+      i {
+        font-size: 4rem;
+      }
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      &:hover {
+        text-shadow: 0px 0px 3px var(--primary-lighter);
+        span {
+          visibility: visible;
+        }
+      }
+      span {
+        font-size: 1.4rem;
+        visibility: hidden;
+      }
+    }
+  }
+}
+
+.experiences {
+  article {
+    display: flex;
+    margin-bottom: 3.2rem;
+    .timeline {
+      color: var(--secondary);
+      text-align: right;
+      min-width: 10rem;
+      margin-right: 4rem;
+      padding-top: 0.5rem;
+    }
+  }
+
+  .content {
+    ul {
+      margin-left: 2rem;
+      li {
+        list-style: circle;
+        list-style-position: outside;
+      }
+    }
+    h3 {
+      padding: 0;
+      margin: 0;
+      // line-height: 1.6rem;
+      color: var(--secondary);
+      font-weight: 400;
+      font-size: 1.8rem;
+      letter-spacing: 0.1rem;
+    }
+    h3 + p {
+      color: var(--primary-lighter);
+      padding: 0;
+      padding: 0.4rem 0 1.2rem 0;
+      // line-height: 1.6rem;
+    }
   }
 }
