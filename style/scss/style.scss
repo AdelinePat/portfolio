@@ -7,8 +7,8 @@
 
 // general
 i {
-  font-size: 5.6rem;
-  margin: 0 1rem;
+  // font-size: 5.6rem;
+  // margin: 0 1rem;
 }
 .container {
   margin: 0 auto;
@@ -76,11 +76,42 @@ footer {
         width: 5rem;
       }
       &:hover {
+        text-shadow: 0px 0px 1px var(--primary);
         &::before {
           width: 5rem;
+          box-shadow: 0px 0px 1px var(--primary);
         }
       }
     }
+  }
+
+  .social {
+    // background: red;
+    display: flex;
+    justify-content: center;
+    gap: 3.2rem;
+    a {
+      font-size: 2.4rem;
+      line-height: 4rem;
+      color: var(--background);
+      background: var(--primary-lighter);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.8rem 1rem;
+      opacity: 0.5;
+      &:hover {
+        opacity: 1;
+        box-shadow: 0px 0px 3px var(--primary-lighter);
+      }
+    }
+  }
+
+  .text-hint {
+    font-size: 1rem;
+    text-align: center;
+    margin: 2.8rem 0;
   }
 }
 

@@ -16,6 +16,7 @@
   @include m.text-color(primary-lighter);
   @include m.text-color(secondary);
   @include m.text-color(secondary-ligther);
+  @include m.text-color(hint);
 }
 
 // generate btn 
