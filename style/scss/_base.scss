@@ -7,10 +7,9 @@ body {
   font-family: var(--text-font);
   font-size: 1.6rem;
   color: var(--text);
-  display: flex;
-  position: relative;
 }
 
+// base titles
 h1,
 h2,
 h3,
@@ -18,17 +17,27 @@ h4,
 h5,
 h6 {
   font-family: var(--title-font);
-  text-transform: uppercase;
   font-weight: 500;
+  padding-bottom: 0.8rem;
+  padding-top: 0.8rem;
+  margin-bottom: 1.2rem;
+  text-transform: capitalize;
+}
+
+h1,
+h2 {
+  text-transform: uppercase;
+  display: inline-block;
 }
 
 h1 {
-  font-family: var(--big-title-font);
+  font-size: 3rem;
 }
 
-aside {
-    // top: 0;
-    top: 0;
-    position: sticky;
-    
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+ font-size: 1.2em; 
 }

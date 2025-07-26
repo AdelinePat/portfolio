@@ -2,8 +2,104 @@
 @use "reset";
 @use "classes";
 @use "base";
+@use "generic";
+@use "mixin" as m;
 
+// general
+i {
+  font-size: 5.6rem;
+  margin: 0 1rem;
+}
 .container {
-    top: 0;
-    position: sticky;
+  margin: 0 auto;
+  padding: 0 2.4rem 2.4rem 2.4rem;
+}
+
+.grid-container {
+  max-width: 1400px;
+  margin: auto;
+  position: relative;
+  display: grid;
+  grid:
+    ". . ." 2.4rem
+    "header . main" auto
+    "footer . main" auto
+    ". . ." 2.4rem
+    / 45rem 3rem auto;
+}
+
+// left side
+aside {
+  top: 4rem;
+  position: sticky;
+}
+
+header {
+  grid-area: header;
+  h1,
+  h3 {
+    margin-left: 2rem;
+  }
+  .description {
+    background: var(--background-lighter);
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2.4rem;
+    opacity: 0.7;
+  }
+}
+
+footer {
+  grid-area: footer;
+
+  nav {
+    a {
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      text-transform: uppercase;
+      padding: 1rem 2rem;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      font-size: 1.4rem;
+
+      &::before {
+        background: var(--primary);
+        display: inline-block;
+        width: 3rem;
+        height: 0.1rem;
+        margin-right: 0.5em;
+        content: " ";
+      }
+
+      &.active::before {
+        width: 5rem;
+      }
+      &:hover {
+        &::before {
+          width: 5rem;
+        }
+      }
+    }
+  }
+}
+
+// right side
+main {
+  grid-area: main;
+  text-align: center;
+  h2 {
+    margin-top: 1.6rem;
+    letter-spacing: 0.5rem;
+    line-height: 4rem;
+  }
+  article {
+    text-align: left;
+  }
+}
+
+.preview {
+  p {
+    margin-bottom: 2rem;
+  }
 }

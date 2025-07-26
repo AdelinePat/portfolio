@@ -15,6 +15,21 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.btn-primary-lighter, .btn-primary, .btn-secondary-lighter, .btn-secondary {
+  font-size: 1.4rem;
+  color: var(--background);
+  border-radius: 25px;
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  margin: 1rem;
 }
 
 .title {
@@ -23,17 +38,62 @@
 .title-odd {
   color: var(--secondary);
   border-bottom: 1px solid var(--secondary);
+  text-shadow: 0px 0px 6px var(--secondary);
 }
 .title-even {
   color: var(--primary);
   border-bottom: 1px solid var(--primary);
+  text-shadow: 0px 0px 6px var(--primary);
 }
 
-.btn-odd {
-  background: var(--secondary);
+.text-primary {
+  color: var(--primary);
 }
-.btn-even {
+.text-primary-lighter {
+  color: var(--primary-lighter);
+}
+.text-secondary {
+  color: var(--secondary);
+}
+.text-secondary-ligther {
+  color: var(--secondary-ligther);
+}
+
+.btn-primary-lighter {
+  background: var(--primary-lighter);
+  border: 1px solid transparent;
+}
+.btn-primary-lighter:hover {
+  background: none;
+  border: 1px solid var(--primary-lighter);
+  color: var(--primary-lighter);
+}
+.btn-primary {
   background: var(--primary);
+  border: 1px solid transparent;
+}
+.btn-primary:hover {
+  background: none;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+.btn-secondary-lighter {
+  background: var(--secondary-lighter);
+  border: 1px solid transparent;
+}
+.btn-secondary-lighter:hover {
+  background: none;
+  border: 1px solid var(--secondary-lighter);
+  color: var(--secondary-lighter);
+}
+.btn-secondary {
+  background: var(--secondary);
+  border: 1px solid transparent;
+}
+.btn-secondary:hover {
+  background: none;
+  border: 1px solid var(--secondary);
+  color: var(--secondary);
 }
 
 html {
@@ -45,8 +105,6 @@ body {
   font-family: var(--text-font);
   font-size: 1.6rem;
   color: var(--text);
-  display: flex;
-  position: relative;
 }
 
 h1,
@@ -56,22 +114,135 @@ h4,
 h5,
 h6 {
   font-family: var(--title-font);
-  text-transform: uppercase;
   font-weight: 500;
+  padding-bottom: 0.8rem;
+  padding-top: 0.8rem;
+  margin-bottom: 1.2rem;
+  text-transform: capitalize;
+}
+
+h1,
+h2 {
+  text-transform: uppercase;
+  display: inline-block;
 }
 
 h1 {
-  font-family: var(--big-title-font);
+  font-size: 3rem;
 }
 
-aside {
-  top: 0;
-  position: sticky;
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.2em;
+}
+
+.gradient-subtitle {
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
+
+.pt-4 {
+  padding-top: 4rem;
+}
+
+.mb-5 {
+  margin-bottom: 5rem;
+}
+
+.ls-5 {
+  letter-spacing: 0.5rem; /* 5px */
+}
+
+.ls-2 {
+  letter-spacing: 0.2rem; /* 2px */
+}
+
+i {
+  font-size: 5.6rem;
+  margin: 0 1rem;
 }
 
 .container {
-  top: 0;
+  margin: 0 auto;
+  padding: 0 2.4rem 2.4rem 2.4rem;
+}
+
+.grid-container {
+  max-width: 1400px;
+  margin: auto;
+  position: relative;
+  display: grid;
+  grid: ". . ." 2.4rem "header . main" auto "footer . main" auto ". . ." 2.4rem/45rem 3rem auto;
+}
+
+aside {
+  top: 4rem;
   position: sticky;
+}
+
+header {
+  grid-area: header;
+}
+header h1,
+header h3 {
+  margin-left: 2rem;
+}
+header .description {
+  background: var(--background-lighter);
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2.4rem;
+  opacity: 0.7;
+}
+
+footer {
+  grid-area: footer;
+}
+footer nav a {
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+footer nav a::before {
+  background: var(--primary);
+  display: inline-block;
+  width: 3rem;
+  height: 0.1rem;
+  margin-right: 0.5em;
+  content: " ";
+}
+footer nav a.active::before {
+  width: 5rem;
+}
+footer nav a:hover::before {
+  width: 5rem;
+}
+
+main {
+  grid-area: main;
+  text-align: center;
+}
+main h2 {
+  margin-top: 1.6rem;
+  letter-spacing: 0.5rem;
+  line-height: 4rem;
+}
+main article {
+  text-align: left;
+}
+
+.preview p {
+  margin-bottom: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */

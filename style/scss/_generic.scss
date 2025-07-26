@@ -1,0 +1,24 @@
+.gradient-subtitle {
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+  // font-size: 2rem;
+}
+
+.pt-4 {
+  padding-top: 4rem;
+}
+
+.mb-5 {
+  margin-bottom: 5rem;
+}
+
+.ls-5 {
+  letter-spacing: 0.5rem; /* 5px */
+}
+.ls-2 {
+  letter-spacing: 0.2rem; /* 2px */
+}
+
+

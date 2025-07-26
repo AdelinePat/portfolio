@@ -1,4 +1,3 @@
-
 @use "mixin" as m;
 
 .title {
@@ -11,11 +10,18 @@
   }
 }
 
+// Text-color using classes like .text-primary
+.text {
+  @include m.text-color(primary);
+  @include m.text-color(primary-lighter);
+  @include m.text-color(secondary);
+  @include m.text-color(secondary-ligther);
+}
+
+// generate btn 
 .btn {
-  &-odd {
-    background: var(--secondary);
-  }
-  &-even {
-    background: var(--primary);
-  }
+  @include m.btn-color(primary-lighter);
+  @include m.btn-color(primary);
+  @include m.btn-color(secondary-lighter);
+  @include m.btn-color(secondary);
 }
