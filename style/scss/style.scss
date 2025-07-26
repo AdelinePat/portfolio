@@ -33,6 +33,13 @@ i {
 aside {
   top: 4rem;
   position: sticky;
+  // background: red;
+
+  
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 header {
@@ -48,12 +55,6 @@ header {
     margin-bottom: 2.4rem;
     opacity: 0.7;
   }
-}
-
-// footer [nav + social + credits]
-footer {
-  grid-area: footer;
-
   nav {
     a {
       color: var(--primary);
@@ -64,7 +65,7 @@ footer {
       margin-bottom: 0.5rem;
       font-weight: 500;
       font-size: 1.4rem;
-
+  
       &::before {
         background: var(--primary);
         display: inline-block;
@@ -73,7 +74,7 @@ footer {
         margin-right: 0.5em;
         content: " ";
       }
-
+  
       &.active::before {
         width: 5rem;
       }
@@ -86,7 +87,12 @@ footer {
       }
     }
   }
+}
 
+// footer [nav + social + credits]
+footer {
+  grid-area: footer;
+  // background: green;
   .social {
     // background: red;
     display: flex;
@@ -175,14 +181,13 @@ main {
     ul {
       margin-left: 2rem;
       li {
-        list-style: circle;
+        list-style: disc;
         list-style-position: outside;
       }
     }
     h3 {
       padding: 0;
       margin: 0;
-      // line-height: 1.6rem;
       color: var(--secondary);
       font-weight: 400;
       font-size: 1.8rem;
@@ -192,7 +197,43 @@ main {
       color: var(--primary-lighter);
       padding: 0;
       padding: 0.4rem 0 1.2rem 0;
-      // line-height: 1.6rem;
     }
+  }
+}
+
+.education {
+  margin-bottom: 3.2rem;
+  h3 {
+    color: var(--primary);
+    margin: 0;
+    padding: 0;
+    padding-bottom: 0.3rem;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+
+    &::before {
+      display: inline-block;
+      content: " ";
+      width: 0.8rem;
+      height: 0.8rem;
+      border-radius: 50%;
+      background: var(--primary);
+      margin-right: 2.5rem;
+    }
+  }
+
+  h4 {
+    color: var(--secondary);
+    @include m.education-border;
+  }
+  .timeline {
+    color: var(--primary);
+    @include m.education-border;
+    padding-bottom: 0.8rem;
+  }
+  p {
+    @include m.education-border;
+    padding-bottom: 2rem;
   }
 }

@@ -186,6 +186,10 @@ i {
 aside {
   top: 4rem;
   position: sticky;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 header {
@@ -202,11 +206,7 @@ header .description {
   margin-bottom: 2.4rem;
   opacity: 0.7;
 }
-
-footer {
-  grid-area: footer;
-}
-footer nav a {
+header nav a {
   color: var(--primary);
   display: flex;
   align-items: center;
@@ -216,7 +216,7 @@ footer nav a {
   font-weight: 500;
   font-size: 1.4rem;
 }
-footer nav a::before {
+header nav a::before {
   background: var(--primary);
   display: inline-block;
   width: 3rem;
@@ -224,15 +224,19 @@ footer nav a::before {
   margin-right: 0.5em;
   content: " ";
 }
-footer nav a.active::before {
+header nav a.active::before {
   width: 5rem;
 }
-footer nav a:hover {
+header nav a:hover {
   text-shadow: 0px 0px 1px var(--primary);
 }
-footer nav a:hover::before {
+header nav a:hover::before {
   width: 5rem;
   box-shadow: 0px 0px 1px var(--primary);
+}
+
+footer {
+  grid-area: footer;
 }
 footer .social {
   display: flex;
@@ -314,7 +318,7 @@ main article {
   margin-left: 2rem;
 }
 .experiences .content ul li {
-  list-style: circle;
+  list-style: disc;
   list-style-position: outside;
 }
 .experiences .content h3 {
@@ -329,6 +333,53 @@ main article {
   color: var(--primary-lighter);
   padding: 0;
   padding: 0.4rem 0 1.2rem 0;
+}
+
+.education {
+  margin-bottom: 3.2rem;
+}
+.education h3 {
+  color: var(--primary);
+  margin: 0;
+  padding: 0;
+  padding-bottom: 0.3rem;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+.education h3::before {
+  display: inline-block;
+  content: " ";
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  background: var(--primary);
+  margin-right: 2.5rem;
+}
+.education h4 {
+  color: var(--secondary);
+  margin: 0;
+  padding: 0;
+  margin-left: 0.4rem;
+  border-left: 1px solid var(--primary);
+  padding-left: 3rem;
+}
+.education .timeline {
+  color: var(--primary);
+  margin: 0;
+  padding: 0;
+  margin-left: 0.4rem;
+  border-left: 1px solid var(--primary);
+  padding-left: 3rem;
+  padding-bottom: 0.8rem;
+}
+.education p {
+  margin: 0;
+  padding: 0;
+  margin-left: 0.4rem;
+  border-left: 1px solid var(--primary);
+  padding-left: 3rem;
+  padding-bottom: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -32,3 +32,11 @@
         }
     }
 }
+
+@mixin education-border {
+    margin: 0;
+    padding: 0;
+    margin-left: 0.4rem;
+    border-left: 1px solid var(--primary);
+    padding-left: 3rem;
+}
