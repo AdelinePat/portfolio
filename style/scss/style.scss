@@ -6,11 +6,6 @@
 @use "mixin" as m;
 
 // general
-i {
-  font-family: var(-text-font);
-  // font-size: 5.6rem;
-  // margin: 0 1rem;
-}
 .container {
   margin: 0 auto;
   padding: 0 3rem 2.4rem 3rem;
@@ -25,7 +20,7 @@ i {
     ". . ." 2.4rem
     "header . main" auto
     "footer . main" auto
-    ". . ." 2.4rem
+    ". . ." 1.6rem
     / 45rem 3rem auto;
 }
 
@@ -33,10 +28,7 @@ i {
 aside {
   top: 4rem;
   position: sticky;
-  // background: red;
-
-  
-  min-height: 100vh;
+  min-height: calc( 100vh - 4rem);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -65,14 +57,15 @@ header {
       margin-bottom: 0.5rem;
       font-weight: 500;
       font-size: 1.4rem;
-  
+      
       &::before {
         background: var(--primary);
         display: inline-block;
-        width: 3rem;
+        width: 2.5rem;
         height: 0.1rem;
         margin-right: 0.5em;
         content: " ";
+        transition: all 0.15s ease-in;
       }
   
       &.active::before {
@@ -92,9 +85,7 @@ header {
 // footer [nav + social + credits]
 footer {
   grid-area: footer;
-  // background: green;
   .social {
-    // background: red;
     display: flex;
     justify-content: center;
     gap: 3.2rem;
@@ -109,6 +100,7 @@ footer {
       align-items: center;
       padding: 0.8rem 1rem;
       opacity: 0.5;
+      transition: all 0.2s ease-out;
       &:hover {
         opacity: 1;
         box-shadow: 0px 0px 3px var(--primary-lighter);
@@ -147,8 +139,17 @@ main {
 
 .experiences {
   article {
+    line-height: 2.2rem;
     display: flex;
-    margin-bottom: 3.2rem;
+    padding: 1.6rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease-in;
+    border-radius: 25px;
+    &:hover {
+      background: var(--background);
+      box-shadow: 0px 0px 3px 2px #222;
+      filter: brightness(110%);
+    }
     .timeline {
       color: var(--secondary);
       text-align: right;
@@ -224,7 +225,8 @@ main {
     display: grid;
     grid:
     "content title" auto
-    / auto 12rem;
+    / auto 15rem;
+    gap: 2.4rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
     margin-bottom: 1.5rem;

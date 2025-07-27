@@ -66,8 +66,10 @@ a {
 .btn-primary-lighter {
   background: var(--primary-lighter);
   border: 1px solid transparent;
+  transition: all 0.25s ease-out;
 }
 .btn-primary-lighter:hover {
+  transition: all 0.2s ease-in;
   background: none;
   border: 1px solid var(--primary-lighter);
   color: var(--primary-lighter);
@@ -75,8 +77,10 @@ a {
 .btn-primary {
   background: var(--primary);
   border: 1px solid transparent;
+  transition: all 0.25s ease-out;
 }
 .btn-primary:hover {
+  transition: all 0.2s ease-in;
   background: none;
   border: 1px solid var(--primary);
   color: var(--primary);
@@ -84,8 +88,10 @@ a {
 .btn-secondary-lighter {
   background: var(--secondary-lighter);
   border: 1px solid transparent;
+  transition: all 0.25s ease-out;
 }
 .btn-secondary-lighter:hover {
+  transition: all 0.2s ease-in;
   background: none;
   border: 1px solid var(--secondary-lighter);
   color: var(--secondary-lighter);
@@ -93,8 +99,10 @@ a {
 .btn-secondary {
   background: var(--secondary);
   border: 1px solid transparent;
+  transition: all 0.25s ease-out;
 }
 .btn-secondary:hover {
+  transition: all 0.2s ease-in;
   background: none;
   border: 1px solid var(--secondary);
   color: var(--secondary);
@@ -166,10 +174,6 @@ h3 {
   letter-spacing: 0.2rem; /* 2px */
 }
 
-i {
-  font-family: var(-text-font);
-}
-
 .container {
   margin: 0 auto;
   padding: 0 3rem 2.4rem 3rem;
@@ -180,13 +184,13 @@ i {
   margin: auto;
   position: relative;
   display: grid;
-  grid: ". . ." 2.4rem "header . main" auto "footer . main" auto ". . ." 2.4rem/45rem 3rem auto;
+  grid: ". . ." 2.4rem "header . main" auto "footer . main" auto ". . ." 1.6rem/45rem 3rem auto;
 }
 
 aside {
   top: 4rem;
   position: sticky;
-  min-height: 100vh;
+  min-height: calc(100vh - 4rem);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -219,10 +223,11 @@ header nav a {
 header nav a::before {
   background: var(--primary);
   display: inline-block;
-  width: 3rem;
+  width: 2.5rem;
   height: 0.1rem;
   margin-right: 0.5em;
   content: " ";
+  transition: all 0.15s ease-in;
 }
 header nav a.active::before {
   width: 5rem;
@@ -254,6 +259,7 @@ footer .social a {
   align-items: center;
   padding: 0.8rem 1rem;
   opacity: 0.5;
+  transition: all 0.2s ease-out;
 }
 footer .social a:hover {
   opacity: 1;
@@ -288,17 +294,21 @@ main article {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  transition: all 0.4s ease-out;
 }
 .preview ul li i {
   font-size: 4rem;
 }
 .preview ul li:hover {
+  transition: all 0.15s ease-in;
   text-shadow: 0px 0px 3px var(--primary-lighter);
 }
 .preview ul li:hover span {
+  transition: all 0.15s ease-in;
   visibility: visible;
 }
 .preview ul li span {
+  transition: all 0.4s ease-out;
   font-size: 1.4rem;
   visibility: hidden;
   letter-spacing: 0.1rem;
@@ -308,8 +318,17 @@ main article {
 }
 
 .experiences article {
+  line-height: 2.2rem;
   display: flex;
-  margin-bottom: 3.2rem;
+  padding: 1.6rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease-in;
+  border-radius: 25px;
+}
+.experiences article:hover {
+  background: var(--background);
+  box-shadow: 0px 0px 3px 2px #222;
+  filter: brightness(110%);
 }
 .experiences article .timeline {
   color: var(--secondary);
@@ -388,7 +407,8 @@ main article {
 
 .tools article {
   display: grid;
-  grid: "content title" auto/auto 12rem;
+  grid: "content title" auto/auto 15rem;
+  gap: 2.4rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
   margin-bottom: 1.5rem;
@@ -411,17 +431,21 @@ main article {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  transition: all 0.4s ease-out;
 }
 .tools article ul li i {
   font-size: 6rem;
 }
 .tools article ul li:hover {
+  transition: all 0.15s ease-in;
   text-shadow: 0px 0px 3px var(--secondary-lighter);
 }
 .tools article ul li:hover span {
+  transition: all 0.15s ease-in;
   visibility: visible;
 }
 .tools article ul li span {
+  transition: all 0.4s ease-out;
   font-size: 1.4rem;
   visibility: hidden;
   letter-spacing: 0.1rem;
