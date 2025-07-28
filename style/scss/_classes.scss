@@ -3,10 +3,10 @@
 
 .title {
   display: inline-block;
-  &-odd {
+  &-secondary {
     @include m.title(secondary);
   }
-  &-even {
+  &-primary {
     @include m.title(primary);
   }
 }
@@ -26,6 +26,11 @@
   @include m.btn-color(primary);
   @include m.btn-color(secondary-lighter);
   @include m.btn-color(secondary);
+}
+
+.skills {
+  @include m.skills-color(primary-lighter);
+  @include m.skills-color(secondary-lighter);
 }
 
 nav {

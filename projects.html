@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adeline Patenne | Projets</title>
+    <script src="./scripts/load-components.js"></script>
+    <script>
+      loadHead();
+    </script>
+  </head>
+  <body class="grid-container">
+    <aside class="container">
+      <header>
+        <h1 class="title-secondary ls-5">Mes projets</h1>
+        <h3 class="gradient-subtitle">
+          Un parcours entre lignes de code et projets créatifs
+        </h3>
+        <div class="description text-primary-lighter">
+          <p>
+            Voici un aperçu de tous les projets réalisés depuis le début de mes
+            études en Bachelor.
+          </p>
+          <p>
+            La liste n'est pas triée — utilisez le filtre pour explorer ce qui
+            vous intéresse !
+          </p>
+        </div>
+        <nav class="nav ls-2 mb-5 big-screen" id="nav"></nav>
+        <script>
+          const currentPage = "projects";
+          loadNav(currentPage);
+        </script>
+      </header>
+      <footer class="footer big-screen">
+        <!-- <script>
+          loadComponents("footer");
+        </script> -->
+      </footer>
+    </aside>
+    <main class="container">
+      <section class="projects-portfolio">
+        <article class="card">
+          <h2 class="title-primary">Démineur</h2>
+          <figure>
+            <img
+              src="./assets/project_img/minesweeper_project.jpg"
+              alt="image du jeu du démineur"
+              loading="lazy"
+            />
+            <i class="fa-solid fa-plus caption"></i>
+          </figure>
+          <p>
+            Travail de conception du projet, réalisation : d'un diagramme de
+            classe, d'une maquette Figma du projet. Répartition des tâches dans
+            le groupe, intégration et test manuel des nouvelles features.
+          </p>
+          <p>
+            Réalisation d'un jeu de démineur avec pygame. Utilisation d'un
+            design system (création des différents composants réutilisables et
+            modifiable de l'interface graphique)
+          </p>
+          <p>
+            Programmation orientée objet. Utilisation de la récursivité pour
+            découvrir en chaîne les cases libres.
+          </p>
+          <p>Score enregistré dans un json</p>
+          <p class="time">Mars 2025</p>
+          <a
+            href="https://github.com/AdelinePat/minesweeper"
+            target="_blank"
+            rel="noopener"
+            class="btn-secondary my-3 o-08"
+          >
+            Code source
+          </a>
+          <div class="skills-secondary-lighter o-08">
+            <strong><i class="fa-brands fa-git-alt"></i> Git</strong>
+            <strong><i class="fa-brands fa-python"></i> Python</strong>
+            <strong><i class="fa-sharp fa-solid fa-code"></i> POO</strong>
+            <strong> Pygame</strong>
+            <strong> MVC</strong>
+            <strong> Design System</strong>
+            <strong> Algorithmique</strong>
+            <strong><i class="fa-solid fa-users"></i> Travail d'équipe</strong>
+            <strong><i class="fa-solid fa-graduation-cap"></i> Scolaire</strong>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2 class="title-primary">Budget Buddy</h2>
+          <figure>
+            <img
+              src="./assets/project_img/budget_buddy_project.jpg"
+              alt="image de l'application budget buddy"
+              loading="lazy"
+            />
+            <i class="fa-solid fa-plus caption"></i>
+          </figure>
+          <p>
+            Réalisation d'un application de gestion bancaire. Utilisation de
+            SQL, SQL CLI et du connecteur mysql-connector-python.
+          </p>
+          <p>
+            Travail de conception du projet, réalisation : d'un diagramme de
+            classe, d'une maquette Figma du projet. Répartition des tâches dans
+            le groupe, intégration et test manuel des nouvelles features.
+          </p>
+          <p>
+            Réalisation d'une interface graphique avec Tkinter, projet basé sur
+            le Model View Controller
+          </p>
+          <p>
+            Création de compte client et bancaire, regex pour les emails et les
+            mots de passe, hashage avec sallage des mots de passe avant de les
+            enregistrer en base de donnée.
+          </p>
+          <p class="time">Mars 2025</p>
+          <a
+            href="https://github.com/AdelinePat/budget_buddy"
+            target="_blank"
+            rel="noopener"
+            class="btn-secondary my-3 o-08"
+          >
+            Code source
+          </a>
+          <div class="skills-secondary-lighter o-08">
+            <strong><i class="fa-brands fa-git-alt"></i> Git</strong>
+            <strong><i class="fa-solid fa-database"></i> SQL</strong>
+            <strong><i class="fa-brands fa-python"></i> Python</strong>
+            <strong><i class="fa-sharp fa-solid fa-code"></i> POO</strong>
+            <strong> MVC</strong>
+            <strong> Tkinter</strong>
+            <strong> Algorithmique</strong>
+            <strong><i class="fa-solid fa-users"></i> Travail d'équipe</strong>
+            <strong><i class="fa-solid fa-graduation-cap"></i> Scolaire</strong>
+          </div>
+        </article>
+        <article class="card">
+          <h2 class="title-primary">Pokemon</h2>
+          <figure>
+            <img
+              src="./assets/project_img/pokemon_project.jpg"
+              alt="image du jeu pokemon"
+              loading="lazy"
+            />
+            <i class="fa-solid fa-plus caption"></i>
+          </figure>
+
+          <p class="time">Février 2025</p>
+          <a
+            href="https://github.com/AdelinePat/pokemon"
+            target="_blank"
+            rel="noopener"
+            class="btn-secondary my-3 o-08"
+          >
+            Code source
+          </a>
+          <div class="skills-secondary-lighter o-08">
+            <strong><i class="fa-brands fa-git-alt"></i> Git</strong>
+            <strong><i class="fa-brands fa-python"></i> Python</strong>
+            <strong><i class="fa-sharp fa-solid fa-code"></i> POO</strong>
+            <strong> Pygame</strong>
+            <strong>Algorithmique</strong>
+            <strong><i class="fa-solid fa-users"></i> Travail d'équipe</strong>
+            <strong><i class="fa-solid fa-graduation-cap"></i> Scolaire</strong>
+          </div>
+        </article>
+      </section>
+    </main>
+    <footer class="small-screen">
+      <nav class="nav ls-2 mb-5 small-screen" id="nav"></nav>
+      <div class="footer"></div>
+    </footer>
+  </body>
+</html>
+
+<script>
+  loadNav(currentPage);
+  loadComponents("footer");
+</script>

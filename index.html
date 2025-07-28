@@ -4,40 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Adeline Patenne | CV</title>
-    <!-- style -->
-    <link rel="stylesheet" href="./style/css/style.css" />
-    <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Onest:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
-    <!-- icons     -->
-    <script
-      src="https://kit.fontawesome.com/7b20e7d8d0.js"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
-    />
     <script src="./scripts/load-components.js"></script>
+    <script>
+      loadHead();
+    </script>
   </head>
   <body class="grid-container">
     <aside class="container">
       <header>
-        <div class="header-title">
+        <div class="header-title picture">
           <div class="header-title-group">
-            <h1 class="title-odd ls-5">Adeline Patenne</h1>
+            <h1 class="title-secondary ls-5">Adeline Patenne</h1>
             <h3 class="gradient-subtitle">
               Développeuse logiciel en formation
             </h3>
           </div>
-          <div class="picture">
-            <a class="btn-secondary-lighter" href="./contact">Contactez-moi</a>
-          </div>
+            <a class="btn-secondary-lighter small-screen" href="./contact">Contactez-moi</a>
         </div>
         <div class="description text-primary-lighter">
           Animée par une soif d'apprendre et un goût du challenge, j'ai fait le
@@ -49,7 +31,7 @@
         </div>
         <nav class="nav ls-2 mb-5 big-screen" id="nav"></nav>
         <script>
-          const currentPage = "projects";
+          const currentPage = "index";
           loadNav(currentPage);
         </script>
       </header>
@@ -61,7 +43,7 @@
     </aside>
     <main class="container">
       <section class="preview">
-        <h2 class="title-odd">Mes outils principaux</h2>
+        <h2 class="title-secondary">Mes outils principaux</h2>
         <ul class="text-primary-lighter ls-2">
           <li>
             <i class="fa-brands fa-docker"></i>
@@ -87,7 +69,7 @@
         <a class="btn-primary-lighter" href="#tools">Plus...</a>
       </section>
       <section class="experiences">
-        <h2 class="title-even">Mes experiences</h2>
+        <h2 class="title-primary">Mes experiences</h2>
         <article>
           <div class="timeline">
             <p>
@@ -171,7 +153,7 @@
         </article>
       </section>
       <section class="education">
-        <h2 class="title-odd">Cursus Scolaire</h2>
+        <h2 class="title-secondary">Cursus Scolaire</h2>
         <article>
           <h3>
             <span class="big-screen">
@@ -231,7 +213,7 @@
         </article>
       </section>
       <section class="tools" id="tools">
-        <h2 class="title-even">Mes hards skills</h2>
+        <h2 class="title-primary">Mes hards skills</h2>
         <article>
           <h4>Outils et IDE</h4>
           <ul class="text-secondary-lighter">
@@ -359,11 +341,11 @@
           <ul>
             <li>
               <i class="devicon-photoshop-plain"></i>
-              <span>Adobe Photoshop</span>
+              <span>Photoshop</span>
             </li>
             <li>
               <i class="devicon-illustrator-plain"></i>
-              <span>Adobe Illustrator</span>
+              <span>Illustrator</span>
             </li>
           </ul>
         </article>

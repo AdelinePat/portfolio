@@ -1,0 +1,66 @@
+@use "../media_queries" as mq;
+@use "../base/variables" as *;
+
+header {
+  grid-area: header;
+  .picture {
+    background: none;
+  }
+
+  .small-screen {
+    display: none;
+  }
+  h1,
+  h3 {
+    margin-left: 2rem;
+  }
+  .description {
+    background: var(--background-lighter);
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2.4rem;
+    opacity: 0.7;
+  }
+
+  
+}
+@include mq.s {
+  header {
+      .small-screen {
+      display: inline;
+    }
+    .header-title {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-direction: column;
+
+      a {
+        margin-bottom: 4rem;
+        align-self: center;
+        justify-self: center;
+      }
+    }
+
+    .header-title.picture {
+      min-height: 100vh;
+      background: url($img_path) center -60% / cover no-repeat fixed;
+    }
+    h1,
+    h3 {
+      margin-right: 2rem;
+    }
+    .description {
+      padding: 3rem;
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+  }
+  
+  }
+  
+@include mq.md {
+  h1 {
+    padding-top: 4rem;
+  }
+}

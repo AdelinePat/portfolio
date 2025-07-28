@@ -1,15 +1,15 @@
 /* Landscape phones and down 480*/
 @mixin xs {
-    @media only screen and (max-width: 480px) {
-        @content;
-     }
+  @media only screen and (max-width: 480px) {
+    @content;
+  }
 }
 
 /* Landscape phone to portrait tablet */
 @mixin s {
-    @media only screen and (max-width: 767px) {
-        @content;
-     }
+  @media only screen and (max-width: 767px) {
+    @content;
+  }
 }
 
 /* Portrait tablet to landscape and desktop */
@@ -19,14 +19,14 @@
 //      }
 // }
 @mixin md {
-    @media only screen and (max-width: 979px) {
-        @content;
-     }
+  @media only screen and (max-width: 979px) {
+    @content;
+  }
 }
 
 /* Large desktop */
 @mixin xl {
-    @media only screen and (min-width: 1200px) {
-        @content;
-     }
+  @media only screen and (min-width: 1200px) {
+    @content;
+  }
 }

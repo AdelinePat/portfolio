@@ -1,6 +1,18 @@
+function loadHead() {
+  fetch("components/head.html")
+    .then((response) => response.text())
+    .then((data) => {
+      const headFragment = document.createRange().createContextualFragment(data);
+      document.head.appendChild(headFragment);
+    })
+    .catch((error) => {
+      console.error("Error loading head component:", error);
+    });
+}
+
 function loadComponents(element) {
   document.addEventListener("DOMContentLoaded", () => {
-    fetch(`html/components/${element}.html`)
+    fetch(`components/${element}.html`)
       .then((response) => response.text())
       .then((data) => {
         // document.getElementById(element).innerHTML = data;
@@ -32,7 +44,7 @@ function loadComponents(element) {
 // }
 function loadNav(currentPage) {
   document.addEventListener("DOMContentLoaded", () => {
-    fetch("html/components/nav.html")
+    fetch("components/nav.html")
       .then((response) => response.text())
       .then((data) => {
         // Inject nav into all .nav elements
