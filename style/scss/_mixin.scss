@@ -1,3 +1,4 @@
+@use "media_queries" as mq;
 @mixin title($color) {
     color: var(--#{$color});
     border-bottom: 1px solid var(--#{$color});
@@ -68,6 +69,9 @@
         font-size: 1.4rem;
         visibility: hidden;
         letter-spacing: 0.1rem;
+        @include mq.s {
+          visibility: visible;
+        }
       }
     }
   }

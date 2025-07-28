@@ -2,9 +2,10 @@
   --primary: #B4A7F7;
   --primary-lighter: #EDDEFF;
   --secondary: #80FFDB;
-  --secondary-lighter: #C6FFED;
-  --background: #1B1B1B;
-  --background-lighter: #242427;
+  --secondary-lighter: #c6ffed;
+  --secondary-lighter-rgb: 198, 255, 237;
+  --background: #1d1d1d;
+  --background-lighter: #2d2d30;
   --text: #E0E0E0;
   --hint: #828282;
   --title-font: "Manrope", sans-serif;
@@ -24,6 +25,10 @@ a {
   color: white;
 }
 
+/* Landscape phones and down 480*/
+/* Landscape phone to portrait tablet */
+/* Portrait tablet to landscape and desktop */
+/* Large desktop */
 .btn-primary-lighter, .btn-primary, .btn-secondary-lighter, .btn-secondary {
   font-size: 1.4rem;
   color: var(--background);
@@ -108,6 +113,76 @@ a {
   color: var(--secondary);
 }
 
+nav {
+  grid-area: nav;
+}
+nav a {
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+nav a::before {
+  background: var(--primary);
+  display: inline-block;
+  width: 2.5rem;
+  height: 0.1rem;
+  margin-right: 0.5em;
+  content: " ";
+  transition: all 0.15s ease-in;
+}
+nav a.active::before {
+  width: 5rem;
+}
+nav a:hover {
+  text-shadow: 0px 0px 1px var(--primary);
+}
+nav a:hover::before {
+  width: 5rem;
+  box-shadow: 0px 0px 1px var(--primary);
+}
+@media only screen and (max-width: 979px) {
+  nav a {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 400;
+  }
+  nav a.active::before {
+    width: 2.5rem;
+    background: var(--secondary);
+  }
+  nav a.active::after {
+    background: var(--secondary);
+  }
+  nav a.active {
+    color: var(--secondary);
+    font-size: 2.5rem;
+    letter-spacing: 0.5rem;
+  }
+  nav a::after {
+    background: var(--primary);
+    display: inline-block;
+    width: 2.5rem;
+    height: 0.1rem;
+    margin-left: 0.5em;
+    content: " ";
+    transition: all 0.15s ease-in;
+  }
+  nav a:hover::before {
+    width: 5rem;
+  }
+  nav a:hover::after {
+    width: 5rem;
+    box-shadow: 0px 0px 1px var(--primary);
+  }
+}
+
 html {
   font-size: 62.5%;
 }
@@ -117,6 +192,11 @@ body {
   font-family: var(--text-font);
   font-size: 1.6rem;
   color: var(--text);
+}
+
+::selection {
+  background: var(--secondary);
+  color: var(--background);
 }
 
 h1,
@@ -174,115 +254,8 @@ h3 {
   letter-spacing: 0.2rem; /* 2px */
 }
 
-.container {
-  margin: 0 auto;
-  padding: 0 3rem 2.4rem 3rem;
-}
-
-.grid-container {
-  max-width: 1400px;
-  margin: auto;
-  position: relative;
-  display: grid;
-  grid: ". . ." 2.4rem "header . main" auto "footer . main" auto ". . ." 1.6rem/45rem 3rem auto;
-}
-
-aside {
-  top: 4rem;
-  position: sticky;
-  min-height: calc(100vh - 4rem);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-header {
-  grid-area: header;
-}
-header h1,
-header h3 {
-  margin-left: 2rem;
-}
-header .description {
-  background: var(--background-lighter);
-  padding: 2rem;
-  border-radius: 12px;
-  margin-bottom: 2.4rem;
-  opacity: 0.7;
-}
-header nav a {
-  color: var(--primary);
-  display: flex;
-  align-items: center;
-  text-transform: uppercase;
-  padding: 1rem 2rem;
-  margin-bottom: 0.5rem;
-  font-weight: 500;
-  font-size: 1.4rem;
-}
-header nav a::before {
-  background: var(--primary);
-  display: inline-block;
-  width: 2.5rem;
-  height: 0.1rem;
-  margin-right: 0.5em;
-  content: " ";
-  transition: all 0.15s ease-in;
-}
-header nav a.active::before {
-  width: 5rem;
-}
-header nav a:hover {
-  text-shadow: 0px 0px 1px var(--primary);
-}
-header nav a:hover::before {
-  width: 5rem;
-  box-shadow: 0px 0px 1px var(--primary);
-}
-
-footer {
-  grid-area: footer;
-}
-footer .social {
-  display: flex;
-  justify-content: center;
-  gap: 3.2rem;
-}
-footer .social a {
-  font-size: 2.4rem;
-  line-height: 4rem;
-  color: var(--background);
-  background: var(--primary-lighter);
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.8rem 1rem;
-  opacity: 0.5;
-  transition: all 0.2s ease-out;
-}
-footer .social a:hover {
-  opacity: 1;
-  box-shadow: 0px 0px 3px var(--primary-lighter);
-}
-footer .text-hint {
-  font-size: 1rem;
-  text-align: center;
-  margin: 2.8rem 0;
-}
-
-main {
-  grid-area: main;
-  text-align: center;
-}
-main h2 {
-  margin-top: 1.6rem;
-  margin-bottom: 4rem;
-  letter-spacing: 0.5rem;
-  line-height: 4rem;
-}
-main article {
-  text-align: left;
+.no-text-transform {
+  text-transform: none;
 }
 
 .preview ul {
@@ -313,7 +286,13 @@ main article {
   visibility: hidden;
   letter-spacing: 0.1rem;
 }
+@media only screen and (max-width: 767px) {
+  .preview ul li span {
+    visibility: visible;
+  }
+}
 .preview ul {
+  padding-top: 16px;
   justify-content: space-evenly;
 }
 
@@ -326,6 +305,7 @@ main article {
   border-radius: 25px;
 }
 .experiences article:hover {
+  opacity: 1;
   background: var(--background);
   box-shadow: 0px 0px 3px 2px #222;
   filter: brightness(110%);
@@ -336,6 +316,18 @@ main article {
   min-width: 10rem;
   margin-right: 4rem;
   padding-top: 0.5rem;
+}
+@media only screen and (max-width: 979px) {
+  .experiences article {
+    flex-direction: column;
+  }
+  .experiences article .nl {
+    display: none;
+  }
+  .experiences article .timeline {
+    text-align: left;
+    opacity: 0.6;
+  }
 }
 .experiences .content ul {
   margin-left: 2rem;
@@ -357,9 +349,23 @@ main article {
   padding: 0;
   padding: 0.4rem 0 1.2rem 0;
 }
+@media only screen and (max-width: 979px) {
+  .experiences .content p + p {
+    margin-left: 2rem;
+  }
+  .experiences .content ul {
+    margin-left: 4rem;
+  }
+}
 
 .education {
   margin-bottom: 3.2rem;
+}
+.education .small-screen {
+  display: none;
+}
+.education .big-screen {
+  display: inline;
 }
 .education h3 {
   color: var(--primary);
@@ -373,8 +379,8 @@ main article {
 .education h3::before {
   display: inline-block;
   content: " ";
-  width: 0.8rem;
-  height: 0.8rem;
+  min-width: 0.8rem;
+  min-height: 0.8rem;
   border-radius: 50%;
   background: var(--primary);
   margin-right: 2.5rem;
@@ -403,6 +409,22 @@ main article {
   border-left: 1px solid var(--primary);
   padding-left: 3rem;
   padding-bottom: 2rem;
+}
+@media only screen and (max-width: 979px) {
+  .education .timeline {
+    padding-bottom: 1.6rem;
+  }
+  .education p + p {
+    display: none;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .education .big-screen {
+    display: none;
+  }
+  .education .small-screen {
+    display: inline;
+  }
 }
 
 .tools article {
@@ -450,6 +472,11 @@ main article {
   visibility: hidden;
   letter-spacing: 0.1rem;
 }
+@media only screen and (max-width: 767px) {
+  .tools article ul li span {
+    visibility: visible;
+  }
+}
 .tools article ul {
   margin-bottom: 0;
   color: var(--secondary-lighter);
@@ -460,6 +487,197 @@ main article {
 }
 .tools article ul li {
   margin: 0 2rem 2rem 2rem;
+}
+@media only screen and (max-width: 767px) {
+  .tools article {
+    grid: "title" auto "content" auto/auto;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  .tools article h4 {
+    text-align: center;
+  }
+  .tools article ul {
+    border-bottom: 1px solid rgba(var(--secondary-lighter-rgb), 0.2);
+    justify-content: center;
+    justify-self: center;
+    max-width: 80%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .tools article ul {
+    max-width: 100%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .tools article:last-child ul {
+    border-bottom: 0;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 3rem 2.4rem 3rem;
+}
+
+@media only screen and (max-width: 767px) {
+  aside.container {
+    padding: 0;
+  }
+}
+.grid-container {
+  max-width: 1400px;
+  margin: auto;
+  position: relative;
+  display: grid;
+  grid: ". . ." 2.4rem "header . main" auto "nav . main" auto "footer . main" auto ". . ." 1.6rem/45rem 3rem auto;
+}
+@media only screen and (max-width: 979px) {
+  .grid-container {
+    grid: "header" auto "main" auto "nav" auto "footer" auto/auto;
+  }
+}
+
+aside {
+  top: 4rem;
+  position: sticky;
+  min-height: calc(100vh - 4rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+aside ::selection {
+  background: var(--primary);
+  color: var(--background);
+}
+@media only screen and (max-width: 979px) {
+  aside {
+    text-align: center;
+    position: static;
+    min-height: auto;
+  }
+  aside nav {
+    display: none;
+  }
+}
+
+header {
+  grid-area: header;
+}
+header .picture {
+  display: none;
+}
+header h1,
+header h3 {
+  margin-left: 2rem;
+}
+header .description {
+  background: var(--background-lighter);
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2.4rem;
+  opacity: 0.7;
+}
+@media only screen and (max-width: 767px) {
+  header .header-title {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-direction: column;
+    background: url("../../assets/_MG_1840.jpg") center -60%/cover no-repeat fixed;
+  }
+  header h1 {
+    padding-top: 4rem;
+  }
+  header h1,
+  header h3 {
+    margin-right: 2rem;
+  }
+  header .description {
+    padding: 3rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  header .picture {
+    display: block;
+    padding-bottom: 4rem;
+  }
+}
+
+footer {
+  grid-area: footer;
+}
+footer.small-screen {
+  display: none;
+  background: var(--background-lighter);
+  padding-top: 4rem;
+  margin-bottom: 0;
+}
+footer.small-screen .social {
+  margin-bottom: 6rem;
+}
+footer.small-screen .social i {
+  font-size: 4rem;
+}
+footer.small-screen .text-hint {
+  font-size: 1.4rem;
+}
+footer.big-screen {
+  display: block;
+}
+footer .social {
+  display: flex;
+  justify-content: center;
+  gap: 3.2rem;
+}
+footer .social a {
+  font-size: 2.4rem;
+  line-height: 4rem;
+  color: var(--background);
+  background: var(--primary-lighter);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  opacity: 0.5;
+  transition: all 0.2s ease-out;
+}
+footer .social a:hover {
+  opacity: 1;
+  box-shadow: 0px 0px 3px var(--primary-lighter);
+}
+footer .text-hint {
+  font-size: 1rem;
+  text-align: center;
+  margin: 2.8rem 0;
+}
+
+@media only screen and (max-width: 979px) {
+  footer.small-screen {
+    display: block;
+    grid-area: footer;
+  }
+  nav.small-screen {
+    display: block;
+  }
+  footer.big-screen {
+    display: none;
+  }
+}
+main {
+  grid-area: main;
+  text-align: center;
+}
+main h2 {
+  margin-top: 1.6rem;
+  margin-bottom: 3rem;
+  letter-spacing: 0.5rem;
+  line-height: 4rem;
+}
+main article {
+  text-align: left;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,14 +1,21 @@
-@use "variables" as *;
-@use "reset";
+@use "base/variables" as *;
+@use "base/reset";
 @use "classes";
-@use "base";
-@use "generic";
+@use "base/base";
+@use "base/generic";
 @use "mixin" as m;
+@use "pages/homepage";
+@use "media_queries" as mq;
 
 // general
 .container {
   margin: 0 auto;
   padding: 0 3rem 2.4rem 3rem;
+}
+@include mq.s {
+  aside.container {
+    padding: 0;
+  }
 }
 
 .grid-container {
@@ -19,23 +26,49 @@
   grid:
     ". . ." 2.4rem
     "header . main" auto
+    "nav . main" auto
     "footer . main" auto
     ". . ." 1.6rem
     / 45rem 3rem auto;
+
+  @include mq.md {
+    grid:
+      "header" auto
+      "main" auto
+      "nav" auto
+      "footer" auto
+      / auto;
+  }
 }
 
 // LEFT SIDE
 aside {
+  ::selection {
+    background: var(--primary);
+    color: var(--background);
+  }
   top: 4rem;
   position: sticky;
-  min-height: calc( 100vh - 4rem);
+  min-height: calc(100vh - 4rem);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @include mq.md {
+    text-align: center;
+    position: static;
+    min-height: auto;
+
+    nav {
+      display: none;
+    }
+  }
 }
 
 header {
   grid-area: header;
+  .picture {
+    display: none;
+  }
   h1,
   h3 {
     margin-left: 2rem;
@@ -47,37 +80,31 @@ header {
     margin-bottom: 2.4rem;
     opacity: 0.7;
   }
-  nav {
-    a {
-      color: var(--primary);
-      display: flex;
-      align-items: center;
-      text-transform: uppercase;
-      padding: 1rem 2rem;
-      margin-bottom: 0.5rem;
-      font-weight: 500;
-      font-size: 1.4rem;
-      
-      &::before {
-        background: var(--primary);
-        display: inline-block;
-        width: 2.5rem;
-        height: 0.1rem;
-        margin-right: 0.5em;
-        content: " ";
-        transition: all 0.15s ease-in;
-      }
   
-      &.active::before {
-        width: 5rem;
-      }
-      &:hover {
-        text-shadow: 0px 0px 1px var(--primary);
-        &::before {
-          width: 5rem;
-          box-shadow: 0px 0px 1px var(--primary);
-        }
-      }
+  @include mq.s {
+    .header-title {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-direction: column;
+      background: url($img_path) center -60% / cover no-repeat fixed;
+    }
+    h1 {
+      padding-top: 4rem;
+    }
+    h1,
+    h3 {
+      margin-right: 2rem;
+    }
+    .description {
+      padding: 3rem;
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+    .picture {
+      display: block;
+      padding-bottom: 4rem;
     }
   }
 }
@@ -85,6 +112,27 @@ header {
 // footer [nav + social + credits]
 footer {
   grid-area: footer;
+  &.small-screen {
+    display: none;
+    background: var(--background-lighter);
+    padding-top: 4rem;
+    margin-bottom: 0;
+    .social {
+      // flex-direction: column;
+      // justify-content: center;
+      // align-items: center;
+      margin-bottom: 6rem;
+      i {
+        font-size: 4rem;
+      }
+    }
+    .text-hint {
+      font-size: 1.4rem;
+    }
+  }
+  &.big-screen {
+    display: block;
+  }
   .social {
     display: flex;
     justify-content: center;
@@ -115,143 +163,30 @@ footer {
   }
 }
 
+@include mq.md {
+  footer.small-screen {
+    display: block;
+    grid-area: footer;
+  }
+  nav.small-screen {
+    display: block;
+  }
+  footer.big-screen {
+    display: none;
+  }
+}
+
 // RIGHT SIDE
 main {
   grid-area: main;
   text-align: center;
   h2 {
     margin-top: 1.6rem;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
     letter-spacing: 0.5rem;
     line-height: 4rem;
   }
   article {
     text-align: left;
-  }
-}
-
-.preview {
-  @include m.skills-icon(--primary-lighter, 4rem);
-  ul {
-    justify-content: space-evenly;
-  }
-}
-
-.experiences {
-  article {
-    line-height: 2.2rem;
-    display: flex;
-    padding: 1.6rem;
-    margin-bottom: 1rem;
-    transition: all 0.3s ease-in;
-    border-radius: 25px;
-    &:hover {
-      background: var(--background);
-      box-shadow: 0px 0px 3px 2px #222;
-      filter: brightness(110%);
-    }
-    .timeline {
-      color: var(--secondary);
-      text-align: right;
-      min-width: 10rem;
-      margin-right: 4rem;
-      padding-top: 0.5rem;
-    }
-  }
-
-  .content {
-    ul {
-      margin-left: 2rem;
-      li {
-        list-style: disc;
-        list-style-position: outside;
-      }
-    }
-    h3 {
-      padding: 0;
-      margin: 0;
-      color: var(--secondary);
-      font-weight: 400;
-      font-size: 1.8rem;
-      letter-spacing: 0.1rem;
-    }
-    h3 + p {
-      color: var(--primary-lighter);
-      padding: 0;
-      padding: 0.4rem 0 1.2rem 0;
-    }
-  }
-}
-
-.education {
-  margin-bottom: 3.2rem;
-  h3 {
-    color: var(--primary);
-    margin: 0;
-    padding: 0;
-    padding-bottom: 0.3rem;
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-
-    &::before {
-      display: inline-block;
-      content: " ";
-      width: 0.8rem;
-      height: 0.8rem;
-      border-radius: 50%;
-      background: var(--primary);
-      margin-right: 2.5rem;
-    }
-  }
-
-  h4 {
-    color: var(--secondary);
-    @include m.education-border;
-  }
-  .timeline {
-    color: var(--primary);
-    @include m.education-border;
-    padding-bottom: 0.8rem;
-  }
-  p {
-    @include m.education-border;
-    padding-bottom: 2rem;
-  }
-}
-
-.tools {
-  article {
-    display: grid;
-    grid:
-    "content title" auto
-    / auto 15rem;
-    gap: 2.4rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    margin-bottom: 1.5rem;
-    h4 {
-      grid-area: title;
-      color: var(--secondary);
-      text-transform: uppercase;
-      align-self: flex-start;
-      text-align: left;
-      letter-spacing: 0.2rem;
-      word-break: break;
-    }
-
-    @include m.skills-icon(--secondary-lighter, 6rem);
-    ul {
-      margin-bottom: 0;
-      color: var(--secondary-lighter);
-      grid-area: content;
-      justify-content: flex-end;
-      flex-flow: wrap;
-      width: 100%;
-
-      li {
-        margin: 0 2rem 2rem 2rem;
-      }
-    }
   }
 }

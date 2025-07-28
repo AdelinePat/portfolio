@@ -1,0 +1,21 @@
+:root {
+    // colors
+    --primary: #B4A7F7;
+    --primary-lighter: #EDDEFF;
+    --secondary: #80FFDB;
+    --secondary-lighter: #c6ffed;
+    --secondary-lighter-rgb : 198, 255, 237;
+    //--background: #1B1B1B;
+    //--background-lighter: #242427;
+     --background: #1d1d1d;
+     --background-lighter: #2d2d30;
+    --text: #E0E0E0;
+    --hint: #828282;
+
+    // fonts
+    --title-font: "Manrope", sans-serif;
+    --text-font: "Inter", sans-serif;
+    --big-title-font: "Onest", sans-serif;
+}
+
+$img_path : "../../assets/_MG_1840.jpg"
