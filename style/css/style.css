@@ -33,6 +33,8 @@ a {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  max-height: 3rem;
+  overflow: hidden;
 }
 
 .btn-primary-lighter, .btn-primary, .btn-secondary-lighter, .btn-secondary {
@@ -269,6 +271,10 @@ h3 {
 
 .my-3 {
   margin-bottom: 3rem;
+  margin-top: 3rem;
+}
+
+.mt-3 {
   margin-top: 3rem;
 }
 
@@ -719,6 +725,15 @@ footer .text-hint {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+.card .links {
+  align-self: center;
+  display: flex;
+  justify-content: center;
+}
+.card .links a {
+  align-self: center;
+  justify-self: center;
 }
 .card a {
   align-self: center;

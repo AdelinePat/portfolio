@@ -41,6 +41,322 @@
     <main class="container">
       <section class="projects-portfolio">
         <article class="card">
+          <h2 class="title-primary">CV d'entraînement</h2>
+          <figure>
+            <img
+              src="./assets/project_img/resume.jpg"
+              alt="Projet d'entraînement de réalisation de CV"
+              loading="lazy"
+            />
+            <i class="fa-solid fa-plus caption"></i>
+          </figure>
+          <p>Réalisation d'un CV dans le cadre du cours Dyma</p>
+          <p>
+            Objectif : utiliser Sass, grid, flex et tout ce qui a été appris
+            lors de la certification
+          </p>
+          <p>
+            Le design général a été donné lors du cours, mais l'utilisation et
+            création des mixin et l'utisation de l'héritage pour les barres de
+            compétences ont été des rajouts que j'ai trouvé plus intéressant que
+            le template proposés.
+          </p>
+          <p class="time">Juillet 2025</p>
+          <div class="links">
+            <a
+              href="https://github.com/AdelinePat/resume"
+              target="_blank"
+              rel="noopener"
+              class="btn-secondary my-3 o-08"
+            >
+              Code source
+            </a>
+            <a
+              href="https://adelinepat.github.io/resume/"
+              target="_blank"
+              rel="noopener"
+              class="btn-primary my-3 o-08"
+            >
+              Live demo
+            </a>
+          </div>
+          <div class="skills-secondary-lighter o-08">
+            <strong><i class="fa-solid fa-briefcase"></i> Personnel</strong>
+            <strong><i class="fa-brands fa-sass"></i> Sass</strong>
+            <strong><i class="fa-brands fa-html5"></i> HTML</strong>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2 class="title-primary">Plateforme Tracker</h2>
+          <figure>
+            <img
+              src="./assets/project_img/PlateformeTracker"
+              alt="Projet La Plateforme Tracker"
+              loading="lazy"
+            />
+            <i class="fa-solid fa-plus caption"></i>
+          </figure>
+          <p>Création d'une application de gestion des élèves d'une école</p>
+          <p>
+            Base de données PostgreSQL action CRUD possible pour les étudiants
+            avec filtre en fonction du nom / prénom (LIKE), âge ou note (BETWEEN
+            : range)
+          </p>
+          <p>
+            Création de compte administrateur pour les formateurs et équipe
+            pédagogique avec salage des mots de passe, sel unique pour chaque
+            compte créé. Regex pour le mot de passe
+          </p>
+          <p>
+            Utilisation de javafx pour l'interface graphique et de Maven pour
+            les dépendances du projets
+          </p>
+          <p class="time">Juillet 2025</p>
+          <a
+            href="https://github.com/AdelinePat/LaPlateformeTracker"
+            target="_blank"
+            rel="noopener"
+            class="btn-secondary my-3 o-08"
+          >
+            Code source
+          </a>
+          <div class="skills-secondary-lighter o-08">
+            <strong><i class="fa-solid fa-graduation-cap"></i> Scolaire</strong>
+            <strong><i class="fa-brands fa-java"></i> Java</strong>
+            <strong><i class="devicon-postgresql-plain"></i> PostgreSQL</strong>
+            <strong><i class="devicon-maven-plain"></i> Maven</strong>
+            <strong
+              ><i class="fa-solid fa-triangle-exclamation"></i> Gestion
+              d'erreur</strong
+            >
+            <strong> Java:fx</strong>
+            <strong
+              ><i class="fa-solid fa-puzzle-piece"></i> Design Pattern</strong
+            >
+            <strong><i class="fa-solid fa-users"></i> Travail d'équipe</strong>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2 class="title-primary">Global Converter</h2>
+          <figure>
+            <img
+              src="./assets/project_img/globalConverter"
+              alt="Projet Global Converter"
+              loading="lazy"
+            />
+            <i class="fa-solid fa-plus caption"></i>
+          </figure>
+          <p>
+            Réalisation d'une application console pour convertir des lettres en
+            différente base
+          </p>
+          <p>
+            Factory pour les différents convertisseurs. Interface gérant
+            l'ensemble des convertisseurs, chacun d'entre eux gère sa propre
+            logique.
+          </p>
+          <p>
+            Conversion d'une lettre vers les bases : décimal (ASCII),
+            hexadécimal, octal et binaire
+          </p>
+          <p>
+            Possibilité d'utiliser le chiffrement de césar avec la clé au choix
+            de l'utilisateur.
+          </p>
+          <p class="time">Juin 2025</p>
+          <a
+            href="https://github.com/AdelinePat/globalConverter"
+            target="_blank"
+            rel="noopener"
+            class="btn-secondary my-3 o-08"
+          >
+            Code source
+          </a>
+          <div class="skills-secondary-lighter o-08">
+            <strong><i class="fa-solid fa-graduation-cap"></i> Scolaire</strong>
+            <strong><i class="fa-brands fa-java"></i> Java</strong>
+            <strong
+              ><i class="fa-solid fa-triangle-exclamation"></i> Gestion
+              d'erreur</strong
+            >
+            <strong><i class="fa-solid fa-terminal"></i> Console</strong>
+            <strong
+              ><i class="fa-solid fa-puzzle-piece"></i> Design Pattern</strong
+            >
+            <strong><i class="fa-solid fa-users"></i> Travail d'équipe</strong>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2 class="title-primary">Tower Defense</h2>
+          <figure>
+            <img
+              src="https://github.com/AdelinePat/tower-defense/blob/main/docs/README/main_menu.png?raw=true"
+              alt="Projet Tower Defense"
+              loading="lazy"
+            />
+            <i class="fa-solid fa-plus caption"></i>
+          </figure>
+
+          <p>Réalisation d'un jeu type Tower Defense</p>
+          <p>
+            Création des ennemis via une factory, 4 types d'ennemi dont un créé
+            par défaut si aucune précision n'est donnée
+          </p>
+          <p>
+            Utilisation du design pattern strategy pour les mouvements des
+            ennemis
+          </p>
+          <p>
+            Chaque ennemi gère son propre mouvement, abstraction et
+            polymorphisme utilisé
+          </p>
+          <p>
+            Factory pour création des trois différents type de tours, même
+            principe que pour les ennemis
+          </p>
+          <p class="time">Juin 2025</p>
+          <a
+            href="https://github.com/AdelinePat/tower-defense"
+            target="_blank"
+            rel="noopener"
+            class="btn-secondary my-3 o-08"
+          >
+            Code source
+          </a>
+          <div class="skills-secondary-lighter o-08">
+            <strong><i class="fa-solid fa-graduation-cap"></i> Scolaire</strong>
+            <strong
+              ><i class="fa-solid fa-puzzle-piece"></i> Design Pattern</strong
+            >
+            <strong><i class="devicon-cplusplus-plain"></i> C++</strong>
+            <strong><i class="devicon-unity-plain"></i> Unity</strong>
+            <strong><i class="fa-solid fa-users"></i> Travail d'équipe</strong>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2 class="title-primary">Todo C++</h2>
+          <figure>
+            <img
+              src="./assets/project_img/todo-cpp.jpg"
+              alt="projet console todo list"
+              loading="lazy"
+            />
+            <i class="fa-solid fa-plus caption"></i>
+          </figure>
+          <p>Réalisation d'une todo liste en console avec C++</p>
+          <p>
+            Nettoyage des inputs utilisateurs pour avoir le bon format final.
+          </p>
+          <p>Réalisation des actions CRUD dans un fichier csv.</p>
+          <p>Gestion des erreurs</p>
+          <p class="time">Mai 2025</p>
+          <a
+            href="https://github.com/AdelinePat/todolist_cpp"
+            target="_blank"
+            rel="noopener"
+            class="btn-secondary my-3 o-08"
+          >
+            Code source
+          </a>
+          <div class="skills-secondary-lighter o-08">
+            <strong><i class="fa-solid fa-briefcase"></i> Personnel</strong>
+            <strong><i class="devicon-cplusplus-plain"></i> C++</strong>
+            <strong
+              ><i class="fa-solid fa-triangle-exclamation"></i> Gestion
+              erreur</strong
+            >
+            <strong><i class="fa-solid fa-terminal"></i> Console</strong>
+            <strong><i class="devicon-cmake-plain"></i> CMake</strong>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2 class="title-primary">My Discord</h2>
+          <figure>
+            <img
+              src="./assets/project_img/myDiscord.jpg"
+              alt="Application My Discord"
+              loading="lazy"
+            />
+            <i class="fa-solid fa-plus caption"></i>
+          </figure>
+          <p>
+            Création d'une application de messagerie type discord avec le
+            langage C.
+          </p>
+          <p>
+            Installation et mise en place de l'environnement de développement
+            sous windows utilisant MSYS2.
+          </p>
+          <p>
+            Création de socket, deux applications : une pour le serveur et
+            l'autre pour le client.
+          </p>
+          <p>
+            Communication entre les deux applications via les sockets en
+            envoyant les données sous forme de json.
+          </p>
+          <p>
+            Conception et gestion d'une base de données PostgreSQL avec création
+            de trigger et de fonction permettant de donner l'accès aux
+            utilisateurs aux channels publics.
+          </p>
+          <p>Utilisation de GTK3 pour l'interface graphique</p>
+          <p class="time">Mai 2025</p>
+          <a
+            href="https://github.com/AdelinePat/myDiscord"
+            target="_blank"
+            rel="noopener"
+            class="btn-secondary my-3 o-08"
+          >
+            Code source
+          </a>
+          <div class="skills-secondary-lighter o-08">
+            <strong><i class="fa-solid fa-graduation-cap"></i> Scolaire</strong>
+            <strong> C</strong>
+            <strong><i class="devicon-postgresql-plain"></i> PostgreSQL</strong>
+            <strong> Socket</strong>
+            <strong> Makefile</strong>
+            <strong><i class="fa-solid fa-users"></i> Travail d'équipe</strong>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2 class="title-primary">Pierre Feuille Ciseaux</h2>
+          <figure>
+            <img
+              src="./assets/project_img/rock-paper-cisors.jpg"
+              alt="image représentant le jeu pierre feuille ciseaux"
+              loading="lazy"
+            />
+            <i class="fa-solid fa-plus caption"></i>
+          </figure>
+          <p>
+            Projet d'entraînement à C++, utilisant un simple menu, des
+            namespaces
+          </p>
+          <p class="time">Mai 2025</p>
+          <a
+            href="https://github.com/AdelinePat/rock-paper-scissors"
+            target="_blank"
+            rel="noopener"
+            class="btn-secondary my-3 o-08"
+          >
+            Code source
+          </a>
+          <div class="skills-secondary-lighter o-08">
+            <strong><i class="fa-solid fa-briefcase"></i> Personnel</strong>
+            <strong><i class="devicon-cplusplus-plain"></i> C++</strong>
+            <strong><i class="fa-solid fa-terminal"></i> Console</strong>
+            <strong><i class="devicon-cmake-plain"></i> CMake</strong>
+          </div>
+        </article>
+
+        <article class="card">
           <h2 class="title-primary">Démineur</h2>
           <figure>
             <img
@@ -75,7 +391,7 @@
             Code source
           </a>
           <div class="skills-secondary-lighter o-08">
-            <strong><i class="fa-brands fa-git-alt"></i> Git</strong>
+            <strong><i class="fa-solid fa-graduation-cap"></i> Scolaire</strong>
             <strong><i class="fa-brands fa-python"></i> Python</strong>
             <strong><i class="fa-sharp fa-solid fa-code"></i> POO</strong>
             <strong> Pygame</strong>
@@ -83,7 +399,7 @@
             <strong> Design System</strong>
             <strong> Algorithmique</strong>
             <strong><i class="fa-solid fa-users"></i> Travail d'équipe</strong>
-            <strong><i class="fa-solid fa-graduation-cap"></i> Scolaire</strong>
+            <strong><i class="fa-brands fa-git-alt"></i> Git</strong>
           </div>
         </article>
 
@@ -125,7 +441,7 @@
             Code source
           </a>
           <div class="skills-secondary-lighter o-08">
-            <strong><i class="fa-brands fa-git-alt"></i> Git</strong>
+            <strong><i class="fa-solid fa-graduation-cap"></i> Scolaire</strong>
             <strong><i class="fa-solid fa-database"></i> SQL</strong>
             <strong><i class="fa-brands fa-python"></i> Python</strong>
             <strong><i class="fa-sharp fa-solid fa-code"></i> POO</strong>
@@ -133,9 +449,10 @@
             <strong> Tkinter</strong>
             <strong> Algorithmique</strong>
             <strong><i class="fa-solid fa-users"></i> Travail d'équipe</strong>
-            <strong><i class="fa-solid fa-graduation-cap"></i> Scolaire</strong>
+            <strong><i class="fa-brands fa-git-alt"></i> Git</strong>
           </div>
         </article>
+
         <article class="card">
           <h2 class="title-primary">Pokemon</h2>
           <figure>
@@ -146,7 +463,21 @@
             />
             <i class="fa-solid fa-plus caption"></i>
           </figure>
-
+          <p>
+            Réalisation d'un jeu Pokémon en groupe. Créations d'une classe
+            pokémon <strong>héritant</strong> d'évolution afin de gérer le gain
+            d'expérience, de level up et l'évolution.
+          </p>
+          <p>
+            Utilisation du modèle MVC (Model View Controller) afin de faire
+            communiquer les classes et fichier back avec les classes et fichiers
+            front
+          </p>
+          <p>
+            Sauvegarde des données dans des json (traduction des objets en
+            dictionnaire) puis instanciation des objets depuis les fichiers json
+          </p>
+          <p class="coming-soon">Février 2025</p>
           <p class="time">Février 2025</p>
           <a
             href="https://github.com/AdelinePat/pokemon"
@@ -157,13 +488,411 @@
             Code source
           </a>
           <div class="skills-secondary-lighter o-08">
-            <strong><i class="fa-brands fa-git-alt"></i> Git</strong>
+            <strong><i class="fa-solid fa-graduation-cap"></i> Scolaire</strong>
             <strong><i class="fa-brands fa-python"></i> Python</strong>
             <strong><i class="fa-sharp fa-solid fa-code"></i> POO</strong>
             <strong> Pygame</strong>
             <strong>Algorithmique</strong>
             <strong><i class="fa-solid fa-users"></i> Travail d'équipe</strong>
+            <strong><i class="fa-brands fa-git-alt"></i> Git</strong>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2 class="title-primary">Fruit Ninja</h2>
+          <figure>
+            <img
+              src="./assets/project_img/fruit_ninja_project.jpg"
+              alt="image du jeu fruit ninja"
+              loading="lazy"
+            />
+            <i class="fa-solid fa-plus caption"></i>
+          </figure>
+          <p>
+            Réalisation d'un jeu type Fruit Ninja avec python en utilisant
+            l'interface graphique Pygame. Lorsque la touche du clavier
+            correspondante a été appuyée, le fruit est coupé.
+          </p>
+          <p>
+            Création de plusieurs classes (fruits, boutons) et utilisation de
+            l'<strong>héritage</strong> (bouton_image hérite de bouton)
+          </p>
+          <p class="time">Janvier 2025</p>
+          <a
+            href="https://github.com/AdelinePat/typing-game"
+            target="_blank"
+            rel="noopener"
+            class="btn-secondary my-3 o-08"
+          >
+            Code source
+          </a>
+          <div class="skills-secondary-lighter o-08">
             <strong><i class="fa-solid fa-graduation-cap"></i> Scolaire</strong>
+            <strong><i class="fa-brands fa-python"></i> Python</strong>
+            <strong><i class="fa-sharp fa-solid fa-code"></i> POO</strong>
+            <strong> Pygame</strong>
+            <strong>Algorithmique</strong>
+            <strong><i class="fa-solid fa-users"></i> Travail d'équipe</strong>
+            <strong><i class="fa-brands fa-git-alt"></i> Git</strong>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2 class="title-primary">Jeu du pendu</h2>
+          <figure>
+            <img
+              src="./assets/project_img/hangman_project.jpg"
+              alt="image du jeu du pendu"
+              loading="lazy"
+            />
+            <i class="fa-solid fa-plus caption"></i>
+          </figure>
+          <p>
+            Réalisation d'un jeu du pendu avec python en utilisant l'interface
+            graphique Pygame.
+          </p>
+          <p>
+            Utilisation d'un fichier Json pour enregistrer les scores et les
+            supprimer.
+          </p>
+          <p class="time">Janvier 2025</p>
+          <a
+            href="https://github.com/AdelinePat/hangman"
+            target="_blank"
+            rel="noopener"
+            class="btn-secondary my-3 o-08"
+          >
+            Code source
+          </a>
+          <div class="skills-secondary-lighter o-08">
+            <strong><i class="fa-solid fa-graduation-cap"></i> Scolaire</strong>
+            <strong><i class="fa-brands fa-python"></i> Python</strong>
+            <strong>Pygame</strong>
+            <strong><i class="fa-solid fa-users"></i> Travail d'équipe</strong>
+            <strong><i class="fa-brands fa-git-alt"></i> Git</strong>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2 class="title-primary">Calculatrice</h2>
+          <figure>
+            <img
+              src="./assets/project_img/calculator_project1.jpg"
+              alt="image du projet de la calculatrice"
+              loading="lazy"
+            />
+            <i class="fa-solid fa-plus caption"></i>
+          </figure>
+          <p>
+            Réalisation d'une calculatrice dans le terminal avec python. Prise
+            en compte d'un input géré par une regex.
+          </p>
+          <p>
+            Utilisation du try except, gestion des diverses exceptions possible
+            (ZeroDivisionError, gestion des erreurs possible après traitement
+            par la regex)
+          </p>
+          <p class="time">Janvier 2025</p>
+          <a
+            href="https://github.com/AdelinePat/my_calculator"
+            target="_blank"
+            rel="noopener"
+            class="btn-secondary my-3 o-08"
+          >
+            Code source
+          </a>
+          <div class="skills-secondary-lighter o-08">
+            <strong><i class="fa-solid fa-graduation-cap"></i> Scolaire</strong>
+            <strong><i class="fa-brands fa-python"></i> Python</strong>
+            <strong>Algorithmique</strong>
+            <strong>Regex</strong>
+            <strong><i class="fa-solid fa-users"></i> Travail d'équipe</strong>
+            <strong><i class="fa-brands fa-git-alt"></i> Git</strong>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2 class="title-primary">AzerType</h2>
+          <figure>
+            <img
+              src="./assets/project_img/azertype_project.jpg"
+              alt="image de AzerType"
+              loading="lazy"
+            />
+            <i class="fa-solid fa-plus caption"></i>
+          </figure>
+          <p>
+            Création d'un jeu pour s'entraîner à taper au clavier dans le cadre
+            d'un cours OpenClassRooms :
+            <a
+              href="https://openclassrooms.com/fr/courses/7696886-apprenez-a-programmer-avec-javascript"
+              >Apprenez à programmer avec JavaScript</a
+            >
+          </p>
+          <p>
+            Le cours se concentrait sur l'apprentissage du javascript. Le CSS et
+            HTML a donc été fourni par OpenClassRooms
+          </p>
+          <p>
+            Utilisation du DOM (Document Object Model), modification du contenu
+            html selon certaines conditions (au niveau du score), utilisation
+            d'une regex pour le formulaire.
+          </p>
+          <p class="time">Décembre 2024</p>
+          <div class="links">
+            <a
+              href="https://github.com/AdelinePat/AzerType"
+              target="_blank"
+              rel="noopener"
+              class="btn-secondary my-3 o-08"
+            >
+              Code source
+            </a>
+            <a
+              href="https://adelinepat.github.io/AzerType/"
+              target="_blank"
+              rel="noopener"
+              class="btn-primary my-3 o-08"
+            >
+              Live demo
+            </a>
+          </div>
+
+          <div class="skills-secondary-lighter o-08">
+            <strong><i class="fa-solid fa-briefcase"></i> Personnel</strong>
+            <strong><i class="fa-brands fa-js"></i> Javascript</strong>
+            <strong>Regex</strong>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2 class="title-primary">Hackaton - KoSphere</h2>
+          <figure>
+            <img
+              src="./assets/project_img/kosphere_project.jpg"
+              alt="image représentant le hackaton"
+              loading="lazy"
+            />
+            <i class="fa-solid fa-plus caption"></i>
+          </figure>
+          <p>
+            Participation à un hackaton à la Plateforme_ . Idéation sur un sujet
+            imposé : l'amélioration de l'utiisation des IoT au sein de notre
+            centre de formation
+          </p>
+          <p>Echange des idées au sein d'une équipe de 4 à l'aide du crazy 8</p>
+          <p>
+            L'idée choisie est une machine à café connectée avec une application
+            notifiant les utilisateurs si une machine est en panne, à nouveau en
+            service et quelle quantité de quelle boisson se trouve dans la
+            machine.<br />
+            Le problème nous ayant poussé à choisir cette idée plutôt qu'une
+            autre : les machines à café souvent en panne poussent les élèves à
+            aller consommer en dehors de l'école, causant une perte de temps et
+            de la mauvaise humeur lorsque l'utilisateur découvre que toutes les
+            machines sont en pannes.
+          </p>
+          <p class="time">Décembre 2024</p>
+
+          <div class="skills-secondary-lighter o-08 mt-3">
+            <strong><i class="fa-solid fa-graduation-cap"></i> Scolaire</strong>
+            <strong><i class="fa-solid fa-users"></i> Travail d'équipe</strong>
+            <strong><i class="fa-solid fa-lightbulb"></i> Idéation</strong>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2 class="title-primary">Portfolio</h2>
+          <figure>
+            <img
+              src="./assets/project_img/resume-preview-recent.png"
+              alt="Capture d'écran du projet Portfolio"
+              loading="lazy"
+            />
+            <i class="fa-solid fa-plus caption"></i>
+          </figure>
+          <p>
+            Réalisation d'un CV et portfolio regrouppant mes projets scolaires
+            et personnels.
+          </p>
+          <p>
+            Utilisation du javascript pour la page portfolio afin de créer les
+            filtres (utilisation de classList). Utilisation du php afin de
+            n'avoir qu'un fichier pour le header et le modifier dans les 3
+            pages.
+          </p>
+          <p>
+            Apprentissage de Sass en cours afin de rendre le CSS plus facile à
+            maintenir
+          </p>
+          <p class="time">Décembre 2024 - Août 2025</p>
+          <a
+            href="https://github.com/AdelinePat/portfolio"
+            target="_blank"
+            rel="noopener"
+            class="btn-secondary my-3 o-08"
+          >
+            Code source
+          </a>
+          <div class="skills-secondary-lighter o-08">
+            <strong><i class="fa-solid fa-briefcase"></i> Personnel</strong>
+            <strong><i class="fa-brands fa-sass"></i> Sass</strong>
+            <strong><i class="fa-brands fa-html5"></i> HTML</strong>
+            <strong><i class="fa-brands fa-js"></i> Javascript</strong>
+            <strong><i class="fa-brands fa-figma"></i> Figma</strong>
+            <strong><i class="fa-brands fa-git-alt"></i> Git</strong>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2 class="title-primary">Blackpink</h2>
+          <figure>
+            <img
+              src="https://raw.githubusercontent.com/AdelinePat/fansite/refs/heads/main/preview_fansite1_blackpink.jpg"
+              alt="Capture d'écran du projet Blackpink"
+              loading="lazy"
+            />
+            <i class="fa-solid fa-plus caption"></i>
+          </figure>
+          <p>
+            Création d'un fansite sur blackpink, projet individuel lié au projet
+            Fansite en groupe.
+          </p>
+          <p>Utilisation des pseudo classes et des transitions</p>
+          <p class="time">Novembre 2024</p>
+          <div class="links">
+            <a
+              href="https://github.com/AdelinePat/fansite"
+              target="_blank"
+              rel="noopener"
+              class="btn-secondary my-3 o-08"
+            >
+              Code source
+            </a>
+            <a
+              href="https://adelinepat.github.io/fansite/fansite1.html"
+              target="_blank"
+              rel="noopener"
+              class="btn-primary my-3 o-08"
+            >
+              Live demo
+            </a>
+          </div>
+          <div class="skills-secondary-lighter o-08">
+            <strong><i class="fa-solid fa-graduation-cap"></i> Scolaire</strong>
+            <strong><i class="fa-brands fa-html5"></i> HTML</strong>
+            <strong><i class="fa-brands fa-css3-alt"></i> CSS</strong>
+            <strong><i class="fa-brands fa-figma"></i> Figma</strong>
+            <strong><i class="fa-brands fa-git-alt"></i> Git</strong>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2 class="title-primary">Bloom Petals</h2>
+          <figure>
+            <img
+              src="https://raw.githubusercontent.com/AdelinePat/webdesign-fleuriste/refs/heads/main/preview-desktop.jpg"
+              alt="Capture d'écran du projet Bloom Petals"
+              loading="lazy"
+            />
+            <i class="fa-solid fa-plus caption"></i>
+          </figure>
+          <p>
+            Premier projet HTML et CSS, réalisation d'un site pour une fleuriste
+            nommée Bloom Petals.
+          </p>
+          <p>Apprentissage des balises HTML5 et bonnes pratiques</p>
+          <p class="time">Novembre 2024</p>
+          <div class="links">
+            <a
+              href="https://github.com/AdelinePat/webdesign-fleuriste"
+              target="_blank"
+              rel="noopener"
+              class="btn-secondary my-3 o-08"
+            >
+              Code source
+            </a>
+            <a
+              href="https://adelinepat.github.io/webdesign-fleuriste/"
+              target="_blank"
+              rel="noopener"
+              class="btn-primary my-3 o-08"
+            >
+              Live demo
+            </a>
+          </div>
+          <div class="skills-secondary-lighter o-08">
+            <strong><i class="fa-solid fa-graduation-cap"></i> Scolaire</strong>
+            <strong><i class="fa-brands fa-html5"></i> HTML</strong>
+            <strong><i class="fa-brands fa-css3-alt"></i> CSS</strong>
+            <strong><i class="fa-brands fa-figma"></i> Figma</strong>
+            <strong><i class="fa-brands fa-git-alt"></i> Git</strong>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2 class="title-primary">Tic Tac Toe</h2>
+          <figure>
+            <img
+              src="https://raw.githubusercontent.com/AdelinePat/tictactoe/refs/heads/main/tictactoe.jpg"
+              alt="image du jeu du morpion"
+              loading="lazy"
+            />
+            <i class="fa-solid fa-plus caption"></i>
+          </figure>
+          <p>
+            Réalisation d'un jeu de morpion avec python, création d'un jeu
+            joueur contre joueur et joueur contre bot
+          </p>
+          <p>
+            Première version du bot : l'algorithme cherche le premier
+            emplacement vide disponible (en partant du haut à gauche en allant
+            vers la droite et en bas) pour y placer son signe.
+          </p>
+          <p>
+            Deuxième version du bot : l'algorithme liste tous les emplacements
+            disponibles restants et choisi au hasard un emplacement avec le
+            module random.
+          </p>
+          <p class="time">Novembre 2024</p>
+          <a
+            href="https://github.com/AdelinePat/tictactoe"
+            target="_blank"
+            rel="noopener"
+            class="btn-secondary my-3 o-08"
+          >
+            Code source
+          </a>
+          <div class="skills-secondary-lighter o-08">
+            <strong><i class="fa-brands fa-python"></i> Python</strong>
+            <strong>Algorithmique</strong>
+            <strong><i class="fa-solid fa-graduation-cap"></i> Scolaire</strong>
+            <strong><i class="fa-brands fa-git-alt"></i> Git</strong>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2 class="title-primary">Hardware et virtualisation</h2>
+          <figure>
+            <img
+              src="./assets/project_img/component.jpg"
+              alt="Image représentant le projet hardware et virtualisation"
+              loading="lazy"
+            />
+            <i class="fa-solid fa-plus caption"></i>
+          </figure>
+          <p>
+            Projet dans le cadre de la formation La Plateforme_ . Apprentissage
+            des différents composants hardware, utilisation de VMware,
+            installation de windows 11 et linux.
+          </p>
+          <p class="time">Octobre 2024</p>
+          <div class="skills-secondary-lighter o-08 mt-3">
+            <strong><i class="fa-solid fa-graduation-cap"></i> Scolaire</strong>
+            <strong><i class="fa-brands fa-linux"></i> Linux</strong>
+            <strong>installation d'OS</strong>
+            <strong>Machine virtuelle</strong>
+            <strong>VMWare</strong>
           </div>
         </article>
       </section>

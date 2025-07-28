@@ -47,6 +47,15 @@
     top: 50%;
     transform: translate(-50%, -50%);
   }
+  .links {
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    a {
+        align-self: center;
+        justify-self: center;
+    }
+  }
   a {
     align-self: center;
     width: auto;
