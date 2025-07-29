@@ -1,37 +1,5 @@
-@use "mixin" as m;
-@use "media_queries" as mq;
-
-.title {
-  display: inline-block;
-  &-secondary {
-    @include m.title(secondary);
-  }
-  &-primary {
-    @include m.title(primary);
-  }
-}
-
-// Text-color using classes like .text-primary
-.text {
-  @include m.text-color(primary);
-  @include m.text-color(primary-lighter);
-  @include m.text-color(secondary);
-  @include m.text-color(secondary-ligther);
-  @include m.text-color(hint);
-}
-
-// generate btn
-.btn {
-  @include m.btn-color(primary-lighter);
-  @include m.btn-color(primary);
-  @include m.btn-color(secondary-lighter);
-  @include m.btn-color(secondary);
-}
-
-.skills {
-  @include m.skills-color(primary-lighter);
-  @include m.skills-color(secondary-lighter);
-}
+@use "../tools/mixin" as m;
+@use "../tools/media_queries" as mq;
 
 nav {
   grid-area: nav;

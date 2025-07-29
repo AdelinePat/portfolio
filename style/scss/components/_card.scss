@@ -1,6 +1,12 @@
 @use "../base/variables" as *;
 
 .card {
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 5px rgb(10, 10, 10);
+    filter: saturate(120%);
+  }
   flex: 1 1 clamp(300px, 45%, 600px);
   background: var(--background-lighter);
   display: flex;
@@ -24,6 +30,12 @@
     border-radius: 1rem;
     filter: brightness(50%) contrast(110%);
     opacity: 0.5;
+    transition: all 0.3s ease-in-out;
+  }
+  i {
+    transition: all 0.2s ease-in-out;
+    display: inline-block;
+    transform-origin: center;
   }
   p {
     display: none;
@@ -34,6 +46,19 @@
     position: relative;
     border-radius: 1rem;
     max-height: 200px;
+    &:hover {
+      img {
+        opacity: 1;
+      }
+
+      i {
+        cursor: pointer;
+        &:hover {
+          transform: translate(-50%, -50%) rotate(180deg) scale(1.15);
+          box-shadow: 0px 0px 5px 2px var(--secondary);
+        }
+      }
+    }
   }
   .caption {
     background: var(--secondary);
@@ -52,8 +77,8 @@
     display: flex;
     justify-content: center;
     a {
-        align-self: center;
-        justify-self: center;
+      align-self: center;
+      justify-self: center;
     }
   }
   a {

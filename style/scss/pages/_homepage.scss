@@ -1,5 +1,5 @@
-@use "../mixin" as m;
-@use "../media_queries" as mq;
+@use "../tools/mixin" as m;
+@use "../tools/media_queries" as mq;
 
 .preview {
   @include m.skills-icon(--primary-lighter, 4rem);

@@ -1,16 +1,20 @@
+@use "tools/media_queries" as mq;
+@use "tools/mixin" as m;
+
 @use "base/variables" as *;
 @use "base/reset";
-@use "classes";
 @use "base/base";
-@use "base/generic";
-@use "mixin" as m;
+
 @use "pages/homepage";
 @use "pages/projects";
-@use "media_queries" as mq;
 
+@use "./components/common";
+@use "./components/nav";
 @use "./components/header";
 @use "./components/footer";
 @use "./components/card";
+
+@use "base/helpers";
 
 // general
 .container {
