@@ -1,20 +1,22 @@
-@use "tools/media_queries" as mq;
-@use "tools/mixin" as m;
+@use "./tools/media_queries" as mq;
+@use "./tools/mixin" as m;
 
-@use "base/variables" as *;
-@use "base/reset";
-@use "base/base";
+@use "./base/variables" as *;
+@use "./base/reset";
+@use "./base/base";
+@use "./base/icon";
 
-@use "pages/homepage";
-@use "pages/projects";
+@use "./pages/homepage";
+@use "./pages/projects";
 
 @use "./components/common";
 @use "./components/nav";
 @use "./components/header";
 @use "./components/footer";
 @use "./components/card";
+@use "./components/skillbar";
 
-@use "base/helpers";
+@use "./base/helpers";
 
 // general
 .container {

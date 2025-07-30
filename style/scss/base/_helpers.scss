@@ -38,3 +38,17 @@
 .o-08 {
   opacity: 0.8;
 }
+
+.zi-10 {
+  transform: scale(170%)
+}
+img.zi-10 {
+  object-position: 50% 50%;
+}
+
+.hide {
+  display: none;
+  &-none {
+    display: inline-block;
+  }
+}

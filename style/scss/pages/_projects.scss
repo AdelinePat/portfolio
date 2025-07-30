@@ -1,7 +1,41 @@
-.projects-portfolio {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: stretch;
-    gap: 4rem 3rem;
+@use "../tools/media_queries" as mq;
+
+%grid-container-main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: stretch;
+  justify-content: center;
+  @include mq.l {
+      grid-template-columns: 1fr;
+    }
+    @include mq.md {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @include mq.s {
+      grid-template-columns: 1fr;
+    }
+}
+.grid-container-main {
+  @extend %grid-container-main;
+  gap: 4rem 3rem;
+  margin-bottom: 4rem;
+}
+
+.container .description p {
+  text-align: left;
+}
+
+.courses-list {
+  @extend %grid-container-main;
+  gap: 2rem 3rem;
+}
+
+.courses {
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    background: var(--background-lighter);
+    transform: scale(1.1);
+  }
 }

@@ -9,7 +9,8 @@
   //--background-lighter: #242427;
   --background: #1d1d1d;
   --background-lighter: #2d2d30;
-  --text: #e0e0e0;
+  // --text: #e0e0e0;
+  --text: #d9d9d9;
   --hint: #828282;
 
   // fonts
@@ -19,3 +20,18 @@
 }
 
 $img_path: "../../assets/_MG_1840.jpg";
+
+// where-courseName : %
+$courses : (
+    ocr-python: 72%,
+    ocr-php: 59%,
+    ocr-c: 100%,
+    ocr-web: 100%,
+    ocr-algo: 100%,
+    ocr-html: 100%,
+    ocr-git: 100%,
+    ocr-oop: 100%,
+    ocr-js: 100%,
+    ocr-sass: 100%,
+    ocr-figma: 100%
+)

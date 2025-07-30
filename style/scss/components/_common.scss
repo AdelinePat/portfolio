@@ -9,6 +9,18 @@
   &-primary {
     @include m.title(primary);
   }
+  &-filter {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 0rem;
+    padding-left: 0.5em;
+    align-items: center;
+    font-size: 2.5rem;
+
+    span {
+      margin-right: 0.5rem;
+    }
+  }
 }
 
 // Text-color using classes like .text-primary

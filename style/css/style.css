@@ -2,6 +2,21 @@
 /* Landscape phone to portrait tablet */
 /* Portrait tablet to landscape and desktop */
 /* Large desktop */
+:root {
+  --primary: #b4a7f7;
+  --primary-lighter: #eddeff;
+  --secondary: #80ffdb;
+  --secondary-lighter: #c6ffed;
+  --secondary-lighter-rgb: 198, 255, 237;
+  --background: #1d1d1d;
+  --background-lighter: #2d2d30;
+  --text: #d9d9d9;
+  --hint: #828282;
+  --title-font: "Manrope", sans-serif;
+  --text-font: "Inter", sans-serif;
+  --big-title-font: "Onest", sans-serif;
+}
+
 .skills-primary-lighter, .skills-secondary-lighter {
   display: flex;
   flex-flow: row wrap;
@@ -18,19 +33,13 @@
   margin: 1rem;
 }
 
-:root {
-  --primary: #b4a7f7;
-  --primary-lighter: #eddeff;
-  --secondary: #80ffdb;
-  --secondary-lighter: #c6ffed;
-  --secondary-lighter-rgb: 198, 255, 237;
-  --background: #1d1d1d;
-  --background-lighter: #2d2d30;
-  --text: #e0e0e0;
-  --hint: #828282;
-  --title-font: "Manrope", sans-serif;
-  --text-font: "Inter", sans-serif;
-  --big-title-font: "Onest", sans-serif;
+.bar-skill-progress-ocr-python, .bar-skill-progress-ocr-php, .bar-skill-progress-ocr-c, .bar-skill-progress-ocr-web, .bar-skill-progress-ocr-algo, .bar-skill-progress-ocr-html, .bar-skill-progress-ocr-git, .bar-skill-progress-ocr-oop, .bar-skill-progress-ocr-js, .bar-skill-progress-ocr-sass, .bar-skill-progress-ocr-figma {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to bottom right, var(--primary), var(--primary-lighter));
+  height: 6px;
+  border-radius: 3px;
 }
 
 * {
@@ -91,6 +100,33 @@ h2 {
 
 h3 {
   font-size: 1.2em;
+}
+
+@font-face {
+  font-family: "../../../assets/icomoon.woff";
+  src: url("fonts/icomoon.eot?sqt90s");
+  src: url("fonts/icomoon.eot?sqt90s#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?sqt90s") format("truetype"), url("fonts/icomoon.woff?sqt90s") format("woff"), url("fonts/icomoon.svg?sqt90s#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^=icon-], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-ap:before {
+  content: "\e900";
+  color: #b4a7f7;
 }
 
 .preview ul {
@@ -350,12 +386,49 @@ h3 {
   }
 }
 
-.projects-portfolio {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
+.courses-list, .grid-container-main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   align-items: stretch;
+  justify-content: center;
+}
+@media only screen and (max-width: 1199px) {
+  .courses-list, .grid-container-main {
+    grid-template-columns: 1fr;
+  }
+}
+@media only screen and (max-width: 979px) {
+  .courses-list, .grid-container-main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 767px) {
+  .courses-list, .grid-container-main {
+    grid-template-columns: 1fr;
+  }
+}
+
+.grid-container-main {
   gap: 4rem 3rem;
+  margin-bottom: 4rem;
+}
+
+.container .description p {
+  text-align: left;
+}
+
+.courses-list {
+  gap: 2rem 3rem;
+}
+
+.courses {
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  transition: all 0.2s ease-in-out;
+}
+.courses:hover {
+  background: var(--background-lighter);
+  transform: scale(1.1);
 }
 
 .title {
@@ -370,6 +443,17 @@ h3 {
   color: var(--primary);
   border-bottom: 1px solid var(--primary);
   text-shadow: 0px 0px 6px var(--primary);
+}
+.title-filter {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 0rem;
+  padding-left: 0.5em;
+  align-items: center;
+  font-size: 2.5rem;
+}
+.title-filter span {
+  margin-right: 0.5rem;
 }
 
 .text-primary {
@@ -644,7 +728,7 @@ footer .text-hint {
   background: var(--background-lighter);
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   max-width: 100%;
   border-radius: 2.5rem;
   padding: 2.5rem;
@@ -663,7 +747,8 @@ footer .text-hint {
 }
 .card img {
   width: 100%;
-  height: 200px;
+  min-height: 200px;
+  max-height: 200px;
   object-fit: cover;
   object-position: 50% 0%;
   border-radius: 1rem;
@@ -684,6 +769,7 @@ footer .text-hint {
   position: relative;
   border-radius: 1rem;
   max-height: 200px;
+  overflow: hidden;
 }
 .card figure:hover img {
   opacity: 1;
@@ -719,6 +805,74 @@ footer .text-hint {
 .card a {
   align-self: center;
   width: auto;
+}
+
+.courses {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.courses h3 {
+  color: var(--secondary);
+  text-transform: capitalize;
+  font-size: 1.4rem;
+  letter-spacing: 0.1rem;
+  padding-left: 2px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  margin-bottom: 0.8rem;
+}
+.courses h4 {
+  color: var(--primary-lighter);
+  font-size: 1.4rem;
+  text-align: right;
+  margin-top: 0;
+  margin-bottom: 0;
+  opacity: 0.5;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bar-skill {
+  margin: 0;
+  height: 6px;
+  background: var(--background-lighter);
+  box-shadow: 0px 0px 2px var(--primary);
+  border-radius: 3px;
+  position: relative;
+}
+.bar-skill-progress-ocr-python {
+  width: 72%;
+}
+.bar-skill-progress-ocr-php {
+  width: 59%;
+}
+.bar-skill-progress-ocr-c {
+  width: 100%;
+}
+.bar-skill-progress-ocr-web {
+  width: 100%;
+}
+.bar-skill-progress-ocr-algo {
+  width: 100%;
+}
+.bar-skill-progress-ocr-html {
+  width: 100%;
+}
+.bar-skill-progress-ocr-git {
+  width: 100%;
+}
+.bar-skill-progress-ocr-oop {
+  width: 100%;
+}
+.bar-skill-progress-ocr-js {
+  width: 100%;
+}
+.bar-skill-progress-ocr-sass {
+  width: 100%;
+}
+.bar-skill-progress-ocr-figma {
+  width: 100%;
 }
 
 .gradient-subtitle {
@@ -761,6 +915,21 @@ footer .text-hint {
 
 .o-08 {
   opacity: 0.8;
+}
+
+.zi-10 {
+  transform: scale(170%);
+}
+
+img.zi-10 {
+  object-position: 50% 50%;
+}
+
+.hide {
+  display: none;
+}
+.hide-none {
+  display: inline-block;
 }
 
 .container {

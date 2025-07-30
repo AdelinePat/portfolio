@@ -24,6 +24,12 @@
   }
 }
 
+@mixin l {
+  @media only screen and (max-width: 1199px) {
+    @content;
+  }
+}
+
 /* Large desktop */
 @mixin xl {
   @media only screen and (min-width: 1200px) {
