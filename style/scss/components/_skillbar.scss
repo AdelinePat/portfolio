@@ -1,32 +1,7 @@
 @use "../base/variables" as *;
 @use "../tools/mixin" as m;
 
-.courses {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-  h3 {
-    color: var(--secondary);
-    text-transform: capitalize;
-    font-size: 1.4rem;
-    letter-spacing: 0.1rem;
-    padding-left: 2px;
-    margin-bottom: 0;
-    padding-bottom: 0;
-    margin-bottom: 0.8rem;
-  }
-  h4 {
-    color: var(--primary-lighter);
-    font-size: 1.4rem;
-    text-align: right;
-    margin-top: 0;
-    margin-bottom: 0;
-    opacity: 0.5;
-    display: flex;
-    justify-content: space-between;
-    // padding-top: 0;
-  }
-}
+
 
 .bar-skill {
   margin: 0;

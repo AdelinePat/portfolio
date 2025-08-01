@@ -36,3 +36,10 @@
     @content;
   }
 }
+
+
+@mixin v-md {
+  @media only screen and (max-height: 750px) and (min-width: 980px) {
+    @content;
+  }
+}

@@ -69,6 +69,7 @@
   ul {
     margin-bottom: 2rem;
     display: flex;
+    flex-flow: row wrap;
     li {
       i {
         font-size: $size;

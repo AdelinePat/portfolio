@@ -11,7 +11,9 @@
   --background-lighter: #2d2d30;
   // --text: #e0e0e0;
   --text: #d9d9d9;
-  --hint: #828282;
+  // --hint: #828282;
+  // --hint: #8C8C8C;
+  --hint: var(--secondary);
 
   // fonts
   --title-font: "Manrope", sans-serif;

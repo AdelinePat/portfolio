@@ -76,4 +76,11 @@ nav {
       }
     }
   }
+
+}
+
+@include mq.v-md {
+  .mb-5 {
+    margin-bottom: 2rem!important;
+  }
 }

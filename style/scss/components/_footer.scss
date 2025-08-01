@@ -7,6 +7,7 @@ footer {
   &.small-screen {
     display: none;
     background: var(--background-lighter);
+    padding: 0 2rem;
     padding-top: 4rem;
     margin-bottom: 0;
     .social {
@@ -36,7 +37,7 @@ footer {
       justify-content: center;
       align-items: center;
       padding: 0.8rem 1rem;
-      opacity: 0.5;
+      opacity: 0.6;
       transition: all 0.2s ease-out;
       &:hover {
         opacity: 1;
@@ -50,17 +51,40 @@ footer {
     text-align: center;
     margin: 2.8rem 0;
   }
+
+  @include mq.md {
+    &.small-screen {
+      display: block;
+      grid-area: footer;
+    }
+    &.small-screen {
+      display: block;
+    }
+    &.big-screen {
+      display: none;
+    }
+  }
 }
 
-@include mq.md {
-  footer.small-screen {
-    display: block;
-    grid-area: footer;
-  }
-  nav.small-screen {
-    display: block;
-  }
-  footer.big-screen {
+.bg-logo {
+  z-index: -1;
+  position: absolute;
+  bottom: -3%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30rem;
+  color: var(--hint);
+  opacity: 0.05;
+   @include mq.md {
+     display: none;
+   }
+   @include mq.v-md {
     display: none;
+   }
+}
+
+@include mq.v-md {
+  footer .text-hint {
+    margin: 2.8rem 0 1rem 0;
   }
 }
