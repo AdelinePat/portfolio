@@ -3,3 +3,6 @@ ini_folder/*
 
 **/*to-tidy-later
 **/*ap*.zip
+
+**/*node_modules
+node_modules

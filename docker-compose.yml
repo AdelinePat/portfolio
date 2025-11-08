@@ -1,10 +1,27 @@
+# services:
+#   dev:
+#     build: .
+#     volumes:
+#       - type: bind
+#         source: ./style
+#         target: /app/style
+#       - type: volume
+#         target: /app/node_modules
+#     restart: unless-stopped
 services:
   dev:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
     volumes:
       - type: bind
-        source: ./style
-        target: /app/style
+        source: .
+        target: /app/
       - type: volume
         target: /app/node_modules
+    ports:
+     - "5175:5173"
+     - "4173:4173"
+    stdin_open: true
+    tty: true
     restart: unless-stopped
