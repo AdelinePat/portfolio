@@ -1,13 +1,3 @@
-# services:
-#   dev:
-#     build: .
-#     volumes:
-#       - type: bind
-#         source: ./style
-#         target: /app/style
-#       - type: volume
-#         target: /app/node_modules
-#     restart: unless-stopped
 services:
   dev:
     build:

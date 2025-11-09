@@ -7,8 +7,8 @@ import {
 } from "../assets/data/generateTagsAndFilters.js";
 import { projects } from "../assets/data/project-list.js";
 
-import { updateTitle, createAllCards } from "./project-elements.js";
-import { createFilterDiv } from "./filter-element.js";
+import { updateTitle, createAllCards } from "../components/project-elements.js";
+import { createFilterDiv } from "../components/filter-element.js";
 import {
   toggleFilterDiv,
   toggleActiveTag,

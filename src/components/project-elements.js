@@ -70,7 +70,8 @@ function createFigure(card, project) {
 
 function createCardContent(card, project) {
   const content = document.createElement("p");
-  content.innerText = project.content;
+  //   content.innerText = project.content;
+  content.innerHTML = project.content;
   card.append(content);
 }
 

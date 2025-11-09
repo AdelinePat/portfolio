@@ -1,7 +1,7 @@
-import { updateTitle, createAllCards } from "./project-elements.js";
+import { updateTitle, createAllCards } from "../components/project-elements.js";
 
 export function toggleFilterDiv(sectionTitleElement, filterDiv) {
-    sectionTitleElement.addEventListener("click", (event) => {
+  sectionTitleElement.addEventListener("click", (event) => {
     const span = sectionTitleElement.querySelector("span");
     // console.log(span);
     if (span.contains(event.target)) {
@@ -22,7 +22,7 @@ export function toggleActiveTag(
     const span = event.target.closest("span");
     if (span && filterDiv.contains(span)) {
       event.stopPropagation();
-      
+
       toggleTag(activeFilter, span.classList[0]);
       if (span.classList.contains("active")) {
         span.classList.remove("active");
@@ -34,7 +34,6 @@ export function toggleActiveTag(
 
       updateTitle(sectionTitleElement, result);
       createAllCards(sectionElement, result);
-
     }
   });
 }
