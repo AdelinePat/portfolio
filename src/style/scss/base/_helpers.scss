@@ -20,6 +20,10 @@
   margin-top: 3rem;
 }
 
+.ml-1 {
+  margin-left: 1rem;
+}
+
 .mb-5 {
   margin-bottom: 5rem;
 }
@@ -40,7 +44,7 @@
 }
 
 .zi-10 {
-  transform: scale(170%)
+  transform: scale(170%);
 }
 img.zi-10 {
   object-position: 50% 50%;
@@ -52,3 +56,8 @@ img.zi-10 {
     display: inline-block;
   }
 }
+
+// .hidden {
+//   display: none !important;
+
+// }

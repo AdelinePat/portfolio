@@ -40,6 +40,7 @@
   border-radius: 25px;
   padding: 0.8rem 1.6rem;
   margin: 1rem;
+  cursor: pointer;
 }
 
 @mixin btn-color($color) {
@@ -55,6 +56,36 @@
       color: var(--#{$color});
     }
   }
+}
+
+@mixin btn-reversed-color($color) {
+  &-reversed-#{$color} {
+    @extend %btn;
+    background: transparent;
+    border: 1px solid var(--#{$color});
+    transition: all 0.25s ease-out;
+    color: var(--#{$color});
+    &:hover {
+      transition: all 0.2s ease-in;
+      background: var(--#{$color});
+      border: 1px solid transparent;
+      color: var(--background);
+    }
+    &.active {
+      background: var(--#{$color});
+      color: var(--background);
+      border: 1px solid transparent;
+      // &:hover {
+      //   background: none;
+      //   border: 1px solid var(--#{$color});
+      //   color: var(--#{$color});
+      // }
+    }
+  }
+
+  // &-reversed-#{$color}.active {
+  //   background: red;
+  // }
 }
 
 @mixin education-border {
@@ -104,7 +135,11 @@
   position: absolute;
   top: 0;
   left: 0;
-  background: linear-gradient(to bottom right, var(--primary), var(--primary-lighter));
+  background: linear-gradient(
+    to bottom right,
+    var(--primary),
+    var(--primary-lighter)
+  );
   height: 6px;
   border-radius: 3px;
 }

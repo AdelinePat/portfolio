@@ -22,9 +22,11 @@ export default defineConfig({
     watch: {
       usePolling: isWindows, // Windows + Docker fix
       interval: 5000,
+      followSymlinks: true,
     },
     hmr: {
       host: "localhost", // browser connects to localhost: mapped by Docker
     },
   },
+  
 });

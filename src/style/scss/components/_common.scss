@@ -38,7 +38,12 @@
   @include m.btn-color(primary);
   @include m.btn-color(secondary-lighter);
   @include m.btn-color(secondary);
+  @include m.btn-reversed-color(primary-lighter);
 }
+
+// main .active {
+//   background: red;
+// }
 
 .skills {
   @include m.skills-color(primary-lighter);

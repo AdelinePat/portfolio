@@ -26,22 +26,6 @@ function loadComponents(element) {
   });
 }
 
-// function loadNav(currentPage) {
-//   document.addEventListener("DOMContentLoaded", () => {
-//     fetch("html/components/nav.html")
-//       .then((response) => response.text())
-//       .then((data) => {
-//         // document.getElementById("nav").innerHTML = data;
-//         const activeLink = document.getElementById(currentPage);
-//         if (activeLink) {
-//           activeLink.classList.add("active");
-//         }
-//       })
-//       .catch((error) => {
-//         console.error("Error loading component:", error);
-//       });
-//   });
-// }
 function loadNav(currentPage) {
   document.addEventListener("DOMContentLoaded", () => {
     fetch("components/nav.html")

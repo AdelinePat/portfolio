@@ -27,10 +27,12 @@ nav {
       width: 5rem;
     }
     &:hover {
-      text-shadow: 0px 0px 1px var(--primary);
+      // text-shadow: 0px 0px 1px var(--primary);
+      text-shadow: var(--box-shadow-primary);
       &::before {
         width: 5rem;
-        box-shadow: 0px 0px 1px var(--primary);
+        box-shadow: var(--box-shadow-primary);
+        // box-shadow: 0px 0px 1px var(--primary);
       }
     }
   }
@@ -71,16 +73,16 @@ nav {
         }
         &::after {
           width: 5rem;
-          box-shadow: 0px 0px 1px var(--primary);
+          box-shadow: var(--box-shadow-primary);
+          // box-shadow: 0px 0px 1px var(--primary);
         }
       }
     }
   }
-
 }
 
 @include mq.v-md {
   .mb-5 {
-    margin-bottom: 2rem!important;
+    margin-bottom: 2rem !important;
   }
 }
