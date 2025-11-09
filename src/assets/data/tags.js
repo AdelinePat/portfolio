@@ -10,6 +10,8 @@ const icons = {
   vmware: "",
   virtualization: "",
   osInstall: "",
+  // DevOPS
+  docker: `<i class="fa-brands fa-docker"></i>`,
   // Design
   figma: `<i class="fa-brands fa-figma"></i>`,
   // Databases
@@ -20,10 +22,13 @@ const icons = {
   cpp: `<i class="devicon-cplusplus-plain"></i>`,
   cmake: `<i class="devicon-cmake-plain"></i>`,
   makefile: "",
+  csharp: `<i class="devicon-csharp-plain"></i>`,
   //  Java
   java: `<i class="fa-brands fa-java"></i>`,
   maven: `<i class="devicon-maven-plain"></i>`,
   junit: `<i class="devicon-junit-plain-wordmark"></i>`,
+  springboot: `<i class="devicon-spring-original"></i>`,
+  thymeleaf: `<i class="devicon-thymeleaf-plain"></i>`,
   // Python
   python: `<i class="fa-brands fa-python"></i>`,
   // GUI or output
@@ -62,6 +67,7 @@ export const categories = {
   software: "Logiciel",
   databases: "Bases de Données",
   oop: "Programmation Orientée Objet",
+  devops: "DevOps",
 };
 
 export const tags = {
@@ -209,6 +215,16 @@ export const tags = {
     icon: icons.javaFX,
     category: categories.software,
   },
+  springboot: {
+    name: "Spring Boot",
+    icon: icons.springboot,
+    category: categories.software,
+  },
+  thymeleaf: {
+    name: "thymeleaf",
+    icon: icons.thymeleaf,
+    category: categories.web,
+  },
   //    C/C++
   c: {
     name: "C",
@@ -231,7 +247,12 @@ export const tags = {
     icon: icons.makefile,
     category: categories.software,
   },
-  //    C/C++ -> GUI/Game Engine
+  csharp: {
+    name: "C#",
+    icon: icons.csharp,
+    category: categories.software,
+  },
+  //    C/C++ or C# -> GUI/Game Engine
   unity: {
     name: "Unity",
     icon: icons.unity,
@@ -275,5 +296,11 @@ export const tags = {
     name: "Design Pattern",
     icon: icons.designPattern,
     category: categories.oop,
+  },
+  // DevOps
+  docker: {
+    name: "Docker",
+    icon: icons.docker,
+    category: categories.devops,
   },
 };

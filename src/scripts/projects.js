@@ -9,21 +9,19 @@ import { projects } from "../assets/data/project-list.js";
 
 import { updateTitle, createAllCards } from "./project-elements.js";
 import { createFilterDiv } from "./filter-element.js";
-import { toggleFilterDiv, toggleActiveTag } from "./filter.js";
+import {
+  toggleFilterDiv,
+  toggleActiveTag,
+  sortFromMostRecent,
+} from "./filter.js";
 
 const activeFilter = [];
 
-const sortedProjects = [...projects].sort((project1, project2) => {
-  const date1 = new Date(project1.createdAt).getTime();
-  const date2 = new Date(project2.createdAt).getTime();
-  return date2 - date1;
-});
-
 let currentCount = 6;
-let articles = sortedProjects.slice(0, currentCount);
-articles = sortedProjects;
+// let articles = sortFromMostRecent(projects).slice(0, currentCount);
+let articles = sortFromMostRecent(projects);
 
-console.log(articles);
+// console.log(articles);
 
 const sectionTitleElement = document.querySelector(".title-filter");
 const sectionTitleContainer = document.querySelector(
@@ -32,10 +30,17 @@ const sectionTitleContainer = document.querySelector(
 updateTitle(sectionTitleElement, articles);
 const filterDiv = createFilterDiv(sectionTitleContainer, allCategories);
 toggleFilterDiv(sectionTitleElement, filterDiv);
-toggleActiveTag(filterDiv, activeFilter);
+// toggleActiveTag(filterDiv, activeFilter, articles);
+console.log(articles);
 const sectionElement = document.querySelector("section");
 createAllCards(sectionElement, articles);
-
+toggleActiveTag(
+  sectionTitleElement,
+  sectionElement,
+  filterDiv,
+  activeFilter,
+  articles
+);
 
 // displayTitleAndDate();
 function displayTitleAndDate() {

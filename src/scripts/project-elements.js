@@ -1,6 +1,3 @@
-
-
-
 export function updateTitle(sectionTitleElement, articles) {
   sectionTitleElement.innerHTML = "";
 
@@ -12,6 +9,7 @@ export function updateTitle(sectionTitleElement, articles) {
   span.classList.add("btn-primary-lighter");
   const filterIcon = document.createElement("i");
   const filterText = document.createTextNode("Filtrer");
+  filterIcon.classList.add("ml-1");
 
   span.append(filterText, filterIcon);
   filterIcon.classList.add("fa-solid", "fa-filter");
@@ -19,6 +17,8 @@ export function updateTitle(sectionTitleElement, articles) {
 }
 
 export function createAllCards(sectionElement, articles) {
+  sectionElement.innerHTML = "";
+  //   console.log(articles);
   for (const project of articles) {
     const card = createCard(project);
     sectionElement.append(card);
@@ -38,7 +38,7 @@ function createCard(project) {
 }
 
 function setFilters(element, filters) {
-  // console.log(filters);
+  //   console.log("setfilter ", filters);
   for (let i = 0; i < filters.length; ++i) {
     // console.log(filters[i]);
     if (filters[i] != "Général") {

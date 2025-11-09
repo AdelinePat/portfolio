@@ -381,6 +381,92 @@ export const projects = [
     demo: "https://adelinepat.github.io/resume/",
     tags: [tags.sass, tags.personal, tags.html],
   },
+  {
+    title: "Todo JS",
+    img: "",
+    altImg: "Capture d'écran du projet todo js",
+    createdAt: "2025-08-29T10:00:00.000Z",
+    content:
+      "Projet de Todo List dynamique réalisé dans le cadre de la certification JavaScript de Dyma.\n" +
+      "L'objectif principal était de pratiquer la manipulation du DOM et la gestion des événements en " +
+      "JavaScript, tout en appliquant une séparation claire entre les données (tableau), l'affichage et " +
+      "les interactions utilisateur. Les fonctionnalités incluent l'ajout, la modification et la suppression " +
+      "de tâches, avec gestion des erreurs (champs vides) et navigation intuitive (édition avec validation ou annulation).\n" +
+      "Chaque tâche est générée dynamiquement à partir du tableau, et l'édition se fait via un échange " +
+      "entre paragraphe et champ input, avec focus et sélection automatiques.\n" +
+      "Ce projet m'a également permis de renforcer mes compétences en débogage, en manipulation du DOM, " +
+      "et de m'initier à Docker pour des environnements de développement reproductibles.",
+    code: "https://github.com/AdelinePat/todolist_js",
+    demo: "https://adelinepat.github.io/todolist_js/",
+    tags: [tags.javascript, tags.docker, tags.personal, tags.css, tags.html],
+  },
+  {
+    title: "Overlook Hotel",
+    img: "https://raw.githubusercontent.com/AdelinePat/overlook_hotel/refs/heads/main/overlook_hotel.jpg",
+    altImg: "Capture d'écran du projet Overlook Hotel",
+    createdAt: "2025-09-29T10:00:00.000Z",
+    content:
+      "Projet de groupe scolaire réalisé à trois contributeurs, visant à développer une solution " +
+      "complète de gestion hôtelière.\n" +
+      "L'application se compose de trois services principaux : une interface client pour réserver chambres " +
+      "et espaces d'événements et laisser des avis, une interface manager pour gérer employés, plannings et " +
+      "statistiques, et un système d'authentification sécurisé avec Spring Security. Le projet inclut la gestion " +
+      "complète des réservations, la supervision du personnel, l'affichage de statistiques, et la sécurisation " +
+      "des comptes et sessions.\n" +
+      "Cette expérience m'a permis de renforcer mes compétences en Java, Spring Boot, JPA/Hibernate, Thymeleaf, " +
+      "sécurité applicative et containerisation avec Docker pour des environnements de développement reproductibles.",
+    code: "https://github.com/AdelinePat/overlook_hotel",
+    demo: "",
+    tags: [
+      tags.springboot,
+      tags.java,
+      tags.docker,
+      tags.thymeleaf,
+      tags.maven,
+      tags.mysql,
+      tags.school,
+    ],
+  },
+  {
+    title: "Uniquest",
+    img: "https://raw.githubusercontent.com/AdelinePat/uniquest/refs/heads/main/MapGame.png",
+    altImg: "Capture d'écran du projet Uniquest",
+    createdAt: "2025-10-18T10:00:00.000Z",
+    content:
+      "Projet de groupe scolaire réalisé à trois contributeurs : un RPG 2D en Unity (C#) " +
+      "combinant exploration, combats au tour par tour et gestion d’inventaire.\n" +
+      "Ce projet pédagogique avait pour objectif d’apprendre à utiliser Unity et " +
+      "structurer un jeu sans créer tous les assets. Les fonctionnalités incluent le " +
+      "déplacement par tuiles sur des cartes interactives, un système de combat avec " +
+      "IA ennemie, la gestion d’objets et potions, un gestionnaire de musique dynamique, " +
+      "et un système de sauvegarde des statistiques et de la progression du joueur. " +
+      "L’architecture C# est modulaire, séparant entités, menus et interactions cartes.\n" +
+      "Ce projet m’a permis de renforcer mes compétences en Unity, C#, design d’interface " +
+      "et structuration de code orienté jeu vidéo.",
+    code: "https://github.com/AdelinePat/uniquest/",
+    demo: "",
+    tags: [tags.unity, tags.csharp, tags.school],
+  },
+  {
+    title: "Blog",
+    img: "",
+    altImg: "Capture d'écran du projet Blog",
+    createdAt: "2025-10-25T10:00:00.000Z",
+    content:
+      "Projet personnel réalisé dans le cadre de la certification JavaScript, visant à créer un blog dynamique.\n" +
+      "L'objectif principal était de pratiquer la manipulation du DOM, la délégation d'événements et " +
+      "la gestion des fonctions asynchrones via une API externe.\n" +
+      "Les fonctionnalités incluent l'affichage des articles récupérés avec fetch, le filtrage par " +
+      "catégories et par date, la conversion des dates ISO en format lisible, ainsi qu'un formulaire " +
+      "pour ajouter ou modifier des articles avec validation des champs.\n" +
+      "Un système de modals permet de confirmer la suppression d'un article ou l'annulation d'une " +
+      "création/édition, avec gestion des promesses personnalisées pour le retour utilisateur.\n" +
+      "Ce projet m'a permis de renforcer mes compétences en JavaScript, API, et gestion d'interactions " +
+      "complexes côté client.",
+    code: "https://github.com/AdelinePat/blog_project/",
+    demo: "",
+    tags: [tags.javascript, tags.docker, tags.sass, tags.html, tags.personal],
+  },
 ];
 
 const articleTemplate = {

@@ -5,7 +5,7 @@ export function createFilterDiv(sectionTitleContainer, allCategories) {
   filterDiv.classList.add("filter-list", "mb-5");
   const firstSpan = document.createElement("span");
   firstSpan.innerText = "Tous";
-  firstSpan.classList.add(tagBtnClass);
+  firstSpan.classList.add("all", tagBtnClass);
   filterDiv.append(firstSpan);
 
   for (const filter of allCategories) {

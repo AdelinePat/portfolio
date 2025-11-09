@@ -3,10 +3,10 @@
 
 .section-title-container {
   position: relative;
-  //   background: red;
   word-break: keep-all;
   .filter-list {
     display: flex;
+    // top: 0;
     justify-content: center;
     align-content: center;
     flex-wrap: wrap;
@@ -17,13 +17,9 @@
     height: auto;
 
     &.hidden {
-      // position: relative;
-      // // top: -15rem;
-      // transform: translateY(-15rem);
-      // background: red;
+      // top: -5rem;
       height: 0px;
       transition: none;
-
       opacity: 0;
       transform: translateY(-0.8rem);
       pointer-events: none; // prevents interaction while hidden
