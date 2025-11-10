@@ -17,7 +17,8 @@
   --big-title-font: "Onest", sans-serif;
 }
 
-.skills-primary-lighter, .skills-secondary-lighter {
+.skills-primary-lighter,
+.skills-secondary-lighter {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -25,7 +26,10 @@
   overflow: hidden;
 }
 
-.btn-primary-lighter, .btn-primary, .btn-secondary-lighter, .btn-secondary {
+.btn-primary-lighter,
+.btn-primary,
+.btn-secondary-lighter,
+.btn-secondary {
   font-size: 1.4rem;
   color: var(--background);
   border-radius: 25px;
@@ -33,11 +37,25 @@
   margin: 1rem;
 }
 
-.bar-skill-progress-ocr-python, .bar-skill-progress-ocr-php, .bar-skill-progress-ocr-c, .bar-skill-progress-ocr-web, .bar-skill-progress-ocr-algo, .bar-skill-progress-ocr-html, .bar-skill-progress-ocr-git, .bar-skill-progress-ocr-oop, .bar-skill-progress-ocr-js, .bar-skill-progress-ocr-sass, .bar-skill-progress-ocr-figma {
+.bar-skill-progress-ocr-python,
+.bar-skill-progress-ocr-php,
+.bar-skill-progress-ocr-c,
+.bar-skill-progress-ocr-web,
+.bar-skill-progress-ocr-algo,
+.bar-skill-progress-ocr-html,
+.bar-skill-progress-ocr-git,
+.bar-skill-progress-ocr-oop,
+.bar-skill-progress-ocr-js,
+.bar-skill-progress-ocr-sass,
+.bar-skill-progress-ocr-figma {
   position: absolute;
   top: 0;
   left: 0;
-  background: linear-gradient(to bottom right, var(--primary), var(--primary-lighter));
+  background: linear-gradient(
+    to bottom right,
+    var(--primary),
+    var(--primary-lighter)
+  );
   height: 6px;
   border-radius: 3px;
 }
@@ -382,24 +400,28 @@ h3 {
   }
 }
 
-.courses-list, .grid-container-main {
+.courses-list,
+.grid-container-main {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: stretch;
   justify-content: center;
 }
 @media only screen and (max-width: 1199px) {
-  .courses-list, .grid-container-main {
+  .courses-list,
+  .grid-container-main {
     grid-template-columns: 1fr;
   }
 }
 @media only screen and (max-width: 979px) {
-  .courses-list, .grid-container-main {
+  .courses-list,
+  .grid-container-main {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media only screen and (max-width: 767px) {
-  .courses-list, .grid-container-main {
+  .courses-list,
+  .grid-container-main {
     grid-template-columns: 1fr;
   }
 }
@@ -645,7 +667,7 @@ header .description {
   }
   header .header-title.picture {
     min-height: 100vh;
-    background: url("../../assets/_MG_1840.jpg") center -60%/cover no-repeat fixed;
+    background: url("../../assets/_MG_1840.jpg") center -60% / cover no-repeat fixed;
   }
   header h1,
   header h3 {
@@ -800,9 +822,11 @@ footer .text-hint {
   display: inline-block;
   transform-origin: center;
 }
-.card p {
+
+/* .card p {
   display: none;
-}
+} */
+
 .card figure {
   background: var(--background);
   position: relative;

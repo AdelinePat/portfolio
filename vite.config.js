@@ -20,13 +20,12 @@ export default defineConfig({
   server: {
     host: "0.0.0.0", // container listens on all interfaces
     watch: {
-      usePolling: isWindows, // Windows + Docker fix
-      interval: 5000,
-      followSymlinks: true,
+      usePolling: true, // Windows + Docker fix
+      interval: 1000,
+      // followSymlinks: true,
     },
     hmr: {
       host: "localhost", // browser connects to localhost: mapped by Docker
     },
   },
-  
 });

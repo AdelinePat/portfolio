@@ -24,18 +24,3 @@
 .container .description p {
   text-align: left;
 }
-
-.courses-list {
-  @extend %grid-container-main;
-  gap: 2rem 3rem;
-}
-
-.courses {
-  padding: 1rem 2rem;
-  border-radius: 2rem;
-  transition: all 0.2s ease-in-out;
-  &:hover {
-    background: var(--background-lighter);
-    transform: scale(1.1);
-  }
-}

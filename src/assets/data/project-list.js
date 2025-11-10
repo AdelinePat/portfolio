@@ -425,6 +425,7 @@ export const projects = [
       tags.maven,
       tags.mysql,
       tags.school,
+      tags.teamwork,
     ],
   },
   {
@@ -445,7 +446,7 @@ export const projects = [
       "et structuration de code orienté jeu vidéo.</p>",
     code: "https://github.com/AdelinePat/uniquest/",
     demo: "",
-    tags: [tags.unity, tags.csharp, tags.school],
+    tags: [tags.unity, tags.csharp, tags.school, tags.teamwork],
   },
   {
     title: "Blog",

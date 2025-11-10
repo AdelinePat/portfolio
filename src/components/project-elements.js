@@ -25,13 +25,13 @@ export function createAllCards(sectionElement, articles) {
   }
 }
 
-function createCard(project) {
+export function createCard(project) {
   const card = document.createElement("article");
   card.classList.add("card");
   setFilters(card, project.filter);
   createCardTitle(card, project);
   createFigure(card, project);
-  createCardContent(card, project);
+  // createCardContent(card, project);
   createCardLinks(card, project);
   createCardTags(card, project);
   return card;

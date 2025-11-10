@@ -4,9 +4,15 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
+      # - type: bind
+      #   source: .
+      #   target: /app/
       - type: bind
-        source: .
-        target: /app/
+        source: ./src
+        target: /app/src/
+      - type: bind
+        source: ./vite.config.js
+        target: /app/vite.config.js
       - type: volume
         target: /app/node_modules
     ports:
