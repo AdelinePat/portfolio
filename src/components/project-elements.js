@@ -28,12 +28,53 @@ export function createAllCards(sectionElement, articles) {
 export function createCard(project) {
   const card = document.createElement("article");
   card.classList.add("card");
+  card.dataset.id = project.createdAt;
   setFilters(card, project.filter);
   createCardTitle(card, project);
   createFigure(card, project);
   // createCardContent(card, project);
-  createCardLinks(card, project);
+
+  if (project.code != "" || project.demo != "") {
+    createCardLinks(card, project);
+  }
   createCardTags(card, project);
+  return card;
+}
+
+export function createProjectModal(project) {
+  console.log(project);
+  const card = document.createElement("div");
+  card.classList.add("modal");
+  // createFigure(card, project);
+  const figure = document.createElement("figure");
+  figure.classList.add("modal-figure");
+  // const divImg = document.createElement("div");
+  const divTitle = document.createElement("div");
+  divTitle.classList.add("modal-title");
+  createImg(figure, project);
+  // divImg.append(img);
+
+  console.log(figure);
+  card.append(figure);
+  createCardTitle(divTitle, project);
+  card.append(divTitle);
+  const dateElement = document.createElement("h3");
+  console.log(project.createdAt);
+  const creationDate = new Date(project.createdAt).toLocaleDateString("fr-FR", {
+    month: "long",
+    year: "numeric",
+  });
+  console.log(creationDate);
+  dateElement.innerText = creationDate;
+  divTitle.append(dateElement);
+  // figure.append(divImg);
+  createCardContent(card, project);
+
+  if (project.code != "" || project.demo != "") {
+    createCardLinks(card, project);
+  }
+  createCardTags(card, project, true);
+  console.log(card);
   return card;
 }
 
@@ -66,8 +107,23 @@ function createFigure(card, project) {
   plusIcon.classList.add("fa-solid", "fa-plus", "caption");
   figure.append(img, plusIcon);
   card.append(figure);
+  return figure;
 }
 
+function createImg(divImg, project) {
+  // const img = document.createElement("img");
+  // img.setAttribute("src", project.img);
+  // img.setAttribute("alt", project.altImg);
+  // img.setAttribute("loading", "lazy");
+  // img.classList.add("modal-img");
+  // return img;
+
+  divImg.style.backgroundImage = `url(${project.img})`;
+  divImg.style.backgroundSize = "cover";
+  divImg.style.backgroundPosition = "center";
+  // divImg.style.backgroundSize = "cover"; // optional, makes it fit nicely
+  // divImg.style.backgroundPosition = "center";
+}
 function createCardContent(card, project) {
   const content = document.createElement("p");
   //   content.innerText = project.content;
@@ -78,8 +134,11 @@ function createCardContent(card, project) {
 function createCardLinks(card, project) {
   const linkDiv = document.createElement("div");
   linkDiv.classList.add("links");
-  const codeLink = createLink(project.code, "Code Source");
-  linkDiv.append(codeLink);
+  if (project.code != "") {
+    const codeLink = createLink(project.code, "Code Source");
+    linkDiv.append(codeLink);
+  }
+  // linkDiv.append(codeLink);
   if (project.demo != "") {
     const demoLink = createLink(project.demo, "Live Demo");
     linkDiv.append(demoLink);
@@ -101,12 +160,18 @@ function createLink(link, string) {
   return linkElement;
 }
 
-function createCardTags(card, project) {
+function createCardTags(card, project, margin = false) {
   const tagDiv = document.createElement("div");
   tagDiv.classList.add("skills-secondary-lighter", "o-08");
   for (const tag of project.tags) {
     const tagEl = createTagElement(tag);
     tagDiv.append(tagEl);
+  }
+  if (margin) {
+    tagDiv.classList.add("mt-3");
+  }
+  if (!margin) {
+    tagDiv.classList.add("oh");
   }
   card.append(tagDiv);
 }

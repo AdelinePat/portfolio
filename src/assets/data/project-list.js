@@ -110,7 +110,7 @@ export const projects = [
     createdAt: "2024-12-26T10:00:00.000Z",
     content:
       `<p>Création d'un jeu pour s'entraîner à taper au clavier dans le cadre d'un cours OpenClassRooms : ` +
-      `<ahref="https://openclassrooms.com/fr/courses/7696886-apprenez-a-programmer-avec-javascript">Apprenez à programmer avec JavaScript</a ></p><p>` +
+      `<a href="https://openclassrooms.com/fr/courses/7696886-apprenez-a-programmer-avec-javascript" target="_blank" rel="noopener">Apprenez à programmer avec JavaScript</a></p><p>` +
       `Le cours se concentrait sur l'apprentissage du javascript. Le CSS et HTML a donc été fourni par OpenClassRooms</p><p>` +
       `Utilisation du DOM (Document Object Model), modification du contenu html selon certaines conditions ` +
       `(au niveau du score), utilisation d'une regex pour le formulaire.`,
@@ -284,6 +284,7 @@ export const projects = [
       tags.makefile,
       tags.school,
       tags.teamwork,
+      tags.git,
     ],
   },
   {
@@ -292,7 +293,7 @@ export const projects = [
     altImg: "projet console todo list",
     createdAt: "2025-05-25T10:00:00.000Z",
     content:
-      "<p>Réalisation d'une todo liste en console avec C++</p><p>" +
+      "<p>Réalisation d'une todo liste en console avec C++ dans le cadre de la certification <a href='https://dyma.fr/formations/cpp' target='_blank' rel='noopener'>Dyma</a></p><p>" +
       "Nettoyage des inputs utilisateurs pour avoir le bon format final.</p><p>" +
       "Réalisation des actions CRUD dans un fichier csv.</p><p>" +
       "Gestion des erreurs</p>",
@@ -314,7 +315,14 @@ export const projects = [
       "Factory pour création des trois différents type de tours, même principe que pour les ennemis</p>",
     code: "https://github.com/AdelinePat/tower-defense",
     demo: "",
-    tags: [tags.cpp, tags.unity, tags.oop, tags.school, tags.teamwork],
+    tags: [
+      tags.cpp,
+      tags.unity,
+      tags.oop,
+      tags.school,
+      tags.teamwork,
+      tags.git,
+    ],
   },
   {
     title: "Global Converter",
@@ -337,6 +345,7 @@ export const projects = [
       tags.oop,
       tags.school,
       tags.teamwork,
+      tags.git,
     ],
   },
   {
@@ -365,6 +374,7 @@ export const projects = [
       tags.postgresql,
       tags.school,
       tags.teamwork,
+      tags.git,
     ],
   },
   {
@@ -387,7 +397,7 @@ export const projects = [
     altImg: "Capture d'écran du projet todo js",
     createdAt: "2025-08-29T10:00:00.000Z",
     content:
-      "<p>Projet de Todo List dynamique réalisé dans le cadre de la certification JavaScript de Dyma.</p><p>" +
+      "<p>Projet de Todo List dynamique réalisé dans le cadre de la <a href='https://dyma.fr/formations/javascript' target='_blank' rel='noopener'>certification JavaScript de Dyma</a>.</p><p>" +
       "L'objectif principal était de pratiquer la manipulation du DOM et la gestion des événements en " +
       "JavaScript, tout en appliquant une séparation claire entre les données (tableau), l'affichage et " +
       "les interactions utilisateur. Les fonctionnalités incluent l'ajout, la modification et la suppression " +
@@ -426,6 +436,7 @@ export const projects = [
       tags.mysql,
       tags.school,
       tags.teamwork,
+      tags.git
     ],
   },
   {
@@ -454,7 +465,7 @@ export const projects = [
     altImg: "Capture d'écran du projet Blog",
     createdAt: "2025-10-25T10:00:00.000Z",
     content:
-      "<p>Projet personnel réalisé dans le cadre de la certification JavaScript, visant à créer un blog dynamique.</p><p>" +
+      "<p>Projet personnel réalisé dans le cadre de la <a href='https://dyma.fr/formations/javascript' target='_blank' rel='noopener'>certification JavaScript de Dyma</a>, visant à créer un blog dynamique.</p><p>" +
       "L'objectif principal était de pratiquer la manipulation du DOM, la délégation d'événements et " +
       "la gestion des fonctions asynchrones via une API externe.</p><p>" +
       "Les fonctionnalités incluent l'affichage des articles récupérés avec fetch, le filtrage par " +

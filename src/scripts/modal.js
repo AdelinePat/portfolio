@@ -1,4 +1,4 @@
-import { createCard } from "../components/project-elements";
+import { createProjectModal } from "../components/project-elements";
 
 const body = document.querySelector("body");
 let layer;
@@ -6,9 +6,13 @@ let modal;
 
 export function openModal(article) {
   createLayer();
-  createModal(question);
-  layer.append(modal);
+  // createModal(question);
+  const modalElement = createProjectModal(article);
+  modal = modalElement;
+  layer.append(modalElement);
+  // modal = document.querySelector(".modal");
   body.append(layer);
+  document.body.classList.add("modal-open");
 
   return new Promise((resolve, reject) => {
     layer.addEventListener("click", (event) => {
@@ -18,9 +22,11 @@ export function openModal(article) {
       ) {
         resolve(false);
         layer.remove();
+        document.body.classList.remove("modal-open");
       } else if (event.target === modal.querySelector(".btn-primary")) {
         console.log("confirm!!!");
         layer.remove();
+        document.body.classList.remove("modal-open");
         resolve(true);
       }
     });
@@ -41,9 +47,9 @@ function createModal(question) {
   questionParagraph.append(textQuestion);
 
   const confirmBtn = createButton("Confirmer");
-  confirmBtn.classList.add("btn", "btn-primary");
+  confirmBtn.classList.add("btn-primary");
   const cancelBtn = createButton("Annuler");
-  cancelBtn.classList.add("btn", "btn-secondary");
+  cancelBtn.classList.add("btn-secondary");
   modal.append(questionParagraph);
   modal.append(cancelBtn);
   modal.append(confirmBtn);

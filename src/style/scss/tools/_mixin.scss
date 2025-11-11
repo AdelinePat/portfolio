@@ -13,13 +13,16 @@
   }
 }
 
+// .skills-secondary-lighter
 %skills {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   max-height: 3rem;
-  overflow: hidden;
+  // overflow: hidden;
 }
+
+// Icons for projects
 @mixin skills-color($color) {
   &-#{$color} {
     @extend %skills;
@@ -31,6 +34,7 @@
       word-break: keep-all;
       font-weight: 400;
       margin: 0 0.8rem 0.8rem 0;
+      // background: red;
     }
   }
 }
