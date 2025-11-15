@@ -1,22 +1,40 @@
 const icons = {
+  // Not tag
+  closed: ["fa-solid", "fa-plus"],
+  // IDE and TOOL
+  visualStudioCode: `<i class="devicon-vscode-plain"></i>`,
+  intelliJ: `<i class="devicon-intellij-plain"></i>`,
   // General
   personal: `<i class="fa-solid fa-briefcase"></i>`,
   school: `<i class="fa-solid fa-graduation-cap"></i>`,
   teamwork: `<i class="fa-solid fa-users"></i>`,
   // Versionning
   git: `<i class="fa-brands fa-git-alt"></i>`,
-  // OS & Virtualization
+  unityVersionControl: ``,
+  // OS
   linux: `<i class="fa-brands fa-linux"></i>`,
+  windows: `<i class="fa-brands fa-windows"></i>`,
+  debian: `<i class="fa-brands fa-debian"></i>`,
+  ubuntu: `<i class="fa-brands fa-ubuntu"></i>`,
+  redhat: `<i class="devicon-redhat-plain"></i>`,
+  osInstall: "",
+  // Shell & Scripting
+  bashScripting: `<i class="devicon-bash-plain"></i>`,
+  linuxCLI: `<i class="fa-solid fa-terminal"></i>`,
+  powershell: `<i class="devicon-powershell-plain"></i>`,
+  // Virtualization
   vmware: "",
   virtualization: "",
-  osInstall: "",
   // DevOPS
   docker: `<i class="fa-brands fa-docker"></i>`,
   // Design
   figma: `<i class="fa-brands fa-figma"></i>`,
+  photoshop: `<i class="devicon-photoshop-plain"></i>`,
+  illustrator: `<i class="devicon-photoshop-plain"></i>`,
   // Databases
   mysql: `<i class="devicon-mysql-original"></i>`,
   postgresql: `<i class="devicon-postgresql-plain"></i>`,
+  kafka: `<i class="devicon-apachekafka-original"></i>`,
   // C & C++
   c: "",
   cpp: `<i class="devicon-cplusplus-plain"></i>`,
@@ -42,6 +60,7 @@ const icons = {
   css: `<i class="fa-brands fa-css3-alt"></i>`,
   sass: `<i class="fa-brands fa-sass"></i>`,
   javascript: `<i class="fa-brands fa-js"></i>`,
+  php: `<i class="fa-brands fa-php"></i>`,
   // OOP
   oop: `<i class="fa-sharp fa-solid fa-code"></i>`,
   designPattern: `<i class="fa-solid fa-puzzle-piece"></i>`,
@@ -54,7 +73,6 @@ const icons = {
   // Tests (use the same icon!)
   unitaryTest: `<i class="fa-solid fa-vial"></i>`,
   integrationTest: `<i class="fa-solid fa-vial"></i>`,
-
   //   Architecture
   mvc: `<i class="fa-solid fa-diagram-project"></i>`,
   designSystem: "",
@@ -74,6 +92,10 @@ export const categories = {
 };
 
 export const tags = {
+  // Not tag
+  closed: {
+    icon: icons.closed,
+  },
   // General
   personal: {
     name: "Personnel",
@@ -91,16 +113,42 @@ export const tags = {
     icon: icons.teamwork,
     category: categories.general,
   },
+  // IDE
+  visualStudioCode: {
+    name: "VS Code",
+    icon: icons.visualStudioCode,
+    category: categories.general,
+  },
+  intelliJ: {
+    name: "IntelliJ",
+    icon: icons.intelliJ,
+    category: categories.general,
+  },
   // Versionning
   git: {
     name: "Git",
     icon: icons.git,
     category: categories.general,
   },
+  unityVersionControl: {
+    name: "Unity Version Control",
+    icon: icons.unityVersionControl,
+    category: categories.general,
+  },
   // Design
   figma: {
     name: "Figma",
     icon: icons.figma,
+    category: categories.general,
+  },
+  photoshop: {
+    name: "Photoshop",
+    icon: icons.photoshop,
+    category: categories.general,
+  },
+  illustrator: {
+    name: "Illustrator",
+    icon: icons.illustrator,
     category: categories.general,
   },
   // GUI or output
@@ -152,12 +200,53 @@ export const tags = {
     icon: icons.designSystem,
     category: categories.general,
   },
-  // OS & Virtualization
+  // OS
   linux: {
     name: "Linux",
     icon: icons.linux,
     category: categories.general,
   },
+  windows: {
+    name: "Windows",
+    icon: icons.windows,
+    category: categories.general,
+  },
+  debian: {
+    name: "Debian",
+    icon: icons.debian,
+    category: categories.general,
+  },
+  ubuntu: {
+    name: "Ubuntu",
+    icon: icons.ubuntu,
+    category: categories.general,
+  },
+  redhat: {
+    name: "Red Hat",
+    icon: icons.redhat,
+    category: categories.general,
+  },
+
+  // Bash & Scripting
+  bashScripting: {
+    name: "Bash scripting",
+    icon: icons.bashScripting,
+    category: categories.general,
+  },
+
+  linuxCLI: {
+    name: "Linux CLI",
+    icon: icons.linuxCLI,
+    category: categories.general,
+  },
+
+  powershell: {
+    name: "Powershell",
+    icon: icons.powershell,
+    category: categories.general,
+  },
+
+  // Virtualization
   vmware: {
     name: "VMWare",
     icon: icons.vmware,
@@ -198,6 +287,11 @@ export const tags = {
   javascript: {
     name: "Javascript",
     icon: icons.javascript,
+    category: categories.web,
+  },
+  php: {
+    name: "PHP",
+    icon: icons.php,
     category: categories.web,
   },
   // Software

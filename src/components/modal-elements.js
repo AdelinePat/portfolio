@@ -3,45 +3,55 @@ import {
   createCardLinks,
   createCardTags,
 } from "./project-elements.js";
+import { tags } from "../assets/data/tags.js";
 
 export function createProjectModal(project) {
   console.log(project);
+
   const card = document.createElement("div");
   card.classList.add("modal");
   // createFigure(card, project);
+
+  const cardHeader = document.createElement("div");
+  cardHeader.classList.add("modal-header");
+
   const figure = document.createElement("figure");
   figure.classList.add("modal-figure");
-  // const divImg = document.createElement("div");
+  createImg(figure, project);
+
   const divTitle = document.createElement("div");
   divTitle.classList.add("modal-title");
-
-  createImg(figure, project);
-  // divImg.append(img);
-
-  console.log(figure);
-  card.append(figure);
+  const closeBtn = document.createElement("i");
+  // console.log("tags closed", tags.closed.icon);
+  // card.append(figure);
+  cardHeader.append(figure);
 
   createCardTitle(divTitle, project);
-  card.append(divTitle);
+  // card.append(divTitle);
+  cardHeader.append(divTitle);
+  closeBtn.classList.add("btn-close", ...tags.closed.icon);
+
+  cardHeader.append(closeBtn);
+
+  card.append(cardHeader);
+
   const dateElement = document.createElement("h3");
   console.log(project.createdAt);
   const creationDate = new Date(project.createdAt).toLocaleDateString("fr-FR", {
     month: "long",
     year: "numeric",
   });
-  console.log(creationDate);
+
   dateElement.innerText = creationDate;
   divTitle.append(dateElement);
-  // figure.append(divImg);
 
   createCardContent(card, project);
 
   if (project.code != "" || project.demo != "") {
     createCardLinks(card, project);
   }
-
   createCardTags(card, project, true);
-  console.log(card);
+
   return card;
 }
 
@@ -52,7 +62,8 @@ function createImg(divImg, project) {
 }
 
 function createCardContent(card, project) {
-  const content = document.createElement("p");
+  const content = document.createElement("div");
+  content.classList.add("modal-content");
   content.innerHTML = project.content;
   card.append(content);
 }

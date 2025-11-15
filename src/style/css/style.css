@@ -313,7 +313,9 @@ h3 {
 
 .tools article {
   display: grid;
-  grid: "content title" auto/auto 15rem;
+  grid:
+    "content title" auto
+    / auto 15rem;
   gap: 2.4rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -375,7 +377,10 @@ h3 {
 }
 @media only screen and (max-width: 767px) {
   .tools article {
-    grid: "title" auto "content" auto/auto;
+    grid:
+      "title" auto
+      "content" auto
+      / auto;
     gap: 0.5rem;
     align-items: center;
   }
@@ -1010,16 +1015,31 @@ img.zi-10 {
   margin: auto;
   position: relative;
   display: grid;
-  grid: ". . ." 2.4rem "header . main" auto "nav . main" auto "footer . main" auto ". . ." 1.6rem/45rem 3rem auto;
+  grid:
+    ". . ." 2.4rem
+    "header . main" auto
+    "nav . main" auto
+    "footer . main" auto
+    ". . ." 1.6rem /
+    45rem 3rem auto;
 }
 @media only screen and (max-width: 979px) {
   .grid-container {
-    grid: "header" auto "main" auto "nav" auto "footer" auto/auto;
+    grid:
+      "header" auto
+      "main" auto
+      "nav" auto
+      "footer" auto
+      / auto;
   }
 }
 @media only screen and (max-height: 750px) and (min-width: 980px) {
   .grid-container {
-    grid: "header . main" auto "nav . main" auto "footer . main" auto/45rem 3rem auto;
+    grid:
+      "header . main" auto
+      "nav . main" auto
+      "footer . main" auto
+      / 45rem 3rem auto;
   }
 }
 

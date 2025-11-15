@@ -117,7 +117,7 @@ export function createCardTags(card, project, margin = false) {
     tagDiv.append(tagEl);
   }
   if (margin) {
-    tagDiv.classList.add("my-3");
+    tagDiv.classList.add("tags", "mt-3");
   }
   if (!margin) {
     tagDiv.classList.add("oh");

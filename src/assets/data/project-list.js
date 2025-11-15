@@ -2,7 +2,7 @@ import { tags } from "./tags.js";
 
 const portfolio = {
   title: "Portfolio",
-  img: "",
+  img: "./assets/project_img/portfolio.png",
   altImg: "Capture d'écran du projet Portfolio",
   firstCreatedAt: "2024-12-03T10:00:00.000Z",
   createdAt: "2025-11-07T10:00:00.000Z",
@@ -34,7 +34,7 @@ export const projects = [
     createdAt: "2024-10-28T10:00:00.000Z",
     content:
       "<p>Projet dans le cadre de la formation La Plateforme_ . Apprentissage des différents " +
-      "composants hardware, utilisation de VMware, installation de windows 11 et linux.</p>",
+      "composants hardware : CPU, GPU, refroidissement... utilisation de VMware, installation de windows 11 et Debian en utilisant un dual boot.</p>",
     code: "",
     demo: "",
     tags: [
@@ -258,7 +258,7 @@ export const projects = [
     altImg: "image représentant le jeu pierre feuille ciseaux",
     createdAt: "2025-05-18T10:00:00.000Z",
     content:
-      "<p>Projet d'entraînement à C++, utilisant un simple menu, des namespaces</p>",
+      "<p>Projet d'entraînement <a href='https://dyma.fr/formations/cpp' target='_blank' rel='noopener'>à la certification C++ de Dyma</a> à C++ , utilisant un simple menu, des namespaces</p>",
     code: "https://github.com/AdelinePat/rock-paper-scissors",
     demo: "",
     tags: [tags.cmake, tags.cpp, tags.console, tags.personal],
@@ -294,7 +294,7 @@ export const projects = [
     altImg: "projet console todo list",
     createdAt: "2025-05-25T10:00:00.000Z",
     content:
-      "<p>Réalisation d'une todo liste en console avec C++ dans le cadre de la certification <a href='https://dyma.fr/formations/cpp' target='_blank' rel='noopener'>Dyma</a></p><p>" +
+      "<p>Réalisation d'une todo liste en console avec C++ dans le cadre de la certification <a href='https://dyma.fr/formations/cpp' target='_blank' rel='noopener'>C++ de Dyma</a></p><p>" +
       "Nettoyage des inputs utilisateurs pour avoir le bon format final.</p><p>" +
       "Réalisation des actions CRUD dans un fichier csv.</p><p>" +
       "Gestion des erreurs</p>",
@@ -384,7 +384,7 @@ export const projects = [
     altImg: "Projet d'entraînement de réalisation de CV",
     createdAt: "2025-07-22T10:00:00.000Z",
     content:
-      "<p>Réalisation d'un CV dans le cadre du cours Dyma</p><p>" +
+      "<p>Réalisation d'un CV dans le cadre du cours <a href='https://dyma.fr/formations/html-css' target='_blank' rel='noopener'>HTML et CSS de Dyma</a></p><p>" +
       "Objectif : utiliser Sass, grid, flex et tout ce qui a été appris lors de la certification</p><p>" +
       "Le design général a été donné lors du cours, mais l'utilisation et création des mixin et " +
       "l'utisation de l'héritage pour les barres de compétences ont été des rajouts que j'ai trouvé plus intéressant que le template proposés.</p>",
@@ -394,7 +394,7 @@ export const projects = [
   },
   {
     title: "Todo JS",
-    img: "",
+    img: "./assets/project_img/todolist_js.png",
     altImg: "Capture d'écran du projet todo js",
     createdAt: "2025-08-29T10:00:00.000Z",
     content:
@@ -466,13 +466,14 @@ export const projects = [
       tags.csharp,
       tags.unitaryTest,
       tags.oop,
+      tags.unityVersionControl,
       tags.school,
       tags.teamwork,
     ],
   },
   {
     title: "Blog",
-    img: "",
+    img: "./assets/project_img/blog_js_project.png",
     altImg: "Capture d'écran du projet Blog",
     createdAt: "2025-10-25T10:00:00.000Z",
     content:

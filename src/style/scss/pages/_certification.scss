@@ -1,6 +1,24 @@
+@use "../tools/mixin" as m;
+
+// %grid-container-main {
+//   display: grid;
+//   grid-template-columns: repeat(2, 1fr);
+//   align-items: stretch;
+//   justify-content: center;
+//   @include mq.l {
+//     grid-template-columns: 1fr;
+//   }
+//   @include mq.md {
+//     grid-template-columns: repeat(2, 1fr);
+//   }
+//   @include mq.s {
+//     grid-template-columns: 1fr;
+//   }
+// }
 
 .courses-list {
-  @extend %grid-container-main;
+  // @extend %grid-container-main;
+  @include m.grid-container-main();
   gap: 2rem 3rem;
 }
 
