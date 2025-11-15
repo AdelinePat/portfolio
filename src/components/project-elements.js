@@ -1,3 +1,5 @@
+import { openModal } from "../scripts/modal";
+
 export function updateTitle(sectionTitleElement, articles) {
   sectionTitleElement.innerHTML = "";
 
@@ -41,7 +43,6 @@ export function createCard(project) {
   return card;
 }
 
-
 function setFilters(element, filters) {
   //   console.log("setfilter ", filters);
   for (let i = 0; i < filters.length; ++i) {
@@ -69,12 +70,15 @@ function createFigure(card, project) {
   img.setAttribute("loading", "lazy");
   const plusIcon = document.createElement("i");
   plusIcon.classList.add("fa-solid", "fa-plus", "caption");
+
+  plusIcon.addEventListener("click", async () => {
+    console.log("coucou je clique sur le plus");
+    const result = await openModal(project);
+  });
   figure.append(img, plusIcon);
   card.append(figure);
   return figure;
 }
-
-
 
 export function createCardLinks(card, project) {
   const linkDiv = document.createElement("div");
