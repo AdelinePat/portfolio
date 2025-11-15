@@ -20,9 +20,9 @@ export function toggleActiveTag(
 ) {
   filterDiv.addEventListener("click", (event) => {
     const span = event.target.closest("span");
+
     if (span && filterDiv.contains(span)) {
       event.stopPropagation();
-
       toggleTag(activeFilter, span.classList[0]);
       if (span.classList.contains("active")) {
         span.classList.remove("active");
@@ -31,8 +31,12 @@ export function toggleActiveTag(
       }
 
       const result = filterProjects(articles, activeFilter);
-
-      updateTitle(sectionTitleElement, result);
+      console.log(articles.at(0).code);
+      updateTitle(
+        sectionTitleElement,
+        result,
+        articles.at(0).code ? true : false
+      );
       createAllCards(sectionElement, result);
     }
   });

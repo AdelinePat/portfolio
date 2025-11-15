@@ -47,8 +47,12 @@ export function createProjectModal(project) {
 
   createCardContent(card, project);
 
-  if (project.code != "" || project.demo != "") {
+  if (project.code || project.demo) {
     createCardLinks(card, project);
+  }
+  if (project.link || project.successCertificate) {
+    console.log("coucou allo?");
+    createCardLinks(card, project, false);
   }
   createCardTags(card, project, true);
 

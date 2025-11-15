@@ -1,10 +1,18 @@
 import { openModal } from "../scripts/modal";
 
-export function updateTitle(sectionTitleElement, articles) {
+export function updateTitle(sectionTitleElement, articles, isProject = true) {
   sectionTitleElement.innerHTML = "";
 
-  const string =
-    articles.length + " " + (articles.length > 1 ? "projets" : "projet");
+  let string;
+  if (isProject) {
+    string =
+      articles.length + " " + (articles.length > 1 ? "projets" : "projet");
+  } else {
+    string =
+      articles.length +
+      " " +
+      (articles.length > 1 ? "certifications" : "certification");
+  }
   const titleText = document.createTextNode(string);
 
   const span = document.createElement("span");
@@ -36,7 +44,7 @@ export function createCard(project) {
   createFigure(card, project);
   // createCardContent(card, project);
 
-  if (project.code != "" || project.demo != "") {
+  if (project.code || project.demo) {
     createCardLinks(card, project);
   }
   createCardTags(card, project);
@@ -65,32 +73,53 @@ export function createCardTitle(card, project) {
 function createFigure(card, project) {
   const figure = document.createElement("figure");
   const img = document.createElement("img");
+
   img.setAttribute("src", project.img);
   img.setAttribute("alt", project.altImg);
   img.setAttribute("loading", "lazy");
+  if (project.successCertificate) {
+    img.classList.add("zi-10");
+  }
+
   const plusIcon = document.createElement("i");
   plusIcon.classList.add("fa-solid", "fa-plus", "caption");
 
   plusIcon.addEventListener("click", async () => {
-    console.log("coucou je clique sur le plus");
     const result = await openModal(project);
   });
+
   figure.append(img, plusIcon);
+  figure.classList.add("mb-3");
   card.append(figure);
   return figure;
 }
 
-export function createCardLinks(card, project) {
+export function createCardLinks(card, project, isProject = true) {
   const linkDiv = document.createElement("div");
   linkDiv.classList.add("links");
-  if (project.code != "") {
-    const codeLink = createLink(project.code, "Code Source");
-    linkDiv.append(codeLink);
-  }
-  // linkDiv.append(codeLink);
-  if (project.demo != "") {
-    const demoLink = createLink(project.demo, "Live Demo");
-    linkDiv.append(demoLink);
+  if (isProject) {
+    if (project.code) {
+      const codeLink = createLink(project.code, "Code Source");
+      linkDiv.append(codeLink);
+    }
+
+    if (project.demo) {
+      const demoLink = createLink(project.demo, "Live Demo");
+      linkDiv.append(demoLink);
+    }
+  } else {
+    if (project.link) {
+      const codeLink = createLink(project.link, "Formation");
+      linkDiv.append(codeLink);
+    }
+
+    if (project.successCertificate) {
+      const demoLink = createLink(
+        project.successCertificate,
+        "Certificat de réussite"
+      );
+      linkDiv.append(demoLink);
+    }
   }
   card.append(linkDiv);
 }
@@ -98,7 +127,7 @@ export function createCardLinks(card, project) {
 function createLink(link, string) {
   const linkElement = document.createElement("a");
   linkElement.innerText = string;
-  if (string === "Code Source") {
+  if (string === "Code Source" || string === "Formation") {
     linkElement.classList.add("btn-secondary", "my-3", "o-08");
   } else {
     linkElement.classList.add("btn-primary", "my-3", "o-08");

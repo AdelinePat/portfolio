@@ -32,6 +32,7 @@ const icons = {
   photoshop: `<i class="devicon-photoshop-plain"></i>`,
   illustrator: `<i class="devicon-photoshop-plain"></i>`,
   // Databases
+  sql: `<i class="fa-solid fa-database"></i>`,
   mysql: `<i class="devicon-mysql-original"></i>`,
   postgresql: `<i class="devicon-postgresql-plain"></i>`,
   kafka: `<i class="devicon-apachekafka-original"></i>`,
@@ -89,6 +90,14 @@ export const categories = {
   databases: "Bases de Données",
   oop: "Programmation Orientée Objet",
   devops: "DevOps",
+};
+
+export const certificationCategories = {
+  web: "Web",
+  software: "Logiciel",
+  databases: "Bases de Données",
+  devops: "DevOps",
+  systems: "Systèmes",
 };
 
 export const tags = {
@@ -204,46 +213,46 @@ export const tags = {
   linux: {
     name: "Linux",
     icon: icons.linux,
-    category: categories.general,
+    category: certificationCategories.systems,
   },
   windows: {
     name: "Windows",
     icon: icons.windows,
-    category: categories.general,
+    category: certificationCategories.systems,
   },
   debian: {
     name: "Debian",
     icon: icons.debian,
-    category: categories.general,
+    category: certificationCategories.systems,
   },
   ubuntu: {
     name: "Ubuntu",
     icon: icons.ubuntu,
-    category: categories.general,
+    category: certificationCategories.systems,
   },
   redhat: {
     name: "Red Hat",
     icon: icons.redhat,
-    category: categories.general,
+    category: certificationCategories.systems,
   },
 
   // Bash & Scripting
   bashScripting: {
     name: "Bash scripting",
     icon: icons.bashScripting,
-    category: categories.general,
+    category: certificationCategories.systems,
   },
 
   linuxCLI: {
     name: "Linux CLI",
     icon: icons.linuxCLI,
-    category: categories.general,
+    category: certificationCategories.systems,
   },
 
   powershell: {
     name: "Powershell",
     icon: icons.powershell,
-    category: categories.general,
+    category: certificationCategories.systems,
   },
 
   // Virtualization
@@ -378,6 +387,11 @@ export const tags = {
     category: categories.software,
   },
   // Databases
+  sql: {
+    name: "SQL",
+    icon: icons.sql,
+    category: categories.databases,
+  },
   mysql: {
     name: "MySQL",
     icon: icons.mysql,

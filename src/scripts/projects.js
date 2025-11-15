@@ -1,10 +1,7 @@
 // import { allFilters } from "../assets/data/generateTagsAndFilters.js";
 import "../style/scss/style.scss";
 
-import {
-  allCategories,
-  reversedCategories,
-} from "../assets/data/generateTagsAndFilters.js";
+import { allCategories } from "../assets/data/generateTagsAndFilters.js";
 import { projects } from "../assets/data/project-list.js";
 
 import { updateTitle, createAllCards } from "../components/project-elements.js";
@@ -15,7 +12,7 @@ import {
   sortFromMostRecent,
 } from "./filter.js";
 
-import { openModal } from "./modal.js";
+// import { openModal } from "./modal.js";
 const activeFilter = [];
 
 let currentCount = 6;

@@ -1,4 +1,5 @@
 const tagBtnClass = "btn-reversed-primary-lighter";
+
 export function createFilterDiv(sectionTitleContainer, allCategories) {
   const filterDiv = document.createElement("div");
 
