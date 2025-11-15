@@ -77,7 +77,19 @@ export const certificationTags = {
     icon: "",
   },
   gitCommand: {
-    name: "Merge/rebase",
+    name: "merge, rebase",
+    icon: "",
+  },
+  gitStash: {
+    name: "stash",
+    icon: "",
+  },
+  gitPull: {
+    name: "pull, fetch",
+    icon: "",
+  },
+  gitLog: {
+    name: "log, blame",
     icon: "",
   },
   // MYSQL

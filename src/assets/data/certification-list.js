@@ -89,7 +89,14 @@ export const certifications = [
     link: "https://dyma.fr/formations/git",
     successCertificate:
       "https://dyma.fr/certification/67cd546795b4574e36077859/5e66b9c683f9574379ad6802",
-    tags: [tags.git, certificationTags.gitFlow, certificationTags.gitCommand],
+    tags: [
+      tags.git,
+      certificationTags.gitFlow,
+      certificationTags.gitCommand,
+      certificationTags.gitStash,
+      certificationTags.gitPull,
+      certificationTags.gitLog,
+    ],
   },
   {
     title: "MySQL",

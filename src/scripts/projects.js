@@ -1,5 +1,5 @@
 // import { allFilters } from "../assets/data/generateTagsAndFilters.js";
-import "../style/scss/style.scss";
+import "../style/scss/projects.scss";
 
 import { allCategories } from "../assets/data/generateTagsAndFilters.js";
 import { projects } from "../assets/data/project-list.js";

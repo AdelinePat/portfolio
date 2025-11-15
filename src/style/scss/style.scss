@@ -6,16 +6,16 @@
 @use "./base/base";
 @use "./base/icon";
 
-@use "./pages/homepage";
-@use "./pages/projects";
+// @use "./pages/homepage";
+// @use "./pages/projects";
 
 @use "./components/common";
 @use "./components/nav";
 @use "./components/header";
 @use "./components/footer";
-@use "./components/card";
-@use "./components/skillbar";
-@use "./components/courses";
+// @use "./components/card";
+
+// @use "./components/courses";
 
 @use "./base/helpers";
 @use "./components/filter-title";
