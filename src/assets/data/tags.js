@@ -49,9 +49,12 @@ const icons = {
   socket: `<i class="fa-solid fa-network-wired"></i>`,
   // Concept
   ideation: "",
-  unitaryTest: `<i class="fa-solid fa-vial"></i>`,
   algorithmic: `<i class="fa-solid fa-gears"></i>`,
   errorHandling: `<i class="fa-solid fa-triangle-exclamation"></i>`,
+  // Tests (use the same icon!)
+  unitaryTest: `<i class="fa-solid fa-vial"></i>`,
+  integrationTest: `<i class="fa-solid fa-vial"></i>`,
+
   //   Architecture
   mvc: `<i class="fa-solid fa-diagram-project"></i>`,
   designSystem: "",
@@ -126,6 +129,11 @@ export const tags = {
   unitaryTest: {
     name: "Test unitaire",
     icon: icons.unitaryTest,
+    category: categories.general,
+  },
+  integrationTest: {
+    name: "Test d'intégration",
+    icon: icons.integrationTest,
     category: categories.general,
   },
   errorHandling: {

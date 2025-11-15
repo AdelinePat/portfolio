@@ -21,6 +21,7 @@ const portfolio = {
     tags.personal,
     tags.figma,
     tags.git,
+    tags.docker,
   ],
 };
 
@@ -431,12 +432,15 @@ export const projects = [
       tags.springboot,
       tags.java,
       tags.docker,
+      tags.integrationTest,
+      tags.unitaryTest,
       tags.thymeleaf,
       tags.maven,
       tags.mysql,
+      tags.oop,
       tags.school,
       tags.teamwork,
-      tags.git
+      tags.git,
     ],
   },
   {
@@ -457,7 +461,14 @@ export const projects = [
       "et structuration de code orienté jeu vidéo.</p>",
     code: "https://github.com/AdelinePat/uniquest/",
     demo: "",
-    tags: [tags.unity, tags.csharp, tags.school, tags.teamwork],
+    tags: [
+      tags.unity,
+      tags.csharp,
+      tags.unitaryTest,
+      tags.oop,
+      tags.school,
+      tags.teamwork,
+    ],
   },
   {
     title: "Blog",

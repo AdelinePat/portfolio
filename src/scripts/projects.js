@@ -28,11 +28,13 @@ const sectionTitleElement = document.querySelector(".title-filter");
 const sectionTitleContainer = document.querySelector(
   ".section-title-container"
 );
+
 updateTitle(sectionTitleElement, articles);
 const filterDiv = createFilterDiv(sectionTitleContainer, allCategories);
 toggleFilterDiv(sectionTitleElement, filterDiv);
-// toggleActiveTag(filterDiv, activeFilter, articles);
+
 console.log(articles);
+
 const sectionElement = document.querySelector("section");
 createAllCards(sectionElement, articles);
 toggleActiveTag(

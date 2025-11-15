@@ -1,4 +1,4 @@
-import { createProjectModal } from "../components/project-elements";
+import { createProjectModal } from "../components/modal-elements.js";
 
 const body = document.querySelector("body");
 let layer;
@@ -12,7 +12,7 @@ export function openModal(article) {
   layer.append(modalElement);
   // modal = document.querySelector(".modal");
   body.append(layer);
-  document.body.classList.add("modal-open");
+  // document.body.classList.add("modal-open");
 
   return new Promise((resolve, reject) => {
     layer.addEventListener("click", (event) => {
@@ -22,11 +22,11 @@ export function openModal(article) {
       ) {
         resolve(false);
         layer.remove();
-        document.body.classList.remove("modal-open");
+        // document.body.classList.remove("modal-open");
       } else if (event.target === modal.querySelector(".btn-primary")) {
         console.log("confirm!!!");
         layer.remove();
-        document.body.classList.remove("modal-open");
+        // document.body.classList.remove("modal-open");
         resolve(true);
       }
     });
@@ -36,28 +36,4 @@ export function openModal(article) {
 function createLayer() {
   layer = document.createElement("div");
   layer.classList.add("layer");
-}
-
-function createModal(question) {
-  modal = document.createElement("div");
-  modal.classList.add("modal");
-
-  const questionParagraph = document.createElement("p");
-  const textQuestion = document.createTextNode(question);
-  questionParagraph.append(textQuestion);
-
-  const confirmBtn = createButton("Confirmer");
-  confirmBtn.classList.add("btn-primary");
-  const cancelBtn = createButton("Annuler");
-  cancelBtn.classList.add("btn-secondary");
-  modal.append(questionParagraph);
-  modal.append(cancelBtn);
-  modal.append(confirmBtn);
-}
-
-function createButton(text) {
-  const delText = document.createTextNode(text);
-  const btn = document.createElement("button");
-  btn.append(delText);
-  return btn;
 }

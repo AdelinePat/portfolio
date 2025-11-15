@@ -67,16 +67,17 @@
   background: var(--background);
   min-width: 35rem;
   width: 60%;
-  max-width: 90rem;
+  max-width: 80rem;
+  // height: 100%;
   border-radius: 25px;
   box-shadow: var(--box-shadow);
   text-align: center;
+  // padding-bottom: 3.2rem;
   padding-bottom: 3.2rem;
   position: relative;
   border: 1px solid var(--background-lighter);
   // position: fixed;
   // overflow-y: auto;
-  // height: 100%;
   overflow: auto;
   scrollbar-width: none;
 
@@ -86,6 +87,7 @@
     left: 0;
     width: 100%;
     min-height: 200px;
+    letter-spacing: 0.1rem;
     // background: rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
@@ -131,8 +133,8 @@
   }
 }
 
-body.modal-open {
-  overflow: hidden; /* prevents background scrolling */
-  position: fixed; /* optional: keeps scroll position */
-  width: 100%;
-}
+// body.modal-open {
+//   overflow: hidden; /* prevents background scrolling */
+//   // position: fixed; /* optional: keeps scroll position */
+//   width: 100%;
+// }

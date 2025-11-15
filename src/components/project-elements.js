@@ -41,42 +41,6 @@ export function createCard(project) {
   return card;
 }
 
-export function createProjectModal(project) {
-  console.log(project);
-  const card = document.createElement("div");
-  card.classList.add("modal");
-  // createFigure(card, project);
-  const figure = document.createElement("figure");
-  figure.classList.add("modal-figure");
-  // const divImg = document.createElement("div");
-  const divTitle = document.createElement("div");
-  divTitle.classList.add("modal-title");
-  createImg(figure, project);
-  // divImg.append(img);
-
-  console.log(figure);
-  card.append(figure);
-  createCardTitle(divTitle, project);
-  card.append(divTitle);
-  const dateElement = document.createElement("h3");
-  console.log(project.createdAt);
-  const creationDate = new Date(project.createdAt).toLocaleDateString("fr-FR", {
-    month: "long",
-    year: "numeric",
-  });
-  console.log(creationDate);
-  dateElement.innerText = creationDate;
-  divTitle.append(dateElement);
-  // figure.append(divImg);
-  createCardContent(card, project);
-
-  if (project.code != "" || project.demo != "") {
-    createCardLinks(card, project);
-  }
-  createCardTags(card, project, true);
-  console.log(card);
-  return card;
-}
 
 function setFilters(element, filters) {
   //   console.log("setfilter ", filters);
@@ -89,7 +53,7 @@ function setFilters(element, filters) {
   }
 }
 
-function createCardTitle(card, project) {
+export function createCardTitle(card, project) {
   // Create article title
   const title = document.createElement("h2");
   title.classList.add("title-primary");
@@ -110,28 +74,9 @@ function createFigure(card, project) {
   return figure;
 }
 
-function createImg(divImg, project) {
-  // const img = document.createElement("img");
-  // img.setAttribute("src", project.img);
-  // img.setAttribute("alt", project.altImg);
-  // img.setAttribute("loading", "lazy");
-  // img.classList.add("modal-img");
-  // return img;
 
-  divImg.style.backgroundImage = `url(${project.img})`;
-  divImg.style.backgroundSize = "cover";
-  divImg.style.backgroundPosition = "center";
-  // divImg.style.backgroundSize = "cover"; // optional, makes it fit nicely
-  // divImg.style.backgroundPosition = "center";
-}
-function createCardContent(card, project) {
-  const content = document.createElement("p");
-  //   content.innerText = project.content;
-  content.innerHTML = project.content;
-  card.append(content);
-}
 
-function createCardLinks(card, project) {
+export function createCardLinks(card, project) {
   const linkDiv = document.createElement("div");
   linkDiv.classList.add("links");
   if (project.code != "") {
@@ -160,7 +105,7 @@ function createLink(link, string) {
   return linkElement;
 }
 
-function createCardTags(card, project, margin = false) {
+export function createCardTags(card, project, margin = false) {
   const tagDiv = document.createElement("div");
   tagDiv.classList.add("skills-secondary-lighter", "o-08");
   for (const tag of project.tags) {
@@ -168,7 +113,7 @@ function createCardTags(card, project, margin = false) {
     tagDiv.append(tagEl);
   }
   if (margin) {
-    tagDiv.classList.add("mt-3");
+    tagDiv.classList.add("my-3");
   }
   if (!margin) {
     tagDiv.classList.add("oh");
