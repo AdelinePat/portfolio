@@ -77,19 +77,20 @@ function createFigure(card, project) {
   img.setAttribute("src", project.img);
   img.setAttribute("alt", project.altImg);
   img.setAttribute("loading", "lazy");
+
   if (project.successCertificate) {
     img.classList.add("zi-10");
+    figure.classList.add("mb-3");
   }
 
   const plusIcon = document.createElement("i");
   plusIcon.classList.add("fa-solid", "fa-plus", "caption");
 
-  plusIcon.addEventListener("click", async () => {
-    const result = await openModal(project);
+  plusIcon.addEventListener("click", () => {
+    const result = openModal(project);
   });
 
   figure.append(img, plusIcon);
-  figure.classList.add("mb-3");
   card.append(figure);
   return figure;
 }

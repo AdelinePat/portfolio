@@ -4,33 +4,50 @@ const body = document.querySelector("body");
 let layer;
 let modal;
 
+// export function openModal(article) {
+//   createLayer();
+//   // createModal(question);
+//   const modalElement = createProjectModal(article);
+//   modal = modalElement;
+//   layer.append(modalElement);
+//   // modal = document.querySelector(".modal");
+//   body.append(layer);
+//   document.body.classList.add("modal-open");
+
+//   return new Promise((resolve, reject) => {
+//     layer.addEventListener("click", (event) => {
+//       if (
+//         !modal.contains(event.target) ||
+//         event.target === modal.querySelector(".btn-secondary") ||
+//         event.target === modal.querySelector(".btn-close")
+//       ) {
+//         resolve(false);
+//         layer.remove();
+//         document.body.classList.remove("modal-open");
+//       } else if (event.target === modal.querySelector(".btn-primary")) {
+//         console.log("confirm!!!");
+//         layer.remove();
+//         document.body.classList.remove("modal-open");
+//         resolve(true);
+//       }
+//     });
+//   });
+// }
+
 export function openModal(article) {
   createLayer();
-  // createModal(question);
   const modalElement = createProjectModal(article);
   modal = modalElement;
   layer.append(modalElement);
-  // modal = document.querySelector(".modal");
   body.append(layer);
   document.body.classList.add("modal-open");
 
-  return new Promise((resolve, reject) => {
-    layer.addEventListener("click", (event) => {
-      if (
-        !modal.contains(event.target) ||
-        event.target === modal.querySelector(".btn-secondary") ||
-        event.target === modal.querySelector(".btn-close")
-      ) {
-        resolve(false);
-        layer.remove();
-        document.body.classList.remove("modal-open");
-      } else if (event.target === modal.querySelector(".btn-primary")) {
-        console.log("confirm!!!");
-        layer.remove();
-        document.body.classList.remove("modal-open");
-        resolve(true);
-      }
-    });
+  layer.addEventListener("click", (event) => {
+    const closeBtn = modal.querySelector(".btn-close");
+    if (!modal.contains(event.target) || event.target === closeBtn) {
+      layer.remove();
+      document.body.classList.remove("modal-open");
+    }
   });
 }
 

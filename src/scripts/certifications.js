@@ -24,8 +24,6 @@ const filterDiv = createFilterDiv(
 );
 toggleFilterDiv(sectionTitleElement, filterDiv);
 
-// console.log(sectionTitleElement, sectionTitleContainer);
-
 const sectionElement = document.querySelector(".certifications");
 console.log(sectionElement);
 createAllCards(sectionElement, articles);
