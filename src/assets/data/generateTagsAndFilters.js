@@ -1,6 +1,7 @@
 // import { tags } from "./tags.js";
 import { projects } from "./project-list.js";
 import { certifications } from "./certification-list.js";
+import { courses } from "./courses-list.js";
 import { categories, certificationCategories } from "./tags.js";
 
 export const allCategories = Object.entries(categories);
@@ -34,4 +35,8 @@ for (const project of projects) {
 
 for (const certification of certifications) {
   setProjectFilters(certification, certificationCategories);
+}
+
+for (const course of courses) {
+  setProjectFilters(course, certificationCategories);
 }

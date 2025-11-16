@@ -2,6 +2,7 @@ import { tags } from "./tags.js";
 
 const portfolio = {
   title: "Portfolio",
+  display: true,
   img: "./assets/project_img/portfolio.png",
   altImg: "Capture d'écran du projet Portfolio",
   firstCreatedAt: "2024-12-03T10:00:00.000Z",
@@ -29,6 +30,7 @@ export const projects = [
   portfolio,
   {
     title: "Hardware et virtualisation",
+    display: true,
     img: "./assets/project_img/component.jpg",
     altImg: "Image représentant le projet hardware et virtualisation",
     createdAt: "2024-10-28T10:00:00.000Z",
@@ -47,6 +49,7 @@ export const projects = [
   },
   {
     title: "Tic Tac Toe",
+    display: true,
     img: "https://raw.githubusercontent.com/AdelinePat/tictactoe/refs/heads/main/tictactoe.jpg",
     altImg: "Image du jeu du morpion",
     createdAt: "2024-11-08T10:00:00.000Z",
@@ -62,6 +65,7 @@ export const projects = [
   },
   {
     title: "Bloom Petals",
+    display: true,
     img: "https://raw.githubusercontent.com/AdelinePat/webdesign-fleuriste/refs/heads/main/preview-desktop.jpg",
     altImg: "Capture d'écran du projet Bloom Petals",
     createdAt: "2024-11-23T10:00:00.000Z",
@@ -74,6 +78,7 @@ export const projects = [
   },
   {
     title: "Blackpink",
+    display: true,
     img: "https://raw.githubusercontent.com/AdelinePat/fansite/refs/heads/main/preview_fansite1_blackpink.jpg",
     altImg: "Capture d'écran du projet Blackpink",
     createdAt: "2024-12-02T10:00:00.000Z",
@@ -86,6 +91,7 @@ export const projects = [
   },
   {
     title: "Hackaton - KoSphere",
+    display: true,
     img: "./assets/project_img/kosphere_project.jpg",
     altImg: "image représentant le projet d'idéation du hackaton",
     createdAt: "2024-12-13T10:00:00.000Z",
@@ -106,6 +112,7 @@ export const projects = [
   },
   {
     title: "AzerType",
+    display: true,
     img: "./assets/project_img/azertype_project.jpg",
     altImg: "image de AzerType",
     createdAt: "2024-12-26T10:00:00.000Z",
@@ -121,6 +128,7 @@ export const projects = [
   },
   {
     title: "Calculatrice",
+    display: true,
     img: "./assets/project_img/calculator_project1.jpg",
     altImg: "Capture d'écran du projet de la calculatrice",
     createdAt: "2025-01-21T10:00:00.000Z",
@@ -143,6 +151,7 @@ export const projects = [
   },
   {
     title: "Jeu du pendu",
+    display: true,
     img: "./assets/project_img/hangman_project.jpg",
     altImg: "Capture d'écran du projet de Jeu du pendu",
     createdAt: "2025-01-29T10:00:00.000Z",
@@ -155,6 +164,7 @@ export const projects = [
   },
   {
     title: "Fruit Ninja",
+    display: true,
     img: "./assets/project_img/fruit_ninja_project.jpg",
     altImg: "Capture d'écran du projet de jeu Fruit Ninja",
     createdAt: "2025-02-04T10:00:00.000Z",
@@ -177,6 +187,7 @@ export const projects = [
   },
   {
     title: "Pokemon",
+    display: true,
     img: "./assets/project_img/pokemon_project.jpg",
     altImg: "Capture d'écran du projet de jeu pokemon",
     createdAt: "2025-03-02T10:00:00.000Z",
@@ -201,6 +212,7 @@ export const projects = [
   },
   {
     title: "Budget Buddy",
+    display: true,
     img: "./assets/project_img/budget_buddy_project.jpg",
     altImg: "image de l'application budget buddy",
     createdAt: "2025-03-25T10:00:00.000Z",
@@ -228,6 +240,7 @@ export const projects = [
   },
   {
     title: "Démineur",
+    display: true,
     img: "./assets/project_img/minesweeper_project.jpg",
     altImg: "Capture d'écran du projet du jeu du démineur",
     createdAt: "2025-03-31T10:00:00.000Z",
@@ -254,6 +267,7 @@ export const projects = [
   },
   {
     title: "Pierre Feuille Ciseaux",
+    display: true,
     img: "./assets/project_img/rock-paper-scissors.webp",
     altImg: "image représentant le jeu pierre feuille ciseaux",
     createdAt: "2025-05-18T10:00:00.000Z",
@@ -265,6 +279,7 @@ export const projects = [
   },
   {
     title: "My Discord",
+    display: true,
     img: "./assets/project_img/whispr-mydiscord.jpg",
     altImg: "Application My Discord",
     createdAt: "2025-05-12T10:00:00.000Z",
@@ -290,6 +305,7 @@ export const projects = [
   },
   {
     title: "Todo C++",
+    display: true,
     img: "./assets/project_img/todolist_cpp.jpg",
     altImg: "projet console todo list",
     createdAt: "2025-05-25T10:00:00.000Z",
@@ -304,6 +320,7 @@ export const projects = [
   },
   {
     title: "Tower Defense",
+    display: true,
     img: "https://github.com/AdelinePat/tower-defense/blob/main/docs/README/main_menu.png?raw=true",
     altImg: "Capture d'écran du projet Tower Defense",
     createdAt: "2025-06-17T10:00:00.000Z",
@@ -327,6 +344,7 @@ export const projects = [
   },
   {
     title: "Global Converter",
+    display: true,
     img: "https://github.com/AdelinePat/globalConverter/blob/main/ressources/globalConverter.png?raw=true",
     altImg: "Capture d'écran du projet Global Converter",
     createdAt: "2025-06-30T10:00:00.000Z",
@@ -351,6 +369,7 @@ export const projects = [
   },
   {
     title: "Plateforme Tracker",
+    display: true,
     img: "https://github.com/AdelinePat/LaPlateformeTracker/blob/main/src/main/resources/plateforme-tracker.png?raw=true",
     altImg: "Capture d'écran du projet La Plateforme Tracker",
     createdAt: "2025-07-10T10:00:00.000Z",
@@ -380,6 +399,7 @@ export const projects = [
   },
   {
     title: "CV d'entraînement",
+    display: true,
     img: "https://github.com/AdelinePat/resume/blob/main/img/preview%20CV%20Curriculum%20Vitae.png?raw=true",
     altImg: "Projet d'entraînement de réalisation de CV",
     createdAt: "2025-07-22T10:00:00.000Z",
@@ -394,6 +414,7 @@ export const projects = [
   },
   {
     title: "Todo JS",
+    display: true,
     img: "./assets/project_img/todolist_js.png",
     altImg: "Capture d'écran du projet todo js",
     createdAt: "2025-08-29T10:00:00.000Z",
@@ -413,6 +434,7 @@ export const projects = [
   },
   {
     title: "Overlook Hotel",
+    display: true,
     img: "https://raw.githubusercontent.com/AdelinePat/overlook_hotel/refs/heads/main/overlook_hotel.jpg",
     altImg: "Capture d'écran du projet Overlook Hotel",
     createdAt: "2025-09-29T10:00:00.000Z",
@@ -445,6 +467,7 @@ export const projects = [
   },
   {
     title: "Uniquest",
+    display: true,
     img: "https://raw.githubusercontent.com/AdelinePat/uniquest/refs/heads/main/MapGame.png",
     altImg: "Capture d'écran du projet Uniquest",
     createdAt: "2025-10-18T10:00:00.000Z",
@@ -473,6 +496,7 @@ export const projects = [
   },
   {
     title: "Blog",
+    display: true,
     img: "./assets/project_img/blog_js_project.png",
     altImg: "Capture d'écran du projet Blog",
     createdAt: "2025-10-25T10:00:00.000Z",
@@ -495,6 +519,7 @@ export const projects = [
 
 const articleTemplate = {
   title: "",
+  display: true,
   img: "",
   altImg: "",
   createdAt: "2025-07-22T10:00:00.000Z",

@@ -46,6 +46,8 @@ let courseList = sortFromMostRecent(courses);
 console.log(courseList);
 // courseSection.innerHTML = "";
 for (const course of courseList) {
-  const article = createCourseArticle(course);
-  courseSection.append(article);
+  if (course.display) {
+    const article = createCourseArticle(course);
+    courseSection.append(article);
+  }
 }

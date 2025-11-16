@@ -29,6 +29,13 @@
       min-width: 10rem;
       margin-right: 4rem;
       padding-top: 0.5rem;
+      
+      @include mq.md {
+        p {
+          display: inline-block;
+          margin-right: 0.8rem;
+        }
+      }
     }
     @include mq.md {
       flex-direction: column;

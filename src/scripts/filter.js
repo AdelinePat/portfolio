@@ -74,11 +74,34 @@ export function filterProjects(articles, activeFilter) {
 }
 
 export function sortFromMostRecent(projects) {
-  console.log(projects);
-  const sortedProjects = [...projects].sort((project1, project2) => {
-    const date1 = new Date(project1.createdAt).getTime();
-    const date2 = new Date(project2.createdAt).getTime();
+  if (!projects || projects.length === 0) return [];
+
+  const visible = projects.filter((project) => project.display === true);
+
+  if (visible.length === 0) return [];
+  const dateKey = projects.at(0).createdAt ? "createdAt" : "startDate";
+
+  const sortedprojects = [...visible].sort((project1, project2) => {
+    const date1 = new Date(project1[dateKey]).getTime();
+    const date2 = new Date(project2[dateKey]).getTime();
     return date2 - date1;
   });
-  return sortedProjects;
+  return sortedprojects;
+
+  // console.log(projects);
+  // if (projects.at(0).createdAt) {
+  //   const sortedProjects = [...projects].sort((project1, project2) => {
+  //     const date1 = new Date(project1.createdAt).getTime();
+  //     const date2 = new Date(project2.createdAt).getTime();
+  //     return date2 - date1;
+  //   });
+  //   return sortedProjects;
+  // } else if (projects.at(0).startDate) {
+  //   const sortedProjects = [...projects].sort((project1, project2) => {
+  //     const date1 = new Date(project1.startDate).getTime();
+  //     const date2 = new Date(project2.startDate).getTime();
+  //     return date2 - date1;
+  //   });
+  //   return sortedProjects;
+  // }
 }

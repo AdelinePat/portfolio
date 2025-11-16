@@ -4,6 +4,7 @@ import { certificationTags } from "./certification-tags.js";
 export const courses = [
   {
     title: "Apprenez à programmer en C",
+    display: true,
     createdAt: "2025-03-31T10:00:00.000Z",
     progress: 100, // optional chapter not done
     courseUrl:
@@ -13,6 +14,7 @@ export const courses = [
   },
   {
     title: "Apprenez la programmation orientée objet avec Python",
+    display: true,
     createdAt: "2025-01-06T10:00:00.000Z",
     progress: 100,
     courseUrl:
@@ -22,6 +24,7 @@ export const courses = [
   },
   {
     title: "Concevez votre site web avec PHP et MySQL",
+    display: true,
     createdAt: "2024-12-28T10:00:00.000Z",
     progress: 59,
     courseUrl:
@@ -31,6 +34,7 @@ export const courses = [
   },
   {
     title: "Apprenez à programmer avec JavaScript",
+    display: true,
     createdAt: "2024-12-19T10:00:00.000Z",
     progress: 100,
     courseUrl:
@@ -40,6 +44,7 @@ export const courses = [
   },
   {
     title: "Simplifiez-vous le CSS avec Sass",
+    display: true,
     createdAt: "2024-12-03T10:00:00.000Z",
     progress: 100,
     courseUrl:
@@ -49,6 +54,7 @@ export const courses = [
   },
   {
     title: "Créez une maquette web avec Figma",
+    display: true,
     createdAt: "2024-11-14T10:00:00.000Z",
     progress: 100,
     courseUrl:
@@ -58,6 +64,7 @@ export const courses = [
   },
   {
     title: "Gérez du code avec Git et GitHub",
+    display: true,
     createdAt: "2024-11-02T10:00:00.000Z",
     progress: 100,
     courseUrl:
@@ -67,6 +74,7 @@ export const courses = [
   },
   {
     title: "Apprenez les bases du langage Python",
+    display: true,
     createdAt: "2024-10-31T10:00:00.000Z",
     progress: 72,
     courseUrl:
@@ -76,6 +84,7 @@ export const courses = [
   },
   {
     title: "Comprendre le Web",
+    display: true,
     createdAt: "2024-02-31T10:00:00.000Z",
     progress: 100,
     courseUrl:
@@ -85,6 +94,7 @@ export const courses = [
   },
   {
     title: "Créez votre site web avec HTML5 et CSS3",
+    display: true,
     createdAt: "2024-03-05T10:00:00.000Z",
     progress: 100,
     courseUrl:
@@ -94,6 +104,7 @@ export const courses = [
   },
   {
     title: "Découvrez le fonctionnement des algorithmes",
+    display: true,
     createdAt: "2024-02-22T10:00:00.000Z",
     progress: 100,
     courseUrl:
@@ -105,6 +116,7 @@ export const courses = [
 
 const courseTemplate = {
   title: "",
+  display: true,
   createdAt: "2025-03-31T10:00:00.000Z",
   progress: 0,
   courseUrl: "",

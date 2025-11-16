@@ -2,7 +2,7 @@
 
 export function createCourseArticle(course) {
   const articleElement = document.createElement("article");
-  articleElement.classList.add("courses");
+  articleElement.classList.add("courses", ...course.filter);
 
   const title = document.createElement("h3");
   const titleLink = document.createElement("a");
