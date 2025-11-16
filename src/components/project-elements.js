@@ -158,5 +158,6 @@ export function createCardTags(card, project, margin = false) {
 function createTagElement(tag) {
   const tagElement = document.createElement("strong");
   tagElement.innerHTML = `${tag.icon} ${tag.name}`;
+  tagElement.setAttribute("aria-hidden", true);
   return tagElement;
 }

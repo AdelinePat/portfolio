@@ -402,6 +402,11 @@ export const tags = {
     icon: icons.postgresql,
     category: categories.databases,
   },
+  kafka: {
+    name: "Kafka",
+    icon: icons.kafka,
+    category: categories.databases,
+  },
   // OOP
   oop: {
     name: "POO",
