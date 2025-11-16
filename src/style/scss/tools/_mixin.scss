@@ -136,7 +136,27 @@
   }
 }
 
-%progress {
+// %progress {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   background: linear-gradient(
+//     to bottom right,
+//     var(--primary),
+//     var(--primary-lighter)
+//   );
+//   height: 6px;
+//   border-radius: 3px;
+// }
+
+// @mixin skill-bar-content($name, $size) {
+//   &-progress-#{$name} {
+//     @extend %progress;
+//     width: $size;
+//   }
+// }
+
+@mixin skill-bar-content() {
   position: absolute;
   top: 0;
   left: 0;
@@ -147,13 +167,6 @@
   );
   height: 6px;
   border-radius: 3px;
-}
-
-@mixin skill-bar-content($name, $size) {
-  &-progress-#{$name} {
-    @extend %progress;
-    width: $size;
-  }
 }
 
 @mixin grid-container-main() {

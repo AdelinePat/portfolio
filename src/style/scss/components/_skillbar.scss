@@ -1,6 +1,10 @@
 @use "../base/variables" as *;
 @use "../tools/mixin" as m;
 
+.courses h3 a {
+  color: var(--secondary);
+}
+
 .bar-skill {
   margin: 0;
   height: 6px;
@@ -8,7 +12,11 @@
   box-shadow: 0px 0px 2px var(--primary);
   border-radius: 3px;
   position: relative;
-  @each $skill, $percent in $courses {
-    @include m.skill-bar-content($skill, $percent);
+  .bar-skill-progress {
+    @include m.skill-bar-content();
   }
+  // ICI
+  // @each $skill, $percent in $courses {
+  //   @include m.skill-bar-content($skill, $percent);
+  // }
 }
