@@ -29,7 +29,7 @@
       min-width: 10rem;
       margin-right: 4rem;
       padding-top: 0.5rem;
-      
+
       @include mq.md {
         p {
           display: inline-block;
@@ -121,6 +121,7 @@
   p {
     @include m.education-border;
     padding-bottom: 2rem;
+    padding-bottom: 3.2rem;
   }
   @include mq.md {
     .timeline {

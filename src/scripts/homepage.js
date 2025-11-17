@@ -1,7 +1,10 @@
 import "../style/scss/homepage.scss";
 import { experiences } from "../assets/data/experiences.js";
+import { education } from "../assets/data/education-list.js";
 import { hardskills, highlights } from "../assets/data/hardskills-list.js";
 import { createExperienceArticle } from "../components/experiece-element.js";
+import { createEducationArticle } from "../components/education-element.js";
+
 import { sortFromMostRecent } from "./filter.js";
 
 const previewSection = document.querySelector(".preview");
@@ -48,6 +51,26 @@ for (const experience of experiecesList) {
     experienceSection.append(expArticle);
   }
 }
+
+// EDUCATION SECTION
+const educationSection = document.querySelector(".education");
+educationSection.innerHTML = "";
+const educationTitle = createTitle("Cursus Scolaire", "title-secondary");
+educationSection.append(educationTitle);
+let educationList = sortFromMostRecent(education);
+for (const item of educationList) {
+  const educationArticle = createEducationArticle(item);
+  console.log(item);
+  console.log(educationArticle);
+  educationSection.append(educationArticle);
+}
+
+window.addEventListener("resize", (event) => {
+  // console.log(window.innerWidth);
+  if (window.innerWidth < 769) {
+    console.log(educationTitles);
+  }
+});
 
 // TOOLS SECTION
 toolSection.innerHTML = "";

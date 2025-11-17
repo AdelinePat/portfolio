@@ -22,21 +22,9 @@
   // --box-shadow: 0px 0px 5px rgb(10, 10, 10);
   --box-shadow: 0px 0px 5px rgb(10, 10, 10);
   --box-shadow-primary: 0px 0px 1px var(--primary);
+
+  // --media-query-medium: 979;
+  // --media-query-small: 767;
 }
 
 $img_path: "../../assets/_MG_1840.jpg";
-
-// where-courseName : %
-$courses: (
-  ocr-python: 72%,
-  ocr-php: 59%,
-  ocr-c: 100%,
-  ocr-web: 100%,
-  ocr-algo: 100%,
-  ocr-html: 100%,
-  ocr-git: 100%,
-  ocr-oop: 100%,
-  ocr-js: 100%,
-  ocr-sass: 100%,
-  ocr-figma: 100%,
-);

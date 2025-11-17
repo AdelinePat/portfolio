@@ -49,3 +49,4 @@ function createDateElement(experienceDate) {
   paragraph.append(text);
   return paragraph;
 }
+

@@ -42,26 +42,6 @@ toggleActiveTag(
   articles
 );
 
-// const plusBtnList = document.querySelectorAll("article figure i");
-// console.log("article element :", plusBtnList);
-// for (const plusBtn of plusBtnList) {
-//   plusBtn.addEventListener("click", async (event) => {
-//     const article = event.target.closest("article");
-//     // const articleId = article.dataset.id;
-//     const project = getArticle(article.dataset.id);
-//     console.log(project);
-//     const result = await openModal(project);
-//     console.log(result);
-//   });
-// }
-
-// function getArticle(id) {
-//   for (const project of projects) {
-//     if (project.createdAt === id) {
-//       return project;
-//     }
-//   }
-// }
 // displayTitleAndDate();
 function displayTitleAndDate() {
   //Debug

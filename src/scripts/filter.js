@@ -87,21 +87,4 @@ export function sortFromMostRecent(projects) {
     return date2 - date1;
   });
   return sortedprojects;
-
-  // console.log(projects);
-  // if (projects.at(0).createdAt) {
-  //   const sortedProjects = [...projects].sort((project1, project2) => {
-  //     const date1 = new Date(project1.createdAt).getTime();
-  //     const date2 = new Date(project2.createdAt).getTime();
-  //     return date2 - date1;
-  //   });
-  //   return sortedProjects;
-  // } else if (projects.at(0).startDate) {
-  //   const sortedProjects = [...projects].sort((project1, project2) => {
-  //     const date1 = new Date(project1.startDate).getTime();
-  //     const date2 = new Date(project2.startDate).getTime();
-  //     return date2 - date1;
-  //   });
-  //   return sortedProjects;
-  // }
 }
