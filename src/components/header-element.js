@@ -40,10 +40,35 @@ export function createHeader(headerArticle) {
   return headerElement;
 }
 
-export function createNav(headerArticle, screenSize = "small-screen") {
+// export function createNav(headerArticle, screenSize = "small-screen") {
+//   const nav = document.createElement("nav");
+//   nav.classList.add("nav", "ls-2", "mb-5", screenSize);
+//   // nav.setAttribute("id", "nav");
+//   const list = document.createElement("ul");
+
+//   for (const element of navigation) {
+//     const li = document.createElement("li");
+//     const link = document.createElement("a");
+//     link.text = element.text;
+//     link.setAttribute("href", element.url);
+//     link.classList.add(element.class);
+
+//     if (element.class === headerArticle.id) {
+//       link.classList.add("active");
+//     }
+
+//     li.append(link);
+//     list.append(li);
+//   }
+
+//   nav.append(list);
+//   return nav;
+// }
+
+export function createNav(headerArticleId, screenSize = "small-screen") {
   const nav = document.createElement("nav");
   nav.classList.add("nav", "ls-2", "mb-5", screenSize);
-  nav.setAttribute("id", "nav");
+  // nav.setAttribute("id", "nav");
   const list = document.createElement("ul");
 
   for (const element of navigation) {
@@ -53,7 +78,8 @@ export function createNav(headerArticle, screenSize = "small-screen") {
     link.setAttribute("href", element.url);
     link.classList.add(element.class);
 
-    if (element.class === headerArticle.id) {
+    if (element.class === headerArticleId) {
+      // console.log("id svp : ", headerArticleId);
       link.classList.add("active");
     }
 
@@ -71,12 +97,12 @@ export function createNav(headerArticle, screenSize = "small-screen") {
 
 export function createFinalHeader(headerArticle, screenSize = "small-screen") {
   if (screenSize === "big-screen") {
-    const navigation = createNav(headerArticle, "big-screen");
+    const navigation = createNav(headerArticle.id, "big-screen");
     const header = createHeader(headerArticle);
     header.append(navigation);
     return header;
   }
-  if (screenSize === "small-screen") {
-    console.log("hola?");
-  }
+  // if (screenSize === "small-screen") {
+  //   console.log("hola?");
+  // }
 }

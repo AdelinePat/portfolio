@@ -11,6 +11,9 @@ import { createEducationArticle } from "../components/education-element.js";
 
 import { sortFromMostRecent } from "./filter.js";
 
+import { createTopbar } from "../components/topbar-element.js";
+import { mobileMenu } from "./topbar.js";
+
 const body = document.querySelector("body");
 const aside = document.querySelector("aside");
 
@@ -24,6 +27,12 @@ const navigationFooter = createNav(headerContents.homepage);
 const footerPhone = createFooter();
 footerPhone.prepend(navigationFooter);
 body.append(footerPhone);
+
+// MOBILE MENU=
+const mobileNav = createNav(headerContents.homepage.id);
+const topbar = document.querySelector(".menu-phone");
+topbar.append(mobileNav);
+mobileMenu(mobileNav);
 
 const previewSection = document.querySelector(".preview");
 const experienceSection = document.querySelector(".experiences");

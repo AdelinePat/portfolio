@@ -5,6 +5,7 @@
   min-width: 35rem;
   width: 60%;
   max-width: 80rem;
+
   // height: 100%;
   border-radius: 25px;
   box-shadow: var(--box-shadow);
@@ -125,6 +126,7 @@
 
 .layer {
   position: fixed;
+  z-index: 3;
   top: 0;
   left: 0;
   width: 100%;

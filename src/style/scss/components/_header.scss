@@ -1,5 +1,6 @@
 @use "../tools/media_queries" as mq;
 @use "../base/variables" as *;
+@use "menu-hamburger" as *;
 
 header {
   grid-area: header;
@@ -64,6 +65,7 @@ header {
 @include mq.md {
   h1 {
     padding-top: 4rem;
+    padding-top: 9.2rem;
   }
 }
 header {

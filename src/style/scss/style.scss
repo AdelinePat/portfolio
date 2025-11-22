@@ -51,6 +51,13 @@
       "nav" auto
       "footer" auto
       / auto;
+    grid:
+      "menuPhone" auto
+      "header" auto
+      "main" auto
+      "nav" auto
+      "footer" auto
+      / auto;
   }
   @include mq.v-md {
     grid:

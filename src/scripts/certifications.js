@@ -15,6 +15,9 @@ import {
   toggleActiveTag,
   sortFromMostRecent,
 } from "./filter.js";
+import { createTopbar } from "../components/topbar-element.js";
+import { mobileMenu } from "./topbar.js";
+
 const activeFilter = [];
 let articles = sortFromMostRecent(certifications);
 
@@ -31,6 +34,14 @@ const navigationFooter = createNav(headerContents.certifications);
 const footerPhone = createFooter();
 footerPhone.prepend(navigationFooter);
 body.append(footerPhone);
+
+// MOBILE MENU
+const mobileNav = createNav(headerContents.certifications.id);
+console.log("mobilenav", mobileNav);
+const topbar = document.querySelector(".menu-phone");
+console.log(topbar);
+topbar.append(mobileNav);
+mobileMenu(mobileNav);
 
 // CERTIFICATIONS PART
 // CREATE FILTER AND FILTER EVENTS

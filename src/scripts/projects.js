@@ -1,13 +1,9 @@
-// import { allFilters } from "../assets/data/generateTagsAndFilters.js";
 import "../style/scss/projects.scss";
 
-import {
-  createHeader,
-  createFinalHeader,
-  createNav,
-} from "../components/header-element.js";
+import { createFinalHeader, createNav } from "../components/header-element.js";
 import { createFooter } from "../components/footer-element.js";
 import { headerContents } from "../assets/data/header-page";
+import { createTopbar } from "../components/topbar-element.js";
 
 import { allCategories } from "../assets/data/generateTagsAndFilters.js";
 import { projects } from "../assets/data/project-list.js";
@@ -19,7 +15,8 @@ import {
   toggleActiveTag,
   sortFromMostRecent,
 } from "./filter.js";
-
+import "../components/topbar-element.js";
+import { mobileMenu } from "./topbar.js";
 
 const body = document.querySelector("body");
 const aside = document.querySelector("aside");
@@ -30,10 +27,16 @@ const footer = createFooter("big-screen");
 aside.append(header, footer);
 
 // FOOTER AND NAV SMALL SCREEN
-const navigationFooter = createNav(headerContents.projects);
+const navigationFooter = createNav(headerContents.projects.id);
 const footerPhone = createFooter();
 footerPhone.prepend(navigationFooter);
 body.append(footerPhone);
+
+// MOBILE MENU
+const mobileNav = createNav(headerContents.projects.id);
+const topbar = document.querySelector(".menu-phone");
+topbar.append(mobileNav);
+mobileMenu(mobileNav);
 
 // PROJECTS
 const activeFilter = [];
