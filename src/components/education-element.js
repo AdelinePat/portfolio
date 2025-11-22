@@ -15,18 +15,16 @@ export function createEducationArticle(article, smallScreen = false) {
   const endDate = new Date(article.endDate).toLocaleDateString("fr-FR", {
     year: "numeric",
   });
-  if (article.startDate) {
+  if (!article.startDate || article.title === "Baccalauréat Scientifique SVT") {
+    timeline.innerHTML = endDate;
+  } else {
     const startDate = new Date(article.startDate).toLocaleDateString("fr-FR", {
       year: "numeric",
     });
     timeline.innerText = `${startDate} - ${endDate}`;
-  } else {
-    timeline.innerHTML = endDate;
   }
   const paragraph = document.createElement("p");
   paragraph.innerHTML = article.content;
-
-  console.log(article.location, location);
 
   articleElement.append(title, location, timeline, paragraph);
   return articleElement;

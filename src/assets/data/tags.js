@@ -1,6 +1,9 @@
 const icons = {
   // Not tag
   closed: ["fa-solid", "fa-plus"],
+  // SOCIALS
+  linkedin: `<i class="fa-brands fa-linkedin-in"></i>`,
+  github: `<i class="fa-brands fa-github"></i>`,
   // IDE and TOOL
   visualStudioCode: `<i class="devicon-vscode-plain"></i>`,
   intelliJ: `<i class="devicon-intellij-plain"></i>`,
@@ -30,7 +33,7 @@ const icons = {
   // Design
   figma: `<i class="fa-brands fa-figma"></i>`,
   photoshop: `<i class="devicon-photoshop-plain"></i>`,
-  illustrator: `<i class="devicon-photoshop-plain"></i>`,
+  illustrator: `<i class="devicon-illustrator-plain"></i>`,
   // Databases
   sql: `<i class="fa-solid fa-database"></i>`,
   mysql: `<i class="devicon-mysql-original"></i>`,
@@ -120,6 +123,17 @@ export const tags = {
   teamwork: {
     name: "Travail d'équipe",
     icon: icons.teamwork,
+    category: categories.general,
+  },
+  // SOCIALS
+  github: {
+    name: "GitHub",
+    icon: icons.github,
+    category: categories.general,
+  },
+  linkedin: {
+    name: "Linkedin",
+    icon: icons.linkedin,
     category: categories.general,
   },
   // IDE

@@ -50,25 +50,4 @@
   @include m.skills-color(secondary-lighter);
 }
 
-.layer {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(4px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.modal-open {
-  // position: absolute;
-  overflow: hidden; /* prevents background scrolling */
-  position: fixed; /* optional: keeps scroll position */
-  width: 100%;
-}
-
-.modal-open {
-}

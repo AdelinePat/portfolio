@@ -1,3 +1,5 @@
+@use "../tools/media_queries" as mq;
+
 .modal {
   background: var(--background-lighter);
   min-width: 35rem;
@@ -7,6 +9,14 @@
   border-radius: 25px;
   box-shadow: var(--box-shadow);
   text-align: center;
+  max-height: 95vh;
+  scrollbar-width: none;
+  @include mq.xs {
+    width: 100%;
+    height: 100vh;
+    max-height: 100vh;
+    border-radius: 0;
+  }
   // padding-bottom: 3.2rem;
 
   padding-bottom: 3.2rem;
@@ -45,6 +55,9 @@
       min-height: 200px;
       opacity: 0.35;
       filter: brightness(0.5) blur(0.5px);
+      @include mq.xs {
+        border-radius: 0px;
+      }
     }
   }
 
@@ -108,4 +121,24 @@
   .btn {
     margin-left: 0.8rem;
   }
+}
+
+.layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-open {
+  // position: absolute;
+  overflow: hidden; /* prevents background scrolling */
+  position: fixed; /* optional: keeps scroll position */
+  width: 100%;
 }

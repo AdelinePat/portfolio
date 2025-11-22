@@ -1,4 +1,8 @@
 import "../style/scss/homepage.scss";
+import { createFinalHeader, createNav } from "../components/header-element.js";
+import { createFooter } from "../components/footer-element.js";
+import { headerContents } from "../assets/data/header-page";
+
 import { experiences } from "../assets/data/experiences.js";
 import { education } from "../assets/data/education-list.js";
 import { hardskills, highlights } from "../assets/data/hardskills-list.js";
@@ -6,6 +10,20 @@ import { createExperienceArticle } from "../components/experiece-element.js";
 import { createEducationArticle } from "../components/education-element.js";
 
 import { sortFromMostRecent } from "./filter.js";
+
+const body = document.querySelector("body");
+const aside = document.querySelector("aside");
+
+// HEADER BIG SCREEN
+const header = createFinalHeader(headerContents.homepage, "big-screen");
+const footer = createFooter("big-screen");
+aside.append(header, footer);
+
+// FOOTER AND NAV SMALL SCREEN
+const navigationFooter = createNav(headerContents.homepage);
+const footerPhone = createFooter();
+footerPhone.prepend(navigationFooter);
+body.append(footerPhone);
 
 const previewSection = document.querySelector(".preview");
 const experienceSection = document.querySelector(".experiences");
@@ -60,17 +78,8 @@ educationSection.append(educationTitle);
 let educationList = sortFromMostRecent(education);
 for (const item of educationList) {
   const educationArticle = createEducationArticle(item);
-  console.log(item);
-  console.log(educationArticle);
   educationSection.append(educationArticle);
 }
-
-window.addEventListener("resize", (event) => {
-  // console.log(window.innerWidth);
-  if (window.innerWidth < 769) {
-    console.log(educationTitles);
-  }
-});
 
 // TOOLS SECTION
 toolSection.innerHTML = "";

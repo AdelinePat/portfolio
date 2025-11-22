@@ -1,6 +1,14 @@
 // import { allFilters } from "../assets/data/generateTagsAndFilters.js";
 import "../style/scss/projects.scss";
 
+import {
+  createHeader,
+  createFinalHeader,
+  createNav,
+} from "../components/header-element.js";
+import { createFooter } from "../components/footer-element.js";
+import { headerContents } from "../assets/data/header-page";
+
 import { allCategories } from "../assets/data/generateTagsAndFilters.js";
 import { projects } from "../assets/data/project-list.js";
 
@@ -12,14 +20,27 @@ import {
   sortFromMostRecent,
 } from "./filter.js";
 
-// import { openModal } from "./modal.js";
+
+const body = document.querySelector("body");
+const aside = document.querySelector("aside");
+
+// HEADER BIG SCREEN
+const header = createFinalHeader(headerContents.projects, "big-screen");
+const footer = createFooter("big-screen");
+aside.append(header, footer);
+
+// FOOTER AND NAV SMALL SCREEN
+const navigationFooter = createNav(headerContents.projects);
+const footerPhone = createFooter();
+footerPhone.prepend(navigationFooter);
+body.append(footerPhone);
+
+// PROJECTS
 const activeFilter = [];
 
 let currentCount = 6;
 // let articles = sortFromMostRecent(projects).slice(0, currentCount);
 let articles = sortFromMostRecent(projects);
-
-// console.log(articles);
 
 const sectionTitleElement = document.querySelector(".title-filter");
 const sectionTitleContainer = document.querySelector(

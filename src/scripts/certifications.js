@@ -1,4 +1,8 @@
 import "../style/scss/certifications.scss";
+import { createFinalHeader, createNav } from "../components/header-element.js";
+import { createFooter } from "../components/footer-element.js";
+import { headerContents } from "../assets/data/header-page";
+
 import { certifications } from "../assets/data/certification-list.js";
 import { courses } from "../assets/data/courses-list.js";
 import { allCertificationCategories } from "../assets/data/generateTagsAndFilters.js";
@@ -13,7 +17,20 @@ import {
 } from "./filter.js";
 const activeFilter = [];
 let articles = sortFromMostRecent(certifications);
-console.log(articles);
+
+const body = document.querySelector("body");
+const aside = document.querySelector("aside");
+
+// HEADER BIG SCREEN
+const header = createFinalHeader(headerContents.certifications, "big-screen");
+const footer = createFooter("big-screen");
+aside.append(header, footer);
+
+// FOOTER AND NAV SMALL SCREEN
+const navigationFooter = createNav(headerContents.certifications);
+const footerPhone = createFooter();
+footerPhone.prepend(navigationFooter);
+body.append(footerPhone);
 
 // CERTIFICATIONS PART
 // CREATE FILTER AND FILTER EVENTS
@@ -28,8 +45,7 @@ const filterDiv = createFilterDiv(
 );
 toggleFilterDiv(sectionTitleElement, filterDiv);
 
-const sectionElement = document.querySelector(".certifications");
-console.log(sectionElement);
+const sectionElement = document.querySelector("#certifications");
 createAllCards(sectionElement, articles);
 
 toggleActiveTag(
@@ -43,8 +59,7 @@ toggleActiveTag(
 // COURSES PART
 const courseSection = document.querySelector(".courses-list");
 let courseList = sortFromMostRecent(courses);
-console.log(courseList);
-// courseSection.innerHTML = "";
+
 for (const course of courseList) {
   if (course.display) {
     const article = createCourseArticle(course);

@@ -8,17 +8,13 @@ export const allCategories = Object.entries(categories);
 export const allCertificationCategories = Object.entries(
   certificationCategories
 );
-console.log(allCertificationCategories);
-// export const reversedCategories = Object.fromEntries(
-//   Object.entries(categories).map(([key, value]) => [value, key])
-// );
+// console.log(allCertificationCategories);
 
 export function setProjectFilters(project, categoryList) {
   const categoriesSet = new Set();
   const reversedCategories = Object.fromEntries(
     Object.entries(categoryList).map(([key, value]) => [value, key])
   );
-  // console.log("######### REVERSED CATEGORIES SVP : ", reversedCategories);
   for (const tag of project.tags) {
     if (project.title === "Todo JS") {
     }
