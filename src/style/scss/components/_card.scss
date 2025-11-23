@@ -49,6 +49,7 @@
     border-radius: 1rem;
     max-height: 200px;
     overflow: hidden;
+    margin-bottom: 2.4rem;
     &:hover {
       img {
         opacity: 1;
@@ -79,7 +80,11 @@
     align-self: center;
     display: flex;
     justify-content: center;
+    margin-bottom: 2.4rem;
+
     a {
+      margin-top: 0rem;
+      margin-bottom: 0rem;
       align-self: center;
       justify-self: center;
     }

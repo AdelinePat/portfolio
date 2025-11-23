@@ -30,7 +30,7 @@ const footer = createFooter("big-screen");
 aside.append(header, footer);
 
 // FOOTER AND NAV SMALL SCREEN
-const navigationFooter = createNav(headerContents.certifications);
+const navigationFooter = createNav(headerContents.certifications.id);
 const footerPhone = createFooter();
 footerPhone.prepend(navigationFooter);
 body.append(footerPhone);

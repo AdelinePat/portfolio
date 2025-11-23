@@ -129,9 +129,11 @@ function createLink(link, string) {
   const linkElement = document.createElement("a");
   linkElement.innerText = string;
   if (string === "Code Source" || string === "Formation") {
-    linkElement.classList.add("btn-secondary", "my-3", "o-08");
+    // linkElement.classList.add("btn-secondary", "my-3", "o-08");
+    linkElement.classList.add("btn-secondary", "o-08");
   } else {
-    linkElement.classList.add("btn-primary", "my-3", "o-08");
+    // linkElement.classList.add("btn-primary", "my-3", "o-08");
+    linkElement.classList.add("btn-primary", "o-08");
   }
   linkElement.setAttribute("href", link);
   linkElement.setAttribute("target", "_blank");

@@ -23,7 +23,8 @@ const footer = createFooter("big-screen");
 aside.append(header, footer);
 
 // FOOTER AND NAV SMALL SCREEN
-const navigationFooter = createNav(headerContents.homepage);
+const navigationFooter = createNav(headerContents.homepage.id);
+console.log("navfooter: ", navigationFooter);
 const footerPhone = createFooter();
 footerPhone.prepend(navigationFooter);
 body.append(footerPhone);
@@ -34,6 +35,21 @@ const topbar = document.querySelector(".menu-phone");
 topbar.append(mobileNav);
 mobileMenu(mobileNav);
 
+// HEADER SMALL SCREEN
+const headerPicture = document.querySelector(".header-title.picture");
+function updateVH() {
+  if (window.innerWidth <= 767) {
+    const vh = window.innerHeight - window.innerHeight * 0.01;
+    // document.documentElement.style.setProperty("--vh", `${vh}px`);
+    headerPicture.style.setProperty("height", `${vh}px`);
+  } else {
+    headerPicture.style.removeProperty("height");
+  }
+}
+updateVH();
+window.addEventListener("resize", updateVH);
+
+// HOMEPAGE
 const previewSection = document.querySelector(".preview");
 const experienceSection = document.querySelector(".experiences");
 const toolSection = document.querySelector("#tools");
