@@ -1,7 +1,7 @@
 import "../style/scss/homepage.scss";
 import { createFinalHeader, createNav } from "../components/header-element.js";
 import { createFooter } from "../components/footer-element.js";
-import { headerContents } from "../assets/data/header-page";
+import { headerContents } from "../assets/data/header-page.js";
 
 import { experiences } from "../assets/data/experiences.js";
 import { education } from "../assets/data/education-list.js";

@@ -68,6 +68,12 @@ export const headerContents = {
             d'explorer des domaines clés en profondeur.
           </p>`,
   },
+  contact: {
+    title: "Contact",
+    // subtitle: "",
+    id: "contact",
+    description: "Page en cours de construction",
+  },
 };
 
 const headerTemplate = {

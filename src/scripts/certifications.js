@@ -1,7 +1,7 @@
 import "../style/scss/certifications.scss";
 import { createFinalHeader, createNav } from "../components/header-element.js";
 import { createFooter } from "../components/footer-element.js";
-import { headerContents } from "../assets/data/header-page";
+import { headerContents } from "../assets/data/header-page.js";
 
 import { certifications } from "../assets/data/certification-list.js";
 import { courses } from "../assets/data/courses-list.js";

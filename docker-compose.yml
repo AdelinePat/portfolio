@@ -15,6 +15,15 @@ services:
         target: /app/vite.config.js
       - type: volume
         target: /app/node_modules
+      - type: bind
+        source: ./dist
+        target: /app/dist/
+      - type: bind
+        source: ./package.json
+        target: /app/package.json
+      - type: bind
+        source: ./package-lock.json
+        target: /app/package-lock.json
     ports:
      - "5175:5173"
      - "4175:4173"

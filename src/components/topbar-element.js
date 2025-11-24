@@ -6,7 +6,7 @@ export function createTopbar() {
   const iconLink = document.createElement("a");
   iconLink.setAttribute("href", "./index.html");
   const myIcon = document.createElement("img");
-  myIcon.setAttribute("src", "../assets/icon/Logo-AP-small.png");
+  myIcon.setAttribute("src", "/assets/icon/Logo-AP-small.png");
   iconLink.append(myIcon);
   menuPhone.append(iconLink);
   return menuPhone;
@@ -20,7 +20,7 @@ menuPhone.classList.add("menu-phone");
 const iconLink = document.createElement("a");
 iconLink.setAttribute("href", "./index.html");
 const myIcon = document.createElement("img");
-myIcon.setAttribute("src", "../assets/icon/Logo-AP-small.png");
+myIcon.setAttribute("src", "/assets/icon/Logo-AP-small.png");
 iconLink.append(myIcon);
 menuPhone.append(iconLink);
 

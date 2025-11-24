@@ -14,6 +14,7 @@ footer {
       margin-bottom: 6rem;
       i {
         font-size: 4rem;
+        font-size: 2.8rem;
       }
     }
     .text-hint {
@@ -75,12 +76,12 @@ footer {
   font-size: 30rem;
   color: var(--hint);
   opacity: 0.05;
-   @include mq.md {
-     display: none;
-   }
-   @include mq.v-md {
+  @include mq.md {
     display: none;
-   }
+  }
+  @include mq.v-md {
+    display: none;
+  }
 }
 
 @include mq.v-md {

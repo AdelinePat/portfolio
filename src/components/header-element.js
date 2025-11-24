@@ -12,7 +12,9 @@ export function createHeader(headerArticle) {
 
   const subtitle = document.createElement("h3");
   subtitle.classList.add("gradient-subtitle");
-  subtitle.innerText = headerArticle.subtitle;
+  if (headerArticle?.subtitle) {
+    subtitle.innerText = headerArticle.subtitle;
+  }
 
   const description = document.createElement("div");
   description.classList.add("description", "text-primary-lighter");
