@@ -22,6 +22,7 @@ import { createInfiniteLoader } from "./infinite-loading.js";
 
 const activeFilter = [];
 let articles = sortFromMostRecent(certifications);
+let filterableArticles = articles;
 
 const body = document.querySelector("body");
 const aside = document.querySelector("aside");
@@ -69,7 +70,7 @@ const loader = createInfiniteLoader({
   },
 });
 
-loader.reset(articles);
+loader.reset(filterableArticles);
 // createAllCards(sectionElement, articles);
 
 toggleActiveTag(
@@ -77,7 +78,6 @@ toggleActiveTag(
   sectionElement,
   filterDiv,
   activeFilter,
-  articles,
   articles,
   (filtered) => {
     filterableArticles = filtered;
