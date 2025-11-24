@@ -11,12 +11,43 @@ export function toggleFilterDiv(sectionTitleElement, filterDiv) {
   });
 }
 
+// export function toggleActiveTag(
+//   sectionTitleElement,
+//   sectionElement,
+//   filterDiv,
+//   activeFilter,
+//   articles
+// ) {
+//   filterDiv.addEventListener("click", (event) => {
+//     const span = event.target.closest("span");
+
+//     if (span && filterDiv.contains(span)) {
+//       event.stopPropagation();
+//       toggleTag(activeFilter, span.classList[0]);
+//       if (span.classList.contains("active")) {
+//         span.classList.remove("active");
+//       } else if (activeFilter.length > 0) {
+//         span.classList.add("active");
+//       }
+
+//       const result = filterProjects(articles, activeFilter);
+//       console.log(articles.at(0).code);
+//       updateTitle(
+//         sectionTitleElement,
+//         result,
+//         articles.at(0).code ? true : false
+//       );
+//       createAllCards(sectionElement, result);
+//     }
+//   });
+// }
 export function toggleActiveTag(
   sectionTitleElement,
   sectionElement,
   filterDiv,
   activeFilter,
-  articles
+  articles,
+  onFilterChange
 ) {
   filterDiv.addEventListener("click", (event) => {
     const span = event.target.closest("span");
@@ -31,13 +62,14 @@ export function toggleActiveTag(
       }
 
       const result = filterProjects(articles, activeFilter);
-      console.log(articles.at(0).code);
+      // console.log(articles.at(0).code);
       updateTitle(
         sectionTitleElement,
         result,
         articles.at(0).code ? true : false
       );
-      createAllCards(sectionElement, result);
+      // createAllCards(sectionElement, result);
+      onFilterChange(result);
     }
   });
 }

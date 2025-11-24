@@ -26,9 +26,19 @@ export function updateTitle(sectionTitleElement, articles, isProject = true) {
   sectionTitleElement.append(titleText, span);
 }
 
-export function createAllCards(sectionElement, articles) {
-  sectionElement.innerHTML = "";
-  //   console.log(articles);
+// export function createAllCards(sectionElement, articles) {
+//   sectionElement.innerHTML = "";
+//   //   console.log(articles);
+//   for (const project of articles) {
+//     const card = createCard(project);
+//     sectionElement.append(card);
+//   }
+// }
+export function createAllCards(sectionElement, articles, append = false) {
+  if (!append) {
+    sectionElement.innerHTML = "";
+  }
+
   for (const project of articles) {
     const card = createCard(project);
     sectionElement.append(card);

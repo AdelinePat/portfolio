@@ -18,6 +18,8 @@ import {
 import "../components/topbar-element.js";
 import { mobileMenu } from "./topbar.js";
 
+import { createInfiniteLoader } from "./infinite-loading.js";
+
 const body = document.querySelector("body");
 const aside = document.querySelector("aside");
 
@@ -44,26 +46,49 @@ const activeFilter = [];
 let currentCount = 6;
 // let articles = sortFromMostRecent(projects).slice(0, currentCount);
 let articles = sortFromMostRecent(projects);
+let filterableArticles = articles;
 
 const sectionTitleElement = document.querySelector(".title-filter");
 const sectionTitleContainer = document.querySelector(
   ".section-title-container"
 );
 
-updateTitle(sectionTitleElement, articles);
+const sectionElement = document.querySelector("section");
+// createAllCards(sectionElement, articles);
+
+// Initialize infinite loader
+const loader = createInfiniteLoader({
+  container: sectionElement,
+  batchSize: 4,
+  onBatchLoaded: (batch, isLastBatch) => {
+    // Add cards to DOM
+    createAllCards(sectionElement, batch, true);
+  },
+});
+
+updateTitle(sectionTitleElement, filterableArticles);
+// SET ARTICLE LIST INSIDE LOADER !!
+loader.reset(filterableArticles);
+
+
 const filterDiv = createFilterDiv(sectionTitleContainer, allCategories);
 toggleFilterDiv(sectionTitleElement, filterDiv);
 
-console.log(articles);
+// console.log(articles);
 
-const sectionElement = document.querySelector("section");
-createAllCards(sectionElement, articles);
 toggleActiveTag(
   sectionTitleElement,
   sectionElement,
   filterDiv,
   activeFilter,
-  articles
+  articles,
+  (filtered) => {
+    filterableArticles = filtered;
+
+    updateTitle(sectionTitleElement, filterableArticles);
+
+    loader.reset(filterableArticles);
+  }
 );
 
 // displayTitleAndDate();

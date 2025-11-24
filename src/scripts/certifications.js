@@ -18,6 +18,8 @@ import {
 import { createTopbar } from "../components/topbar-element.js";
 import { mobileMenu } from "./topbar.js";
 
+import { createInfiniteLoader } from "./infinite-loading.js";
+
 const activeFilter = [];
 let articles = sortFromMostRecent(certifications);
 
@@ -57,14 +59,33 @@ const filterDiv = createFilterDiv(
 toggleFilterDiv(sectionTitleElement, filterDiv);
 
 const sectionElement = document.querySelector("#certifications");
-createAllCards(sectionElement, articles);
+
+const loader = createInfiniteLoader({
+  container: sectionElement,
+  batchSize: 4,
+  onBatchLoaded: (batch, isLastBatch) => {
+    // Add cards to DOM
+    createAllCards(sectionElement, batch, true);
+  },
+});
+
+loader.reset(articles);
+// createAllCards(sectionElement, articles);
 
 toggleActiveTag(
   sectionTitleElement,
   sectionElement,
   filterDiv,
   activeFilter,
-  articles
+  articles,
+  articles,
+  (filtered) => {
+    filterableArticles = filtered;
+
+    updateTitle(sectionTitleElement, filterableArticles);
+
+    loader.reset(filterableArticles);
+  }
 );
 
 // COURSES PART
