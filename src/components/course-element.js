@@ -1,5 +1,25 @@
 // const courseSection = document.querySelector(".courses-list");
 
+// export function createAllCourses(sectionElement, courseList, append = false) {
+//   for (const course of courseList) {
+//     if (course.display) {
+//       const article = createCourseArticle(course);
+//       sectionElement.append(article);
+//     }
+//   }
+// }
+
+export function createAllCourses(sectionElement, courseList, append = false) {
+  if (!append) {
+    sectionElement.innerHTML = "";
+  }
+
+  for (const course of courseList) {
+    const article = createCourseArticle(course);
+    sectionElement.append(article);
+  }
+}
+
 export function createCourseArticle(course) {
   const articleElement = document.createElement("article");
   articleElement.classList.add("courses", ...course.filter);

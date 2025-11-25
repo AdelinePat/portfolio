@@ -8,7 +8,7 @@ import { courses } from "../assets/data/courses-list.js";
 import { allCertificationCategories } from "../assets/data/generateTagsAndFilters.js";
 
 import { updateTitle, createAllCards } from "../components/project-elements.js";
-import { createCourseArticle } from "../components/course-element.js";
+import { createCourseArticle, createAllCourses } from "../components/course-element.js";
 import { createFilterDiv } from "../components/filter-element.js";
 import {
   toggleFilterDiv,
@@ -19,6 +19,7 @@ import { createTopbar } from "../components/topbar-element.js";
 import { mobileMenu } from "./topbar.js";
 
 import { createInfiniteLoader } from "./infinite-loading.js";
+import { createLoadMoreLoader } from "./load-more.js";
 
 const activeFilter = [];
 let articles = sortFromMostRecent(certifications);
@@ -92,9 +93,18 @@ toggleActiveTag(
 const courseSection = document.querySelector(".courses-list");
 let courseList = sortFromMostRecent(courses);
 
-for (const course of courseList) {
-  if (course.display) {
-    const article = createCourseArticle(course);
-    courseSection.append(article);
+const loadMore = createLoadMoreLoader({
+  container: courseSection,
+  batchSize: 4,
+  onBatchLoaded: (batch) => {
+    createAllCourses(courseSection, batch, true);
   }
-}
+})
+
+loadMore.reset(courseList);
+// for (const course of courseList) {
+//   if (course.display) {
+//     const article = createCourseArticle(course);
+//     courseSection.append(article);
+//   }
+// }
