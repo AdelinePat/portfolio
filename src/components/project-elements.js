@@ -1,4 +1,4 @@
-import { openModal } from "../scripts/modal";
+import { openModal } from "../scripts/modal-controller";
 
 export function updateTitle(sectionTitleElement, articles, isProject = true) {
   sectionTitleElement.innerHTML = "";

@@ -11,7 +11,7 @@ export function toggleFilterDiv(sectionTitleElement, filterDiv) {
   });
 }
 
-// export function toggleActiveTag(
+// export function initTagFilterHandler(
 //   sectionTitleElement,
 //   sectionElement,
 //   filterDiv,
@@ -41,7 +41,7 @@ export function toggleFilterDiv(sectionTitleElement, filterDiv) {
 //     }
 //   });
 // }
-export function toggleActiveTag(
+export function initTagFilterHandler(
   sectionTitleElement,
   sectionElement,
   filterDiv,

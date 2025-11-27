@@ -1,5 +1,5 @@
 import { tags } from "./tags.js";
-import { certificationTags } from "./certification-tags.js";
+// import { certificationTags } from "./certification-tags.js";
 
 export const courses = [
   {

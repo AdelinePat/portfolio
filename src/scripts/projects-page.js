@@ -2,8 +2,8 @@ import "../style/scss/projects.scss";
 
 import { createFinalHeader, createNav } from "../components/header-element.js";
 import { createFooter } from "../components/footer-element.js";
-import { headerContents } from "../assets/data/header-page";
-import { createTopbar } from "../components/topbar-element.js";
+import { headerContents } from "../assets/data/header-page.js";
+// import { createTopbar } from "../components/topbar-element.js";
 
 import { allCategories } from "../assets/data/generateTagsAndFilters.js";
 import { projects } from "../assets/data/project-list.js";
@@ -12,13 +12,13 @@ import { updateTitle, createAllCards } from "../components/project-elements.js";
 import { createFilterDiv } from "../components/filter-element.js";
 import {
   toggleFilterDiv,
-  toggleActiveTag,
+  initTagFilterHandler,
   sortFromMostRecent,
-} from "./filter.js";
+} from "./filter-service.js";
 import "../components/topbar-element.js";
-import { mobileMenu } from "./topbar.js";
+import { mobileMenu } from "./topbar-controller.js";
 
-import { createInfiniteLoader } from "./infinite-loading.js";
+import { createInfiniteLoader } from "./infinite-scroll-loader.js";
 
 const body = document.querySelector("body");
 const aside = document.querySelector("aside");
@@ -70,13 +70,12 @@ updateTitle(sectionTitleElement, filterableArticles);
 // SET ARTICLE LIST INSIDE LOADER !!
 loader.reset(filterableArticles);
 
-
 const filterDiv = createFilterDiv(sectionTitleContainer, allCategories);
 toggleFilterDiv(sectionTitleElement, filterDiv);
 
 // console.log(articles);
 
-toggleActiveTag(
+initTagFilterHandler(
   sectionTitleElement,
   sectionElement,
   filterDiv,

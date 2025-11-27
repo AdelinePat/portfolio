@@ -3,7 +3,7 @@ import { createFinalHeader, createNav } from "../components/header-element.js";
 import { createFooter } from "../components/footer-element.js";
 import { headerContents } from "../assets/data/header-page.js";
 import "../components/topbar-element.js";
-import { mobileMenu } from "./topbar.js";
+import { mobileMenu } from "./topbar-controller.js";
 
 const body = document.querySelector("body");
 const aside = document.querySelector("aside");

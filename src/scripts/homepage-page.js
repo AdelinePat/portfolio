@@ -6,13 +6,13 @@ import { headerContents } from "../assets/data/header-page.js";
 import { experiences } from "../assets/data/experiences.js";
 import { education } from "../assets/data/education-list.js";
 import { hardskills, highlights } from "../assets/data/hardskills-list.js";
-import { createExperienceArticle } from "../components/experiece-element.js";
+import { createExperienceArticle } from "../components/experience-element.js";
 import { createEducationArticle } from "../components/education-element.js";
 
-import { sortFromMostRecent } from "./filter.js";
+import { sortFromMostRecent } from "./filter-service.js";
 
-import { createTopbar } from "../components/topbar-element.js";
-import { mobileMenu } from "./topbar.js";
+import "../components/topbar-element.js";
+import { mobileMenu } from "./topbar-controller.js";
 
 const body = document.querySelector("body");
 const aside = document.querySelector("aside");

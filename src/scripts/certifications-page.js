@@ -8,18 +8,21 @@ import { courses } from "../assets/data/courses-list.js";
 import { allCertificationCategories } from "../assets/data/generateTagsAndFilters.js";
 
 import { updateTitle, createAllCards } from "../components/project-elements.js";
-import { createCourseArticle, createAllCourses } from "../components/course-element.js";
+import {
+  createCourseArticle,
+  createAllCourses,
+} from "../components/course-element.js";
 import { createFilterDiv } from "../components/filter-element.js";
 import {
   toggleFilterDiv,
-  toggleActiveTag,
+  initTagFilterHandler,
   sortFromMostRecent,
-} from "./filter.js";
+} from "./filter-service.js";
 import { createTopbar } from "../components/topbar-element.js";
-import { mobileMenu } from "./topbar.js";
+import { mobileMenu } from "./topbar-controller.js";
 
-import { createInfiniteLoader } from "./infinite-loading.js";
-import { createLoadMoreLoader } from "./load-more.js";
+import { createInfiniteLoader } from "./infinite-scroll-loader.js";
+import { createLoadMoreLoader } from "./load-more-loader.js";
 
 const activeFilter = [];
 let articles = sortFromMostRecent(certifications);
@@ -74,7 +77,7 @@ const loader = createInfiniteLoader({
 loader.reset(filterableArticles);
 // createAllCards(sectionElement, articles);
 
-toggleActiveTag(
+initTagFilterHandler(
   sectionTitleElement,
   sectionElement,
   filterDiv,
@@ -98,8 +101,8 @@ const loadMore = createLoadMoreLoader({
   batchSize: 4,
   onBatchLoaded: (batch) => {
     createAllCourses(courseSection, batch, true);
-  }
-})
+  },
+});
 
 loadMore.reset(courseList);
 // for (const course of courseList) {
