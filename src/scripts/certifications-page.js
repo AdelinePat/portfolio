@@ -18,7 +18,7 @@ import {
   initTagFilterHandler,
   sortFromMostRecent,
 } from "./filter-service.js";
-import { createTopbar } from "../components/topbar-element.js";
+import "../components/topbar-element.js";
 import { mobileMenu } from "./topbar-controller.js";
 
 import { createInfiniteLoader } from "./infinite-scroll-loader.js";

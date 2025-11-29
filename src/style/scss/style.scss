@@ -110,3 +110,20 @@ main {
     text-align: left;
   }
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+  box-shadow: var(--box-shadow);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-lighter);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border: 1px solid var(--background-lighter);
+  border-left: 2px solid var(--background-lighter);
+  border-right: 2px solid var(--background-lighter);
+  border-radius: 10px;
+}

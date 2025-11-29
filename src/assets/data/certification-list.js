@@ -5,7 +5,7 @@ export const certifications = [
   {
     title: "HTML, CSS et Sass",
     display: true,
-    img: "/assets/certifications_img/html-css-sass.png",
+    img: "./assets/certifications_img/html-css-sass.png",
     altImg: "Certification Dyma HTML CSS et Sass",
     createdAt: "2025-07-25T10:00:00.000Z",
     content: `<p>Certification réalisée sur Dyma.fr</p>
@@ -25,7 +25,7 @@ export const certifications = [
   {
     title: "Docker",
     display: true,
-    img: "/assets/certifications_img/docker.png",
+    img: "./assets/certifications_img/docker.png",
     altImg: "Certification Dyma Docker",
     createdAt: "2025-07-14T10:00:00.000Z",
     content: `<p>Certification réalisée sur Dyma.fr</p>
@@ -45,7 +45,7 @@ export const certifications = [
   {
     title: "Linux & bash",
     display: true,
-    img: "/assets/certifications_img/linux-bash.png",
+    img: "./assets/certifications_img/linux-bash.png",
     altImg: "Certification Dyma Linux & bash",
     createdAt: "2025-06-17T10:00:00.000Z",
     content: `<p>Certification réalisée sur Dyma.fr</p>
@@ -68,7 +68,7 @@ export const certifications = [
   {
     title: "C++",
     display: true,
-    img: "/assets/certifications_img/cpp.png",
+    img: "./assets/certifications_img/cpp.png",
     altImg: "Certification Dyma C++",
     createdAt: "2025-05-25T10:00:00.000Z",
     content: `<p>Certification réalisée sur Dyma.fr</p>
@@ -86,7 +86,7 @@ export const certifications = [
   {
     title: "Git",
     display: true,
-    img: "/assets/certifications_img/git.png",
+    img: "./assets/certifications_img/git.png",
     altImg: "Certification Dyma Git",
     createdAt: "2025-04-27T10:00:00.000Z",
     content: `<p>Certification réalisée sur Dyma.fr</p>
@@ -106,7 +106,7 @@ export const certifications = [
   {
     title: "MySQL",
     display: true,
-    img: "/assets/certifications_img/mysql.png",
+    img: "./assets/certifications_img/mysql.png",
     altImg: "Certification Dyma MySQL",
     createdAt: "2025-04-21T10:00:00.000Z",
     content: `<p>Certification réalisée sur Dyma.fr</p>

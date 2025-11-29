@@ -4,6 +4,7 @@ import { resolve } from "path";
 const isWindows = process.platform === "win32";
 
 export default defineConfig({
+  base: "/portfolio/",
   root: "./src",
   build: {
     outDir: "../dist",
@@ -24,8 +25,8 @@ export default defineConfig({
       interval: 1000,
       // followSymlinks: true,
     },
-    hmr: {
-      host: "localhost", // browser connects to localhost: mapped by Docker
-    },
+    // hmr: {
+    //   host: "localhost", // browser connects to localhost: mapped by Docker
+    // },
   },
 });
