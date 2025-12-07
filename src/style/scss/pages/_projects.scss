@@ -1,3 +1,4 @@
+@use "../base/variables";
 @use "../tools/mixin" as m;
 @use "../components/modal";
 @use "../components/card";
@@ -9,6 +10,12 @@
   margin-bottom: 4rem;
 }
 
-.container .description p {
-  text-align: left;
+.container .description {
+  p {
+    text-align: left;
+  }
+
+  article {
+    color: var(--text);
+  }
 }

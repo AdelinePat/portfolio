@@ -57,8 +57,7 @@ export const headerContents = {
   },
   certifications: {
     title: "Certifications",
-    subtitle:
-      "Des bases solides acquises grâce à des formations cibléesDes bases solides acquises grâce à des formations ciblées",
+    subtitle: "Des bases solides acquises grâce à des formations ciblées",
     id: "certifications",
     description: `<p>
             Voici une sélection de certifications obtenues lors de mon parcours.

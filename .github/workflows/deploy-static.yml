@@ -4,7 +4,7 @@ name: Deploy static content to Pages
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["portfolio-v2"]
+    branches: ["main"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -44,6 +44,64 @@ jobs:
         env:
           VITE_BASE: "/portfolio/"
         run: npm run build
+
+      # AUTOMATE UPDATE SITEMAP.XML!
+      # - name: Update sitemap.xml (date + GitHub Pages URLs)
+      #   run: |
+      #     TODAY=$(date +%Y-%m-%d)
+      #     FILE="dist/sitemap.xml"
+
+      #     echo "Updating sitemap: $FILE"
+
+      #     # replace base URLs (plesk → gh-pages)
+      #     sed -i 's|https://adeline-patenne.students-laplateforme.io|https://adelinepat.github.io/portfolio|g' "$FILE"
+
+      #     # update lastmod values
+      #     sed -i "s|<lastmod>.*</lastmod>|<lastmod>$TODAY</lastmod>|g" "$FILE"
+          
+      # DYNAMICALLY CREATE SITEMAP.XML
+      - name: Generate sitemap dynamically
+        run: |
+          TODAY=$(date +%Y-%m-%d)
+
+          # template lives in repo, not in dist
+          TEMPLATE="src/public/sitemap.template.xml"
+          OUTPUT="dist/sitemap.xml"
+
+          echo '<?xml version="1.0" encoding="UTF-8"?>' > "$OUTPUT"
+          echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' >> "$OUTPUT"
+
+          pages=(
+            ""                # index page
+            "projects.html"
+            "certifications.html"
+            "contact.html"
+          )
+
+          for PAGE in "${pages[@]}"; do
+            if [ "$PAGE" = "" ]; then
+              URL="https://adelinepat.github.io/portfolio/"
+            else
+              URL="https://adelinepat.github.io/portfolio/$PAGE"
+            fi
+
+            case "$PAGE" in
+              ""|"projects.html")    FREQ="monthly"; PRIO="0.9";;
+              "contact.html")        FREQ="yearly";  PRIO="0.6";;
+              "certifications.html") FREQ="yearly";  PRIO="0.6";;
+              *)                     FREQ="monthly"; PRIO="0.5";;
+            esac
+
+            ENTRY=$(cat "$TEMPLATE")
+            ENTRY="${ENTRY//\{\{URL\}\}/$URL}"
+            ENTRY="${ENTRY//\{\{DATE\}\}/$TODAY}"
+            ENTRY="${ENTRY//\{\{FREQ\}\}/$FREQ}"
+            ENTRY="${ENTRY//\{\{PRIO\}\}/$PRIO}"
+
+            echo "$ENTRY" >> "$OUTPUT"
+          done
+
+          echo '</urlset>' >> "$OUTPUT"
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
