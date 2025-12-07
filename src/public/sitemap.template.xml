@@ -1,0 +1,6 @@
+<url>
+  <loc>{{URL}}</loc>
+  <lastmod>{{DATE}}</lastmod>
+  <changefreq>{{FREQ}}</changefreq>
+  <priority>{{PRIO}}</priority>
+</url>

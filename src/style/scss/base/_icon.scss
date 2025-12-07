@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "ap";
+  src: url("../../../assets/ap.woff") format("woff"); /* or .ttf */
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon-ap {
+  padding: 0;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.icon-ap::before {
+  content: "\e900"; /* unicode from the generator */
+  display: inline-block;
+  vertical-align: middle;
+  font-family: "ap";
+  font-style: normal;
+  padding: 1.5% 1% 1.5% 1%;
+}

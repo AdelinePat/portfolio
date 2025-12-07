@@ -1,0 +1,21 @@
+@use "../base/variables";
+@use "../tools/mixin" as m;
+@use "../components/modal";
+@use "../components/card";
+
+.grid-container-main {
+  // @extend %grid-container-main;
+  @include m.grid-container-main();
+  gap: 4rem 3rem;
+  margin-bottom: 4rem;
+}
+
+.container .description {
+  p {
+    text-align: left;
+  }
+
+  article {
+    color: var(--text);
+  }
+}

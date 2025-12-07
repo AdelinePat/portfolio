@@ -1,0 +1,91 @@
+@use "../tools/media_queries" as mq;
+@use "../base/variables" as *;
+
+// footer [nav + social + credits]
+footer {
+  grid-area: footer;
+  &.small-screen {
+    display: none;
+    background: var(--background-lighter);
+    padding: 0 2rem;
+    padding-top: 4rem;
+    margin-bottom: 0;
+    .social {
+      margin-bottom: 6rem;
+      i {
+        font-size: 4rem;
+        font-size: 2.8rem;
+      }
+    }
+    .text-hint {
+      font-size: 1.4rem;
+    }
+  }
+  &.big-screen {
+    display: block;
+  }
+  .social {
+    display: flex;
+    justify-content: center;
+    gap: 3.2rem;
+    a {
+      font-size: 2.4rem;
+      line-height: 4rem;
+      color: var(--background);
+      background: var(--primary-lighter);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.8rem 1rem;
+      opacity: 0.6;
+      transition: all 0.2s ease-out;
+      &:hover {
+        opacity: 1;
+        box-shadow: 0px 0px 3px var(--primary-lighter);
+      }
+    }
+  }
+
+  .text-hint {
+    font-size: 1rem;
+    text-align: center;
+    margin: 2.8rem 0;
+  }
+
+  @include mq.md {
+    &.small-screen {
+      display: block;
+      grid-area: footer;
+    }
+    &.small-screen {
+      display: block;
+    }
+    &.big-screen {
+      display: none;
+    }
+  }
+}
+
+.bg-logo {
+  z-index: -1;
+  position: absolute;
+  bottom: -3%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30rem;
+  color: var(--hint);
+  opacity: 0.05;
+  @include mq.md {
+    display: none;
+  }
+  @include mq.v-md {
+    display: none;
+  }
+}
+
+@include mq.v-md {
+  footer .text-hint {
+    margin: 2.8rem 0 1rem 0;
+  }
+}

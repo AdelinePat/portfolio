@@ -1,0 +1,32 @@
+services:
+  dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      # - type: bind
+      #   source: .
+      #   target: /app/
+      - type: bind
+        source: ./src
+        target: /app/src/
+      - type: bind
+        source: ./vite.config.js
+        target: /app/vite.config.js
+      - type: volume
+        target: /app/node_modules
+      - type: bind
+        source: ./dist
+        target: /app/dist/
+      - type: bind
+        source: ./package.json
+        target: /app/package.json
+      - type: bind
+        source: ./package-lock.json
+        target: /app/package-lock.json
+    ports:
+     - "5175:5173"
+     - "4175:4173"
+    stdin_open: true
+    tty: true
+    restart: unless-stopped

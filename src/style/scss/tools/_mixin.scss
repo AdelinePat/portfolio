@@ -1,0 +1,167 @@
+@use "media_queries" as mq;
+@use "../base/variables" as *;
+
+@mixin title($color) {
+  color: var(--#{$color});
+  border-bottom: 1px solid var(--#{$color});
+  text-shadow: 0px 0px 6px var(--#{$color});
+}
+
+@mixin text-color($color) {
+  &-#{$color} {
+    color: var(--#{$color});
+  }
+}
+
+// .skills-secondary-lighter
+%skills {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  max-height: 3rem;
+  gap: 0.4rem 0;
+  // overflow: hidden;
+}
+
+// Icons for projects
+@mixin skills-color($color) {
+  &-#{$color} {
+    @extend %skills;
+    strong {
+      color: var(--#{$color});
+      border: 1px solid var(--#{$color});
+      padding: 0.4rem 0.8rem;
+      border-radius: 1.5rem;
+      word-break: keep-all;
+      font-weight: 400;
+      margin: 0 0.8rem 0.8rem 0;
+      // background: red;
+    }
+  }
+}
+%btn {
+  font-size: 1.4rem;
+  color: var(--background);
+  border-radius: 25px;
+  padding: 0.8rem 1.6rem;
+  margin: 1rem;
+  cursor: pointer;
+}
+
+@mixin btn-color($color) {
+  &-#{$color} {
+    @extend %btn;
+    background: var(--#{$color});
+    border: 1px solid transparent;
+    transition: all 0.25s ease-out;
+    &:hover {
+      transition: all 0.2s ease-in;
+      background: none;
+      border: 1px solid var(--#{$color});
+      color: var(--#{$color});
+    }
+  }
+}
+
+@mixin btn-reversed-color($color) {
+  &-reversed-#{$color} {
+    @extend %btn;
+    background: transparent;
+    border: 1px solid var(--#{$color});
+    transition: all 0.25s ease-out;
+    color: var(--#{$color});
+    &:hover {
+      transition: all 0.2s ease-in;
+      background: var(--#{$color});
+      border: 1px solid transparent;
+      color: var(--background);
+    }
+    &.active {
+      background: var(--#{$color});
+      color: var(--background);
+      border: 1px solid transparent;
+      // &:hover {
+      //   background: none;
+      //   border: 1px solid var(--#{$color});
+      //   color: var(--#{$color});
+      // }
+    }
+  }
+
+  // &-reversed-#{$color}.active {
+  //   background: red;
+  // }
+}
+
+@mixin education-border {
+  margin: 0;
+  padding: 0;
+  margin-left: 0.4rem;
+  border-left: 1px solid var(--primary);
+  padding-left: 3rem;
+}
+
+@mixin skills-icon($color, $size) {
+  ul {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-flow: row wrap;
+    li {
+      i {
+        font-size: $size;
+      }
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      transition: all 0.4s ease-out;
+      &:hover {
+        transition: all 0.15s ease-in;
+        text-shadow: 0px 0px 3px var($color);
+        span {
+          transition: all 0.15s ease-in;
+          visibility: visible;
+        }
+      }
+      span {
+        transition: all 0.4s ease-out;
+        font-size: 1.4rem;
+        visibility: hidden;
+        letter-spacing: 0.1rem;
+        @include mq.s {
+          visibility: visible;
+        }
+      }
+    }
+  }
+}
+
+@mixin skill-bar-content() {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    to bottom right,
+    var(--primary),
+    var(--primary-lighter)
+  );
+  height: 6px;
+  border-radius: 3px;
+}
+
+@mixin grid-container-main() {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: stretch;
+  justify-content: center;
+  @include mq.l {
+    grid-template-columns: 1fr;
+  }
+  @include mq.md {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include mq.s {
+    grid-template-columns: 1fr;
+  }
+}

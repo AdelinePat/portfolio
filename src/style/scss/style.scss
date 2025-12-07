@@ -1,0 +1,129 @@
+@use "./tools/media_queries" as mq;
+@use "./tools/mixin" as m;
+
+@use "./base/variables" as *;
+@use "./base/reset";
+@use "./base/base";
+@use "./base/icon";
+
+// @use "./pages/homepage";
+// @use "./pages/projects";
+
+@use "./components/common";
+@use "./components/nav";
+@use "./components/header";
+@use "./components/footer";
+// @use "./components/card";
+
+// @use "./components/courses";
+
+@use "./base/helpers";
+// @use "./components/filter-title";
+
+// general
+.container {
+  margin: 0 auto;
+  padding: 0 3rem 2.4rem 3rem;
+}
+@include mq.s {
+  aside.container {
+    padding: 0;
+  }
+}
+
+.grid-container {
+  max-width: 1400px;
+  margin: auto;
+  position: relative;
+  display: grid;
+  grid:
+    ". . ." 2.4rem
+    "header . main" auto
+    "nav . main" auto
+    "footer . main" auto
+    ". . ." 1.6rem
+    / 45rem 3rem auto;
+
+  @include mq.md {
+    grid:
+      "header" auto
+      "main" auto
+      "nav" auto
+      "footer" auto
+      / auto;
+    grid:
+      "menuPhone" auto
+      "header" auto
+      "main" auto
+      "nav" auto
+      "footer" auto
+      / auto;
+  }
+  @include mq.v-md {
+    grid:
+      "header . main" auto
+      "nav . main" auto
+      "footer . main" auto
+      // ". . ." 1.6rem
+      / 45rem 3rem auto;
+  }
+}
+
+// LEFT SIDE
+aside {
+  ::selection {
+    background: var(--primary);
+    color: var(--background);
+  }
+  top: 4rem;
+  position: sticky;
+  min-height: calc(100vh - 4rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @include mq.v-md {
+    top: 1.5rem;
+  }
+  @include mq.md {
+    text-align: center;
+    position: static;
+    min-height: auto;
+
+    nav {
+      display: none;
+    }
+  }
+}
+
+// RIGHT SIDE
+main {
+  grid-area: main;
+  text-align: center;
+  min-height: 100vh;
+  h2 {
+    margin-top: 1.6rem;
+    margin-bottom: 3rem;
+    letter-spacing: 0.5rem;
+    line-height: 4rem;
+  }
+  article {
+    text-align: left;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  box-shadow: var(--box-shadow);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-lighter);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border: 1px solid var(--background-lighter);
+  border-left: 2px solid var(--background-lighter);
+  border-right: 2px solid var(--background-lighter);
+  border-radius: 10px;
+}

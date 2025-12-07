@@ -1,0 +1,175 @@
+import { openModal } from "../scripts/modal-controller";
+
+export function updateTitle(sectionTitleElement, articles, isProject = true) {
+  sectionTitleElement.innerHTML = "";
+
+  let string;
+  if (isProject) {
+    string =
+      articles.length + " " + (articles.length > 1 ? "projets" : "projet");
+  } else {
+    string =
+      articles.length +
+      " " +
+      (articles.length > 1 ? "certifications" : "certification");
+  }
+  const titleText = document.createTextNode(string);
+
+  const span = document.createElement("span");
+  span.classList.add("btn-primary-lighter");
+  const filterIcon = document.createElement("i");
+  const filterText = document.createTextNode("Filtrer");
+  filterIcon.classList.add("ml-1");
+
+  span.append(filterText, filterIcon);
+  filterIcon.classList.add("fa-solid", "fa-filter");
+  sectionTitleElement.append(titleText, span);
+}
+
+// export function createAllCards(sectionElement, articles) {
+//   sectionElement.innerHTML = "";
+//   //   console.log(articles);
+//   for (const project of articles) {
+//     const card = createCard(project);
+//     sectionElement.append(card);
+//   }
+// }
+export function createAllCards(sectionElement, articles, append = false) {
+  if (!append) {
+    sectionElement.innerHTML = "";
+  }
+
+  for (const project of articles) {
+    const card = createCard(project);
+    sectionElement.append(card);
+  }
+}
+
+export function createCard(project) {
+  const card = document.createElement("article");
+  card.classList.add("card");
+  card.dataset.id = project.createdAt;
+  setFilters(card, project.filter);
+  createCardTitle(card, project);
+  createFigure(card, project);
+  // createCardContent(card, project);
+
+  if (project.code || project.demo) {
+    createCardLinks(card, project);
+  }
+  createCardTags(card, project);
+  return card;
+}
+
+function setFilters(element, filters) {
+  //   console.log("setfilter ", filters);
+  for (let i = 0; i < filters.length; ++i) {
+    // console.log(filters[i]);
+    if (filters[i] != "Général") {
+      element.classList.add(filters[i]);
+      // console.log(filters[i]);
+    }
+  }
+}
+
+export function createCardTitle(card, project) {
+  // Create article title
+  const title = document.createElement("h2");
+  title.classList.add("title-primary");
+  title.innerText = project.title;
+  card.append(title);
+}
+
+function createFigure(card, project) {
+  const figure = document.createElement("figure");
+  const img = document.createElement("img");
+
+  img.setAttribute("src", project.img);
+  img.setAttribute("alt", project.altImg);
+  img.setAttribute("loading", "lazy");
+
+  if (project.successCertificate) {
+    img.classList.add("zi-10");
+    figure.classList.add("mb-3");
+  }
+
+  const plusIcon = document.createElement("i");
+  plusIcon.classList.add("fa-solid", "fa-plus", "caption");
+
+  plusIcon.addEventListener("click", () => {
+    const result = openModal(project);
+  });
+
+  figure.append(img, plusIcon);
+  card.append(figure);
+  return figure;
+}
+
+export function createCardLinks(card, project, isProject = true) {
+  const linkDiv = document.createElement("div");
+  linkDiv.classList.add("links");
+  if (isProject) {
+    if (project.code) {
+      const codeLink = createLink(project.code, "Code Source");
+      linkDiv.append(codeLink);
+    }
+
+    if (project.demo) {
+      const demoLink = createLink(project.demo, "Live Demo");
+      linkDiv.append(demoLink);
+    }
+  } else {
+    if (project.link) {
+      const codeLink = createLink(project.link, "Formation");
+      linkDiv.append(codeLink);
+    }
+
+    if (project.successCertificate) {
+      const demoLink = createLink(
+        project.successCertificate,
+        "Certificat de réussite"
+      );
+      linkDiv.append(demoLink);
+    }
+  }
+  card.append(linkDiv);
+}
+
+function createLink(link, string) {
+  const linkElement = document.createElement("a");
+  linkElement.innerText = string;
+  if (string === "Code Source" || string === "Formation") {
+    // linkElement.classList.add("btn-secondary", "my-3", "o-08");
+    linkElement.classList.add("btn-secondary", "o-08");
+  } else {
+    // linkElement.classList.add("btn-primary", "my-3", "o-08");
+    linkElement.classList.add("btn-primary", "o-08");
+  }
+  linkElement.setAttribute("href", link);
+  linkElement.setAttribute("target", "_blank");
+  linkElement.setAttribute("rel", "noopener");
+  return linkElement;
+}
+
+export function createCardTags(card, project, margin = false) {
+  const tagDiv = document.createElement("div");
+  tagDiv.classList.add("skills-secondary-lighter", "o-08");
+  for (const tag of project.tags) {
+    const tagEl = createTagElement(tag);
+    tagDiv.append(tagEl);
+  }
+  if (margin) {
+    tagDiv.classList.add("tags", "mt-3");
+  }
+  if (!margin) {
+    tagDiv.classList.add("oh");
+  }
+  card.append(tagDiv);
+}
+
+function createTagElement(tag) {
+  const tagElement = document.createElement("strong");
+  tagElement.innerHTML = `${tag.icon} ${tag.name}`;
+  tagElement.setAttribute("aria-hidden", true);
+  return tagElement;
+}

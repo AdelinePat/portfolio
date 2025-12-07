@@ -1,0 +1,53 @@
+@use "../tools/mixin" as m;
+@use "../tools/media_queries" as mq;
+
+.title {
+  display: inline-block;
+  &-secondary {
+    @include m.title(secondary);
+  }
+  &-primary {
+    @include m.title(primary);
+  }
+  &-filter {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 0rem;
+    padding-left: 0.5em;
+    align-items: center;
+    font-size: 2.5rem;
+
+    span {
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+// Text-color using classes like .text-primary
+.text {
+  @include m.text-color(primary);
+  @include m.text-color(primary-lighter);
+  @include m.text-color(secondary);
+  @include m.text-color(secondary-ligther);
+  @include m.text-color(hint);
+}
+
+// generate btn
+.btn {
+  @include m.btn-color(primary-lighter);
+  @include m.btn-color(primary);
+  @include m.btn-color(secondary-lighter);
+  @include m.btn-color(secondary);
+  @include m.btn-reversed-color(primary-lighter);
+}
+
+// main .active {
+//   background: red;
+// }
+
+.skills {
+  @include m.skills-color(primary-lighter);
+  @include m.skills-color(secondary-lighter);
+}
+
+

@@ -1,0 +1,113 @@
+import "../style/scss/certifications.scss";
+import { createFinalHeader, createNav } from "../components/header-element.js";
+import { createFooter } from "../components/footer-element.js";
+import { headerContents } from "../assets/data/header-page.js";
+
+import { certifications } from "../assets/data/certification-list.js";
+import { courses } from "../assets/data/courses-list.js";
+import { allCertificationCategories } from "../assets/data/generateTagsAndFilters.js";
+
+import { updateTitle, createAllCards } from "../components/project-elements.js";
+import {
+  createCourseArticle,
+  createAllCourses,
+} from "../components/course-element.js";
+import { createFilterDiv } from "../components/filter-element.js";
+import {
+  toggleFilterDiv,
+  initTagFilterHandler,
+  sortFromMostRecent,
+} from "./filter-service.js";
+import "../components/topbar-element.js";
+import { mobileMenu } from "./topbar-controller.js";
+
+import { createInfiniteLoader } from "./infinite-scroll-loader.js";
+import { createLoadMoreLoader } from "./load-more-loader.js";
+
+const activeFilter = [];
+let articles = sortFromMostRecent(certifications);
+let filterableArticles = articles;
+
+const body = document.querySelector("body");
+const aside = document.querySelector("aside");
+
+// HEADER BIG SCREEN
+const header = createFinalHeader(headerContents.certifications, "big-screen");
+const footer = createFooter("big-screen");
+aside.append(header, footer);
+
+// FOOTER AND NAV SMALL SCREEN
+const navigationFooter = createNav(headerContents.certifications.id);
+const footerPhone = createFooter();
+footerPhone.prepend(navigationFooter);
+body.append(footerPhone);
+
+// MOBILE MENU
+const mobileNav = createNav(headerContents.certifications.id);
+console.log("mobilenav", mobileNav);
+const topbar = document.querySelector(".menu-phone");
+console.log(topbar);
+topbar.append(mobileNav);
+mobileMenu(mobileNav);
+
+// CERTIFICATIONS PART
+// CREATE FILTER AND FILTER EVENTS
+const sectionTitleElement = document.querySelector(".title-filter");
+const sectionTitleContainer = document.querySelector(
+  ".section-title-container"
+);
+updateTitle(sectionTitleElement, articles, false);
+const filterDiv = createFilterDiv(
+  sectionTitleContainer,
+  allCertificationCategories
+);
+toggleFilterDiv(sectionTitleElement, filterDiv);
+
+const sectionElement = document.querySelector("#certifications");
+
+const loader = createInfiniteLoader({
+  container: sectionElement,
+  batchSize: 4,
+  onBatchLoaded: (batch, isLastBatch) => {
+    // Add cards to DOM
+    createAllCards(sectionElement, batch, true);
+  },
+});
+
+loader.reset(filterableArticles);
+// createAllCards(sectionElement, articles);
+
+initTagFilterHandler(
+  sectionTitleElement,
+  sectionElement,
+  filterDiv,
+  activeFilter,
+  articles,
+  (filtered) => {
+    filterableArticles = filtered;
+
+    updateTitle(sectionTitleElement, filterableArticles);
+
+    loader.reset(filterableArticles);
+  }
+);
+
+// COURSES PART
+const courseSection = document.querySelector(".courses-list");
+let courseList = sortFromMostRecent(courses);
+
+const loadMore = createLoadMoreLoader({
+  container: courseSection,
+  batchSize: 4,
+  onBatchLoaded: (batch) => {
+    createAllCourses(courseSection, batch, true);
+  },
+});
+
+loadMore.reset(courseList);
+// for (const course of courseList) {
+//   if (course.display) {
+//     const article = createCourseArticle(course);
+//     courseSection.append(article);
+//   }
+// }

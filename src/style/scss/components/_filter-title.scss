@@ -1,0 +1,28 @@
+@use "../base/variables" as *;
+@use "../base/helpers" as *;
+
+.section-title-container {
+  position: relative;
+  word-break: keep-all;
+  .filter-list {
+    display: flex;
+    // top: 0;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    margin-top: -3.4rem;
+    transition: height 0.5s ease, opacity 0.5s ease, transform 0.5s ease; // adjust duration and easing
+    opacity: 1;
+    transform: translateY(0);
+    height: auto;
+
+    &.hidden {
+      // top: -5rem;
+      height: 0px;
+      transition: none;
+      opacity: 0;
+      transform: translateY(-0.8rem);
+      pointer-events: none; // prevents interaction while hidden
+    }
+  }
+}

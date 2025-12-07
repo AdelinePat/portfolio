@@ -1,2 +1,13 @@
 **/ini_folder
 ini_folder/*
+
+**/*to-tidy-later
+**/*ap*.zip
+
+**/*node_modules
+node_modules
+
+**/dist
+**/*dist
+/dist
+src/dist
