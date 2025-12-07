@@ -10,12 +10,12 @@ if($isResume) {echo'resume';}
                 <label for="menu-hamburger"></label>
             </div>
             <ul class="menu-items"> <!-- class="menu-items"-->
-                <li><a class="<?php if($isResume) {echo 'active';} ?>" href="./index.php">CV</a></li>
+                <li><a class="<?php if($isResume) {echo 'active';} ?>" href="./">CV</a></li>
                 <li><a  class="<?php if($isPortfolio) {echo 'active';} ?>" href="./portfolio.php">Portfolio</a></li>
                 <li><a class="<?php if($isContact) {echo 'active';} ?>" href="./contact.php">Contact</a></li>
             </ul>
             
-            <button><a href="https://drive.google.com/file/d/17IvvzIdmWN-PFVbMY67MRuV3xjbtyD66/view?usp=sharing" target="_blank">Télécharger le CV</a></button>
+            <button><a href="./20250330_CV_AP.pdf" target="_blank">Télécharger le CV</a></button>
         </nav>
         <?php if($isResume) : ?>
             <h1>

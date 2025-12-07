@@ -10,13 +10,79 @@ $isContact = false;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Adeline Patenne">
+    <meta name="description" content="Animée par une soif d'apprendre et un goût du challenge, j'ai fait le choix audacieux de me réinventer dans le développement logiciel. En pleine formation pour obtenir mon Bachelor IT, je mets toute ma passion et ma rigueur dans l'adoption des bonnes pratiques et l'amélioration continue du code. Découvrez mes projets, fruits de mon engagement et de ma volonté de progresser chaque jour.">
+    <link rel="canonical" href="https://adeline-patenne.students-laplateforme.io/"/>
+
+    <meta name="google-site-verification" content="D-P5IliP_Ji1Z46g1JrTjG-Ciy4kmHF7BVgdPqaUrDw"/>
+    
     <link rel="stylesheet" href="style.css">
 
     <script defer src="script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://unpkg.com/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
     <link rel="icon" type="image/x-icon" href="./images/Logo AP.ico">
     <title>Accueil</title>
+	<script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@graph": [
+                    {
+                        "@type": "Person",
+                        "@id": "https://adeline-patenne.students-laplateforme.io/",
+                        "name": "Adeline Patenne",
+                        "jobTitle": "Développeuse logiciel et web fullstack",
+                        "url": "https://adeline-patenne.students-laplateforme.io/",
+                        "email": "adeline.patenne@laplateforme.io",
+                        "description": "Portfolio d'Adeline Patenne, développeuse spécialisée en logiciel et web fullstack. Expertise en back-end, algorithmie et clean code. Compétences en gestion de projet et leadership.",
+                        "image": "https://adeline-patenne.students-laplateforme.io/images/adeline.jpg",
+                        "sameAs": [
+                            "https://www.linkedin.com/in/adeline-patenne/",
+                            "https://github.com/AdelinePat",
+                            "https://adelinepat.github.io/portfolio/"
+                        ],
+                        "address": {
+                            "@type": "PostalAddress",
+                            "addressLocality": "Marseille",
+                            "addressCountry": "FR",
+                            "addressRegion": "Provence-Alpes-Côte d'Azur",
+                            "postalCode": "13000"
+                        },
+                        "knowsAbout": ["Développement logiciel", "Développement web", "Fullstack", "Back-end", "Algorithmie", "SQL", "Python", "JavaScript", "HTML", "CSS", "PHP", "SASS", "Programmation orientée objet"],
+                        "skills" : ["Leadership", "Programmation logicielle", "Gestion de projet", "Optimisation des performances"],
+                        "knowsLanguage" : ["Français", "English", "PHP", "Python", "SQL", "JavaScript"],
+                        "alumniOf": {
+                            "@type": "EducationalOrganization",
+                            "name": "La Plateforme_ Formation",
+                            "url": "https://laplateforme.io/"
+                        }
+                    },
+                    {
+                        "@type": "WebSite",
+                        "@id": "https://adeline-patenne.students-laplateforme.io",
+                        "name": "Portfolio d'Adeline Patenne",
+                        "url": "https://adeline-patenne.students-laplateforme.io",
+                        "image": "https://adeline-patenne.students-laplateforme.io/images/Logo%20AP.svg",
+                        "keywords" : ["Portfolio", "Profil professionnel", "Candidature", "Compétences", "Développement logiciel", "Développement web", "Fullstack", "Back-end"],
+                        "author": {
+                            "@type": "Person",
+                            "name": "Adeline Patenne",
+                            "@id": "https://adeline-patenne.students-laplateforme.io/"
+                        },
+                        "sameAs": [
+                            "https://www.linkedin.com/in/adeline-patenne/",
+                            "https://github.com/AdelinePat"
+                        ],
+                        "potentialAction": {
+                            "@type": "SearchAction",
+                            "target": "https://adeline-patenne.students-laplateforme.io/?q={search_term}",
+                            "query-input": "required name=search_term"
+                        }
+                    }
+                ]
+            }
+        </script>
 </head>
 <body>
     
@@ -27,15 +93,19 @@ $isContact = false;
             <article>
                 <h2>Développeuse logiciel en formation</h2>
                 <p>
-                    Après avoir travaillé 3 ans dans le domaine de la santé en tant qu'infirmière,
-                    j'ai décidé d'entreprendre une reconversion vers l'informatique. Actuellement
-                    en préparation d'un Bachelor IT à La Plateforme_ , je suis <strong>à la recherche d'une
-                    alternance d'une durée de 2 ans à partir de septembre 2025</strong>.
-                    Cette alternance me permettra de m'engager sur ce nouveau parcours professionnel.
+                Animée par une soif d'apprendre et un goût du challenge,
+                j'ai fait le choix audacieux de me réinventer dans le développement logiciel.
+                En pleine formation pour obtenir mon Bachelor IT, je mets toute ma passion et ma rigueur
+                dans l'adoption des bonnes pratiques et l'amélioration continue du code. Découvrez mes projets,
+                fruits de mon engagement et de ma volonté de progresser chaque jour.
                 </p>
             </article>
             <!-- <article class="hardskills"> -->
                 <ul class="hardskills">
+                    <!-- <li>
+                        <i class="devicon-csharp-plain"></i><span>C#</span>
+                    </li> -->
+                    
                     <li>
                         <i class="fa-brands fa-git-alt"></i><span>Git</span>
                     </li>
@@ -43,34 +113,55 @@ $isContact = false;
                         <i class="fa-brands fa-github"></i><span>GitHub</span>
                     </li>
                     <li>
+                        <i class="devicon-cplusplus-plain"></i><span>C/C++</span>
+                    </li>
+                    <!-- <li>
+                        <i class="fa-brands fa-java"></i><span>Java</span>
+                    </li> -->
+                    <li>
                         <i class="fa-brands fa-python"></i><span>Python</span>
                     </li>
                     <li>
-                        <i class="fa-brands fa-html5"></i><span>HMTL</span>
+                        <i class="fa-solid fa-database"></i><span>SQL</span>
+                    </li>
+                    <li>     
+                        <i class="devicon-mysql-original"></i><span>MySQL</span>
                     </li>
                     <li>
-                        <i class="fa-brands fa-css3-alt"></i><span>CSS</span>
-                    </li>
-                     <li>
                         <i class="fa-brands fa-js"></i><span>JavaScript</span>
                     </li>
                     <li>
-                        <i class="fa-brands fa-sass"></i><span>Sass</span>
+                        <i class="fa-brands fa-php"></i><span>PHP</span>
+                    </li>
+                    <!-- <li>
+                        <i class="fa-brands fa-rust"></i><span>Rust</span>
                     </li>
                     <li>
-                        <i class="fa-brands fa-php"></i><span>PHP</span>
+                        <i class="fa-brands fa-golang"></i><span>Go</span>
+                    </li> -->
+                    <!-- <li>
+                        <i class="fa-brands fa-html5"></i><span>HMTL</span>
+                    </li>-->
+                    <!-- <li>
+                        <i class="fa-brands fa-css3-alt"></i><span>CSS</span>
+                    </li>  -->
+                    <li>
+                        <i class="fa-brands fa-sass"></i><span>Sass</span>
                     </li>
                     <li>
                         <i class="fa-brands fa-figma"></i><span>Figma</span>
                     </li>
                     <li>
-                        <i class="fa-brands fa-wordpress"></i><span>WordPress</span>
+                        <i class="fa-brands fa-wordpress"></i><span>Wordpress</span>
+                    </li>
+                    <!-- <li>
+                        <i class="fa-brands fa-docker"></i><span>Docker</span>
                     </li>
                     <li>
-                        <i class="fa-brands fa-elementor"></i><span>Elementor</span>
-                    </li>
+                        <i class='bx bxl-kubernetes' ></i><span>Kubernetes</span>
+                    </li> -->
                     <li>
-                    <i class='bx bxl-visual-studio'></i><span>VS Code</span>
+                        <i class='bx bxl-visual-studio'></i><span>VS Code</span>
                     </li>
                     
                 </ul>
@@ -169,7 +260,7 @@ $isContact = false;
                         <li>
                             <strong>Bachelor IT</strong> - La Plateforme_ - <em>2024 - 2027 (en cours)</em>
                             <p>Pédagogie par projet basée sur la résolution de problématiques concrètes en autonomie</br>
-                                Formation de 3 ans délivrant un <em>titre RNCP 6 Concepteur développeur d'applications (équivalent BAC +3)</em>
+                                Formation de 3 ans délivrant un <em>titre RNCP 6 Concepteur développeur d'applications (équivalent BAC +3</em>
                             </p>
                         </li>
                         <li>
@@ -189,19 +280,25 @@ $isContact = false;
                     </h3>
                     <ul>
                         <li>
+                            Anglais bilingue
+                        </li>
+                        <li>
+                            Leadership
+                        </li>
+                        <li>
+                            Chef de projet
+                        </li>
+                        <li>
                             Communication écrite et orale
                         </li>
                         <li>
                             Adaptation
                         </li>
                         <li>
-                            Organisation
+                            Sens de l'organisation
                         </li>
                         <li>
                             Créative
-                        </li>
-                        <li>
-                            Anglais parlé couramment
                         </li>
                     </ul>
                 </article>
