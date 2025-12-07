@@ -1,0 +1,1 @@
+import{c,h as e,a as o,b as t,m as r}from"./topbar-controller-CcCdzLz2.js";const s=document.querySelector("body"),d=document.querySelector("aside"),i=c(e.contact,"big-screen"),p=o("big-screen");d.append(i,p);const m=t(e.contact.id),n=o();n.prepend(m);s.append(n);const a=t(e.contact.id),b=document.querySelector(".menu-phone");b.append(a);r(a);
