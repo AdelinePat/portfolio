@@ -2,8 +2,8 @@ name: Deploy to Plesk
 
 on:
   push:
-    branches: ["main"]  # deploy Plesk when main is updated
-  workflow_dispatch:    # optional manual trigger
+    branches: ["main"] # deploy Plesk when main is updated
+  workflow_dispatch: # optional manual trigger
 
 permissions:
   contents: read
@@ -31,7 +31,7 @@ jobs:
       # 4️⃣ Build project with root base
       - name: Build for Plesk
         env:
-          VITE_BASE: "/"  # root base
+          VITE_BASE: "/" # root base
         run: npm run build
 
       # 5️⃣ Generate sitemap dynamically
@@ -73,7 +73,18 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@users.noreply.github.com"
-          git checkout plesk-deploy
+
+          # fetch branch if exists
+          git fetch origin plesk-deploy || true
+
+          # checkout or create orphan branch
+          if git show-ref --verify --quiet refs/heads/plesk-deploy; then
+            git checkout plesk-deploy
+          else
+            git checkout --orphan plesk-deploy
+          fi
+
+          # clean branch and copy dist
           git rm -rf .
           cp -r dist/* .
           git add .
