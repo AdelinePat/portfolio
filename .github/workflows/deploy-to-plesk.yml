@@ -74,7 +74,7 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@users.noreply.github.com"
 
-          # fetch branch if exists
+          # fetch plesk-deploy branch if exists
           git fetch origin plesk-deploy || true
 
           # checkout or create orphan branch
@@ -84,9 +84,12 @@ jobs:
             git checkout --orphan plesk-deploy
           fi
 
-          # clean branch and copy dist
+          # clean branch and copy dist/
           git rm -rf .
           cp -r dist/* .
+
           git add .
-          git commit -m "Deploy to Plesk - $(date '+%Y-%m-%d %H:%M:%S')"
-          git push -f origin plesk-deploy
+          git commit -m "Deploy to Plesk - $(date '+%Y-%m-%d %H:%M:%S')" || echo "Nothing to commit"
+
+          # push using HTTPS and GITHUB_TOKEN
+          git push -f https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} plesk-deploy
