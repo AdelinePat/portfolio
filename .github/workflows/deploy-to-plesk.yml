@@ -72,12 +72,15 @@ jobs:
 
       # 6️⃣ Push dist/ to plesk-deploy branch
       - name: Deploy to plesk-deploy branch
+        env:
+          PAT_FOR_PLESK: ${{ secrets.PAT_FOR_PLESK }}
+
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@users.noreply.github.com"
 
           # fetch plesk-deploy branch if exists
-          git fetch origin plesk-deploy || true
+          git fetch --depth=1 origin plesk-deploy || true
 
           # checkout or create orphan branch
           if git show-ref --verify --quiet refs/heads/plesk-deploy; then
@@ -94,4 +97,4 @@ jobs:
           git commit -m "Deploy to Plesk - $(date '+%Y-%m-%d %H:%M:%S')" || echo "Nothing to commit"
 
           # push using HTTPS and GITHUB_TOKEN
-          git push -f https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} plesk-deploy
+          git push -f https://$PAT_FOR_PLESK@github.com/${{ github.repository }} plesk-deploy
