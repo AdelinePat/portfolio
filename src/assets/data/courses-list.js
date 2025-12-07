@@ -3,6 +3,16 @@ import { tags } from "./tags.js";
 
 export const courses = [
   {
+    title: "Apache Kafka Series - Learn Apache Kafka for Beginners v3",
+    display: true,
+    createdAt: "2025-10-11T10:00:00.000Z",
+    progress: 49, // optional chapter not done
+    courseUrl:
+      "https://www.udemy.com/course/apache-kafka/",
+    learningPlatform: "Udemy",
+    tags: [tags.kafka],
+  },
+  {
     title: "Apprenez à programmer en C",
     display: true,
     createdAt: "2025-03-31T10:00:00.000Z",

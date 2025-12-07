@@ -1,0 +1,81 @@
+name: Deploy to Plesk
+
+on:
+  push:
+    branches: ["main"]  # deploy Plesk when main is updated
+  workflow_dispatch:    # optional manual trigger
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  plesk-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # 1️⃣ Checkout repo
+      - name: Checkout code
+        uses: actions/checkout@v5
+
+      # 2️⃣ Setup Node
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: lts/*
+          cache: "npm"
+
+      # 3️⃣ Install dependencies
+      - name: Install dependencies
+        run: npm ci
+
+      # 4️⃣ Build project with root base
+      - name: Build for Plesk
+        env:
+          VITE_BASE: "/"  # root base
+        run: npm run build
+
+      # 5️⃣ Generate sitemap dynamically
+      - name: Generate sitemap
+        run: |
+          TODAY=$(date +%Y-%m-%d)
+          TEMPLATE="src/public/sitemap.template.xml"
+          OUTPUT="dist/sitemap.xml"
+          BASE_URL="/"
+
+          printf '%s\n' '<?xml version="1.0" encoding="UTF-8"?>' > "$OUTPUT"
+          printf '%s\n' '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' >> "$OUTPUT"
+
+          pages=("" "projects.html" "certifications.html" "contact.html")
+          for PAGE in "${pages[@]}"; do
+            URL="$BASE_URL$PAGE"
+            [ "$PAGE" = "" ] && URL="$BASE_URL"
+
+            case "$PAGE" in
+              ""|"projects.html") FREQ="monthly"; PRIO="0.9";;
+              "contact.html")     FREQ="yearly";  PRIO="0.6";;
+              "certifications.html") FREQ="yearly"; PRIO="0.6";;
+              *)                  FREQ="monthly"; PRIO="0.5";;
+            esac
+
+            ENTRY=$(cat "$TEMPLATE")
+            ENTRY="${ENTRY//\{\{URL\}\}/$URL}"
+            ENTRY="${ENTRY//\{\{DATE\}\}/$TODAY}"
+            ENTRY="${ENTRY//\{\{FREQ\}\}/$FREQ}"
+            ENTRY="${ENTRY//\{\{PRIO\}\}/$PRIO}"
+
+            printf '%s\n' "$ENTRY" >> "$OUTPUT"
+          done
+
+          printf '%s\n' '</urlset>' >> "$OUTPUT"
+
+      # 6️⃣ Push dist/ to plesk-deploy branch
+      - name: Deploy to plesk-deploy branch
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git checkout plesk-deploy
+          git rm -rf .
+          cp -r dist/* .
+          git add .
+          git commit -m "Deploy to Plesk - $(date '+%Y-%m-%d %H:%M:%S')"
+          git push -f origin plesk-deploy
