@@ -10,9 +10,15 @@ export const highlights = [
 
 export const hardskills = [
   {
-    title: "Outils et IDE",
+    title: "Outils et environnement",
     display: true,
-    tags: [tags.git, tags.docker, tags.visualStudioCode, tags.intelliJ],
+    tags: [
+      tags.git,
+      tags.docker,
+      tags.nodejs,
+      tags.visualStudioCode,
+      tags.intelliJ,
+    ],
   },
   {
     title: "Langages",
@@ -22,6 +28,7 @@ export const hardskills = [
       tags.cpp,
       tags.python,
       tags.javascript,
+      tags.typescript,
       tags.sass,
       tags.css,
       tags.html,

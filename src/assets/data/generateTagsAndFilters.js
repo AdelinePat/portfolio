@@ -8,7 +8,6 @@ export const allCategories = Object.entries(categories);
 export const allCertificationCategories = Object.entries(
   certificationCategories
 );
-// console.log(allCertificationCategories);
 
 export function setProjectFilters(project, categoryList) {
   const categoriesSet = new Set();

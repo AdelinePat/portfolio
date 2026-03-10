@@ -12,6 +12,31 @@ export const certificationTags = {
     name: "Media Queries",
     icon: "",
   },
+  // JAVASCRIPT
+  dom: {
+    name: "Manipulation du DOM",
+    icon: "",
+  },
+  eventloop: {
+    name: "Event loop",
+    icon: "",
+  },
+  event: {
+    name: "Programmation événementielle",
+    icon: "",
+  },
+  request: {
+    name: "fetch et XMLHttpRequest",
+    icon: "",
+  },
+  prototypalInheritance: {
+    name: "Héritage prototypal",
+    icon: "",
+  },
+  promise: {
+    name: "Programmation asynchrone : promesses",
+    icon: "",
+  },
   // DOCKER
   dockerfile: {
     name: "Dockerfile",

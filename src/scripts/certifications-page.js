@@ -44,9 +44,7 @@ body.append(footerPhone);
 
 // MOBILE MENU
 const mobileNav = createNav(headerContents.certifications.id);
-console.log("mobilenav", mobileNav);
 const topbar = document.querySelector(".menu-phone");
-console.log(topbar);
 topbar.append(mobileNav);
 mobileMenu(mobileNav);
 
@@ -86,7 +84,7 @@ initTagFilterHandler(
   (filtered) => {
     filterableArticles = filtered;
 
-    updateTitle(sectionTitleElement, filterableArticles);
+    updateTitle(sectionTitleElement, filterableArticles, false);
 
     loader.reset(filterableArticles);
   }

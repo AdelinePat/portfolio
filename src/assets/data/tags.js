@@ -59,11 +59,15 @@ const icons = {
   pygame: "",
   tkinter: "",
   javaFX: "",
+  sfml: "",
+  sdl: "",
   // Web languages
   html: `<i class="fa-brands fa-html5"></i>`,
   css: `<i class="fa-brands fa-css3-alt"></i>`,
   sass: `<i class="fa-brands fa-sass"></i>`,
+  nodejs: `<i class="fa-brands fa-node-js"></i>`,
   javascript: `<i class="fa-brands fa-js"></i>`,
+  typescript: `<i class="devicon-typescript-plain"></i>`,
   php: `<i class="fa-brands fa-php"></i>`,
   // OOP
   oop: `<i class="fa-sharp fa-solid fa-code"></i>`,
@@ -307,9 +311,19 @@ export const tags = {
     icon: icons.sass,
     category: categories.web,
   },
+  nodejs: {
+    name: "Node.js",
+    icon: icons.nodejs,
+    category: categories.web,
+  },
   javascript: {
     name: "Javascript",
     icon: icons.javascript,
+    category: categories.web,
+  },
+  typescript: {
+    name: "Typescript",
+    icon: icons.typescript,
     category: categories.web,
   },
   php: {
@@ -381,6 +395,16 @@ export const tags = {
   unity: {
     name: "Unity",
     icon: icons.unity,
+    category: categories.software,
+  },
+  sfml: {
+    name: "SFML",
+    icon: icons.sfml,
+    category: categories.software,
+  },
+  sdl: {
+    name: "SDL3",
+    icon: icons.sdl,
     category: categories.software,
   },
   //    Python

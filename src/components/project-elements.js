@@ -26,14 +26,6 @@ export function updateTitle(sectionTitleElement, articles, isProject = true) {
   sectionTitleElement.append(titleText, span);
 }
 
-// export function createAllCards(sectionElement, articles) {
-//   sectionElement.innerHTML = "";
-//   //   console.log(articles);
-//   for (const project of articles) {
-//     const card = createCard(project);
-//     sectionElement.append(card);
-//   }
-// }
 export function createAllCards(sectionElement, articles, append = false) {
   if (!append) {
     sectionElement.innerHTML = "";
@@ -52,7 +44,6 @@ export function createCard(project) {
   setFilters(card, project.filter);
   createCardTitle(card, project);
   createFigure(card, project);
-  // createCardContent(card, project);
 
   if (project.code || project.demo) {
     createCardLinks(card, project);
@@ -62,12 +53,9 @@ export function createCard(project) {
 }
 
 function setFilters(element, filters) {
-  //   console.log("setfilter ", filters);
   for (let i = 0; i < filters.length; ++i) {
-    // console.log(filters[i]);
     if (filters[i] != "Général") {
       element.classList.add(filters[i]);
-      // console.log(filters[i]);
     }
   }
 }

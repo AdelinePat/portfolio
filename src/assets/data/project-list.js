@@ -518,6 +518,50 @@ export const projects = [
     demo: "",
     tags: [tags.javascript, tags.docker, tags.sass, tags.html, tags.personal],
   },
+  {
+    title: "Brick Breaker",
+    display: true,
+    img: "./assets/project_img/brick_breaker_project.png",
+    altImg: "Capture d'écran du projet Brick Breaker",
+    createdAt: "2025-11-10T10:00:00.000Z",
+    content:
+      "<p>Le projet vise à proposer un jeu Brick Breaker fonctionnel " +
+      "et facilement exécutable. Après avoir lancé le serveur X et le conteneur Docker, " +
+      "une fenêtre graphique s'ouvre sur la machine hôte, affichant le jeu : une balle, une " +
+      "raquette contrôlable, des briques avec durabilité, et une gestion des vies. Cela permet " +
+      "de tester immédiatement le gameplay et de visualiser concrètement les objectifs atteints par le projet.</p>",
+    code: "https://github.com/AdelinePat/brick-breaker",
+    demo: "",
+    tags: [
+      tags.cpp,
+      tags.cmake,
+      tags.docker,
+      tags.sfml,
+      tags.teamwork,
+      tags.school,
+      tags.git,
+    ],
+  },
+  {
+    title: "2048",
+    display: true,
+    img: "https://github.com/AdelinePat/2048-tile-twister/blob/main/assets/img/2048_win.png?raw=true",
+    altImg: "Capture d'écran du projet 2048",
+    createdAt: "2025-12-19T10:00:00.000Z",
+    content: "",
+    code: "https://github.com/AdelinePat/2048-tile-twister",
+    demo: "",
+    tags: [
+      tags.cpp,
+      tags.integrationTest,
+      tags.docker,
+      tags.sdl,
+      tags.cmake,
+      tags.teamwork,
+      tags.school,
+      tags.git,
+    ],
+  },
 ];
 
 const articleTemplate = {
@@ -525,7 +569,7 @@ const articleTemplate = {
   display: true,
   img: "",
   altImg: "",
-  createdAt: "2025-07-22T10:00:00.000Z",
+  createdAt: "2026-12-31T10:00:00.000Z",
   content: "",
   code: "",
   demo: "",

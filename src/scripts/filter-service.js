@@ -3,44 +3,12 @@ import { updateTitle, createAllCards } from "../components/project-elements.js";
 export function toggleFilterDiv(sectionTitleElement, filterDiv) {
   sectionTitleElement.addEventListener("click", (event) => {
     const span = sectionTitleElement.querySelector("span");
-    // console.log(span);
     if (span.contains(event.target)) {
-      //   console.log("filtrer? HALLO ?");
       filterDiv.classList.toggle("hidden");
     }
   });
 }
 
-// export function initTagFilterHandler(
-//   sectionTitleElement,
-//   sectionElement,
-//   filterDiv,
-//   activeFilter,
-//   articles
-// ) {
-//   filterDiv.addEventListener("click", (event) => {
-//     const span = event.target.closest("span");
-
-//     if (span && filterDiv.contains(span)) {
-//       event.stopPropagation();
-//       toggleTag(activeFilter, span.classList[0]);
-//       if (span.classList.contains("active")) {
-//         span.classList.remove("active");
-//       } else if (activeFilter.length > 0) {
-//         span.classList.add("active");
-//       }
-
-//       const result = filterProjects(articles, activeFilter);
-//       console.log(articles.at(0).code);
-//       updateTitle(
-//         sectionTitleElement,
-//         result,
-//         articles.at(0).code ? true : false
-//       );
-//       createAllCards(sectionElement, result);
-//     }
-//   });
-// }
 export function initTagFilterHandler(
   sectionTitleElement,
   sectionElement,
@@ -62,33 +30,27 @@ export function initTagFilterHandler(
       }
 
       const result = filterProjects(articles, activeFilter);
-      // console.log(articles.at(0).code);
       updateTitle(
         sectionTitleElement,
         result,
         articles.at(0).code ? true : false
       );
-      // createAllCards(sectionElement, result);
       onFilterChange(result);
     }
   });
 }
 
 function toggleTag(array, value) {
-  console.log("value du tag ? ", value);
   if (value === "all") {
     const filterListElement = document.querySelector(".filter-list");
     const spans = filterListElement.querySelectorAll("span");
     for (const span of spans) {
       span.classList.remove("active");
     }
-    console.log("el", filterListElement);
     array.splice(0, array.length);
-    console.log("apres spice ", array);
     return;
   }
   const index = array.indexOf(value);
-  console.log("index ", index);
   if (index > -1) {
     array.splice(index, 1);
   } else {
