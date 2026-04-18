@@ -81,7 +81,6 @@ export function createNav(headerArticleId, screenSize = "small-screen") {
     link.classList.add(element.class);
 
     if (element.class === headerArticleId) {
-      // console.log("id svp : ", headerArticleId);
       link.classList.add("active");
     }
 
@@ -104,7 +103,4 @@ export function createFinalHeader(headerArticle, screenSize = "small-screen") {
     header.append(navigation);
     return header;
   }
-  // if (screenSize === "small-screen") {
-  //   console.log("hola?");
-  // }
 }

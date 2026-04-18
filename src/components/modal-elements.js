@@ -6,8 +6,6 @@ import {
 import { tags } from "../assets/data/tags.js";
 
 export function createProjectModal(project) {
-  console.log(project);
-
   const card = document.createElement("div");
   card.classList.add("modal");
   // createFigure(card, project);
@@ -22,7 +20,6 @@ export function createProjectModal(project) {
   const divTitle = document.createElement("div");
   divTitle.classList.add("modal-title");
   const closeBtn = document.createElement("i");
-  // console.log("tags closed", tags.closed.icon);
   // card.append(figure);
   cardHeader.append(figure);
 
@@ -36,7 +33,6 @@ export function createProjectModal(project) {
   card.append(cardHeader);
 
   const dateElement = document.createElement("h3");
-  console.log(project.createdAt);
   const creationDate = new Date(project.createdAt).toLocaleDateString("fr-FR", {
     month: "long",
     year: "numeric",
@@ -51,7 +47,6 @@ export function createProjectModal(project) {
     createCardLinks(card, project);
   }
   if (project.link || project.successCertificate) {
-    console.log("coucou allo?");
     createCardLinks(card, project, false);
   }
   createCardTags(card, project, true);

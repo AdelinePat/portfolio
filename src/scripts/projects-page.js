@@ -72,9 +72,6 @@ loader.reset(filterableArticles);
 
 const filterDiv = createFilterDiv(sectionTitleContainer, allCategories);
 toggleFilterDiv(sectionTitleElement, filterDiv);
-
-// console.log(articles);
-
 initTagFilterHandler(
   sectionTitleElement,
   sectionElement,
@@ -113,6 +110,5 @@ function displayTitleAndDate() {
       });
     }
     console.log(title, date, project?.firstCreatedAt ? otherDate : "");
-    // console.log(project.tags);
   }
 }

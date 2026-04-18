@@ -6,7 +6,6 @@ export function createInfiniteLoader({
   onBatchLoaded, // callback after a batch is loaded
 }) {
   let data = []; // current list (filtered or not)
-  console.log(data);
   let loadedCount = 0;
   let observer = null;
   let sentinel = null;
@@ -19,7 +18,6 @@ export function createInfiniteLoader({
 
   function loadNextBatch() {
     const next = data.slice(loadedCount, loadedCount + batchSize);
-    console.log(data, next);
     loadedCount += batchSize;
 
     // Let the parent script add cards to the DOM

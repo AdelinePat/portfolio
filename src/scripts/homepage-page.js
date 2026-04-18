@@ -24,7 +24,6 @@ aside.append(header, footer);
 
 // FOOTER AND NAV SMALL SCREEN
 const navigationFooter = createNav(headerContents.homepage.id);
-console.log("navfooter: ", navigationFooter);
 const footerPhone = createFooter();
 footerPhone.prepend(navigationFooter);
 body.append(footerPhone);

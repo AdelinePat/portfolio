@@ -12,7 +12,6 @@ function closeMenu(mobileMenuDOM) {
 }
 
 function toggleMobileMenu(mobileMenuDOM) {
-  console.log("test : ", mobileMenuDOM);
   if (isMenuOpen) {
     closeMenu(mobileMenuDOM);
   } else {
