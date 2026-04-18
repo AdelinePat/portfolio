@@ -30,6 +30,7 @@ const icons = {
   virtualization: "",
   // DevOPS
   docker: `<i class="fa-brands fa-docker"></i>`,
+  githubActions: `<i class="devicon-githubactions-plain"></i>`,
   // Design
   figma: `<i class="fa-brands fa-figma"></i>`,
   photoshop: `<i class="devicon-photoshop-plain"></i>`,
@@ -61,6 +62,7 @@ const icons = {
   javaFX: "",
   sfml: "",
   sdl: "",
+  qt: `<i class="devicon-qt-original"></i>`,
   // Web languages
   html: `<i class="fa-brands fa-html5"></i>`,
   css: `<i class="fa-brands fa-css3-alt"></i>`,
@@ -407,6 +409,11 @@ export const tags = {
     icon: icons.sdl,
     category: categories.software,
   },
+  qt: {
+    name: "Qt",
+    icon: icons.qt,
+    category: categories.software,
+  },
   //    Python
   python: {
     name: "Python",
@@ -460,6 +467,11 @@ export const tags = {
   docker: {
     name: "Docker",
     icon: icons.docker,
+    category: categories.devops,
+  },
+  githubActions: {
+    name: "Github Actions",
+    icon: icons.githubActions,
     category: categories.devops,
   },
 };

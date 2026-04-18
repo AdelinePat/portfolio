@@ -521,47 +521,83 @@ export const projects = [
   {
     title: "Brick Breaker",
     display: true,
-    img: "./assets/project_img/brick_breaker_project.png",
+    img: "https://raw.githubusercontent.com/AdelinePat/brick-breaker/refs/heads/main/img/breakbreaker.jpg",
     altImg: "Capture d'écran du projet Brick Breaker",
-    createdAt: "2025-11-10T10:00:00.000Z",
-    content:
-      "<p>Le projet vise à proposer un jeu Brick Breaker fonctionnel " +
-      "et facilement exécutable. Après avoir lancé le serveur X et le conteneur Docker, " +
-      "une fenêtre graphique s'ouvre sur la machine hôte, affichant le jeu : une balle, une " +
-      "raquette contrôlable, des briques avec durabilité, et une gestion des vies. Cela permet " +
-      "de tester immédiatement le gameplay et de visualiser concrètement les objectifs atteints par le projet.</p>",
+    createdAt: "2025-11-29T10:00:00.000Z",
+    content: "<p>Projet de groupe de deuxième année de Bachelor consistant à " +
+      "développer un jeu 2D de type Brick Breaker en C++ avec la bibliothèque SFML, " +
+      "le tout conteneurisé avec Docker pour garantir une exécution multiplateforme.</p>" +
+      "<p>L'objectif de ce projet était de renforcer nos compétences en programmation " +
+      "orientée objet et en architecture logicielle appliquée au jeu vidéo, sans utiliser " +
+      "de moteur de jeu. Le jeu intègre les mécaniques classiques du genre : contrôle de la raquette, " +
+      "gestion des collisions et de la physique de la balle, ainsi que génération dynamique de " +
+      "briques avec un système de durabilité.</p>" +
+      "<p>L'architecture repose sur une organisation modulaire (GameManager, Ball, " +
+      "Paddle, BrickFactory, etc.), assurant une séparation claire des responsabilités et une meilleure " +
+      "maintenabilité du code. Le projet inclut également une chaîne de compilation complète avec " +
+      "CMake et une exécution via Docker, garantissant un environnement de développement reproductible " +
+      "sur différentes machines.</p>" +
+      "<p>Ce projet m'a permis de consolider mes compétences en C++, en conception " +
+      "logicielle et en gestion d'environnements de développement pour applications graphiques.</p>",
     code: "https://github.com/AdelinePat/brick-breaker",
     demo: "",
-    tags: [
-      tags.cpp,
-      tags.cmake,
-      tags.docker,
-      tags.sfml,
-      tags.teamwork,
-      tags.school,
-      tags.git,
-    ],
+    tags: [tags.cpp, tags.docker, tags.cmake, tags.sfml, tags.oop, tags.school, tags.teamwork, tags.git],
   },
   {
-    title: "2048",
+    title: "Tile Twister",
     display: true,
-    img: "https://github.com/AdelinePat/2048-tile-twister/blob/main/assets/img/2048_win.png?raw=true",
-    altImg: "Capture d'écran du projet 2048",
+    img: "https://raw.githubusercontent.com/AdelinePat/2048-tile-twister/refs/heads/main/assets/img/2048_win.png",
+    altImg: "Capture d'écran du projet Tile Twister",
     createdAt: "2025-12-19T10:00:00.000Z",
-    content: "",
+    content: "<p>Projet de groupe de développement d'un clone du jeu 2048 en C++17 " +
+      "avec SDL3, axé sur la conception d'une architecture claire et la gestion d'un affichage " +
+      "graphique fluide.</p>" +
+      "<p>L'objectif de ce projet était de recréer fidèlement les mécaniques du jeu original " +
+      "tout en structurant le code selon une séparation logique entre la logique métier et " +
+      "l'interface graphique. Le jeu repose sur une grille 4x4, la fusion des tuiles identiques " +
+      "et la gestion des états de victoire et de défaite en temps réel.</p>" +
+      "<p>L'architecture suit un découpage de type MVC avec une séparation entre le cœur " +
+      "du jeu (Game, Grid, Tile) et la couche d'affichage (Window, GridView, TileView), facilitant " +
+      "la maintenabilité et l'évolution du projet. L'ensemble est compilé avec CMake et conteneurisé " +
+      "via Docker pour assurer une exécution simple et reproductible sur différents environnements.</p>" +
+      "<p>Ce projet m'a permis de renforcer mes compétences en C++, en conception d'architecture logicielle " +
+      "et en utilisation de SDL pour le développement d'interfaces graphiques.</p>",
     code: "https://github.com/AdelinePat/2048-tile-twister",
     demo: "",
-    tags: [
-      tags.cpp,
-      tags.integrationTest,
-      tags.docker,
-      tags.sdl,
-      tags.cmake,
-      tags.teamwork,
-      tags.school,
-      tags.git,
-    ],
+    tags: [tags.cpp, tags.docker, tags.cmake, tags.sdl, tags.oop, tags.school, tags.teamwork, tags.git],
   },
+  {
+    title: "WizzMania",
+    display: true,
+    img: "https://raw.githubusercontent.com/AdelinePat/wizzMania/refs/heads/main/assets/login.png",
+    altImg: "Capture d'écran du projet WizzMania",
+    createdAt: "2026-03-30T10:00:00.000Z",
+    content: `<p>Projet de groupe de deuxième année de Bachelor, réalisation d'une application de messagerie ` +
+      `instantanée en temps réel inspirée de MSN Messenger, développée en C++ (serveur) ` +
+      `et Qt (client).</p>` +
+      `<p>Ce projet s'est distingué par une implication technique complète sur la partie ` +
+      `serveur. L'architecture repose sur une ` +
+      `approche <strong>Domain-Driven Design (DDD)</strong> structurée en plusieurs domaines métier ` +
+      `(authentification, messages, channels, invitations, websocket), avec une attention ` +
+      `particulière portée à la séparation des responsabilités et à la conception d'une <a target="_blank" rel="noopener" href="https://github.com/AdelinePat/wizzMania/blob/main/docs/backend_API.md">API claire et cohérente</a>.</p>` +
+      `<p>Le serveur gère une communication hybride <strong>HTTP/WebSocket</strong> avec <strong>authentification ` +
+      `JWT</strong>, gestion des utilisateurs, channels, messages en temps réel et notifications` +
+      ` multi-devices. L'ensemble est conteneurisé avec Docker, incluant la base de données ` +
+      ` MySQL et un pipeline de build garantissant un environnement reproductible et une ` +
+      ` exécution stable sur différentes machines.</p>` +
+      `<p>En parallèle du développement, le projet a impliqué la conception de l'architecture ` +
+      `globale, la mise en place de l'environnement de développement, la coordination ` +
+      `de l'équipe, ainsi que des revues de code approfondies pour accompagner l'implémentation ` +
+      `du client et garantir la cohérence du système complet. Une chaîne de build et de ` +
+      `<a  target="_blank" rel="noopener" href="https://github.com/AdelinePat/wizzMania/releases">release ` +
+      `multiplateforme (Windows/Linux)</a> a également été mise en place avec des Github Actions.</p>` +
+      `<p>Ce projet m'a permis de consolider des compétences avancées en <a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/AdelinePat/wizzMania/refs/heads/main/docs/server_architecture.png">conception d'architecture</a> ` +
+      `logicielle, développement backend C++, gestion de projet technique et mise en production ` +
+      `d'une application distribuée en conditions proches d'un environnement réel.</p>`,
+    code: "https://github.com/AdelinePat/wizzMania",
+    demo: "",
+    tags: [tags.qt, tags.githubActions, tags.docker, tags.cmake, tags.cpp, tags.oop, tags.school, tags.teamwork, tags.git],
+  }
 ];
 
 const articleTemplate = {
@@ -575,3 +611,4 @@ const articleTemplate = {
   demo: "",
   tags: [],
 };
+

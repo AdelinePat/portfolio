@@ -13,28 +13,52 @@ export const certificationTags = {
     icon: "",
   },
   // JAVASCRIPT
-  dom: {
-    name: "Manipulation du DOM",
+  hoisting: {
+    name: "Hoisting (declaration lifting)",
     icon: "",
   },
-  eventloop: {
-    name: "Event loop",
-    icon: "",
-  },
-  event: {
-    name: "Programmation événementielle",
-    icon: "",
-  },
-  request: {
-    name: "fetch et XMLHttpRequest",
+  esModule: {
+    name: "ES module",
     icon: "",
   },
   prototypalInheritance: {
     name: "Héritage prototypal",
     icon: "",
   },
+  callback: {
+    name: "Callback",
+    icon: "",
+  },
+  event: {
+    name: "Programmation événementielle",
+    icon: "",
+  },
+  eventLoop: {
+    name: "Event loop",
+    icon: "",
+  },
   promise: {
-    name: "Programmation asynchrone : promesses",
+    name: "Promise",
+    icon: "",
+  },
+  asyncAwait: {
+    name: "async/await",
+    icon: "",
+  },
+  request: {
+    name: "fetch et XMLHttpRequest",
+    icon: "",
+  },
+  closure: {
+    name: "Closure",
+    icon: "",
+  },
+  eventPropagation: {
+    name: "Event propagation",
+    icon: "",
+  },
+  dom: {
+    name: "Manipulation du DOM",
     icon: "",
   },
   // DOCKER

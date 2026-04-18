@@ -129,19 +129,25 @@ export const certifications = [
     img: "./assets/certifications_img/javascript.png",
     altImg: "Certification Dyma Javascript",
     createdAt: "2025-12-21T10:00:00.000Z",
-    content: `<p>Certification réalisée sur <strong>Dyma.fr</strong></p>
-    <p>Lien vers la formation suivie ainsi que le certificat de réussite juste en dessous.</p>`,
+    content: `<p>Certification réalisée sur Dyma.fr</p>
+    <p>Lien vers la formation suivie ainsi que le certification de réussite juste en dessous.</p>`,
     link: "https://dyma.fr/formations/javascript",
     successCertificate:
       "https://dyma.fr/certification/67cd546795b4574e36077859/5de1a78332cf6b3128beee34",
     tags: [
       tags.javascript,
-      certificationTags.dom,
-      certificationTags.event,
-      certificationTags.eventloop,
+      certificationTags.eventLoop,
       certificationTags.promise,
+      certificationTags.asyncAwait,
+      certificationTags.event,
       certificationTags.request,
+      certificationTags.callback,
+      certificationTags.closure,
+      certificationTags.hoisting,
+      certificationTags.esModule,
       certificationTags.prototypalInheritance,
+      certificationTags.eventPropagation,
+      certificationTags.dom,
     ],
   },
 ];
