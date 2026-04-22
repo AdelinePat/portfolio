@@ -3,7 +3,7 @@ const tagBtnClass = "btn-reversed-primary-lighter";
 export function createFilterDiv(sectionTitleContainer, allCategories) {
   const filterDiv = document.createElement("div");
 
-  filterDiv.classList.add("filter-list", "mb-5");
+  filterDiv.classList.add("filter-list");
   const firstSpan = document.createElement("span");
   firstSpan.innerText = "Tous";
   firstSpan.classList.add("all", tagBtnClass);

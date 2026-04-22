@@ -3,8 +3,31 @@ import { updateTitle, createAllCards } from "../components/project-elements.js";
 export function toggleFilterDiv(sectionTitleElement, filterDiv) {
   sectionTitleElement.addEventListener("click", (event) => {
     const span = sectionTitleElement.querySelector("span");
-    if (span.contains(event.target)) {
-      filterDiv.classList.toggle("hidden");
+    if (!span.contains(event.target)) return;
+    const isHidden = filterDiv.classList.contains("hidden");
+
+    if (isHidden) {
+      // 1. Put it back in the layout (but still transparent + shifted up)
+      filterDiv.classList.remove("hidden");
+
+      // 2. Double rAF: ensures the browser paints it *before* we transition
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          filterDiv.classList.add("visible");
+        });
+      });
+    } else {
+      // 1. Trigger the reverse transition
+      filterDiv.classList.remove("visible");
+
+      // 2. Once the transition ends, pull it fully out of layout
+      filterDiv.addEventListener(
+        "transitionend",
+        () => {
+          filterDiv.classList.add("hidden");
+        },
+        { once: true },
+      );
     }
   });
 }
@@ -15,7 +38,7 @@ export function initTagFilterHandler(
   filterDiv,
   activeFilter,
   articles,
-  onFilterChange
+  onFilterChange,
 ) {
   filterDiv.addEventListener("click", (event) => {
     const span = event.target.closest("span");
@@ -33,7 +56,7 @@ export function initTagFilterHandler(
       updateTitle(
         sectionTitleElement,
         result,
-        articles.at(0).code ? true : false
+        articles.at(0).code ? true : false,
       );
       onFilterChange(result);
     }
