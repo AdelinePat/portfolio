@@ -2,27 +2,61 @@
 @use "../base/helpers" as *;
 
 .section-title-container {
+  display: grid;
+  // grid-area: ;
+  grid:
+    "section-title" auto
+    "filters" auto
+    / auto;
+  // background: blue;
   position: relative;
   word-break: keep-all;
+  margin-bottom: 3.2rem;
+  .title-filter {
+    grid-area: section-title;
+  }
   .filter-list {
+    // background: rgba(255,0,0,0.5);
+    grid-area: filters;
+    margin-top: 0.5rem;
     display: flex;
-    // top: 0;
     justify-content: center;
     align-content: center;
     flex-wrap: wrap;
-    margin-top: -3.4rem;
-    transition: height 0.5s ease, opacity 0.5s ease, transform 0.5s ease; // adjust duration and easing
-    opacity: 1;
-    transform: translateY(0);
-    height: auto;
+    // Default = hidden but in DOM
+    opacity: 0;
+    transform: translateY(-0.8rem);
+    pointer-events: none;
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease;
+
+    &.visible {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
 
     &.hidden {
-      // top: -5rem;
-      height: 0px;
-      transition: none;
-      opacity: 0;
-      transform: translateY(-0.8rem);
-      pointer-events: none; // prevents interaction while hidden
+      display: none; // fully out of layout when not animating
     }
+    // margin-top: -3.4rem;
+    // transition:
+    //   height 0.5s ease,
+    //   opacity 0.5s ease,
+    //   transform 0.5s ease; // adjust duration and easing
+    // opacity: 1;
+    // transform: translateY(0);
+    // height: auto;
+
+    // &.hidden {
+    //   // top: -5rem;
+    //   display: none;
+    //   height: 0px;
+    //   transition: none;
+    //   opacity: 0;
+    //   transform: translateY(-0.8rem);
+    //   pointer-events: none; // prevents interaction while hidden
+    // }
   }
 }
