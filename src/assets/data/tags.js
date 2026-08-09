@@ -30,6 +30,7 @@ const icons = {
   virtualization: "",
   // DevOPS
   docker: `<i class="fa-brands fa-docker"></i>`,
+  podman: `<i class="devicon-podman-plain"></i>`,
   githubActions: `<i class="devicon-githubactions-plain"></i>`,
   // Design
   figma: `<i class="fa-brands fa-figma"></i>`,
@@ -39,6 +40,7 @@ const icons = {
   sql: `<i class="fa-solid fa-database"></i>`,
   mysql: `<i class="devicon-mysql-original"></i>`,
   postgresql: `<i class="devicon-postgresql-plain"></i>`,
+  timescaledb: ``,
   kafka: `<i class="devicon-apachekafka-original"></i>`,
   // C & C++
   c: "",
@@ -52,6 +54,8 @@ const icons = {
   junit: `<i class="devicon-junit-plain-wordmark"></i>`,
   springboot: `<i class="devicon-spring-original"></i>`,
   thymeleaf: `<i class="devicon-thymeleaf-plain"></i>`,
+  // kotlin
+  kotlin: `<i class="devicon-kotlin-plain"></i>`,
   // Python
   python: `<i class="fa-brands fa-python"></i>`,
   // GUI or output
@@ -336,8 +340,13 @@ export const tags = {
   // Software
   //    Java
   java: {
-    name: "java",
+    name: "Java",
     icon: icons.java,
+    category: categories.software,
+  },
+  kotlin: {
+    name: "Kotlin",
+    icon: icons.kotlin,
     category: categories.software,
   },
   maven: {
@@ -447,6 +456,11 @@ export const tags = {
     icon: icons.postgresql,
     category: categories.databases,
   },
+  timescaledb: {
+    name: "TimescaleDB",
+    icon: icons.timescaledb,
+    category: categories.databases,
+  },
   kafka: {
     name: "Kafka",
     icon: icons.kafka,
@@ -467,6 +481,11 @@ export const tags = {
   docker: {
     name: "Docker",
     icon: icons.docker,
+    category: categories.devops,
+  },
+  podman: {
+    name: "Podman",
+    icon: icons.podman,
     category: categories.devops,
   },
   githubActions: {
