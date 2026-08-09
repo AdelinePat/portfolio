@@ -2,8 +2,8 @@ import { tags } from "./tags.js";
 
 export const highlights = [
   tags.docker,
-  tags.java,
   tags.cpp,
+  tags.java,
   tags.mysql,
   tags.visualStudioCode,
 ];
@@ -15,16 +15,24 @@ export const hardskills = [
     tags: [
       tags.git,
       tags.docker,
-      tags.nodejs,
       tags.visualStudioCode,
       tags.intelliJ,
     ],
+  },
+  {
+    title: "Runtimes et middlewares",
+    display: true,
+    tags: [
+      tags.nodejs,
+      tags.kafka
+    ]
   },
   {
     title: "Langages",
     display: true,
     tags: [
       tags.java,
+      tags.kotlin,
       tags.cpp,
       tags.python,
       tags.javascript,
@@ -37,7 +45,7 @@ export const hardskills = [
   {
     title: "Base de données",
     display: true,
-    tags: [tags.sql, tags.mysql, tags.postgresql, tags.kafka],
+    tags: [tags.sql, tags.mysql, tags.postgresql],
   },
   {
     title: "Systèmes d'exploitation",
@@ -51,7 +59,7 @@ export const hardskills = [
   },
   {
     title: "Design",
-    display: true,
+    display: false,
     tags: [tags.photoshop, tags.illustrator, tags.figma],
   },
 ];

@@ -45,7 +45,7 @@ export function createCard(project) {
   createCardTitle(card, project);
   createFigure(card, project);
 
-  if (project.code || project.demo) {
+  if (project.code || project.demo || project.release) {
     createCardLinks(card, project);
   }
   createCardTags(card, project);
@@ -105,6 +105,11 @@ export function createCardLinks(card, project, isProject = true) {
     if (project.demo) {
       const demoLink = createLink(project.demo, "Live Demo");
       linkDiv.append(demoLink);
+    }
+
+    if (project.release) {
+      const releaseLink = createLink(project.release, "Release");
+      linkDiv.append(releaseLink);
     }
   } else {
     if (project.link) {

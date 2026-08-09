@@ -17,6 +17,7 @@ const portfolio = {
     "L'environnement de développement utilise <strong>Docker</strong>, et le projet est construit avec <strong>Node</strong> et <strong>Vite</strong>.</p>" +
     "<p>Le portfolio est <strong>déployé sur GitHub Pages</strong> grâce à une intégration continue via <strong>GitHub Actions</strong>.</p>",
   code: "https://github.com/AdelinePat/portfolio",
+  release: "",
   demo: "",
   tags: [
     tags.sass,
@@ -41,6 +42,7 @@ export const projects = [
       "<p>Projet dans le cadre de la formation La Plateforme_ . Apprentissage des différents " +
       "composants hardware : CPU, GPU, refroidissement... utilisation de VMware, installation de windows 11 et Debian en utilisant un dual boot.</p>",
     code: "",
+    release: "",
     demo: "",
     tags: [
       tags.linux,
@@ -63,6 +65,7 @@ export const projects = [
       "Deuxième version du bot : l'algorithme liste tous les emplacements disponibles restants " +
       "et choisi au hasard un emplacement avec le module random.</p>",
     code: "https://github.com/AdelinePat/tictactoe",
+    release: "",
     demo: "",
     tags: [tags.python, tags.algorithmic, tags.school, tags.git],
   },
@@ -76,6 +79,7 @@ export const projects = [
       "<p>Premier projet HTML et CSS, réalisation d'un site pour une fleuriste nommée Bloom Petals.</p><p>" +
       "Apprentissage des balises HTML5 et bonnes pratiques</p>",
     code: "https://github.com/AdelinePat/webdesign-fleuriste",
+    release: "",
     demo: "https://adelinepat.github.io/webdesign-fleuriste/",
     tags: [tags.html, tags.css, tags.figma, tags.school, tags.git],
   },
@@ -89,6 +93,7 @@ export const projects = [
       "<p>Création d'un fansite sur blackpink, projet individuel lié au projet Fansite en groupe.</p><p>" +
       "Utilisation des pseudo classes et des transitions</p>",
     code: "https://github.com/AdelinePat/fansite",
+    release: "",
     demo: "https://adelinepat.github.io/fansite/fansite1.html",
     tags: [tags.html, tags.css, tags.figma, tags.school, tags.git],
   },
@@ -110,6 +115,7 @@ export const projects = [
       "dehors de l'école, causant une perte de temps et de la mauvaise humeur lorsque " +
       "l'utilisateur découvre que toutes les machines sont en pannes.</p>",
     code: "",
+    release: "",
     demo: "",
     tags: [tags.ideation, tags.teamwork, tags.school],
   },
@@ -126,6 +132,7 @@ export const projects = [
       `Utilisation du DOM (Document Object Model), modification du contenu html selon certaines conditions ` +
       `(au niveau du score), utilisation d'une regex pour le formulaire.`,
     code: "https://github.com/AdelinePat/AzerType",
+    release: "",
     demo: "https://adelinepat.github.io/AzerType/",
     tags: [tags.regex, tags.personal, tags.javascript],
   },
@@ -141,6 +148,7 @@ export const projects = [
       "Utilisation du try except, gestion des diverses exceptions possible " +
       "(ZeroDivisionError, gestion des erreurs possible après traitement par la regex)</p>",
     code: "https://github.com/AdelinePat/my_calculator",
+    release: "",
     demo: "",
     tags: [
       tags.python,
@@ -162,6 +170,7 @@ export const projects = [
       "<p>Réalisation d'un jeu du pendu avec python en utilisant l'interface graphique Pygame.</p><p>" +
       "Utilisation d'un fichier Json pour enregistrer les scores et les  supprimer.</p>",
     code: "https://github.com/AdelinePat/hangman",
+    release: "",
     demo: "",
     tags: [tags.python, tags.pygame, tags.teamwork, tags.school, tags.git],
   },
@@ -177,6 +186,7 @@ export const projects = [
       "Création de plusieurs classes (fruits, boutons) et utilisation de " +
       "l'<strong>héritage</strong> (bouton_image hérite de bouton)</p>",
     code: "https://github.com/AdelinePat/typing-game",
+    release: "",
     demo: "",
     tags: [
       tags.oop,
@@ -202,6 +212,7 @@ export const projects = [
       "Sauvegarde des données dans des json (traduction des objets en " +
       "dictionnaire) puis instanciation des objets depuis les fichiers json</p>",
     code: "https://github.com/AdelinePat/pokemon",
+    release: "",
     demo: "",
     tags: [
       tags.oop,
@@ -228,6 +239,7 @@ export const projects = [
       "Création de compte client et bancaire, regex pour les emails et les mots de passe, " +
       "hashage avec sallage des mots de passe avant de les enregistrer en base de donnée.</p>",
     code: "https://github.com/AdelinePat/budget_buddy",
+    release: "",
     demo: "",
     tags: [
       tags.mysql,
@@ -255,6 +267,7 @@ export const projects = [
       "Programmation orientée objet. Utilisation de la récursivité pour découvrir en chaîne les cases libres.</p><p>" +
       "Score enregistré dans un json</p>",
     code: "https://github.com/AdelinePat/minesweeper",
+    release: "",
     demo: "",
     tags: [
       tags.oop,
@@ -277,6 +290,7 @@ export const projects = [
     content:
       "<p>Projet d'entraînement <a href='https://dyma.fr/formations/cpp' target='_blank' rel='noopener'>à la certification C++ de Dyma</a> à C++ , utilisant un simple menu, des namespaces</p>",
     code: "https://github.com/AdelinePat/rock-paper-scissors",
+    release: "",
     demo: "",
     tags: [tags.cmake, tags.cpp, tags.console, tags.personal],
   },
@@ -295,6 +309,7 @@ export const projects = [
       "de fonction permettant de donner l'accès aux utilisateurs aux channels publics.</p><p>" +
       "Utilisation de GTK3 pour l'interface graphique</p>",
     code: "https://github.com/AdelinePat/myDiscord",
+    release: "",
     demo: "",
     tags: [
       tags.postgresql,
@@ -318,6 +333,7 @@ export const projects = [
       "Réalisation des actions CRUD dans un fichier csv.</p><p>" +
       "Gestion des erreurs</p>",
     code: "https://github.com/AdelinePat/todolist_cpp",
+    release: "",
     demo: "",
     tags: [tags.cpp, tags.cmake, tags.console, tags.personal],
   },
@@ -335,6 +351,7 @@ export const projects = [
       "Chaque ennemi gère son propre mouvement, abstraction et polymorphisme utilisé</p><p>" +
       "Factory pour création des trois différents type de tours, même principe que pour les ennemis</p>",
     code: "https://github.com/AdelinePat/tower-defense",
+    release: "",
     demo: "",
     tags: [
       tags.cpp,
@@ -358,6 +375,7 @@ export const projects = [
       "Conversion d'une lettre vers les bases : décimal (ASCII), hexadécimal, octal et binaire</p><p>" +
       "Possibilité d'utiliser le chiffrement de césar avec la clé au choix de l'utilisateur.</p>",
     code: "https://github.com/AdelinePat/globalConverter",
+    release: "",
     demo: "",
     tags: [
       tags.java,
@@ -385,6 +403,7 @@ export const projects = [
       "Regex pour le mot de passe </p><p>" +
       "Utilisation de javafx pour l'interface graphique et de Maven pour les dépendances du projets</p>",
     code: "https://github.com/AdelinePat/LaPlateformeTracker",
+    release: "",
     demo: "",
     tags: [
       tags.maven,
@@ -412,6 +431,7 @@ export const projects = [
       "Le design général a été donné lors du cours, mais l'utilisation et création des mixin et " +
       "l'utisation de l'héritage pour les barres de compétences ont été des rajouts que j'ai trouvé plus intéressant que le template proposés.</p>",
     code: "https://github.com/AdelinePat/resume",
+    release: "",
     demo: "https://adelinepat.github.io/resume/",
     tags: [tags.sass, tags.personal, tags.html],
   },
@@ -432,6 +452,7 @@ export const projects = [
       "Ce projet m'a également permis de renforcer mes compétences en débogage, en manipulation du DOM, " +
       "et de m'initier à Docker pour des environnements de développement reproductibles.</p>",
     code: "https://github.com/AdelinePat/todolist_js",
+    release: "",
     demo: "https://adelinepat.github.io/todolist_js/",
     tags: [tags.javascript, tags.docker, tags.personal, tags.css, tags.html],
   },
@@ -452,6 +473,7 @@ export const projects = [
       "Cette expérience m'a permis de renforcer mes compétences en Java, Spring Boot, JPA/Hibernate, Thymeleaf, " +
       "sécurité applicative et containerisation avec Docker pour des environnements de développement reproductibles.</p>",
     code: "https://github.com/AdelinePat/overlook_hotel",
+    release: "",
     demo: "",
     tags: [
       tags.springboot,
@@ -486,6 +508,7 @@ export const projects = [
       "Ce projet m'a permis de renforcer mes compétences en Unity, C#, design d'interface " +
       "et structuration de code orienté jeu vidéo.</p>",
     code: "https://github.com/AdelinePat/uniquest/",
+    release: "",
     demo: "",
     tags: [
       tags.unity,
@@ -515,6 +538,7 @@ export const projects = [
       "Ce projet m'a permis de renforcer mes compétences en JavaScript, API, et gestion d'interactions " +
       "complexes côté client.</p>",
     code: "https://github.com/AdelinePat/blog_project/",
+    release: "",
     demo: "",
     tags: [tags.javascript, tags.docker, tags.sass, tags.html, tags.personal],
   },
@@ -524,7 +548,8 @@ export const projects = [
     img: "https://raw.githubusercontent.com/AdelinePat/brick-breaker/refs/heads/main/img/breakbreaker.jpg",
     altImg: "Capture d'écran du projet Brick Breaker",
     createdAt: "2025-11-29T10:00:00.000Z",
-    content: "<p>Projet de groupe de deuxième année de Bachelor consistant à " +
+    content:
+      "<p>Projet de groupe de deuxième année de Bachelor consistant à " +
       "développer un jeu 2D de type Brick Breaker en C++ avec la bibliothèque SFML, " +
       "le tout conteneurisé avec Docker pour garantir une exécution multiplateforme.</p>" +
       "<p>L'objectif de ce projet était de renforcer nos compétences en programmation " +
@@ -540,8 +565,18 @@ export const projects = [
       "<p>Ce projet m'a permis de consolider mes compétences en C++, en conception " +
       "logicielle et en gestion d'environnements de développement pour applications graphiques.</p>",
     code: "https://github.com/AdelinePat/brick-breaker",
+    release: "",
     demo: "",
-    tags: [tags.cpp, tags.docker, tags.cmake, tags.sfml, tags.oop, tags.school, tags.teamwork, tags.git],
+    tags: [
+      tags.cpp,
+      tags.docker,
+      tags.cmake,
+      tags.sfml,
+      tags.oop,
+      tags.school,
+      tags.teamwork,
+      tags.git,
+    ],
   },
   {
     title: "Tile Twister",
@@ -549,7 +584,8 @@ export const projects = [
     img: "https://raw.githubusercontent.com/AdelinePat/2048-tile-twister/refs/heads/main/assets/img/2048_win.png",
     altImg: "Capture d'écran du projet Tile Twister",
     createdAt: "2025-12-19T10:00:00.000Z",
-    content: "<p>Projet de groupe de développement d'un clone du jeu 2048 en C++17 " +
+    content:
+      "<p>Projet de groupe de développement d'un clone du jeu 2048 en C++17 " +
       "avec SDL3, axé sur la conception d'une architecture claire et la gestion d'un affichage " +
       "graphique fluide.</p>" +
       "<p>L'objectif de ce projet était de recréer fidèlement les mécaniques du jeu original " +
@@ -563,8 +599,19 @@ export const projects = [
       "<p>Ce projet m'a permis de renforcer mes compétences en C++, en conception d'architecture logicielle " +
       "et en utilisation de SDL pour le développement d'interfaces graphiques.</p>",
     code: "https://github.com/AdelinePat/2048-tile-twister",
+    release: "",
     demo: "",
-    tags: [tags.cpp, tags.docker, tags.cmake, tags.sdl, tags.oop, tags.school, tags.teamwork, tags.git],
+    tags: [
+      tags.cpp,
+      tags.docker,
+      tags.integrationTest,
+      tags.cmake,
+      tags.sdl,
+      tags.oop,
+      tags.school,
+      tags.teamwork,
+      tags.git,
+    ],
   },
   {
     title: "WizzMania",
@@ -572,7 +619,8 @@ export const projects = [
     img: "https://raw.githubusercontent.com/AdelinePat/wizzMania/refs/heads/main/assets/login.png",
     altImg: "Capture d'écran du projet WizzMania",
     createdAt: "2026-03-30T10:00:00.000Z",
-    content: `<p>Projet de groupe de deuxième année de Bachelor, réalisation d'une application de messagerie ` +
+    content:
+      `<p>Projet de groupe de deuxième année de Bachelor, réalisation d'une application de messagerie ` +
       `instantanée en temps réel inspirée de MSN Messenger, développée en C++ (serveur) ` +
       `et Qt (client).</p>` +
       `<p>Ce projet s'est distingué par une implication technique complète sur la partie ` +
@@ -595,9 +643,61 @@ export const projects = [
       `logicielle, développement backend C++, gestion de projet technique et mise en production ` +
       `d'une application distribuée en conditions proches d'un environnement réel.</p>`,
     code: "https://github.com/AdelinePat/wizzMania",
+    release: "https://github.com/AdelinePat/wizzMania/releases",
     demo: "",
-    tags: [tags.qt, tags.githubActions, tags.docker, tags.cmake, tags.cpp, tags.oop, tags.school, tags.teamwork, tags.git],
-  }
+    tags: [
+      tags.qt,
+      tags.githubActions,
+      tags.unitaryTest,
+      tags.docker,
+      tags.cmake,
+      tags.cpp,
+      tags.oop,
+      tags.school,
+      tags.teamwork,
+      tags.mysql,
+      tags.git,
+    ],
+  },
+  {
+    title: "Inferno",
+    display: true,
+    img: "https://github.com/AdelinePat/inferno/blob/main/_docs/dashboard/dashboard_screenshot.png?raw=true",
+    altImg: "Capture d'écran du projet Inferno",
+    createdAt: "2026-08-04T10:00:00.000Z",
+    content: `<p>Inferno est une <strong>plateforme de monitoring distribuée</strong> coordonnant des agents système, un serveur central et un dashboard pour l'interface graphique via un protocole binaire personnalisé.</p>
+
+<p>L'architecture repose sur la <strong>programmation événementielle sans threads</strong>. Le serveur multiplex les connexions via epoll, l'agent gère son event loop avec poll/WSAPoll.</p>
+
+<p>Le <strong>protocole binaire</strong> décrit les structures et leur format sur le réseau ainsi que les règles de communication. Il est divisé en deux parties : les structures entre dashboard et serveur, et les structures entre serveur et agents (<a href="https://github.com/AdelinePat/inferno/blob/main/_docs/project/lptf_binary_protocol.md">voir spécification du protocole</a>). Le protocole gère le chunking des réponses volumineuses et limite leur taille. Les <a href="https://github.com/AdelinePat/inferno/tree/main/_docs/protocol">diagrammes de séquence</a> pour chaque type d'interaction (registration, commandes, métriques, disconnexion) sont documentés.</p>
+
+<p>Le serveur s'organise en <strong>domaines métier</strong> (agents, commandes, réponses, métriques) avec un dispatcher central capable de router les requêtes du dashboard vers un agent cible, collecter les réponses, les persister et les renvoyer au dashboard. Chaque domaine encapsule sa logique et ses repositories (<a href="https://github.com/AdelinePat/inferno/tree/main/_docs/server">architecture du serveur</a>).</p>
+
+<p>L'agent possède également un dispatcher pour router et exécuter les commandes. Son metrics controller est appelé directement par la boucle événementielle pour orchestrer la collecte — le stream de métriques est démarré ou arrêté via le dispatcher, mais l'appel de la collecte n'y passe pas (<a href="https://github.com/AdelinePat/inferno/tree/main/_docs/agent">architecture de l'agent</a>).</p>
+
+<p>Le dashboard est réalisé avec Qt en utilisant les abstractions de sockets cross-platform fournies par la librairie transport partagée.</p>
+
+<p>Le développement a suivi une <strong>approche TDD</strong> avec couverture test par composant. L'infrastructure repose sur Docker avec une pipeline multi-étapes compilant et testant chaque composant avant production (<a href="https://github.com/AdelinePat/inferno/tree/main#how-are-agent-and-server-built">pipeline de build</a>). Une GitHub Action a été mise en place pour générer les releases avec des appImages pour Linux.</p>`,
+    code: "https://github.com/AdelinePat/inferno",
+    release: "https://github.com/AdelinePat/inferno/releases",
+    demo: "",
+    tags: [
+      tags.timescaledb,
+      tags.githubActions,
+      tags.docker,
+      tags.socket,
+      tags.qt,
+      tags.postgresql,
+      tags.unitaryTest,
+      tags.integrationTest,
+      tags.cmake,
+      tags.cpp,
+      tags.oop,
+      tags.school,
+      tags.teamwork,
+      tags.git,
+    ],
+  },
 ];
 
 const articleTemplate = {
@@ -608,7 +708,8 @@ const articleTemplate = {
   createdAt: "2026-12-31T10:00:00.000Z",
   content: "",
   code: "",
+  release: "",
+  release: "",
   demo: "",
   tags: [],
 };
-

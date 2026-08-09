@@ -111,8 +111,10 @@ const toolTitle = createTitle("Mes hards skills", "title-primary");
 toolSection.append(toolTitle);
 
 for (const skillSection of hardskills) {
-  const article = createSkillArticle(skillSection);
-  toolSection.append(article);
+  if (skillSection.display) {
+    const article = createSkillArticle(skillSection);
+    toolSection.append(article);
+  }
 }
 
 function createSkillArticle(article) {
