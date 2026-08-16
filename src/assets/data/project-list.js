@@ -665,15 +665,28 @@ export const projects = [
     img: "https://github.com/AdelinePat/inferno/blob/main/_docs/dashboard/dashboard_screenshot.png?raw=true",
     altImg: "Capture d'écran du projet Inferno",
     createdAt: "2026-08-04T10:00:00.000Z",
-    content: `<p>Inferno est une <strong>plateforme de monitoring distribuée</strong> coordonnant des agents système, un serveur central et un dashboard pour l'interface graphique via un protocole binaire personnalisé.</p>
+    content: `<p>Inferno est une <strong>plateforme de monitoring distribuée</strong> coordonnant des agents système,
+    un serveur central et un dashboard pour l'interface graphique via un protocole binaire personnalisé.</p>
 
-<p>L'architecture repose sur la <strong>programmation événementielle sans threads</strong>. Le serveur multiplex les connexions via epoll, l'agent gère son event loop avec poll/WSAPoll.</p>
+<p>L'architecture repose sur la <strong>programmation événementielle sans threads</strong>.
+Le serveur multiplex les connexions via epoll, l'agent gère son event loop avec poll/WSAPoll.</p>
 
-<p>Le <strong>protocole binaire</strong> décrit les structures et leur format sur le réseau ainsi que les règles de communication. Il est divisé en deux parties : les structures entre dashboard et serveur, et les structures entre serveur et agents (<a href="https://github.com/AdelinePat/inferno/blob/main/_docs/project/lptf_binary_protocol.md">voir spécification du protocole</a>). Le protocole gère le chunking des réponses volumineuses et limite leur taille. Les <a href="https://github.com/AdelinePat/inferno/tree/main/_docs/protocol">diagrammes de séquence</a> pour chaque type d'interaction (registration, commandes, métriques, disconnexion) sont documentés.</p>
+<p>Le <strong>protocole binaire</strong> décrit les structures et leur format sur le réseau
+ainsi que les règles de communication. Il est divisé en deux parties : les structures entre dashboard
+et serveur, et les structures entre serveur et agents
+(<a href="https://github.com/AdelinePat/inferno/blob/main/_docs/project/lptf_binary_protocol.md">voir spécification du protocole</a>).
+Le protocole gère le chunking des réponses volumineuses et limite leur taille.
+Les <a href="https://github.com/AdelinePat/inferno/tree/main/_docs/protocol">diagrammes de séquence</a> 
+pour chaque type d'interaction (enregistrement, commandes, métriques, déconnexion) sont documentés.</p>
 
-<p>Le serveur s'organise en <strong>domaines métier</strong> (agents, commandes, réponses, métriques) avec un dispatcher central capable de router les requêtes du dashboard vers un agent cible, collecter les réponses, les persister et les renvoyer au dashboard. Chaque domaine encapsule sa logique et ses repositories (<a href="https://github.com/AdelinePat/inferno/tree/main/_docs/server">architecture du serveur</a>).</p>
+<p>Le serveur s'organise en <strong>domaines métier</strong> (agents, commandes, réponses, métriques) avec un <em>dispatcher central</em>
+ capable de router les requêtes du dashboard vers un agent cible, collecter les réponses, les persister et les renvoyer au dashboard. 
+ Chaque domaine encapsule sa logique et ses repositories 
+ (<a href="https://github.com/AdelinePat/inferno/tree/main/_docs/server">architecture du serveur</a>).</p>
 
-<p>L'agent possède également un dispatcher pour router et exécuter les commandes. Son metrics controller est appelé directement par la boucle événementielle pour orchestrer la collecte — le stream de métriques est démarré ou arrêté via le dispatcher, mais l'appel de la collecte n'y passe pas (<a href="https://github.com/AdelinePat/inferno/tree/main/_docs/agent">architecture de l'agent</a>).</p>
+<p>L'agent possède également un <em>dispatcher</em> pour router et exécuter les commandes. Son <em>MetricsController</em> est appelé directement 
+par la boucle événementielle pour orchestrer la collecte — le stream de métriques est démarré ou arrêté via le dispatcher,
+ mais l'appel de la collecte n'y passe pas (<a href="https://github.com/AdelinePat/inferno/tree/main/_docs/agent">architecture de l'agent</a>).</p>
 
 <p>Le dashboard est réalisé avec Qt en utilisant les abstractions de sockets cross-platform fournies par la librairie transport partagée.</p>
 

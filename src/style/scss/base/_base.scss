@@ -47,3 +47,12 @@ h2 {
 h3 {
   font-size: 1.2em;
 }
+
+
+strong {
+  font-weight: 600;
+}
+strong,
+em {
+  color: var(--secondary-lighter);
+}
