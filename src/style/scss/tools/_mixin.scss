@@ -21,6 +21,7 @@
   align-items: center;
   max-height: 3rem;
   gap: 0.4rem 0;
+  font-size: 1.4rem;
   // overflow: hidden;
 }
 
@@ -49,6 +50,12 @@
   cursor: pointer;
 }
 
+@mixin btn-square() {
+  @extend %btn;
+  border-radius: 12px;
+  margin: 0.5rem;
+}
+
 @mixin btn-color($color) {
   &-#{$color} {
     @extend %btn;
@@ -66,7 +73,8 @@
 
 @mixin btn-reversed-color($color) {
   &-reversed-#{$color} {
-    @extend %btn;
+    // @extend %btn;
+    @include btn-square;
     background: transparent;
     border: 1px solid var(--#{$color});
     transition: all 0.25s ease-out;
@@ -81,17 +89,8 @@
       background: var(--#{$color});
       color: var(--background);
       border: 1px solid transparent;
-      // &:hover {
-      //   background: none;
-      //   border: 1px solid var(--#{$color});
-      //   color: var(--#{$color});
-      // }
     }
   }
-
-  // &-reversed-#{$color}.active {
-  //   background: red;
-  // }
 }
 
 @mixin education-border {
@@ -164,4 +163,15 @@
   @include mq.s {
     grid-template-columns: 1fr;
   }
+}
+
+@mixin date-separator($color, $opacity) {
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-left: 8px;
+  content: "";
+  background: var(--#{$color});
+  opacity: $opacity;
+  // margin-bottom: 0.3rem;
+  transform: rotateZ(45deg);
 }

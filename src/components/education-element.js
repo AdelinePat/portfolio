@@ -21,7 +21,8 @@ export function createEducationArticle(article, smallScreen = false) {
     const startDate = new Date(article.startDate).toLocaleDateString("fr-FR", {
       year: "numeric",
     });
-    timeline.innerText = `${startDate} - ${endDate}`;
+    // timeline.innerText = `${startDate} - ${endDate}`;
+    timeline.innerHTML = `<span>${startDate}</span><span>${endDate}</span>`;
   }
   const paragraph = document.createElement("p");
   paragraph.innerHTML = article.content;

@@ -94,23 +94,54 @@ const icons = {
   regex: "",
 };
 
+// export const categories = {
+//   personal: "Projet personnel",
+//   school: "Projet scolaire",
+//   general: "Général",
+//   web: "Web",
+//   software: "Logiciel",
+//   databases: "Bases de Données",
+//   oop: "Programmation Orientée Objet",
+//   devops: "DevOps",
+// };
+
 export const categories = {
-  personal: "Projet personnel",
-  school: "Projet scolaire",
-  general: "Général",
-  web: "Web",
-  software: "Logiciel",
-  databases: "Bases de Données",
-  oop: "Programmation Orientée Objet",
-  devops: "DevOps",
+  personal: {
+    id: "personal",
+    label: "Projet personnel",
+  },
+  architecture: {
+    id: "architecture",
+    label: "Architecture",
+  },
+  backend: {
+    id: "backend",
+    label: "Backend",
+  },
+  frontend: {
+    id: "frontend",
+    label: "Frontend",
+  },
+  networking: {
+    id: "networking",
+    label: "Réseau",
+  },
+  databases: {
+    id: "databases",
+    label: "Bases de Données",
+  },
+  infrastructure: {
+    id: "infrastructure",
+    label: "Infrastructure",
+  },
 };
 
 export const certificationCategories = {
-  web: "Web",
-  software: "Logiciel",
-  databases: "Bases de Données",
-  devops: "DevOps",
-  systems: "Systèmes",
+  web: { id: "web", label: "Web" },
+  software: { id: "software", label: "Logiciel" },
+  databases: { id: "databases", label: "Bases de Données" },
+  devops: { id: "devops", label: "DevOps" },
+  systems: { id: "systems", label: "Systèmes" },
 };
 
 export const tags = {
@@ -122,375 +153,375 @@ export const tags = {
   personal: {
     name: "Personnel",
     icon: icons.personal,
-    category: categories.personal,
+    // category: categories.personal,
   },
   school: {
     name: "Scolaire",
     icon: icons.school,
-    category: categories.school,
+    // category: categories.school,
   },
 
   teamwork: {
     name: "Travail d'équipe",
     icon: icons.teamwork,
-    category: categories.general,
+    // category: categories.general,
   },
   // SOCIALS
   github: {
     name: "GitHub",
     icon: icons.github,
-    category: categories.general,
+    // category: categories.general,
   },
   linkedin: {
     name: "Linkedin",
     icon: icons.linkedin,
-    category: categories.general,
+    // category: categories.general,
   },
   // IDE
   visualStudioCode: {
     name: "VS Code",
     icon: icons.visualStudioCode,
-    category: categories.general,
+    // category: categories.general,
   },
   intelliJ: {
     name: "IntelliJ",
     icon: icons.intelliJ,
-    category: categories.general,
+    // category: categories.general,
   },
   // Versionning
   git: {
     name: "Git",
     icon: icons.git,
-    category: categories.general,
+    // category: categories.general,
   },
   unityVersionControl: {
     name: "Unity Version Control",
     icon: icons.unityVersionControl,
-    category: categories.general,
+    // category: categories.general,
   },
   // Design
   figma: {
     name: "Figma",
     icon: icons.figma,
-    category: categories.general,
+    // category: categories.general,
   },
   photoshop: {
     name: "Photoshop",
     icon: icons.photoshop,
-    category: categories.general,
+    // category: categories.general,
   },
   illustrator: {
     name: "Illustrator",
     icon: icons.illustrator,
-    category: categories.general,
+    // category: categories.general,
   },
   // GUI or output
   console: {
     name: "Console",
     icon: icons.console,
-    category: categories.general,
+    // category: categories.general,
   },
   // Network
   socket: {
     name: "Socket",
     icon: icons.socket,
-    category: categories.general,
+    // category: categories.general,
   },
   // Concept
   ideation: {
     name: "Ideation",
     icon: icons.ideation,
-    category: categories.general,
+    // category: categories.general,
   },
   algorithmic: {
     name: "Algorithmique",
     icon: icons.algorithmic,
-    category: categories.general,
+    // category: categories.general,
   },
   unitaryTest: {
     name: "Test unitaire",
     icon: icons.unitaryTest,
-    category: categories.general,
+    // category: categories.general,
   },
   integrationTest: {
     name: "Test d'intégration",
     icon: icons.integrationTest,
-    category: categories.general,
+    // category: categories.general,
   },
   errorHandling: {
     name: "Gestion d'erreur",
     icon: icons.errorHandling,
-    category: categories.general,
+    // category: categories.general,
   },
   //   Architecture
   mvc: {
     name: "MVC",
     icon: icons.mvc,
-    category: categories.general,
+    // category: categories.general,
   },
   designSystem: {
     name: "Design system",
     icon: icons.designSystem,
-    category: categories.general,
+    // category: categories.general,
   },
   // OS
   linux: {
     name: "Linux",
     icon: icons.linux,
-    category: certificationCategories.systems,
+    // category: certificationCategories.systems,
   },
   windows: {
     name: "Windows",
     icon: icons.windows,
-    category: certificationCategories.systems,
+    // category: certificationCategories.systems,
   },
   debian: {
     name: "Debian",
     icon: icons.debian,
-    category: certificationCategories.systems,
+    // category: certificationCategories.systems,
   },
   ubuntu: {
     name: "Ubuntu",
     icon: icons.ubuntu,
-    category: certificationCategories.systems,
+    // category: certificationCategories.systems,
   },
   redhat: {
     name: "Red Hat",
     icon: icons.redhat,
-    category: certificationCategories.systems,
+    // category: certificationCategories.systems,
   },
 
   // Bash & Scripting
   bashScripting: {
     name: "Bash scripting",
     icon: icons.bashScripting,
-    category: certificationCategories.systems,
+    // category: certificationCategories.systems,
   },
 
   linuxCLI: {
     name: "Linux CLI",
     icon: icons.linuxCLI,
-    category: certificationCategories.systems,
+    // category: certificationCategories.systems,
   },
 
   powershell: {
     name: "Powershell",
     icon: icons.powershell,
-    category: certificationCategories.systems,
+    // category: certificationCategories.systems,
   },
 
   // Virtualization
   vmware: {
     name: "VMWare",
     icon: icons.vmware,
-    category: categories.general,
+    // category: categories.general,
   },
   virtualization: {
     name: "Machine virtuelle",
     icon: icons.virtualization,
-    category: categories.general,
+    // category: categories.general,
   },
   osInstall: {
     name: "Installation d'OS",
     icon: icons.osInstall,
-    category: categories.general,
+    // category: categories.general,
   },
   // Tools
   regex: {
     name: "regex",
     icon: icons.regex,
-    category: categories.general,
+    // category: categories.general,
   },
   //   Web
   html: {
     name: "HTML",
     icon: icons.html,
-    category: categories.web,
+    // category: categories.web,
   },
   css: {
     name: "CSS",
     icon: icons.css,
-    category: categories.web,
+    // category: categories.web,
   },
   sass: {
     name: "Sass",
     icon: icons.sass,
-    category: categories.web,
+    // category: categories.web,
   },
   nodejs: {
     name: "Node.js",
     icon: icons.nodejs,
-    category: categories.web,
+    // category: categories.web,
   },
   javascript: {
     name: "Javascript",
     icon: icons.javascript,
-    category: categories.web,
+    // category: categories.web,
   },
   typescript: {
     name: "Typescript",
     icon: icons.typescript,
-    category: categories.web,
+    // category: categories.web,
   },
   php: {
     name: "PHP",
     icon: icons.php,
-    category: categories.web,
+    // category: categories.web,
   },
   // Software
   //    Java
   java: {
     name: "Java",
     icon: icons.java,
-    category: categories.software,
+    // category: categories.software,
   },
   kotlin: {
     name: "Kotlin",
     icon: icons.kotlin,
-    category: categories.software,
+    // category: categories.software,
   },
   maven: {
     name: "Maven",
     icon: icons.maven,
-    category: categories.software,
+    // category: categories.software,
   },
   junit: {
     name: "Junit",
     icon: icons.junit,
-    category: categories.software,
+    // category: categories.software,
   },
   //    Java -> GUI
   javaFX: {
     name: "JavaFX",
     icon: icons.javaFX,
-    category: categories.software,
+    // category: categories.software,
   },
   springboot: {
     name: "Spring Boot",
     icon: icons.springboot,
-    category: categories.software,
+    // category: categories.software,
   },
   thymeleaf: {
     name: "thymeleaf",
     icon: icons.thymeleaf,
-    category: categories.web,
+    // category: categories.web,
   },
   //    C/C++
   c: {
     name: "C",
     icon: icons.c,
-    category: categories.software,
+    // category: categories.software,
   },
   cpp: {
     name: "C++",
     icon: icons.cpp,
-    category: categories.software,
+    // category: categories.software,
   },
   //    C/C++ -> Compilation tool
   cmake: {
     name: "CMake",
     icon: icons.cmake,
-    category: categories.software,
+    // category: categories.software,
   },
   makefile: {
     name: "Makefile",
     icon: icons.makefile,
-    category: categories.software,
+    // category: categories.software,
   },
   csharp: {
     name: "C#",
     icon: icons.csharp,
-    category: categories.software,
+    // category: categories.software,
   },
   //    C/C++ or C# -> GUI/Game Engine
   unity: {
     name: "Unity",
     icon: icons.unity,
-    category: categories.software,
+    // category: categories.software,
   },
   sfml: {
     name: "SFML",
     icon: icons.sfml,
-    category: categories.software,
+    // category: categories.software,
   },
   sdl: {
     name: "SDL3",
     icon: icons.sdl,
-    category: categories.software,
+    // category: categories.software,
   },
   qt: {
     name: "Qt",
     icon: icons.qt,
-    category: categories.software,
+    // category: categories.software,
   },
   //    Python
   python: {
     name: "Python",
     icon: icons.python,
-    category: categories.software,
+    // category: categories.software,
   },
   //    Python -> GUI
   pygame: {
     name: "Pygame",
     icon: icons.pygame,
-    category: categories.software,
+    // category: categories.software,
   },
   tkinter: {
     name: "Tkinter",
     icon: icons.tkinter,
-    category: categories.software,
+    // category: categories.software,
   },
   // Databases
   sql: {
     name: "SQL",
     icon: icons.sql,
-    category: categories.databases,
+    // category: categories.databases,
   },
   mysql: {
     name: "MySQL",
     icon: icons.mysql,
-    category: categories.databases,
+    // category: categories.databases,
   },
   postgresql: {
     name: "PostgreSQL",
     icon: icons.postgresql,
-    category: categories.databases,
+    // category: categories.databases,
   },
   timescaledb: {
     name: "TimescaleDB",
     icon: icons.timescaledb,
-    category: categories.databases,
+    // category: categories.databases,
   },
   kafka: {
     name: "Kafka",
     icon: icons.kafka,
-    category: categories.databases,
+    // category: categories.databases,
   },
   // OOP
   oop: {
     name: "POO",
     icon: icons.oop,
-    category: categories.oop,
+    // category: categories.oop,
   },
   designPattern: {
     name: "Design Pattern",
     icon: icons.designPattern,
-    category: categories.oop,
+    // category: categories.oop,
   },
   // DevOps
   docker: {
     name: "Docker",
     icon: icons.docker,
-    category: categories.devops,
+    // category: categories.devops,
   },
   podman: {
     name: "Podman",
     icon: icons.podman,
-    category: categories.devops,
+    // category: categories.devops,
   },
   githubActions: {
     name: "Github Actions",
     icon: icons.githubActions,
-    category: categories.devops,
+    // category: categories.devops,
   },
 };

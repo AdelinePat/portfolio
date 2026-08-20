@@ -57,7 +57,8 @@ export function createFooter(screenSize = "small-screen") {
   }
   const copyright = document.createElement("div");
   copyright.classList.add("text-hint");
-  copyright.innerHTML = `<p>© Copyright 2024-2025 - <i class="icon-ap" aria-hidden="true"></i> Adeline Patenne - Tous droits réservés</p>
+  const currentYear = new Date().getFullYear();
+  copyright.innerHTML = `<p>© Copyright 2024-${currentYear} <i class="icon-ap" aria-hidden="true"></i> Adeline Patenne - Tous droits réservés</p>
    <p>Le logo a été réalisé par mes soins.</p>`;
 
   const logo = document.createElement("div");

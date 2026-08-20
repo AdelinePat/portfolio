@@ -7,8 +7,7 @@ export const courses = [
     display: true,
     createdAt: "2025-10-11T10:00:00.000Z",
     progress: 49, // optional chapter not done
-    courseUrl:
-      "https://www.udemy.com/course/apache-kafka/",
+    courseUrl: "https://www.udemy.com/course/apache-kafka/",
     learningPlatform: "Udemy",
     tags: [tags.kafka],
   },
@@ -121,6 +120,26 @@ export const courses = [
       "https://openclassrooms.com/fr/courses/7527306-decouvrez-le-fonctionnement-des-algorithmes",
     learningPlatform: "OpenClassRooms",
     tags: [tags.algorithmic],
+  },
+  {
+    title: "Gérez un projet digital avec une méthodologie en cascade",
+    display: true,
+    createdAt: "2026-08-11T08:30:00.000Z",
+    progress: 100,
+    courseUrl:
+      "https://openclassrooms.com/fr/courses/4296701-gerez-un-projet-digital-avec-une-methodologie-en-cascade",
+    learningPlatform: "OpenClassRooms",
+    tags: [],
+  },
+  {
+    title: "Initiez-vous à la gestion de projet agile",
+    display: true,
+    createdAt: "2026-08-31T10:00:00.000Z",
+    progress: 6,
+    courseUrl:
+      "https://openclassrooms.com/fr/courses/4507926-initiez-vous-a-la-gestion-de-projet-agile",
+    learningPlatform: "OpenClassRooms",
+    tags: [],
   },
 ];
 

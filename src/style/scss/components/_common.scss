@@ -39,6 +39,7 @@
   @include m.btn-color(secondary-lighter);
   @include m.btn-color(secondary);
   @include m.btn-reversed-color(primary-lighter);
+  @include m.btn-reversed-color(secondary-lighter);
 }
 
 // main .active {
