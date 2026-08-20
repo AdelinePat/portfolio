@@ -14,7 +14,6 @@ body {
   color: var(--background);
 }
 
-
 // base titles
 h1,
 h2,
@@ -48,11 +47,13 @@ h3 {
   font-size: 1.2em;
 }
 
-
 strong {
   font-weight: 600;
 }
-strong,
-em {
+strong {
   color: var(--secondary-lighter);
+}
+
+em {
+  color: var(--primary-lighter);
 }
