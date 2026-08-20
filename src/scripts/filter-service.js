@@ -1,3 +1,4 @@
+import { categories } from "../assets/data/tags.js";
 import { updateTitle, createAllCards } from "../components/project-elements.js";
 
 export function toggleFilterDiv(sectionTitleElement, filterDiv) {
@@ -45,13 +46,20 @@ export function initTagFilterHandler(
 
     if (span && filterDiv.contains(span)) {
       event.stopPropagation();
+      console.log(span.classList[0]);
       toggleTag(activeFilter, span.classList[0]);
-      if (span.classList.contains("active")) {
-        span.classList.remove("active");
-      } else if (activeFilter.length > 0) {
-        span.classList.add("active");
+      if (span.classList.contains("all")) {
+        // Remove active class from all spans
+        filterDiv
+          .querySelectorAll("span")
+          .forEach((s) => s.classList.remove("active"));
+      } else {
+        if (span.classList.contains("active")) {
+          span.classList.remove("active");
+        } else if (activeFilter.length > 0) {
+          span.classList.add("active");
+        }
       }
-
       const result = filterProjects(articles, activeFilter);
       updateTitle(
         sectionTitleElement,
@@ -83,8 +91,17 @@ function toggleTag(array, value) {
 
 export function filterProjects(articles, activeFilter) {
   if (!activeFilter || activeFilter.length === 0) return articles;
+  console.log(activeFilter);
+  // const result = articles.filter((project) => {
+  //   return project.filter.some((filter) => activeFilter.includes(filter));
+  // });
   const result = articles.filter((project) => {
-    return project.filter.some((tag) => activeFilter.includes(tag));
+    return activeFilter.every((filter) => {
+      console.log(project.filters);
+      console.log("actual filter: ", filter);
+      console.log(project.filters.includes(filter));
+      return project.filters.includes(filter);
+    });
   });
 
   return result;
