@@ -12,7 +12,7 @@ export function createFilterDiv(sectionTitleContainer, allCategories) {
   for (const filter of allCategories) {
     const span = document.createElement("span");
     if (filter[0] != "general") {
-      span.innerText = filter[1];
+      span.innerText = filter[1].label;
       span.classList.add(filter[0]);
       span.classList.add(tagBtnClass);
       filterDiv.append(span);

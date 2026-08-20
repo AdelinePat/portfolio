@@ -15,7 +15,8 @@ export function createExperienceArticle(experience) {
   const list = document.createElement("ul");
   for (const item of experience.taskList) {
     const li = document.createElement("li");
-    li.innerText = item;
+    // li.innerText = item;
+    li.innerHTML = item;
     list.append(li);
   }
 
@@ -27,6 +28,18 @@ export function createExperienceArticle(experience) {
     container.append(title, location, list);
   }
 
+  if (experience.softSkills) {
+    const softSkills = document.createElement("ul");
+    softSkills.classList.add("soft-skills");
+    for (const soft of experience.softSkills) {
+      const li = document.createElement("li");
+      li.innerText = soft;
+      li.classList.add("btn-reversed-secondary-lighter");
+      softSkills.append(li);
+    }
+    container.append(softSkills);
+    console.log(experience);
+  }
   articleElement.append(datesElement, container);
   return articleElement;
 }
@@ -49,4 +62,3 @@ function createDateElement(experienceDate) {
   paragraph.append(text);
   return paragraph;
 }
-
