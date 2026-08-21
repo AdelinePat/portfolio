@@ -1,0 +1,1 @@
+import{c as e,n as t,o as n,s as r,t as i}from"./topbar-controller-C3EWAK3D.js";var a=document.querySelector(`body`),o=document.querySelector(`aside`),s=n(e.contact,`big-screen`),c=t(`big-screen`);o.append(s,c);var l=r(e.contact.id),u=t();u.prepend(l),a.append(u);var d=r(e.contact.id);document.querySelector(`.menu-phone`).append(d),i(d);
