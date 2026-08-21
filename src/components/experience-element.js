@@ -29,12 +29,17 @@ export function createExperienceArticle(experience) {
   }
 
   if (experience.softSkills) {
-    const softSkills = document.createElement("ul");
-    softSkills.classList.add("soft-skills");
+    const softSkills = document.createElement("div");
+    softSkills.classList.add(
+      "soft-skills",
+      "skills-secondary-lighter",
+      // "o-08",
+      // "oh",
+    );
     for (const soft of experience.softSkills) {
-      const li = document.createElement("li");
+      const li = document.createElement("strong");
       li.innerText = soft;
-      li.classList.add("btn-reversed-secondary-lighter");
+      // li.classList.add("btn-reversed-secondary-lighter");
       softSkills.append(li);
     }
     container.append(softSkills);
